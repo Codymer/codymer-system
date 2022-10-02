@@ -1,0 +1,69 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN SPACER: size
+// ===============================================
+@mixin helper-size(
+  $size-density: null,
+  $size-width--unit: null,
+  $size-height--unit: null,
+  $size--breakpoint-01: null,
+  $size-width-breakpoint-01--unit: null,
+  $size-height-breakpoint-01--unit: null,
+  $size--breakpoint-02: null,
+  $size-width-breakpoint-02--unit: null,
+  $size-height-breakpoint-02--unit: null,
+  $size--breakpoint-03: null,
+  $size-width-breakpoint-03--unit: null,
+  $size-height-breakpoint-03--unit: null,
+  $size--breakpoint-04: null,
+  $size-width-breakpoint-04--unit: null,
+  $size-height-breakpoint-04--unit: null,
+  $size--breakpoint-05: null,
+  $size-width-breakpoint-05--unit: null,
+  $size-height-breakpoint-05--unit: null,
+  $size--breakpoint-06: null,
+  $size-width-breakpoint-06--unit: null,
+  $size-height-breakpoint-06--unit: null,
+  $size--breakpoint-07: null,
+  $size-width-breakpoint-07--unit: null,
+  $size-height-breakpoint-07--unit: null,
+) {
+
+  .helper-size-#{$size-density} {
+    width: $size-width--unit;
+    height: $size-height--unit;
+    @include min-screen($size--breakpoint-01) {
+      width: $size-width-breakpoint-01--unit;
+      height: $size-height-breakpoint-01--unit;
+    }
+    @include min-screen($size--breakpoint-02) {
+      width: $size-width-breakpoint-02--unit;
+      height: $size-height-breakpoint-02--unit;
+    }
+    @include min-screen($size--breakpoint-03) {
+      width: $size-width-breakpoint-03--unit;
+      height: $size-height-breakpoint-03--unit;
+    }
+    @include min-screen($size--breakpoint-04) {
+      width: $size-width-breakpoint-04--unit;
+      height: $size-height-breakpoint-04--unit;
+    }
+    @include min-screen($size--breakpoint-05) {
+      width: $size-width-breakpoint-05--unit;
+      height: $size-height-breakpoint-05--unit;
+    }
+    @include min-screen($size--breakpoint-06) {
+      width: $size-width-breakpoint-06--unit;
+      height: $size-height-breakpoint-06--unit;
+    }
+    @include min-screen($size--breakpoint-07) {
+      width: $size-width-breakpoint-07--unit;
+      height: $size-height-breakpoint-07--unit;
+    }
+
+  }
+
+}

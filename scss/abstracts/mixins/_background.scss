@@ -1,0 +1,28 @@
+// ABSTRACTS
+// ================================================
+@use '../variables/variables' as *;
+@use '../maps/maps' as *;
+@use '../functions/functions' as *;
+// ================================================
+
+// MIXIN BACKGROUNDS: background-setup
+// ===============================================
+@mixin background-setup(
+  $background-setup--path: null,
+  $background-setup--positionAndSize: null,
+  $background-setup--repeat: null,
+  $background-setup--attachment: null,
+  $background-setup--origin: null,
+  $background-setup--clip: null,
+  $background-setup--color: null,
+) {
+
+  background:
+    url("#{$background-setup--path}") // img path
+    #{$background-setup--positionAndSize} // position and size
+    $background-setup--repeat // repeat
+    $background-setup--attachment // attachment
+    $background-setup--origin // origin
+    $background-setup--clip // clip
+    $background-setup--color; // color
+}

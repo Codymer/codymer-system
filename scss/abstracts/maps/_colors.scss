@@ -1,0 +1,186 @@
+// MAP: COLORS
+// ===============================================
+$map-colors:(
+
+  // AQUAMARINAS
+  aquamarinas: (
+
+    // theme codymer
+    theme-codymer--500: #02DAC0,
+
+  ),
+
+  // BLACKS
+  blacks: (
+
+    // theme all
+    theme--all: rgb(0,0,0),
+
+    // theme example 01
+    theme-example-01--600: #0C2126,
+
+  ),
+
+  // BLUES
+  blues: (
+
+    // theme codymer
+    theme-codymer--100: #83FBFF,
+    theme-codymer--500: #6CC4E8,
+
+    // theme example-01
+    theme-example-01--200: #187FD9,
+
+    // theme facebook
+    theme-facebook--500: #3a5795,
+
+    // theme instagram
+    theme-instagram--500: #3f729b,
+
+    // theme linkedin
+    theme-linkedin--500: #0077B5,
+
+    // theme payPal
+    theme-paypal--400: #009cde,
+    theme-paypal--500: #003087,
+
+    // theme twitter
+    theme-twitter--500: #5ea9dd,
+
+  ),
+
+  // BROWNS
+  browns: (
+
+    // theme example-01
+    theme-example-01--100: #F2B885,
+    theme-example-01--200: #D98D62,
+    theme-example-01--300: #BF5A36,
+
+  ),
+
+  // FUCSIAS
+  fucsias: (
+
+    // theme codymer
+    theme-codymer--200: #F2636F,
+    theme-codymer--300: #FE7E6D,
+    theme-codymer--500: #F22973,
+
+  ),
+
+  // GREENS
+  greens: (
+
+    // codymer
+    theme-codymer--500: #6CE8C9,
+    theme-codymer--600: #30ba5b,
+    theme-codymer--700: #458C78,
+    theme-codymer--success: #006060,
+
+    // example-01
+    theme-example-01--success: #109C3E,
+
+    // theme-whatsapp
+    theme-whatsapp--400: #41C75D,
+    theme-whatsapp--500: #40a73b,
+
+  ),
+
+  // GREYS
+  greys: (
+
+    // theme all
+    theme-all--100: #EEE,
+    theme-all--200: #CBCBCB,
+    theme-all--500: #999,
+
+    // theme example-01
+    theme-example-01--100: #F2F2F2,
+
+  ),
+
+  // ORANGES
+  oranges: (
+
+    // theme codymer
+    theme-codymer--200: #FF9C8E,
+
+  ),
+
+  // PINKS
+  pinks: (
+
+    // theme codymer
+    theme-codymer--200: #FAEEFF,
+    theme-codymer--500: #F294C0,
+
+  ),
+
+  // PURPLES
+  purples: (
+
+    // theme codymer
+    theme-codymer--500: #A885D8,
+    theme-codymer--600: #1E1559,
+
+    // theme instagram
+    theme-instagram--500: #8a3ab9,
+
+  ),
+
+  // REDS
+  reds: (
+
+    // theme codymer
+    theme-codymer--500: #DC3C14,
+    theme-codymer--error: #D50000,
+
+    // theme example 01
+    theme-example-01--error: #F20544,
+
+    // theme pinterest
+    theme-pinterest--500: #E60023,
+
+    // theme youTube
+    theme-youtube--500: #CC181E,
+
+  ),
+
+  // WHITES
+  whites: (
+    theme--all: rgb(255,255,255),
+  ),
+
+  // YELLOWS
+  yellows: (
+
+    // theme codymer
+    theme-codymer--200: #ffeb01,
+    theme-codymer--500: #F2BC1B,
+    theme-codymer--warning: #806c00,
+
+    // theme example-01
+    theme-example-01--100: #F2E7AC,
+    theme-example-01--warning: #F2B705,
+
+    // theme instagram 
+    theme-instagram--500: #fccc63,
+
+    // theme snapchat
+    theme-snapchat--500: #FFFC00,
+
+  ),
+
+);
+// ===============================================
+
+// FUNCTION: MAP COLOR
+// ===============================================
+@function map-colors(
+  $color-name: null,
+  $color-variant: null
+) {
+  @return map-get(map-get($map-colors, $color-name), $color-variant);
+}
+// ===============================================

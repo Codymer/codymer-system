@@ -1,0 +1,563 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+@use '../../base/index' as *;
+@use '../../layout/grids/grid' as *;
+// ===============================================
+
+// FONT SETUP: Google Syne
+// ===============================================
+// &--regular
+@include font-family("Google-Syne--regular",
+  "#{$fonts-path}/google-syne/Syne-Regular",
+  500,
+  normal,
+  eot woff2 woff ttf svg);
+
+// &--medium
+@include font-family("Google-Syne--medium",
+  "#{$fonts-path}/google-syne/Syne-Medium",
+  600,
+  normal,
+  eot woff2 woff ttf svg);
+
+// &--bold
+@include font-family("Google-Syne--bold",
+  "#{$fonts-path}/google-syne/Syne-Bold",
+  800,
+  normal,
+  eot woff2 woff ttf svg);
+// ===============================================
+
+// RESET: global
+// ===============================================
+@include resets-global(
+
+  // HTML FONT STYLE
+  normal,
+
+  // HTML FONT VARIANT
+  normal,
+
+  // HTML FONT WEIGHT
+  500,
+
+  // HTML FONT SIZE
+  16px,
+
+  // HTML LINE HEIGHT
+  18px,
+
+  // HTML FONT FAMILY
+  map-fonts(Google, Syne--400),
+
+  // BODY FONT SIZE
+  null,
+
+  // BODY LINE HEIGHT
+  null,
+
+  // BODY FONT COLOR
+  map-colors(blacks, theme-example-01--600),
+
+  // BODY LETTER SPACING
+  null,
+
+  // BODY BACKGROUND COLOR
+  map-colors(greys, theme-example-01--100),
+
+);
+// ===============================================
+
+// RESET: custom
+// ===============================================
+@include resets-custom(
+
+  // THEME NAME
+  example-01,
+
+  // FONT FAMILY PRIMARY
+  map-fonts(Google, Syne--400),
+
+  // FONT FAMILY SECONDARY
+  map-fonts(Google, Syne--600),
+
+  // RESET TEXT SELECTION COLOR
+  map-colors(blacks, theme--all),
+
+  // RESET TEXT SELECTION BACKGROUND COLOR
+  map-colors(yellows, theme-example-01--100),
+
+  // RESET LINK SELECTION COLOR
+  map-colors(whites, theme--all),
+
+  // RESET LINK SELECTION BACKGROUND COLOR
+  map-colors(browns, theme-example-01--300),
+
+);
+// ===============================================
+
+// HELPER: positioning
+// ===============================================
+@include helper-positioning();
+// ===============================================
+
+// HELPER: hides
+// ===============================================
+@include helper-hides();
+// ===============================================
+
+// HELPER: displays
+// ===============================================
+@include helper-displays();
+// ===============================================
+
+// HELPER: alignments
+// ===============================================
+@include helper-alignments();
+// ===============================================
+
+// HELPER: images
+// ===============================================
+@include helper-images();
+// ===============================================
+
+// HELPER: embedded
+// ===============================================
+@include helper-embedded();
+// ===============================================
+
+// HELPER: maps
+// ===============================================
+@include helper-maps();
+// ===============================================
+
+// HELPER: sizes
+// ===============================================
+// 100
+@include helper-size(
+
+  // density
+  100,
+
+  // width
+  2.5rem,
+
+  // height,
+  2.5rem,
+
+);
+// ===============================================
+
+// HELPER: animations
+// ===============================================
+@include helper-animations();
+// ===============================================
+
+// HELPER: spacers gaps
+// ===============================================
+// t 100
+@include helper-spacer-gap(
+
+  // direction
+  t,
+
+  // density
+  100,
+
+  // unit
+  1rem,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint unit
+  2rem
+
+);
+// ===============================================
+
+// HELPER: spacers inner
+// ===============================================
+// t 100
+@include helper-spacer-inner(
+
+  // direction
+  t,
+
+  // density
+  100,
+
+  // unit
+  1rem,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint unit
+  2rem
+
+);
+// ===============================================
+
+// HELPER: backgrounds
+// ===============================================
+@include helper-backgrounds(
+
+  // &--primary
+  map-colors(blacks, theme-example-01--600),
+
+  // &--secondary
+  map-colors(browns, theme-example-01--100),
+
+  // &--tertiary
+  map-colors(browns, theme-example-01--200),
+
+  // &--quaternary
+  map-colors(browns, theme-example-01--300),
+
+  // &--quinary
+  null,
+
+  // &--senary
+  map-colors(blues, theme-example-01--200),
+
+  // &--septenary
+  null,
+
+  // &--octonary
+  null,
+
+  // &--nonary
+  null,
+
+  // &--denary
+  null,
+
+  // &--undenary
+  null,
+
+  // &--duodenary
+  null,
+
+  // &--trendary
+  null,
+
+);
+// ===============================================
+
+// HELPER: backgrounds color behavior
+// ===============================================
+@include helper-backgrounds-color-behavior(
+
+  // &--black
+  map-colors(whites, theme--all),
+
+  // &--white
+  null,
+
+  // &--primary
+  map-colors(whites, theme--all),
+
+  // &--secondary
+  null,
+
+  // &--tertiary
+  null,
+
+  // &--quaternary
+  null,
+
+  // &--quinary
+  null,
+
+  // &--senary
+  map-colors(whites, theme--all),
+
+  // &--septenary
+  null,
+
+  // &--octonary
+  null,
+
+  // &--nonary
+  null,
+
+  // &--denary
+  null,
+
+  // &--undenary
+  null,
+
+  // &--duodenary
+  null,
+
+  // &--trendary
+  null,
+
+);
+// ===============================================
+
+// HELPER: font sizes
+// ===============================================
+// 100
+@include helper-font-size(
+
+  // density
+  100,
+
+  // font size unit
+  1rem,
+
+  // line height unit
+  1.2rem,
+
+);
+// 200
+@include helper-font-size(
+
+  // density
+  200,
+
+  // font size unit
+  1.5rem,
+
+  // line height unit
+  1.7rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoing 768px: font size
+  2rem,
+
+  // breakpoing 768px: line height
+  2.2rem,
+
+);
+// 300
+@include helper-font-size(
+
+  // density
+  300,
+
+  // font size unit
+  2rem,
+
+  // line height unit
+  2.2rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoing 768px: font size
+  2.2rem,
+
+  // breakpoing 768px: line height
+  2.5rem,
+
+  // breakpoing 768px: letter spacing
+  null,
+
+);
+// 400
+@include helper-font-size(
+
+  // density
+  400,
+
+  // font size unit
+  2.2rem,
+
+  // line height unit
+  2.4rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoing 998px: font size
+  3rem,
+
+  // breakpoing 998px: line height
+  3.2rem,
+
+  // breakpoing 998px: letter spacing
+  -.1rem,
+
+);
+// 500
+@include helper-font-size(
+
+  // density
+  500,
+
+  // font size unit
+  3rem,
+
+  // line height unit
+  3.2rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint 768px: font size unit
+  3.5rem,
+
+  // breakpoint 768px: line height unit
+  3.7rem,
+
+  // breakpoint 768px: letter spacing
+  -.15rem,
+
+);
+// ===============================================
+
+// HELPER: font weight
+// ===============================================
+@include helper-font-weight(
+
+  // &-100
+  map-fonts(Google, Syne--400),
+
+  // &-200
+  null,
+
+  // &-300
+  map-fonts(Google, Syne--500),
+
+  // &-400
+  null,
+
+  // &-500
+  map-fonts(Google, Syne--600),
+
+  // &-600
+  null,
+
+  // &-700
+  null,
+
+  // &-800
+  null,
+
+);
+// ===============================================
+
+// HELPER: font color
+// ===============================================
+@include helper-font-color(
+
+  // &--primary
+  map-colors(blacks, theme-example-01--600),
+
+  // &--secondary
+  map-colors(browns, theme-example-01--100),
+
+  // &--tertiary
+  map-colors(browns, theme-example-01--200),
+
+  // &--quaternary
+  map-colors(browns, theme-example-01--300),
+
+  // &--quinary
+  null,
+
+  // &--senary
+  map-colors(blues, theme-example-01--200),
+
+  // &-septenary
+  null,
+
+  // &-octonary
+  null,
+
+  // &-nonary
+  null,
+
+  // &-denary
+  null,
+
+  // &--undenary
+  null,
+
+  // &-duodenary
+  null,
+
+  // &-tredenary
+  null,
+
+  // &-quadrodenary
+  null,
+
+);
+// ===============================================
+
+// HELPER: links
+// ===============================================
+@include helper-links();
+// ===============================================
+
+// HELPER: icons
+// ===============================================
+@include helper-icons();
+// ===============================================
+
+// LAYOUT: grid
+// ===============================================
+@include layout-grid(
+
+  // padding axis: x
+  .625rem,
+
+  // first gap value
+  .313rem,
+
+  // max width
+  1920px,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint 768px: padding axis: x
+  null,
+
+  // breakpoint 768px: gap
+  1rem,
+
+  // breakpoint: 1280px
+  1280px,
+
+  // breakpoint 1280px: padding axis: x
+  3.5rem,
+
+  // breakpoint 1280px: gap
+  null,
+
+  // breakpoint: 1440px
+  1440px,
+
+  // breakpoint 1440px: padding axis x
+  10rem,
+
+  // breakpoint 1440px: gap
+  null,
+
+);
+// ===============================================
+
+// HELPER: texts
+// ===============================================
+@include helper-texts();
+// ===============================================

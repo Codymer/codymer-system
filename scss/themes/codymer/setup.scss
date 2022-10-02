@@ -1,0 +1,563 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+@use '../../base/index' as *;
+@use '../../layout/grids/grid' as *;
+// ===============================================
+
+// FONT SETUP: Google Space Grotesk
+// ===============================================
+// &--medium
+@include font-family("Google-Space-Grotesk--light",
+  "#{$fonts-path}/google-space-grotesk/SpaceGrotesk-Light",
+  300,
+  normal,
+  eot woff2 woff ttf svg);
+
+// &--regular
+@include font-family("Google-Space-Grotesk--regular",
+  "#{$fonts-path}/google-space-grotesk/SpaceGrotesk-Regular",
+  500,
+  normal,
+  eot woff2 woff ttf svg);
+
+// &--bold
+@include font-family("Google-Space-Grotesk--bold",
+  "#{$fonts-path}/google-space-grotesk/SpaceGrotesk-Bold",
+  700,
+  normal,
+  eot woff2 woff ttf svg);
+// ===============================================
+
+// RESET: global
+// ===============================================
+@include resets-global(
+
+  // HTML FONT STYLE
+  normal,
+
+  // HTML FONT VARIANT
+  normal,
+
+  // HTML FONT WEIGHT
+  500,
+
+  // HTML FONT SIZE
+  16px,
+
+  // HTML LINE HEIGHT
+  18px,
+
+  // HTML FONT FAMILY
+  map-fonts(Google, Space-Grotesk--300),
+
+  // BODY FONT SIZE
+  null,
+
+  // BODY LINE HEIGHT
+  null,
+
+  // BODY FONT COLOR
+  map-colors(purples, theme-codymer--600),
+
+  // BODY LETTER SPACING
+  null,
+
+  // BODY BACKGROUND COLOR
+  map-colors(pinks, theme-codymer--200),
+
+);
+// ===============================================
+
+// RESET: custom
+// ===============================================
+@include resets-custom(
+
+  // THEME NAME
+  codymer,
+
+  // FONT FAMILY PRIMARY
+  map-fonts(Google, Space-Grotesk--300),
+
+  // FONT FAMILY SECONDARY
+  map-fonts(Google, Space-Grotesk--500),
+
+  // RESET TEXT SELECTION COLOR
+  map-colors(blacks, theme--all),
+
+  // RESET TEXT SELECTION BACKGROUND COLOR
+  map-colors(yellows, theme-codymer--500),
+
+  // RESET LINK SELECTION COLOR
+  map-colors(whites, theme--all),
+
+  // RESET LINK SELECTION BACKGROUND COLOR
+  map-colors(purples, theme-codymer--600),
+
+);
+// ===============================================
+
+// HELPER: positioning
+// ===============================================
+@include helper-positioning();
+// ===============================================
+
+// HELPER: hides
+// ===============================================
+@include helper-hides();
+// ===============================================
+
+// HELPER: displays
+// ===============================================
+@include helper-displays();
+// ===============================================
+
+// HELPER: alignments
+// ===============================================
+@include helper-alignments();
+// ===============================================
+
+// HELPER: images
+// ===============================================
+@include helper-images();
+// ===============================================
+
+// HELPER: embedded
+// ===============================================
+@include helper-embedded();
+// ===============================================
+
+// HELPER: maps
+// ===============================================
+@include helper-maps();
+// ===============================================
+
+// HELPER: sizes
+// ===============================================
+// 100
+@include helper-size(
+
+  // density
+  100,
+
+  // width
+  2.5rem,
+
+  // height,
+  2.5rem,
+
+);
+// ===============================================
+
+// HELPER: animations
+// ===============================================
+@include helper-animations();
+// ===============================================
+
+// HELPER: spacers gaps
+// ===============================================
+// t 100
+@include helper-spacer-gap(
+
+  // direction
+  t,
+
+  // density
+  100,
+
+  // unit
+  .313rem,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint unit
+  1.188rem
+
+);
+// ===============================================
+
+// HELPER: spacers inner
+// ===============================================
+// t 100
+@include helper-spacer-inner(
+
+  // direction
+  t,
+
+  // density
+  100,
+
+  // unit
+  .313rem,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint unit
+  1.188rem
+
+);
+// ===============================================
+
+// HELPER: backgrounds
+// ===============================================
+@include helper-backgrounds(
+
+  // &--primary
+  map-colors(fucsias, theme-codymer--500),
+
+  // &--secondary
+  map-colors(pinks, theme-codymer--500),
+
+  // &--tertiary
+  map-colors(greens, theme-codymer--700),
+
+  // &--quaternary
+  map-colors(yellows, theme-codymer--500),
+
+  // &--quinary
+  map-colors(pinks, theme-codymer--200),
+
+  // &--senary
+  map-colors(purples, theme-codymer--600),
+
+  // &--septenary
+  map-colors(blues, theme-codymer--500),
+
+  // &--octonary
+  null,
+
+  // &--nonary
+  null,
+
+  // &--denary
+  null,
+
+  // &--undenary
+  null,
+
+  // &--duodenary
+  null,
+
+  // &--trendary
+  null,
+
+);
+// ===============================================
+
+// HELPER: backgrounds color behavior
+// ===============================================
+@include helper-backgrounds-color-behavior(
+
+  // &--black
+  map-colors(whites, theme--all),
+
+  // &--white
+  null,
+
+  // &--primary
+  null,
+
+  // &--secondary
+  null,
+
+  // &--tertiary
+  null,
+
+  // &--quaternary
+  null,
+
+  // &--quinary
+  null,
+
+  // &--senary
+  map-colors(whites, theme--all),
+
+  // &--septenary
+  null,
+
+  // &--octonary
+  null,
+
+  // &--nonary
+  null,
+
+  // &--denary
+  null,
+
+  // &--undenary
+  null,
+
+  // &--duodenary
+  null,
+
+  // &--trendary
+  null,
+
+);
+// ===============================================
+
+// HELPER: font sizes
+// ===============================================
+// 100
+@include helper-font-size(
+
+  // density
+  100,
+
+  // font size unit
+  .875rem,
+
+  // line height unit
+  1rem,
+
+);
+// 200
+@include helper-font-size(
+
+  // density
+  200,
+
+  // font size unit
+  .875rem,
+
+  // line height unit
+  1rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoing 768px: font size
+  1.25rem,
+
+  // breakpoing 768px: line height
+  1.375rem,
+
+);
+// 300
+@include helper-font-size(
+
+  // density
+  300,
+
+  // font size unit
+  1.125rem,
+
+  // line height unit
+  1.25rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoing 768px: font size
+  1.625rem,
+
+  // breakpoing 768px: line height
+  1.75rem,
+
+  // breakpoing 768px: letter spacing
+  -.063rem,
+
+);
+// 400
+@include helper-font-size(
+
+  // density
+  400,
+
+  // font size unit
+  1.25rem,
+
+  // line height unit
+  1.375rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoing 998px: font size
+  1.875rem,
+
+  // breakpoing 998px: line height
+  2rem,
+
+  // breakpoing 998px: letter spacing
+  -.063rem,
+
+);
+// 500
+@include helper-font-size(
+
+  // density
+  500,
+
+  // font size unit
+  1.5rem,
+
+  // line height unit
+  1.625rem,
+
+  // letter spacing
+  null,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint 768px: font size unit
+  2.25rem,
+
+  // breakpoint 768px: line height unit
+  2.375rem,
+
+  // breakpoint 768px: letter spacing
+  -.063rem,
+
+);
+// ===============================================
+
+// HELPER: font weight
+// ===============================================
+@include helper-font-weight(
+
+  // &-100
+  map-fonts(Google, Space-Grotesk--100),
+
+  // &-200
+  null,
+
+  // &-300
+  map-fonts(Google, Space-Grotesk--300),
+
+  // &-400
+  null,
+
+  // &-500
+  map-fonts(Google, Space-Grotesk--500),
+
+  // &-600
+  null,
+
+  // &-700
+  null,
+
+  // &-800
+  null,
+
+);
+// ===============================================
+
+// HELPER: font color
+// ===============================================
+@include helper-font-color(
+
+  // &--primary
+  map-colors(fucsias, theme-codymer--500),
+
+  // &--secondary
+  map-colors(pinks, theme-codymer--500),
+
+  // &--tertiary
+  map-colors(greens, theme-codymer--700),
+
+  // &--quaternary
+  map-colors(yellows, theme-codymer--500),
+
+  // &--quinary
+  map-colors(pinks, theme-codymer--200),
+
+  // &-senary
+  null,
+
+  // &-septenary
+  map-colors(blues, theme-codymer--500),
+
+  // &-octonary
+  null,
+
+  // &-nonary
+  null,
+
+  // &-denary
+  null,
+
+  // &--undenary
+  null,
+
+  // &-duodenary
+  null,
+
+  // &-tredenary
+  null,
+
+  // &-quadrodenary
+  null,
+
+);
+// ===============================================
+
+// HELPER: links
+// ===============================================
+@include helper-links();
+// ===============================================
+
+// HELPER: icons
+// ===============================================
+@include helper-icons();
+// ===============================================
+
+// LAYOUT: grid
+// ===============================================
+@include layout-grid(
+
+  // padding axis: x
+  .625rem,
+
+  // first gap value
+  .313rem,
+
+  // max width
+  1920px,
+
+  // breakpoint: 768px
+  768px,
+
+  // breakpoint 768px: padding axis: x
+  null,
+
+  // breakpoint 768px: gap
+  .938rem,
+
+  // breakpoint: 1280px
+  1280px,
+
+  // breakpoint 1280px: padding axis: x
+  2.5rem,
+
+  // breakpoint 1280px: gap
+  2rem,
+
+  // breakpoint: 1440px
+  1440px,
+
+  // breakpoint 1440px: padding axis x
+  5rem,
+
+  // breakpoint 1440px: gap
+  null,
+
+);
+// ===============================================
+
+// HELPER: texts
+// ===============================================
+@include helper-texts();
+// ===============================================

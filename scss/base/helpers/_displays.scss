@@ -1,0 +1,407 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: displays
+// ===============================================
+@mixin helper-displays() {
+
+  // .helper-display
+  .helper-display {
+
+    // &-none
+    &-none {
+      display: none;
+
+      // &-mo
+      &-mo {
+
+        display: none;
+        @include min-screen(768px) {
+          display: block;
+        }
+      }
+
+    }
+
+    // &-block
+    &-block {
+      display: block;
+    }
+
+    // &-contents
+    &-contents {
+      display: contents;
+    }
+
+    // &-flex
+    &-flex {
+      display: flex;
+
+      // &-inline
+      &-inline {
+        display: inline-flex;
+      }
+
+      // &--wrap
+      &--wrap {
+
+        // &-yes
+        &-yes {
+          flex-wrap: wrap;
+        }
+
+        // &-reverse
+        &-reverse {
+          flex-wrap: wrap-reverse;
+        }
+
+      }
+
+      // &--justify
+      &--justify {
+
+        // &-strt
+        &-strt {
+          justify-content: flex-start;
+        }
+
+        // &-end
+        &-end {
+          justify-content: flex-end;
+        }
+
+        // &-r
+        &-r {
+          justify-content: right;
+        }
+
+        // &-l
+        &-l {
+          justify-content: left;
+        }
+
+        // &-ctr
+        &-ctr {
+          justify-content: center;
+        }
+
+        // &-s-btw
+        &-s-btw {
+          justify-content: space-between;
+        }
+
+        // &-f-ard
+        &-s-ard {
+          justify-content: space-around;
+        }
+
+      }
+
+      // &--algn-i
+      &--algn-i {
+
+        // &-strt
+        &-strt {
+          align-items: flex-start;
+        }
+
+        // &-end
+        &-end {
+          align-items: flex-end;
+        }
+
+        // &-ctr
+        &-ctr {
+          align-items: center;
+        }
+
+        // &-bline
+        &-bline {
+          align-items: baseline;
+        }
+
+      }
+
+      // &--algn-cont
+      &--algn-cont {
+
+        // &-strt
+        &-strt {
+          align-content: flex-start;
+        }
+
+        // &-end
+        &-end {
+          align-content: flex-end;
+        }
+
+        // &-ctr
+        &-ctr {
+          align-content: center;
+        }
+
+        // &-space-btw
+        &-space-btw {
+          align-content: space-between;
+        }
+
+        // &-space-ard
+        &-space-ard {
+          align-content: space-around;
+        }
+
+      }
+
+    }
+
+    // &-grid
+    &-grid {
+      display: grid;
+
+      // &--justify-i
+      &--justify-i {
+
+        // &-strt
+        &-strt {
+          justify-items: start;
+        }
+
+        // &-end
+        &-end {
+          justify-items: end;
+        }
+
+        // &-ctr
+        &-ctr {
+          justify-items: center;
+        }
+
+      }
+
+      // &--justify-cont
+      &--justify-cont {
+
+        // &-strt
+        &-strt {
+          justify-content: start;
+        }
+
+        // &-end
+        &-end {
+          justify-content: flex-end;
+        }
+
+        // &-ctr
+        &-ctr {
+          align-content: center;
+        }
+
+        // &-space-btw
+        &-space-btw {
+          justify-content: space-between;
+        }
+
+        // &-space-ard
+        &-space-ard {
+          justify-content: space-around;
+        }
+
+        // &-space-evly
+        &-space-evly {
+          justify-content: space-evenly;
+        }
+
+      }
+
+      // &--algn-i
+      &--algn-i {
+
+        // &-strt
+        &-strt {
+          align-items: start;
+        }
+
+        // &-end
+        &-end {
+          align-items: end;
+        }
+
+        // &-ctr
+        &-ctr {
+          align-items: center;
+        }
+
+      }
+
+      // &--algn-cont
+      &--algn-cont {
+
+        // &-strt
+        &-strt {
+          align-content: start;
+        }
+
+        // &-end
+        &-end {
+          align-content: end;
+        }
+
+        // &-ctr
+        &-ctr {
+          align-content: center;
+        }
+
+        // &-space-ard
+        &-space-ard {
+          align-content: space-around;
+        }
+
+        // &-space-btw
+        &-space-btw {
+          align-content: space-between;
+        }
+
+        // &-space-evly
+        &-space-evly {
+          align-content: space-evenly;
+        }
+
+      }
+
+    }
+
+    // &-inline
+    &-inline {
+      display: inline;
+
+      // &-block
+      &-block {
+        display: inline-block;
+      }
+
+      // &-grid
+      &-grid {
+        display: inline-grid;
+      }
+
+      // &-table
+      &-table {
+        display: inline-table;
+      }
+
+    }
+
+    // &-list-item
+    &-list-item {
+      display: list-item;
+    }
+
+    // &-table
+    &-table {
+      display: table;
+
+      // &-caption
+      &-caption {
+        display: table-caption;
+      }
+
+      &-cell {
+        display: table-cell;
+      }
+
+      &-column {
+        display: table-column;
+
+        // &-group
+        &-group {
+          display: table-column-group
+        }
+
+      }
+
+      // &-footer
+      &-footer {
+
+        // &-group
+        &-group {
+          display: table-footer-group;
+        }
+
+      }
+
+      // &-header
+      &-header {
+
+        // &-group
+        &-group {
+          display: table-header-group;
+        }
+
+      }
+
+      // &-row
+      &-row {
+        display: table-row;
+
+        // &-group
+        &-group {
+          display: table-row-group;
+        }
+
+      }
+
+    }
+
+    // &-mo
+    &-mo {
+      @include min-screen(768px) {
+        @include hide-visually;
+      }
+
+    }
+
+    // &-sm
+    &-sm {
+      @include hide-visually;
+
+      @include min-screen(768px) {
+        @include unhide-visually;
+      }
+
+    }
+
+    // &-md
+    &-md {
+      @include hide-visually;
+
+      @include min-screen(1024px) {
+        @include unhide-visually;
+      }
+
+    }
+
+    // &-lg
+    &-lg {
+      @include hide-visually;
+
+      @include min-screen(1280px) {
+        @include unhide-visually;
+      }
+
+    }
+
+    // &-xlg
+    &-xlg {
+      @include hide-visually;
+
+      @include min-screen(1440px) {
+        @include unhide-visually;
+      }
+
+    }
+
+  }
+
+}

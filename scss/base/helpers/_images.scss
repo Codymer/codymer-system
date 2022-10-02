@@ -1,0 +1,22 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: images
+// ===============================================
+@mixin helper-images() {
+
+  // .helper-img
+  .helper-img {
+
+    // &-rd
+    &-rd {
+      @include size(null, auto);
+      display: block;
+      max-width: 100%;
+    }
+
+  }
+
+}

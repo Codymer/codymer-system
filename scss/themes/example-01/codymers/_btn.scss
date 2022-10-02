@@ -1,0 +1,265 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// CDMR: btn
+// ===============================================
+.cdmr-btn {
+  $self: &;
+  @include cdmr-btn;
+  @include border(all, .188rem, solid, null);
+  @include border-radius($radius--example-01);
+  transition: border-color .25s ease-out, color .25s ease-out, background-color .25s ease-out;
+
+  // &:hover
+  &:hover {
+    cursor: default;
+  }
+
+  // &:focus
+  &:focus {
+    outline: 0;
+  }
+
+  // &:focus-visible
+  &:focus-visible {
+    @include focus-custom($color-focus--example-01);
+  }
+
+  // &--primary
+  &--primary {
+    border-color: map-colors(blacks, theme-example-01--600);
+    background-color: map-colors(blacks, theme-example-01--600);
+  }
+
+  // &--secondary
+  &--secondary {
+    border-color: map-colors(blacks, theme-example-01--600);
+  }
+
+  // &--tertiary
+  &--tertiary {
+    border-color: map-colors(browns, theme-example-01--200);
+    background-color: map-colors(browns, theme-example-01--200);
+  }
+
+  // &--quaternary
+  &--quaternary {
+    border-color: map-colors(browns, theme-example-01--200);
+  }
+
+  // &--size
+  &--size {
+
+    // &-100
+    &-100 {
+      @include padding(.55rem .625rem .55rem .625rem);
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+
+    // &-200
+    &-200 {
+      @include padding(.75rem);
+      font-size: 1.125rem;
+      line-height: 1.25rem;
+    }
+
+    // &-300
+    &-300 {
+      @include padding(1.5rem);
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+    }
+
+  }
+
+  // &:where()
+  &:where(
+    #{ $self }--primary
+  ) {
+    color: map-colors(whites, theme--all);
+
+    // .cdmr
+    .cdmr {
+
+      // &-icon
+      &-icon {
+
+        // &:before
+        &:before {
+          filter: map-filters(whites, theme--all);
+        }
+
+      }
+
+    }
+
+    // &:hover
+    &:hover {
+      border-color: map-colors(browns, theme-example-01--300);
+      background-color: map-colors(browns, theme-example-01--300);
+    }
+
+  }
+
+  // &:where()
+  &:where(
+    #{ $self }--tertiary
+  ) {
+    color: map-colors(blacks, theme-example-01--600);
+
+    // .cdmr
+    .cdmr {
+
+      // &-icon
+      &-icon {
+
+        // &:before
+        &:before {
+          filter: map-filters(whites, theme--all);
+        }
+
+      }
+
+    }
+
+    // &:hover
+    &:hover {
+      color: map-colors(whites, theme--all);
+      border-color: map-colors(browns, theme-example-01--300);
+      background-color: map-colors(browns, theme-example-01--300);
+    }
+
+  }
+
+  // &:where()
+  &:where(
+    #{ $self }--secondary,
+    #{ $self }--quaternary
+  ) {
+    color: map-colors(blacks, theme-example-01--600);
+
+    // .cdmr
+    .cdmr {
+
+      // &-icon
+      &-icon {
+
+        // &:before
+        &:before {
+          filter: map-filters(browns, theme-example-01--300);
+        }
+
+      }
+
+    }
+
+    // &:hover, &:focus-within
+    &:hover {
+      border-color: map-colors(browns, theme-example-01--300);
+      color: map-colors(browns, theme-example-01--300);
+    }
+
+  }
+
+  // &:disabled
+  &:disabled {
+    cursor: not-allowed;
+    border-color: map-colors(greys, theme-all--500);
+  }
+
+  // &:where():disabled
+  &:where(
+    #{ $self }--primary,
+    #{ $self }--tertiary
+  ):disabled {
+    color: map-colors(whites, theme--all);
+    background-color: map-colors(greys, theme-all--500);
+  }
+
+  // &:where():disabled
+  &:where(
+    #{ $self }--secondary,
+    #{ $self }--quaternary
+  ):disabled {
+    color: map-colors(greys, theme-all--500);
+  }
+
+  // &--has
+  &--has {
+
+    // &-icon
+    &-icon {
+      @include position(relative);
+
+      // .cdmr
+      .cdmr {
+
+        // &-icon
+        &-icon {
+          @include position(absolute, 0, null, 0, .313rem);
+          @include margin(auto null auto null);
+        }
+
+      }
+
+      // &-size
+      &-size {
+
+        // &-100
+        &-100 {
+          @include padding(null null null 2rem);
+
+          // .cdmr
+          .cdmr {
+
+            // &-icon
+            &-icon {
+              @include size(1.5rem);
+            }
+
+          }
+
+        }
+
+        // &-200
+        &-200 {
+          @include padding(null null null 2.8rem);
+
+          // .cdmr
+          .cdmr {
+
+            // &-icon
+            &-icon {
+              @include size(2.5rem);
+            }
+
+          }
+
+        }
+
+        // &-300
+        &-300 {
+          @include padding(null null null 3.2rem);
+
+          // .cdmr
+          .cdmr {
+
+            // &-icon
+            &-icon {
+              @include size(3rem);
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,210 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// CDMR: btn
+// ===============================================
+.cdmr-btn-iconized {
+  $self: &;
+  @include cdmr-btn-iconized();
+  @include border(all, .188rem, solid, null);
+  transition: border-color .25s ease-out, color .25s ease-out, background-color .25s ease-out;
+
+
+  // &:hover
+  &:hover {
+    cursor: default;
+  }
+
+  // &:focus
+  &:focus {
+    outline: 0;
+  }
+
+  // &:focus-visible
+  &:focus-visible {
+    @include focus-custom($color-focus--codymer);
+  }
+
+  // &--primary
+  &--primary {
+    border-color: map-colors(purples, theme-codymer--600);
+    background-color: map-colors(purples, theme-codymer--600);
+  }
+
+  // &--secondary
+  &--secondary {
+    border-color: map-colors(purples, theme-codymer--600);
+
+    // .cdmr
+    .cdmr {
+
+      // &-icon
+      &-icon {
+
+        // &:before
+        &:before {
+          filter: map-filters(purples, theme-codymer--600);
+        }
+
+      }
+
+    }
+
+  }
+
+  // &--tertiary
+  &--tertiary {
+    border-color: map-colors(greens, theme-codymer--700);
+    background-color: map-colors(greens, theme-codymer--700);
+  }
+
+  // &--quaternary
+  &--quaternary {
+    border-color: map-colors(greens, theme-codymer--700);
+
+    // .cdmr
+    .cdmr {
+
+      // &-icon
+      &-icon {
+
+        // &:before
+        &:before {
+          filter: map-filters(greens, theme-codymer--700);
+        }
+
+      }
+
+    }
+
+  }
+
+  // &--shape
+  &--shape {
+
+    // &-box
+    &-box {
+      @include border-radius($radius--codymer);
+    }
+
+    // &-circle
+    &-circle {
+      border-radius: 50%;
+    }
+
+  }
+
+  // &--size
+  &--size {
+
+    // &-100
+    &-100 {
+      @include size(2.5rem);
+
+      // .cdmr
+      .cdmr {
+
+        // &-icon
+        &-icon {
+
+          // &:before
+          &:before {
+            @include size(85%);
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  // &:where()
+  &:where(
+    #{ $self }--primary,
+    #{ $self }--tertiary
+  ) {
+
+    // .cdmr
+    .cdmr {
+
+      // &-icon
+      &-icon {
+
+        // &:before
+        &:before {
+          filter: map-filters(whites, theme--all);
+        }
+
+      }
+
+    }
+
+    // &:hover
+    &:hover {
+      border-color: map-colors(fucsias, theme-codymer--500);
+      background-color: map-colors(fucsias, theme-codymer--500);
+    }
+
+  }
+
+  // &:where
+  &:where(
+    #{ $self }--secondary,
+    #{ $self }--quaternary
+  ) {
+
+    // behavior-in-ancestor
+    @include behavior-in-ancestor(helper-bg-color-senary) {
+      border-color: map-colors(whites, theme--all);
+
+      // .cdmr
+      .cdmr {
+
+        // &-icon
+        &-icon {
+
+          // &:before
+          &:before {
+            filter: map-filters(whites, theme--all);
+          }
+
+        }
+
+      }
+
+    }
+
+    // &:hover
+    &:hover {
+      border-color: map-colors(fucsias, theme-codymer--500);
+
+      // .cdmr
+      .cdmr {
+
+        // &-icon
+        &-icon {
+
+          // &:before
+          &:before {
+            filter: map-filters(fucsias, theme-codymer--500);
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  // &--has
+  &--has {}
+
+  // &--is
+  &--is {}
+
+}

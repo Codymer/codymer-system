@@ -1,0 +1,428 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index'as *;
+// ===============================================
+
+// MIXIN HELPER: backgrounds
+// ===============================================
+@mixin helper-backgrounds(
+  $helper-background-color--primary: null,
+  $helper-background-color--secondary: null,
+  $helper-background-color--tertiary: null,
+  $helper-background-color--quaternary: null,
+  $helper-background-color--quinary: null,
+  $helper-background-color--senary: null,
+  $helper-background-color--septenary: null,
+  $helper-background-color--octonary: null,
+  $helper-background-color--nonary: null,
+  $helper-background-color--denary: null,
+  $helper-background-color--undenary: null,
+  $helper-background-color--duodenary: null,
+  $helper-background-color--trendary: null,
+) {
+
+  // .helper-bg
+  .helper-bg {
+
+    // &-color
+    &-color {
+
+      // &-black
+      &-black {
+        background-color: map-colors(blacks, theme--all);
+      }
+
+      // &-white
+      &-white {
+        background-color: map-colors(whites, theme--all);
+      }
+
+      // &-blue
+      &-blue {
+
+        // &-facebook
+        &-facebook {
+
+          // &-500
+          &-500 {
+            background-color: map-colors(blues, theme-facebook--500);
+          }
+
+        }
+
+        // &-instagram
+        &-instagram {
+
+          // generals
+          &-500 {
+            background-color: map-colors(blues, theme-instagram--500);
+          }
+
+        }
+
+        // &-twitter
+        &-twitter {
+
+          // &-500
+          &-500 {
+            background-color: map-colors(blues, theme-twitter--500);
+          }
+
+        }
+
+      }
+
+      // &-green
+      &-green {
+
+        // &-whatsapp
+        &-whatsapp {
+
+          // &-400
+          &-400 {
+            background-color: map-colors(greens, theme-whatsapp--400);
+          }
+
+          // &-500
+          &-500 {
+            background-color: map-colors(greens, theme-whatsapp--500);
+          }
+
+        }
+
+      }
+
+      // &-purple
+      &-purple {
+
+        // &-instagram
+        &-instagram {
+
+          // &-500
+          &-500 {
+            background-color: map-colors(purples, theme-instagram--500);
+          }
+
+        }
+
+      }
+
+      // &-transparent
+      &-transparent {
+
+        // &-mo
+        &-mo {
+          @include breakpoint(mobileonly) {
+            background-color: transparent;
+          }
+
+        }
+
+        // &-sm
+        &-sm {
+          @include min-screen(768px) {
+            background-color: transparent;
+          }
+
+        }
+
+        // &-md
+        &-md {
+          @include min-screen(1024px) {
+            background-color: transparent;
+          }
+
+        }
+
+        // &-lg
+        &-lg {
+          @include min-screen(1280px) {
+            background-color: transparent;
+          }
+
+        }
+
+      }
+
+      // &-primary
+      &-primary {
+        background-color: $helper-background-color--primary;
+      }
+
+      // &-secondary
+      &-secondary {
+        background-color: $helper-background-color--secondary;
+      }
+
+      // &-tertiary
+      &-tertiary {
+        background-color: $helper-background-color--tertiary;
+      }
+
+      // &-quaternary
+      &-quaternary {
+        background-color: $helper-background-color--quaternary;
+      }
+
+      // &-quinary
+      &-quinary {
+        background-color: $helper-background-color--quinary;
+      }
+
+      // &-senary
+      &-senary {
+        background-color: $helper-background-color--senary;
+      }
+
+      // &-septenary
+      &-septenary {
+        background-color: $helper-background-color--septenary;
+      }
+
+      // &-octonary
+      &-octonary {
+        background-color: $helper-background-color--octonary;
+      }
+
+      // &-nonary
+      &-nonary {
+        background-color: $helper-background-color--nonary;
+      }
+
+      // &-denary
+      &-denary {
+        background-color: $helper-background-color--denary;
+      }
+
+      // &-undenary
+      &-undenary {
+        background-color: $helper-background-color--undenary;
+      }
+
+      // &-duodenary
+      &-duodenary {
+        background-color: $helper-background-color--duodenary;
+      }
+
+      // &-tredenary
+      &-tredenary {
+        background-color: $helper-background-color--trendary ;
+      }
+
+    }
+
+    // &-auto
+    &-auto {
+      background-size: auto;
+    }
+
+    // &-cover
+    &-cover {
+      background-size: cover;
+    }
+
+    // &-contain
+    &-contain {
+      background-size: contain;
+    }
+
+  }
+
+}
+
+// MIXIN HELPER: backgrounds color behavior
+// ===============================================
+@mixin helper-backgrounds-color-behavior(
+  $helper-background--black-behavior-color: null,
+  $helper-background--white-behavior-color: null,
+  $helper-background--primary-behavior-color: null,
+  $helper-background--secondary-behavior-color: null,
+  $helper-background--tertiary-behavior-color: null,
+  $helper-background--quaternary-behavior-color: null,
+  $helper-background--quinary-behavior-color: null,
+  $helper-background--senary-behavior-color: null,
+  $helper-background--septenary-behavior-color: null,
+  $helper-background--octonary-behavior-color: null,
+  $helper-background--nonary-behavior-color: null,
+  $helper-background--denary-behavior-color: null,
+  $helper-background--undenary-behavior-color: null,
+  $helper-background--duodenary-behavior-color: null,
+  $helper-background--tredenary-behavior-color: null,
+) {
+
+  // .helper-bg
+  .helper-bg {
+
+    // &-color
+    &-color {
+
+      // &-black
+      &-black {
+        color: $helper-background--black-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--black-behavior-color;
+        }
+
+      }
+
+      // &-white
+      &-white {
+        color: $helper-background--white-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--white-behavior-color;
+        }
+
+      }
+
+      // &-primary
+      &-primary {
+        color: $helper-background--primary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--primary-behavior-color;
+        }
+
+      }
+
+      // &-secondary
+      &-secondary {
+        color: $helper-background--secondary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--secondary-behavior-color;
+        }
+
+      }
+
+      // &-tertiary
+      &-tertiary {
+        color: $helper-background--tertiary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--tertiary-behavior-color;
+        }
+
+      }
+
+      // &-quaternary
+      &-quaternary {
+        color: $helper-background--quaternary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--quaternary-behavior-color;
+        }
+
+      }
+
+      // &-quinary
+      &-quinary {
+        color: $helper-background--quinary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--quinary-behavior-color;
+        }
+
+      }
+
+      // &-senary
+      &-senary {
+        color: $helper-background--senary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--senary-behavior-color;
+        }
+
+      }
+
+      // &-septenary
+      &-septenary {
+        color: $helper-background--septenary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--septenary-behavior-color;
+        }
+
+      }
+
+      // &-octonary
+      &-octonary {
+        color: $helper-background--octonary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--octonary-behavior-color;
+        }
+
+      }
+
+      // &-nonary
+      &-nonary {
+        color: $helper-background--nonary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--nonary-behavior-color;
+        }
+
+      }
+
+      // &-denary
+      &-denary {
+        color: $helper-background--denary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--denary-behavior-color;
+        }
+
+      }
+
+      // &-undenary
+      &-undenary {
+        color: $helper-background--undenary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--undenary-behavior-color;
+        }
+
+      }
+
+      // &-duodenary
+      &-duodenary {
+        color: $helper-background--duodenary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--duodenary-behavior-color;
+        }
+
+      }
+
+      // &-tredenary
+      &-tredenary {
+        color: $helper-background--tredenary-behavior-color;
+
+        // *
+        * {
+          color: $helper-background--tredenary-behavior-color;
+        }
+
+      }
+
+    }
+
+  }
+
+}

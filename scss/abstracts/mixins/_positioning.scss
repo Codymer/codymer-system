@@ -1,0 +1,16 @@
+// ABSTRACTS
+// ================================================
+@use '../variables/variables' as *;
+@use '../maps/maps' as *;
+@use '../functions/functions' as *;
+// ================================================
+
+// MIXIN POSITIONING: position
+// ===============================================
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

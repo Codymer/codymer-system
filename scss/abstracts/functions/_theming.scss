@@ -1,0 +1,16 @@
+// FUNCTIONS: theme
+// ===============================================
+@function functionBrandSet($theme-set-string) {
+
+  // @IF
+  @if $theme-set-string == "" {
+    @return unquote($theme-set-string);
+  }
+
+  // @ELSE
+  @else {
+    @return unquote(".cdmr--theme-" + $theme-set-string);
+  }
+
+}
+// ===============================================

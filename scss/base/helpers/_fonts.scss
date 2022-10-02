@@ -1,0 +1,327 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: font-color
+// ===============================================
+@mixin helper-font-color(
+  $helper-color--primary: null,
+  $helper-color--secondary: null,
+  $helper-color--tertiary: null,
+  $helper-color--quaternary: null,
+  $helper-color--quinary: null,
+  $helper-color--senary: null,
+  $helper-color--septenary: null,
+  $helper-color--octonary: null,
+  $helper-color--nonary: null,
+  $helper-color--denary: null,
+  $helper-color--undenary: null,
+  $helper-color--duodenary: null,
+  $helper-color--tredenary: null,
+  $helper-color--quadrodenary: null
+) {
+
+  // .helper-font
+  .helper-font-color {
+
+    // &-black
+    &-black {
+      color: map-colors(blacks, theme--all);
+      @include behavior-in-ancestor(helper-bg-color-black) {
+        color: map-colors(whites, theme--all);
+      }
+
+    }
+
+    // &-blue
+    &-blue {
+
+      // &-facebook
+      &-facebook {
+
+        // &-500
+        &-500 {
+          color: map-colors(blues, theme-facebook--500);
+        }
+
+      }
+
+      // &-instagram
+      &-instagram {
+
+        // generals
+        &-500 {
+          color: map-colors(blues, theme-instagram--500);
+        }
+
+      }
+
+      // &-twitter
+      &-twitter {
+
+        // &-500
+        &-500 {
+          color: map-colors(blues, theme-twitter--500);
+        }
+
+      }
+
+    }
+
+    // &-green
+    &-green {
+
+      // &-whatsapp
+      &-whatsapp {
+
+        // &-500
+        &-500 {
+          color: map-colors(greens, theme-whatsapp--500);
+        }
+
+      // end // &Whatsapp
+      }
+
+    }
+
+    // &-purple
+    &-purple {
+
+      // &-instagram
+      &-instagram {
+
+        // &-500
+        &-500 {
+          color: map-colors(purples, theme-instagram--500);
+        }
+
+      }
+
+    }
+
+    // &-white
+    &-white {
+      color: map-colors(whites, theme--all);
+    }
+
+    // &-primary
+    &-primary {
+      color: $helper-color--primary;
+    }
+
+    // &-secondary
+    &-secondary {
+      color: $helper-color--secondary;
+    }
+
+    // &-tertiary
+    &-tertiary {
+      color: $helper-color--tertiary;
+    }
+
+    // &-quaternary
+    &-quaternary {
+      color: $helper-color--quaternary;
+    }
+
+    // &-quinary
+    &-quinary {
+      color: $helper-color--quinary;
+    }
+
+    // &-senary
+    &-senary {
+      color: $helper-color--senary;
+    }
+
+    // &-septenary
+    &-septenary {
+      color: $helper-color--septenary;
+    }
+
+    // &-octonary
+    &-octonary {
+      color: $helper-color--octonary;
+    }
+
+    // &-nonary
+    &-nonary {
+      color: $helper-color--nonary;
+    }
+
+    // &-denary
+    &-denary {
+      color: $helper-color--denary;
+    }
+
+    // &-undenary
+    &-undenary {
+      color: $helper-color--undenary;
+    }
+
+    // &-duodenary
+    &-duodenary {
+      color: $helper-color--duodenary;
+    }
+
+    // &-tredenary
+    &-tredenary {
+      color: $helper-color--tredenary;
+    }
+
+    // &-quadrodenary
+    &-quadrodenary {
+      color: $helper-color--quadrodenary;
+    }
+
+  }
+
+}
+
+// MIXIN HELPER: font-weight
+// ===============================================
+@mixin helper-font-weight(
+  $helper-weight--100: null,
+  $helper-weight--200: null,
+  $helper-weight--300: null,
+  $helper-weight--400: null,
+  $helper-weight--500: null,
+  $helper-weight--600: null,
+  $helper-weight--700: null,
+  $helper-weight--800: null
+) {
+
+  // .helper-font-weight
+  .helper-font-weight {
+
+    // &-100
+    &-100 {
+      font-family: $helper-weight--100;
+    }
+
+    // &-200
+    &-200 {
+      font-family: $helper-weight--200;
+    }
+
+    // &-300
+    &-300 {
+      font-family: $helper-weight--300;
+    }
+
+    // &-400
+    &-400 {
+      font-family: $helper-weight--400;
+    }
+
+    // &-500
+    &-500 {
+      font-family: $helper-weight--500;
+    }
+
+    // &-600
+    &-600 {
+      font-family: $helper-weight--600;
+    }
+
+    // &-600
+    &-700 {
+      font-family: $helper-weight--700;
+    }
+
+    // &-800
+    &-800 {
+      font-family: $helper-weight--800;
+    }
+
+  }
+
+}
+
+// MIXIN HELPER: font-size
+// ===============================================
+@mixin helper-font-size(
+  $helper-font-size--density: null,
+  $helper-font-size--unit: null,
+  $helper-lineheight--unit: null,
+  $helper-spacing--unit: null,
+  $helper-font--breakpoint-01: null,
+  $helper-font-breakpoint-01--unit: null,
+  $helper-line-breakpoint-01--unit: null,
+  $helper-spacing-breakpoint-01--unit: null,
+  $helper-font--breakpoint-02: null,
+  $helper-font-breakpoint-02--unit: null,
+  $helper-line-breakpoint-02--unit: null,
+  $helper-spacing-breakpoint-02--unit: null,
+  $helper-font--breakpoint-03: null,
+  $helper-font-breakpoint-03--unit: null,
+  $helper-line-breakpoint-03--unit: null,
+  $helper-spacing-breakpoint-03--unit: null,
+  $helper-font--breakpoint-04: null,
+  $helper-font-breakpoint-04--unit: null,
+  $helper-line-breakpoint-04--unit: null,
+  $helper-spacing-breakpoint-04--unit: null,
+  $helper-font--breakpoint-05: null,
+  $helper-font-breakpoint-05--unit: null,
+  $helper-line-breakpoint-05--unit: null,
+  $helper-spacing-breakpoint-05--unit: null,
+  $helper-font--breakpoint-06: null,
+  $helper-font-breakpoint-06--unit: null,
+  $helper-line-breakpoint-06--unit: null,
+  $helper-spacing-breakpoint-06--unit: null,
+  $helper-font--breakpoint-07: null,
+  $helper-font-breakpoint-07--unit: null,
+  $helper-line-breakpoint-07--unit: null,
+  $helper-spacing-breakpoint-07--unit: null
+) {
+
+  // .helper-font-size
+  .helper-font-size {
+
+    // set density
+    &-#{$helper-font-size--density} {
+      font-size: $helper-font-size--unit;
+      line-height: $helper-lineheight--unit;
+      letter-spacing: $helper-spacing--unit;
+      @include min-screen($helper-font--breakpoint-01) {
+        font-size: $helper-font-breakpoint-01--unit;
+        line-height: $helper-line-breakpoint-01--unit;
+        letter-spacing: $helper-spacing-breakpoint-01--unit;
+      }
+      @include min-screen($helper-font--breakpoint-02) {
+        font-size: $helper-font-breakpoint-02--unit;
+        line-height: $helper-line-breakpoint-02--unit;
+        letter-spacing: $helper-spacing-breakpoint-02--unit;
+      }
+      @include min-screen($helper-font--breakpoint-03) {
+        font-size: $helper-font-breakpoint-03--unit;
+        line-height: $helper-line-breakpoint-03--unit;
+        letter-spacing: $helper-spacing-breakpoint-03--unit;
+      }
+      @include min-screen($helper-font--breakpoint-04) {
+        font-size: $helper-font-breakpoint-04--unit;
+        line-height: $helper-line-breakpoint-04--unit;
+        letter-spacing: $helper-spacing-breakpoint-04--unit;
+      }
+      @include min-screen($helper-font--breakpoint-05) {
+        font-size: $helper-font-breakpoint-05--unit;
+        line-height: $helper-line-breakpoint-05--unit;
+        letter-spacing: $helper-spacing-breakpoint-05--unit;
+      }
+      @include min-screen($helper-font--breakpoint-06) {
+        font-size: $helper-font-breakpoint-06--unit;
+        line-height: $helper-line-breakpoint-06--unit;
+        letter-spacing: $helper-spacing-breakpoint-06--unit;
+      }
+      @include min-screen($helper-font--breakpoint-07) {
+        font-size: $helper-font-breakpoint-07--unit;
+        line-height: $helper-line-breakpoint-07--unit;
+        letter-spacing: $helper-spacing-breakpoint-07--unit;
+      }
+
+    }
+
+  }
+
+}

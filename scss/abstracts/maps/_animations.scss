@@ -1,0 +1,109 @@
+// MAP: ANIMATIONS
+// ===============================================
+$map-animations:(
+
+  // fadeIn
+  fadeIn: (
+    0%: (
+      opacity: 0
+    ),
+    100%: (
+      opacity: 1,
+    )
+  ),
+
+  // fadeInTop
+  fadeInTop: (
+    0%: (
+      transform: translateY(-5rem),
+      opacity: 0
+    ),
+    100%: (
+      transform: translateY(0),
+      opacity: 1
+    )
+  ),
+
+  // fadeInRgt
+  fadeInRgt: (
+    0%: (
+      transform: translateX(5rem),
+      opacity: 0
+    ),
+    100%: (
+      transform: translateX(0),
+      opacity: 1
+    )
+  ),
+
+  // fadeInTBttm
+  fadeInBttm: (
+    0%: (
+      transform: translateY(5rem),
+      opacity: 0
+    ),
+    100%: (
+      transform: translateY(0),
+      opacity: 1
+    )
+  ),
+
+  // fadeInLft
+  fadeInLft: (
+    0%: (
+      transform: translateX(-5rem),
+      opacity: 0
+    ),
+    100%: (
+      transform: translateX(0),
+      opacity: 1
+    )
+  ),
+
+  // scaleIn
+  scaleIn: (
+    0%: (
+      transform: scale(0),
+      opacity: 1,
+    ),
+    100%: (
+      transform: scale(1),
+      opacity: 1,
+    )
+  ),
+
+);
+// ===============================================
+
+// FUNCTION MAP-ANIMATION
+// ===============================================
+@mixin keyframe-gen($name) {
+  @keyframes #{$name} {
+    @each $position, $change in map-get($map-animations, $name) {
+      #{$position} {
+        @each $prop, $val in $change {
+          #{$prop}: #{$val};
+        }
+      }
+    }
+  }
+};
+
+$included-animations: ();
+
+
+@mixin animate($name, $duration: null, $timing: null, $delay: null, $iterations: null, $backwards: null) {
+  $exists: index($included-animations, '#{$name}');
+  @if not $exists {
+    @at-root {
+      @include keyframe-gen($name);
+    }
+    $included-animations: append($included-animations, '#{$name}') !global;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: $name $duration $timing $delay $iterations $backwards;
+  }
+
+};
+// ===============================================

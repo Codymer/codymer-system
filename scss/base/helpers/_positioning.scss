@@ -1,0 +1,67 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: positioning
+// ===============================================
+@mixin helper-positioning() {
+
+  // .helper-pos
+  .helper-pos {
+
+    // &-absolute
+    &-absolute {
+      @include position(absolute);
+    }
+
+    // &-fixed
+    &-fixed {
+      @include position(fixed);
+    }
+
+    // &-relative
+    &-relative {
+      @include position(relative);
+    }
+
+    // &-static
+    &-static {
+      @include position(static);
+    }
+
+    // &-sticky
+    &-sticky {
+      @include position(sticky);
+    }
+
+    // &--t
+    &-t {
+      top: 0;
+    }
+
+    // &-r
+    &-r {
+      right: 0;
+    }
+
+    // &-b
+    &-b {
+      bottom: 0;
+    }
+
+    // &-l
+    &-l {
+      left: 0;
+    }
+
+    // &-ctr
+    &-ctr {
+      @include margin(auto);
+      right: 0;
+      left: 0;
+    }
+
+  }
+
+}

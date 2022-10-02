@@ -1,0 +1,85 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: texts
+// ===============================================
+@mixin helper-texts() {
+
+  // .helper-txt
+  .helper-txt {
+
+    // &-hide
+    &-hide {
+      @include hide-visually;
+
+      // &-sm
+      &-sm {
+        @include max-screen(768px) {
+          @include hide-visually;
+        }
+      }
+
+      // &-md
+      &-md {
+        @include max-screen(1024px) {
+          @include hide-visually;
+        }
+      }
+
+    }
+
+    // &-algn
+    &-algn {
+
+      // &-ctr
+      &-ctr {
+        text-align: center;
+      }
+
+      // &-e
+      &-e {
+        text-align: end;
+      }
+
+      // &-j
+      &-j {
+        text-align: justify;
+      }
+
+      // &-r
+      &-r {
+        text-align: right;
+      }
+
+      // &-str
+      &-str {
+        text-align: start;
+      }
+
+    }
+
+    // &-decor
+    &-decor {
+
+      // &-underline
+      &-underline {
+        text-decoration-line: underline;
+      }
+
+      // &-overline
+      &-overline {
+        text-decoration-line: overline;
+      }
+
+      // &-line-through
+      &-line-through {
+        text-decoration-line: line-through;
+      }
+
+    }
+
+  }
+
+}

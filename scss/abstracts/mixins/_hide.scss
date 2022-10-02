@@ -1,0 +1,29 @@
+// ABSTRACTS
+// ================================================
+@use '../variables/variables' as *;
+@use '../maps/maps' as *;
+@use '../functions/functions' as *;
+// ================================================
+
+// MIXIN HIDE: visually
+// ===============================================
+@mixin hide-visually() {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// MIXIN HIDE: unhide visually
+// ===============================================
+@mixin unhide-visually() {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+}

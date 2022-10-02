@@ -1,0 +1,179 @@
+// ABSTRACTS
+// ================================================
+@use '../variables/variables' as *;
+@use '../maps/maps' as *;
+@use '../functions/functions' as *;
+// ================================================
+
+// MIXIN PADDING
+// ===============================================
+@charset "UTF-8";
+
+/// Transforms shorthand to its shortest possible form.
+///
+/// @argument {list} $values
+///   List of directional values.
+///
+/// @example scss
+///   $values: _compact-shorthand(10px 20px 10px 20px);
+///
+///   // Output
+///   $values: 10px 20px;
+///
+/// @return {list}
+///
+/// @access private
+
+@function _compact-shorthand($values) {
+  $output: null;
+
+  $a: nth($values, 1);
+  $b: if(length($values) < 2, $a, nth($values, 2));
+  $c: if(length($values) < 3, $a, nth($values, 3));
+  $d: if(length($values) < 2, $a, nth($values, if(length($values) < 4, 2, 4)));
+
+  @if $a == 0 { $a: 0; }
+  @if $b == 0 { $b: 0; }
+  @if $c == 0 { $c: 0; }
+  @if $d == 0 { $d: 0; }
+
+  @if $a == $b and $a == $c and $a == $d {
+    $output: $a;
+  } @else if $a == $c and $b == $d {
+    $output: $a $b;
+  } @else if $b == $d {
+    $output: $a $b $c;
+  } @else {
+    $output: $a $b $c $d;
+  }
+
+  @return $output;
+}
+
+@charset "UTF-8";
+
+/// Checks if a list does not contain any values.
+///
+/// @argument {list} $list
+///   The list to check against.
+///
+/// @return {boolean}
+///
+/// @access private
+
+@function _contains-falsy($list) {
+  @each $item in $list {
+    @if not $item {
+      @return true;
+    }
+  }
+
+  @return false;
+}
+
+@charset "UTF-8";
+
+/// Builds directional properties by parsing CSS shorthand values. For example,
+/// a value of `10px null` will output top and bottom directional properties,
+/// but the `null` skips left and right from being output.
+///
+/// @argument {string} $property
+///   Base property.
+///
+/// @argument {string} $suffix
+///   Suffix to append. Use `null` to omit.
+///
+/// @argument {list} $values
+///   List of values to set for the property.
+///
+/// @example scss
+///   .element {
+///     @include _directional-property(border, width, null 5px);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     border-right-width: 5px;
+///     border-left-width: 5px;
+///   }
+///
+/// @require {function} _compact-shorthand
+///
+/// @require {function} _contains-falsy
+///
+/// @access private
+
+@mixin _directional-property(
+  $property,
+  $suffix,
+  $values
+) {
+  $top: $property + "-top" + if($suffix, "-#{$suffix}", "");
+  $bottom: $property + "-bottom" + if($suffix, "-#{$suffix}", "");
+  $left: $property + "-left" + if($suffix, "-#{$suffix}", "");
+  $right: $property + "-right" + if($suffix, "-#{$suffix}", "");
+  $all: $property + if($suffix, "-#{$suffix}", "");
+
+  $values: _compact-shorthand($values);
+
+  @if _contains-falsy($values) {
+    @if nth($values, 1) { #{$top}: nth($values, 1); }
+
+    @if length($values) == 1 {
+      @if nth($values, 1) { #{$right}: nth($values, 1); }
+    } @else {
+      @if nth($values, 2) { #{$right}: nth($values, 2); }
+    }
+
+    @if length($values) == 2 {
+      @if nth($values, 1) { #{$bottom}: nth($values, 1); }
+      @if nth($values, 2) { #{$left}: nth($values, 2); }
+    } @else if length($values) == 3 {
+      @if nth($values, 3) { #{$bottom}: nth($values, 3); }
+      @if nth($values, 2) { #{$left}: nth($values, 2); }
+    } @else if length($values) == 4 {
+      @if nth($values, 3) { #{$bottom}: nth($values, 3); }
+      @if nth($values, 4) { #{$left}: nth($values, 4); }
+    }
+  } @else {
+    #{$all}: $values;
+  }
+}
+
+@charset "UTF-8";
+
+/// Provides a concise, one-line method for setting `padding` on specific edges
+/// of a box. Use a `null` value to “skip” edges of the box with standard
+/// CSS shorthand.
+///
+/// @argument {list} $values
+///   List of padding values; accepts CSS shorthand.
+///
+/// @example scss
+///   .element {
+///     @include padding(null auto);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     padding-left: auto;
+///     padding-right: auto;
+///   }
+///
+/// @example scss
+///   .element {
+///     @include padding(10px 3em 20vh null);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     padding-bottom: 20vh;
+///     padding-right: 3em;
+///     padding-top: 10px;
+///   }
+///
+/// @require {mixin} _directional-property
+
+@mixin padding($values) {
+  @include _directional-property(padding, null, $values);
+}

@@ -1,0 +1,65 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: alignments
+// ===============================================
+@mixin helper-alignments() {
+
+  // .helper-algn
+  .helper-algn {
+
+    // &-b
+    &-b {
+      vertical-align: bottom;
+    }
+
+    // &-bline
+    &-bline {
+      vertical-align: baseline;
+    }
+
+    // &-ctr
+    &-ctr {
+      @include margin(null auto null auto);
+    }
+
+    // &-midl
+    &-midl {
+      vertical-align: middle;
+    }
+
+    // &-sub
+    &-sub {
+      vertical-align: sub;
+    }
+
+    // &-super
+    &-super {
+      vertical-align: super;
+    }
+
+    // &-t
+    &-t {
+      vertical-align: top;
+    }
+
+    // &-txt
+    &-txt {
+
+      // &-t
+      &-b {
+        vertical-align: text-bottom
+      }
+
+      // &-t
+      &-t {
+        vertical-align: text-top
+      }
+
+    }
+
+  }
+
+}

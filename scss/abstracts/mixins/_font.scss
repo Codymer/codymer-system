@@ -1,0 +1,71 @@
+// ABSTRACTS
+// ================================================
+@use '../variables/variables' as *;
+@use '../maps/maps' as *;
+@use '../functions/functions' as *;
+// ================================================
+
+// FONT FACE
+// ===============================================
+// https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+
+// String Replace
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// Font family
+@mixin font-family($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		src: $src;
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+
+	@content;
+
+}
+
+// FONT-SETUP
+// ===============================================
+@mixin font-setup(
+	$font-setup--fontStyle: null,
+	$font-setup--fontVariant: null,
+	$font-setup--fontWeight: null,
+	$font-setup--fontSizeLineHeight: null,
+	$font-setup--fontFamily: null
+) {
+
+	font:
+		$font-setup--fontStyle // font-style
+		$font-setup--fontVariant // font-variant
+		#{$font-setup--fontWeight} // font-weight
+		#{$font-setup--fontSizeLineHeight} // font-size / line-height
+		$font-setup--fontFamily; // font-family
+}

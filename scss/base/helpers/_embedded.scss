@@ -1,0 +1,57 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: embedded
+// ===============================================
+@mixin helper-embedded() {
+
+  // .helper-embed
+  .helper-embed {
+
+    // &-rd
+    &-rd {
+      @include position(relative);
+      @include padding(0);
+      @include size(null, 0);
+      display: block;
+      overflow: hidden;
+
+      // &__item
+      &__item {
+        @include position(absolute, 0, null, 0, 0);
+        @include size(100%);
+        @include border(all, 0, null, null);
+      }
+
+      // &-16by9
+      &--16by9 {
+        @include padding(null null 56.25% null);
+      }
+
+      // &--8by5
+      &--8by5 {
+        @include padding(null null 62.5% null);
+      }
+
+      // &--3by2
+      &--3by2 {
+        @include padding(null null 66.66% null);
+      }
+
+      // &-4by3
+      &--4by3 {
+        @include padding(null null 75% null);
+      }
+
+      // &-1by1
+      &--1by1 {
+        @include padding(null null 100% null);
+      }
+
+    }
+
+  }
+
+}

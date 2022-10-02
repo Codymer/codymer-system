@@ -1,0 +1,40 @@
+// ABSTRACTS
+// ================================================
+@use '../variables/variables' as *;
+@use '../maps/maps' as *;
+@use '../functions/functions' as *;
+// ================================================
+
+// MIXIN: triangle
+// ===============================================
+@mixin triangle($triangle--size, $triangle--color, $triangle--direction) {
+  height: 0;
+  width: 0;
+
+  $triangle--width: nth($triangle--size, 1);
+  $triangle--height: nth($triangle--size, length($triangle--size));
+
+  $triangle--width: $triangle--width / 2;
+  $triangle--height: if(length($triangle--size) > 1, $triangle--height, $triangle--height/2);
+
+  @if $triangle--direction == up {
+      border-bottom: $triangle--height solid $triangle--color;
+      border-left: $triangle--width solid transparent;
+      border-right: $triangle--width solid transparent;
+
+  } @else if $triangle--direction == right {
+      border-left: $triangle--height solid $triangle--color;
+      border-bottom: $triangle--width solid transparent;
+      border-top: $triangle--width solid transparent;
+
+  } @else if $triangle--direction == down {
+      border-top: $triangle--height solid $triangle--color;
+      border-left: $triangle--width solid transparent;
+      border-right: $triangle--width solid transparent;
+
+  } @else if $triangle--direction == left {
+      border-right: $triangle--height solid $triangle--color;
+      border-bottom: $triangle--width solid transparent;
+      border-top: $triangle--width solid transparent;
+  }
+}

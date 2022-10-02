@@ -1,0 +1,51 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: hides
+// ===============================================
+@mixin helper-hides() {
+
+  // .helper-hide
+  .helper-hide {
+    @include hide-visually;
+
+    // &-mo
+    &-mo {
+
+      // generals
+      @include hide-visually;
+      @include min-screen(768px) {
+        @include unhide-visually;
+      }
+
+    }
+
+    // &-xs
+    &-xs {
+      @include max-screen(768px) {
+        @include hide-visually;
+      }
+
+    }
+
+    // &-sm
+    &-sm {
+      @include max-screen(1024px) {
+        @include hide-visually;
+      }
+
+    }
+
+    // &-md
+    &-md {
+      @include min-screen(1280px) {
+        @include hide-visually;
+      }
+
+    }
+
+  }
+
+}

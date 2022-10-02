@@ -1,0 +1,462 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN SPACER: gap
+// ===============================================
+@mixin helper-spacer-gap(
+  $gap-direction,
+  $gap-density: null,
+  $gap-all--unit: null,
+  $gap-all--breakpoint-01: null,
+  $gap-all-breakpoint-01--unit: null,
+  $gap-all--breakpoint-02: null,
+  $gap-all-breakpoint-02--unit: null,
+  $gap-all--breakpoint-03: null,
+  $gap-all-breakpoint-03--unit: null,
+  $gap-all--breakpoint-04: null,
+  $gap-all-breakpoint-04--unit: null,
+  $gap-all--breakpoint-05: null,
+  $gap-all-breakpoint-05--unit: null,
+  $gap-all--breakpoint-06: null,
+  $gap-all-breakpoint-06--unit: null,
+  $gap-all--breakpoint-07: null,
+  $gap-all-breakpoint-07--unit: null,
+) {
+  @if ($gap-direction == 'all') {
+
+    // direction
+    .helper-spacer-gap-#{$gap-direction} {
+
+      // density
+      &-#{$gap-density} {
+        @include margin($gap-all--unit);
+        @include min-screen($gap-all--breakpoint-01) {
+          @include margin($gap-all-breakpoint-01--unit);
+        }
+        @include min-screen($gap-all--breakpoint-02) {
+          @include margin($gap-all-breakpoint-02--unit);
+        }
+        @include min-screen($gap-all--breakpoint-03) {
+          @include margin($gap-all-breakpoint-03--unit);
+        }
+        @include min-screen($gap-all--breakpoint-04) {
+          @include margin($gap-all-breakpoint-04--unit);
+        }
+        @include min-screen($gap-all--breakpoint-05) {
+          @include margin($gap-all-breakpoint-05--unit);
+        }
+        @include min-screen($gap-all--breakpoint-06) {
+          @include margin($gap-all-breakpoint-06--unit);
+        }
+        @include min-screen($gap-all--breakpoint-07) {
+          @include margin($gap-all-breakpoint-07--unit);
+        }
+
+      }
+
+    }
+
+  } @else if ($gap-direction == 'x') {
+
+    // direction
+    .helper-spacer-gap-#{$gap-direction} {
+
+      // density
+      &-#{$gap-density} {
+        @include margin(null $gap-all--unit null $gap-all--unit);
+        @include min-screen($gap-all--breakpoint-01) {
+          @include margin(null $gap-all-breakpoint-01--unit null $gap-all-breakpoint-01--unit);
+        }
+        @include min-screen($gap-all--breakpoint-02) {
+          @include margin(null $gap-all-breakpoint-02--unit null $gap-all-breakpoint-02--unit);
+        }
+        @include min-screen($gap-all--breakpoint-03) {
+          @include margin(null $gap-all-breakpoint-03--unit null $gap-all-breakpoint-03--unit);
+        }
+        @include min-screen($gap-all--breakpoint-04) {
+          @include margin(null $gap-all-breakpoint-04--unit null $gap-all-breakpoint-04--unit);
+        }
+        @include min-screen($gap-all--breakpoint-05) {
+          @include margin(null $gap-all-breakpoint-05--unit null $gap-all-breakpoint-05--unit);
+        }
+        @include min-screen($gap-all--breakpoint-06) {
+          @include margin(null $gap-all-breakpoint-06--unit null $gap-all-breakpoint-06--unit);
+        }
+        @include min-screen($gap-all--breakpoint-07) {
+          @include margin(null $gap-all-breakpoint-07--unit null $gap-all-breakpoint-07--unit);
+        }
+
+      }
+
+    }
+
+  } @else if ($gap-direction == 'y') {
+
+    // direction
+    .helper-spacer-gap-#{$gap-direction} {
+
+      // density
+      &-#{$gap-density} {
+        @include margin($gap-all--unit null $gap-all--unit null);
+        @include min-screen($gap-all--breakpoint-01) {
+          @include margin($gap-all-breakpoint-01--unit null $gap-all-breakpoint-01--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-02) {
+          @include margin($gap-all-breakpoint-02--unit null $gap-all-breakpoint-02--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-03) {
+          @include margin($gap-all-breakpoint-03--unit null $gap-all-breakpoint-03--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-04) {
+          @include margin($gap-all-breakpoint-04--unit null $gap-all-breakpoint-04--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-05) {
+          @include margin($gap-all-breakpoint-05--unit null $gap-all-breakpoint-05--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-06) {
+          @include margin($gap-all-breakpoint-06--unit null $gap-all-breakpoint-06--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-07) {
+          @include margin($gap-all-breakpoint-07--unit null $gap-all-breakpoint-07--unit null);
+        }
+
+      }
+
+    }
+
+  } @else if ($gap-direction == 't') {
+
+    // direction
+    .helper-spacer-gap-#{$gap-direction} {
+
+      // density
+      &-#{$gap-density} {
+        @include margin($gap-all--unit null null null);
+        @include min-screen($gap-all--breakpoint-01) {
+          @include margin($gap-all-breakpoint-01--unit null null null);
+        }
+        @include min-screen($gap-all--breakpoint-02) {
+          @include margin($gap-all-breakpoint-02--unit null null null);
+        }
+        @include min-screen($gap-all--breakpoint-03) {
+          @include margin($gap-all-breakpoint-03--unit null null null);
+        }
+        @include min-screen($gap-all--breakpoint-04) {
+          @include margin($gap-all-breakpoint-04--unit null null null);
+        }
+        @include min-screen($gap-all--breakpoint-05) {
+          @include margin($gap-all-breakpoint-05--unit null null null);
+        }
+        @include min-screen($gap-all--breakpoint-06) {
+          @include margin($gap-all-breakpoint-06--unit null null null);
+        }
+        @include min-screen($gap-all--breakpoint-07) {
+          @include margin($gap-all-breakpoint-07--unit null null null);
+        }
+
+      }
+
+    }
+
+  } @else if ($gap-direction == 'rgt') {
+
+    // direction
+    .helper-spacer-gap-#{$gap-direction} {
+
+      // density
+      &-#{$gap-density} {
+        @include margin(null $gap-all--unit null null);
+        @include min-screen($gap-all--breakpoint-01) {
+          @include margin(null $gap-all-breakpoint-01--unit null null);
+        }
+        @include min-screen($gap-all--breakpoint-02) {
+          @include margin(null $gap-all-breakpoint-02--unit null null);
+        }
+        @include min-screen($gap-all--breakpoint-03) {
+          @include margin(null $gap-all-breakpoint-03--unit null null);
+        }
+        @include min-screen($gap-all--breakpoint-04) {
+          @include margin(null $gap-all-breakpoint-04--unit null null);
+        }
+        @include min-screen($gap-all--breakpoint-05) {
+          @include margin(null $gap-all-breakpoint-05--unit null null);
+        }
+        @include min-screen($gap-all--breakpoint-06) {
+          @include margin(null $gap-all-breakpoint-06--unit null null);
+        }
+        @include min-screen($gap-all--breakpoint-07) {
+          @include margin(null $gap-all-breakpoint-07--unit null null);
+        }
+
+      }
+
+    }
+
+  } @else if ($gap-direction == 'b') {
+
+    // direction
+    .helper-spacer-gap-#{$gap-direction} {
+
+      // density
+      &-#{$gap-density} {
+        @include margin(null null $gap-all--unit null);
+        @include min-screen($gap-all--breakpoint-01) {
+          @include margin(null null $gap-all-breakpoint-01--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-02) {
+          @include margin(null null $gap-all-breakpoint-02--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-03) {
+          @include margin(null null $gap-all-breakpoint-03--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-04) {
+          @include margin(null null $gap-all-breakpoint-04--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-05) {
+          @include margin(null null $gap-all-breakpoint-05--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-06) {
+          @include margin(null null $gap-all-breakpoint-06--unit null);
+        }
+        @include min-screen($gap-all--breakpoint-07) {
+          @include margin(null null $gap-all-breakpoint-07--unit null);
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// MIXIN SPACER: inner
+// ===============================================
+@mixin helper-spacer-inner(
+  $inner-direction,
+  $inner-density: null,
+  $inner-all--unit: null,
+  $inner-all--breakpoint-01: null,
+  $inner-all-breakpoint-01--unit: null,
+  $inner-all--breakpoint-02: null,
+  $inner-all-breakpoint-02--unit: null,
+  $inner-all--breakpoint-03: null,
+  $inner-all-breakpoint-03--unit: null,
+  $inner-all--breakpoint-04: null,
+  $inner-all-breakpoint-04--unit: null,
+  $inner-all--breakpoint-05: null,
+  $inner-all-breakpoint-05--unit: null,
+  $inner-all--breakpoint-06: null,
+  $inner-all-breakpoint-06--unit: null,
+  $inner-all--breakpoint-07: null,
+  $inner-all-breakpoint-07--unit: null,
+) {
+  @if ($inner-direction == 'all') {
+
+    // direction
+    .helper-spacer-inner-#{$inner-direction} {
+
+      // density
+      &-#{$inner-density} {
+        @include padding($inner-all--unit);
+        @include min-screen($inner-all--breakpoint-01) {
+          @include padding($inner-all-breakpoint-01--unit);
+        }
+        @include min-screen($inner-all--breakpoint-02) {
+          @include padding($inner-all-breakpoint-02--unit);
+        }
+        @include min-screen($inner-all--breakpoint-03) {
+          @include padding($inner-all-breakpoint-03--unit);
+        }
+        @include min-screen($inner-all--breakpoint-04) {
+          @include padding($inner-all-breakpoint-04--unit);
+        }
+        @include min-screen($inner-all--breakpoint-05) {
+          @include padding($inner-all-breakpoint-05--unit);
+        }
+        @include min-screen($inner-all--breakpoint-06) {
+          @include padding($inner-all-breakpoint-06--unit);
+        }
+        @include min-screen($inner-all--breakpoint-07) {
+          @include padding($inner-all-breakpoint-07--unit);
+        }
+
+      }
+
+    }
+
+  } @else if ($inner-direction == 'x') {
+
+    // direction
+    .helper-spacer-inner-#{$inner-direction} {
+
+      // density
+      &-#{$inner-density} {
+        @include padding(null $inner-all--unit null $inner-all--unit);
+        @include min-screen($inner-all--breakpoint-01) {
+          @include padding(null $inner-all-breakpoint-01--unit null $inner-all-breakpoint-01--unit);
+        }
+        @include min-screen($inner-all--breakpoint-02) {
+          @include padding(null $inner-all-breakpoint-02--unit null $inner-all-breakpoint-02--unit);
+        }
+        @include min-screen($inner-all--breakpoint-03) {
+          @include padding(null $inner-all-breakpoint-03--unit null $inner-all-breakpoint-03--unit);
+        }
+        @include min-screen($inner-all--breakpoint-04) {
+          @include padding(null $inner-all-breakpoint-04--unit null $inner-all-breakpoint-04--unit);
+        }
+        @include min-screen($inner-all--breakpoint-05) {
+          @include padding(null $inner-all-breakpoint-05--unit null $inner-all-breakpoint-05--unit);
+        }
+        @include min-screen($inner-all--breakpoint-06) {
+          @include padding(null $inner-all-breakpoint-06--unit null $inner-all-breakpoint-06--unit);
+        }
+        @include min-screen($inner-all--breakpoint-07) {
+          @include padding(null $inner-all-breakpoint-07--unit null $inner-all-breakpoint-07--unit);
+        }
+
+      }
+
+    }
+
+  } @else if ($inner-direction == 'y') {
+
+    // direction
+    .helper-spacer-inner-#{$inner-direction} {
+
+      // density
+      &-#{$inner-density} {
+        @include padding($inner-all--unit null $inner-all--unit null);
+        @include min-screen($inner-all--breakpoint-01) {
+          @include padding($inner-all-breakpoint-01--unit null $inner-all-breakpoint-01--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-02) {
+          @include padding($inner-all-breakpoint-02--unit null $inner-all-breakpoint-02--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-03) {
+          @include padding($inner-all-breakpoint-03--unit null $inner-all-breakpoint-03--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-04) {
+          @include padding($inner-all-breakpoint-04--unit null $inner-all-breakpoint-04--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-05) {
+          @include padding($inner-all-breakpoint-05--unit null $inner-all-breakpoint-05--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-06) {
+          @include padding($inner-all-breakpoint-06--unit null $inner-all-breakpoint-06--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-07) {
+          @include padding($inner-all-breakpoint-07--unit null $inner-all-breakpoint-07--unit null);
+        }
+
+      }
+
+    }
+
+  } @else if ($inner-direction == 't') {
+
+    // direction
+    .helper-spacer-inner-#{$inner-direction} {
+
+      // density
+      &-#{$inner-density} {
+        @include padding($inner-all--unit null null null);
+        @include min-screen($inner-all--breakpoint-01) {
+          @include padding($inner-all-breakpoint-01--unit null null null);
+        }
+        @include min-screen($inner-all--breakpoint-02) {
+          @include padding($inner-all-breakpoint-02--unit null null null);
+        }
+        @include min-screen($inner-all--breakpoint-03) {
+          @include padding($inner-all-breakpoint-03--unit null null null);
+        }
+        @include min-screen($inner-all--breakpoint-04) {
+          @include padding($inner-all-breakpoint-04--unit null null null);
+        }
+        @include min-screen($inner-all--breakpoint-05) {
+          @include padding($inner-all-breakpoint-05--unit null null null);
+        }
+        @include min-screen($inner-all--breakpoint-06) {
+          @include padding($inner-all-breakpoint-06--unit null null null);
+        }
+        @include min-screen($inner-all--breakpoint-07) {
+          @include padding($inner-all-breakpoint-07--unit null null null);
+        }
+
+      }
+
+    }
+
+  } @else if ($inner-direction == 'rgt') {
+
+    // direction
+    .helper-spacer-inner-#{$inner-direction} {
+
+      // density
+      &-#{$inner-density} {
+        @include padding(null $inner-all--unit null null);
+        @include min-screen($inner-all--breakpoint-01) {
+          @include padding(null $inner-all-breakpoint-01--unit null null);
+        }
+        @include min-screen($inner-all--breakpoint-02) {
+          @include padding(null $inner-all-breakpoint-02--unit null null);
+        }
+        @include min-screen($inner-all--breakpoint-03) {
+          @include padding(null $inner-all-breakpoint-03--unit null null);
+        }
+        @include min-screen($inner-all--breakpoint-04) {
+          @include padding(null $inner-all-breakpoint-04--unit null null);
+        }
+        @include min-screen($inner-all--breakpoint-05) {
+          @include padding(null $inner-all-breakpoint-05--unit null null);
+        }
+        @include min-screen($inner-all--breakpoint-06) {
+          @include padding(null $inner-all-breakpoint-06--unit null null);
+        }
+        @include min-screen($inner-all--breakpoint-07) {
+          @include padding(null $inner-all-breakpoint-07--unit null null);
+        }
+
+      }
+
+    }
+
+  } @else if ($inner-direction == 'b') {
+
+    // direction
+    .helper-spacer-inner-#{$inner-direction} {
+
+      // density
+      &-#{$inner-density} {
+        @include padding(null null $inner-all--unit null);
+        @include min-screen($inner-all--breakpoint-01) {
+          @include padding(null null $inner-all-breakpoint-01--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-02) {
+          @include padding(null null $inner-all-breakpoint-02--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-03) {
+          @include padding(null null $inner-all-breakpoint-03--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-04) {
+          @include padding(null null $inner-all-breakpoint-04--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-05) {
+          @include padding(null null $inner-all-breakpoint-05--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-06) {
+          @include padding(null null $inner-all-breakpoint-06--unit null);
+        }
+        @include min-screen($inner-all--breakpoint-07) {
+          @include padding(null null $inner-all-breakpoint-07--unit null);
+        }
+
+      }
+
+    }
+
+  }
+
+}

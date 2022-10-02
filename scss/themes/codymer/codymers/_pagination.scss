@@ -1,0 +1,241 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// CDMR: pagination
+// ===============================================
+.cdmr-pagination {
+  $self: &;
+  @include cdmr-pagination;
+  gap: .5rem;
+
+  // &__item
+  &__item {
+    @include position(relative);
+    @include size(2.5rem);
+    @include border-radius($radius--codymer);
+    transition: background-color 200ms ease;
+
+    // &--has
+    &--has {
+
+      // &-icon
+      &-icon {
+
+        // &:after
+        &:after {
+          content: '';
+          @include position(absolute, 0, 0, 0, 0);
+          @include margin(auto);
+          @include size(1.875rem);
+          pointer-events: none;
+        }
+
+        // #{ $self }
+        #{ $self } {
+
+          // &__trigger
+          &__trigger {
+            text-indent: -9999px;
+          }
+
+        }
+
+        // &:not()
+        &:not(#{ $self }__item--is-disabled) {
+
+          // &:after
+          &:after {
+            filter: map-filters(purples, theme-codymer--600);
+          }
+
+        }
+
+        // &:focus-visible
+        &:focus-visible {
+
+          // :after
+          &:after {
+            filter: map-filters(whites, theme--all);
+          }
+
+        }
+
+      }
+
+    }
+
+    // &--is
+    &--is {
+
+      // &-nav
+      &-nav {
+
+        // &-prev
+        &-prev {
+
+          // &:after
+          &:after {
+            @include background-setup(
+              map-icons(arrows, theme-unicons--rgt), // img path
+              '0 0 / contain', // position and size
+              no-repeat, // repeat
+              null, // attachment
+              null, // origin
+              null, // clip
+              null, // color
+            );
+            transform:rotate(-180deg);
+
+          }
+
+        }
+
+        // &-next
+        &-next {
+
+          // &:after
+          &:after {
+            @include background-setup(
+              map-icons(arrows, theme-unicons--rgt), // img path
+              '0 0 / contain', // position and size
+              no-repeat, // repeat
+              null, // attachment
+              null, // origin
+              null, // clip
+              null, // color
+            );
+
+          }
+
+        }
+
+      }
+
+      // &-first
+      &-first {
+
+        // &:after
+        &:after {
+          @include background-setup(
+            map-icons(arrows, theme-unicons--double-rgt), // img path
+            '0 0 / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            null, // color
+          );
+          transform:rotate(180deg);
+
+        }
+
+      }
+
+      // &-last
+      &-last {
+
+        // &:after
+        &:after {
+          @include background-setup(
+            map-icons(arrows, theme-unicons--double-rgt), // img path
+            '0 0 / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            null, // color
+          );
+
+        }
+
+      }
+
+      // &-active
+      &-active {
+        border-color: map-colors(purples, theme-codymer--600);
+        background-color: map-colors(purples, theme-codymer--600);
+
+        // #{ $self }
+        #{ $self } {
+
+          // &__trigger
+          &__trigger {
+            color: map-colors(whites, theme--all);
+          }
+
+        }
+
+      }
+
+      // &-disabled
+      &-disabled {
+
+        // &:after
+        &:after {
+          filter: map-filters(whites, theme--all);
+        }
+
+      }
+
+    }
+
+  }
+
+  // &__trigger
+  &__trigger {
+    @include position(relative);
+    @include size(100%);
+    @include border(all, .125rem, solid, transparent);
+    @include border-radius($radius--codymer);
+    transition: border-color 200ms ease, color 200ms ease;
+    color: map-colors(purples, theme-codymer--600);
+    background-color: transparent;
+
+    // &:not(:disabled)
+    &:not(:disabled) {
+
+      // &:hover
+      &:hover {
+        border-color: map-colors(purples, theme-codymer--600);
+      }
+
+    }
+
+    // &:focus-visible
+    &:focus-visible {
+      @include focus-custom($color-focus--codymer);
+    }
+
+    // &:disabled
+    &:disabled {
+      color: map-colors(whites, theme--all);
+      border-color: map-colors(greys, theme-all--500);
+      background-color: map-colors(greys, theme-all--500);
+
+      // &:hover
+      &:hover {
+        cursor: not-allowed;
+      }
+
+      // &:focus-visible
+      &:focus-visible {
+        border-color: map-colors(greys, theme-all--200);
+        color: map-colors(greys, theme-all--500);
+        background-color: map-colors(greys, theme-all--200);
+      }
+
+    }
+
+  }
+
+  // &--has
+  &--has {
+  }
+
+  // &--is
+  &--is {
+  }
+
+}

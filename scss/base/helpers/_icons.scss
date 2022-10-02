@@ -1,0 +1,239 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// MIXIN HELPER: rrss
+// ===============================================
+@mixin helper-icons() {
+
+  // .helper-icon
+  .helper-icon {
+    display: inline-block;
+
+    // &:before
+    &:before {
+      content: '';
+      @include position(absolute, 0, 0, 0, 0);
+      @include margin(auto);
+    }
+
+    // &--facebook
+    &--facebook {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-facebook--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &--github
+    &--github {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-github--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &--instagram
+    &--instagram {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-instagram--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &-linkedin
+    &--linkedin {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-linkedin--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &--pinterest
+    &--pinterest {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-pinterest--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &--snapchat
+    &--snapchat {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-snapchat--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &-twitter
+    &--twitter {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-twitter--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &--whatsapp
+    &--whatsapp {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-whatsapp--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+    // &--youtube
+    &--youtube {
+
+      // &-primary
+      &-primary {
+
+        // &:before
+        &:before {
+          @include background-setup(
+            map-icons(rrss, theme-youtube--default), // img path
+            'center center / contain', // position and size
+            no-repeat, // repeat
+            null, // attachment
+            null, // origin
+            null, // clip
+            transparent, // color
+          );
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

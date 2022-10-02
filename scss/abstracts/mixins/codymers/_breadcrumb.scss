@@ -1,0 +1,11 @@
+// MIXIN: cdmr-breadcrumb
+// ===============================================
+@mixin cdmr-breadcrumb() {
+  position: relative;
+  list-style-type: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+}

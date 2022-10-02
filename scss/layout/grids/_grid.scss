@@ -1,0 +1,355 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// MIXIN: layout-grid
+// ===============================================
+@mixin layout-grid(
+  $grid-flex-padding--x: null,
+  $grid-flex-gap--unit: null,
+  $grid-flex-max-width: null,
+  $grid-flex-breakpoint--01: null,
+  $grid-flex-breakpoint-01--padding-x: null,
+  $grid-flex-breakpoint-01--gap: null,
+  $grid-flex-breakpoint--02: null,
+  $grid-flex-breakpoint-02--padding-x: null,
+  $grid-flex-breakpoint-02--gap: null,
+  $grid-flex-breakpoint--03: null,
+  $grid-flex-breakpoint-03--padding-x: null,
+  $grid-flex-breakpoint-03--gap: null
+) {
+
+  // .layout-grid
+  .layout-grid {
+    @include margin(null auto null auto);
+    padding-right: $grid-flex-padding--x;
+    padding-left: $grid-flex-padding--x;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    gap: $grid-flex-gap--unit;
+    max-width: $grid-flex-max-width;
+    @include min-screen($grid-flex-breakpoint--01) {
+      padding-right: $grid-flex-breakpoint-01--padding-x;
+      padding-left: $grid-flex-breakpoint-01--padding-x;
+      gap: $grid-flex-breakpoint-01--gap;
+    }
+    @include min-screen($grid-flex-breakpoint--02) {
+      padding-right: $grid-flex-breakpoint-02--padding-x;
+      padding-left: $grid-flex-breakpoint-02--padding-x;
+      gap: $grid-flex-breakpoint-02--gap;
+    }
+    @include min-screen($grid-flex-breakpoint--03) {
+      padding-right: $grid-flex-breakpoint-03--padding-x;
+      padding-left: $grid-flex-breakpoint-03--padding-x;
+      gap: $grid-flex-breakpoint-03--gap;
+    }
+
+    // > *
+    > * {
+      word-break: break-word;
+    }
+
+    // &__col
+    &__col {
+
+      // &-xs
+      &-xs {
+
+        // &-1
+        &-1 {
+          grid-column: auto/span 1;
+        }
+
+        // &-2
+        &-2 {
+          grid-column: auto/span 2;
+        }
+
+        // &-3
+        &-3 {
+          grid-column: auto/span 3;
+        }
+
+        // &-4
+        &-4 {
+          grid-column: auto/span 4;
+        }
+
+        // &-5
+        &-5 {
+          grid-column: auto/span 5;
+        }
+
+        // xs-6
+        &-6 {
+          grid-column: auto/span 6;
+        }
+
+        // &-7
+        &-7 {
+          grid-column: auto/span 7;
+        }
+
+        // &-8
+        &-8 {
+          grid-column: auto/span 8;
+        }
+
+        // &-9
+        &-9 {
+          grid-column: auto/span 9;
+        }
+
+        // &-10
+        &-10 {
+          grid-column: auto/span 10;
+        }
+
+        // &-11
+        &-11 {
+          grid-column: auto/span 11;
+        }
+
+        // &-12
+        &-12 {
+          grid-column: auto/span 12;
+        }
+
+      }
+
+      // &-sm
+      &-sm {
+        @include min-screen(768px) {
+
+          // &-1
+          &-1 {
+            grid-column: auto/span 1;
+          }
+
+          // &-2
+          &-2 {
+            grid-column: auto/span 2;
+          }
+
+          // &-3
+          &-3 {
+            grid-column: auto/span 3;
+          }
+
+          // &-4
+          &-4 {
+            grid-column: auto/span 4;
+          }
+
+          // &-5
+          &-5 {
+            grid-column: auto/span 5;
+          }
+
+          // xs-6
+          &-6 {
+            grid-column: auto/span 6;
+          }
+
+          // &-7
+          &-7 {
+            grid-column: auto/span 7;
+          }
+
+          // &-8
+          &-8 {
+            grid-column: auto/span 8;
+          }
+
+          // &-9
+          &-9 {
+            grid-column: auto/span 9;
+          }
+
+          // &-10
+          &-10 {
+            grid-column: auto/span 10;
+          }
+
+          // &-11
+          &-11 {
+            grid-column: auto/span 11;
+          }
+
+          // &-12
+          &-12 {
+            grid-column: auto/span 12;
+          }
+
+        }
+
+      }
+
+      // &-md
+      &-md {
+        @include min-screen(1024px) {
+
+          // &-1
+          &-1 {
+            grid-column: auto/span 1;
+          }
+
+          // &-2
+          &-2 {
+            grid-column: auto/span 2;
+          }
+
+          // &-3
+          &-3 {
+            grid-column: auto/span 3;
+          }
+
+          // &-4
+          &-4 {
+            grid-column: auto/span 4;
+          }
+
+          // &-5
+          &-5 {
+            grid-column: auto/span 5;
+          }
+
+          // xs-6
+          &-6 {
+            grid-column: auto/span 6;
+          }
+
+          // &-7
+          &-7 {
+            grid-column: auto/span 7;
+          }
+
+          // &-8
+          &-8 {
+            grid-column: auto/span 8;
+          }
+
+          // &-9
+          &-9 {
+            grid-column: auto/span 9;
+          }
+
+          // &-10
+          &-10 {
+            grid-column: auto/span 10;
+          }
+
+          // &-11
+          &-11 {
+            grid-column: auto/span 11;
+          }
+
+          // &-12
+          &-12 {
+            grid-column: auto/span 12;
+          }
+
+        }
+
+      }
+
+      // &-lg
+      &-lg {
+        @include min-screen(1280px) {
+
+          // &-1
+          &-1 {
+            grid-column: auto/span 1;
+          }
+
+          // &-2
+          &-2 {
+            grid-column: auto/span 2;
+          }
+
+          // &-3
+          &-3 {
+            grid-column: auto/span 3;
+          }
+
+          // &-4
+          &-4 {
+            grid-column: auto/span 4;
+          }
+
+          // &-5
+          &-5 {
+            grid-column: auto/span 5;
+          }
+
+          // xs-6
+          &-6 {
+            grid-column: auto/span 6;
+          }
+
+          // &-7
+          &-7 {
+            grid-column: auto/span 7;
+          }
+
+          // &-8
+          &-8 {
+            grid-column: auto/span 8;
+          }
+
+          // &-9
+          &-9 {
+            grid-column: auto/span 9;
+          }
+
+          // &-10
+          &-10 {
+            grid-column: auto/span 10;
+          }
+
+          // &-11
+          &-11 {
+            grid-column: auto/span 11;
+          }
+
+          // &-12
+          &-12 {
+            grid-column: auto/span 12;
+          }
+
+        }
+
+      }
+
+    }
+
+    // &__nested
+    &__nested {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-rows: 1fr;
+      gap: $grid-flex-gap--unit;
+      @include min-screen($grid-flex-breakpoint--01) {
+        gap: $grid-flex-breakpoint-01--gap;
+      }
+      @include min-screen($grid-flex-breakpoint--02) {
+        gap: $grid-flex-breakpoint-02--gap;
+      }
+
+    }
+
+    // &--is
+    &--is {
+
+      // &-fs
+      &-fs {
+        @include padding(null 0 null 0);
+      }
+
+    }
+
+  }
+
+}

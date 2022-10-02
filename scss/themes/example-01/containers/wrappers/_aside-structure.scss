@@ -1,0 +1,86 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// CONT WRAPPER: aside structure
+// ===============================================
+.cont-wrapper-aside-structure {
+  $self: &;
+
+  // .cdmr
+  .cdmr {
+
+    // &-breadcrumb
+    &-breadcrumb {
+      @include margin(1rem null 1rem null);
+      @include min-screen(1280px) {
+        @include margin(null null 0 null);
+      }
+
+    }
+
+  }
+
+  // &__aside
+  &__aside {
+    @include position(sticky, 0, null, null, null);
+    @include padding(4rem null null null);
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  // &__article
+  &__article {
+
+  }
+
+  // &__section
+  &__section {
+    @include padding(.938rem);
+    @include border-radius($radius--example-01);
+    background-color: map-colors(whites, theme--all);
+    @include min-screen(768px) {
+      @include padding(1.563rem);
+    }
+
+    // .cdmr
+    .cdmr {
+
+      // &-title
+      &-title {
+
+        // &:not()
+        &:not(.cdmr-list *, .cdmr-list-ordered *) {
+          @include position(sticky, 4.2rem, null, null, null);
+          @include margin(0 null .5rem null);
+          @include padding(1rem null 1rem null);
+          z-index: 2;
+          background-color: map-colors(whites, theme--all);
+        }
+
+      }
+
+    }
+
+    // &:not()
+    &:not(:first-of-type) {
+      @include margin(1rem null null null);
+    }
+
+  }
+
+  // &__main-title
+  &__main-title {
+    @include margin(0 null 2rem null);
+  }
+
+  // &--is
+  &--is {
+  }
+
+  // &--has
+  &--has {
+  }
+
+}

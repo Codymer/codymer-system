@@ -1,0 +1,45 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// CDMR: label
+// ===============================================
+.cdmr-label {
+  $self: &;
+  @include cdmr-label();
+
+  // &--primary
+  &--primary {
+    @include border-radius($radius--codymer);
+  }
+
+  // &--size
+  &--size {
+
+    // &-100
+    &-100 {
+      @include padding(.25rem);
+    }
+
+    // &-200
+    &-200 {
+      @include padding(.625rem);
+    }
+
+    // &-300
+    &-300 {
+      @include padding(.938rem);
+    }
+
+  }
+
+  // &--has
+  &--has {
+  }
+
+  // &--is
+  &--is {
+  }
+
+}

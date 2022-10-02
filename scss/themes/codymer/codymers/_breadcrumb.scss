@@ -1,0 +1,121 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// CDMR: breadcrumb
+// ===============================================
+.cdmr-breadcrumb {
+  $self: &;
+  @include cdmr-breadcrumb;
+  gap: 1.2rem;
+
+  // &:focus-visible
+  &:focus-visible {
+    @include focus-custom($color-focus--codymer);
+  }
+
+  // &__item
+  &__item {
+    @include position(relative);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // &:last-child
+    &:last-child {
+      @include padding(null .313rem null .313rem);
+      color: map-colors(whites, theme--all);
+      background-color: map-colors(purples, theme-codymer--600)
+    }
+
+    // &:not(:last-child)
+    &:not(:last-child) {
+
+      // &:after
+      &:after {
+        content: "";
+        @include margin(auto null auto null);
+        @include position(absolute, 0, -1.25rem, 0, null);
+        @include size(1.2rem);
+        @include background-setup(
+          map-icons(arrows, theme-unicons--rgt), // img path
+          '0 0 / contain', // position and size
+          no-repeat, // repeat
+          null, // attachment
+          null, // origin
+          null, // clip
+          null, // color
+        );
+        filter: map-filters(purples, theme-codymer--600);
+
+      }
+
+    }
+
+  }
+
+  // &__link
+  &__link {
+    transition: color 200ms ease;
+    color: map-colors(purples, theme-codymer--600);
+
+    // &:hover, &:focus-visible
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      color: map-colors(fucsias, theme-codymer--500);
+      text-decoration: underline;
+    }
+
+  }
+
+  // &--primary
+  &--primary {
+
+    // &:before
+    &:before {
+      @include background-setup(
+        map-icons(user-interface, theme-unicons--house), // img path
+        '0 0 / contain', // position and size
+        no-repeat, // repeat
+        null, // attachment
+        null, // origin
+        null, // clip
+        null, // color
+      );
+      filter: map-filters(purples, theme-codymer--600);
+
+    }
+
+  }
+
+  // &--has
+  &--has {
+
+    // &-icon
+    &-icon {
+      @include padding(null null null 1.875rem);
+      line-height: 1.25rem;
+
+      // &:before
+      &:before {
+        content: "";
+        @include position(absolute, 0, null, 0, 0);
+        @include size(1.25rem);
+      }
+
+    }
+
+  }
+
+  // &--is
+  &--is {
+  }
+
+  // &:not()
+  &:not(#{ $self }--has-icon) {
+    @include padding(null null null 0);
+  }
+
+}

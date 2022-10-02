@@ -1,0 +1,30 @@
+// MAP: FONTS
+// ===============================================
+$map-fonts:(
+
+  //  GOOGLE
+  Google: (
+
+    // Space-Grotesk
+    Space-Grotesk--100: ('Google-Space-Grotesk--light', Arial, sans-serif),
+    Space-Grotesk--200: ('Google-Space-Grotesk--medium', Arial, sans-serif),
+    Space-Grotesk--300: ('Google-Space-Grotesk--regular', Arial, sans-serif),
+    Space-Grotesk--400: ('Google-Space-Grotesk--semibold', Arial, sans-serif),
+    Space-Grotesk--500: ('Google-Space-Grotesk--bold', Arial, sans-serif),
+
+    // Syne
+    Syne--400: ('Google-Syne--regular', Arial, sans-serif),
+    Syne--500: ('Google-Syne--medium', Arial, sans-serif),
+    Syne--600: ('Google-Syne--bold', Arial, sans-serif),
+
+  ),
+
+);
+// ===============================================
+
+// FUNCTION: MAP FONTS
+// ===============================================
+@function map-fonts($font-name, $font-variant:null) {
+  @return map-get(map-get($map-fonts, $font-name), $font-variant);
+}
+// ===============================================
