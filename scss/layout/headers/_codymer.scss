@@ -23,7 +23,7 @@
 
   // &__header
   &__header {
-    min-height: 1rem;
+    min-height: 3.5rem;
     flex-basis: 100%;
   }
 
@@ -110,7 +110,7 @@
     // &__link
     &__link {
       @include position(relative);
-      @include padding(.7rem null .7rem 1.5rem);
+      @include padding(.7rem 1.5rem .7rem null);
       @include size(100%, null);
       color: map-colors(whites, theme--all);
       display: block;
@@ -118,8 +118,8 @@
       // &:before
       &:before {
         content: '';
-        @include position(absolute, .75rem, null, null, 0);
-        @include size(1rem);
+        @include position(absolute, .6rem, 0, null, null);
+        @include size(1.3rem);
         @include background-setup(
           map-icons(arrows, theme-unicons--circled-rgt), // img path
           '0 0 / contain', // position and size
