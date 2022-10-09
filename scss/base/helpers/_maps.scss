@@ -9,8 +9,8 @@
 
   .helper-map {
 
-    // &-responsive
-    &-responsive {
+    // &-resp
+    &-resp {
       @include position(relative);
       overflow: hidden;
       height: 0;
@@ -32,7 +32,7 @@
         @include padding(null null 75% null);
       }
 
-      // &--3-2
+      // &--8-5
       &--8-5 {
         @include padding(null null 62.5% null);
       }
