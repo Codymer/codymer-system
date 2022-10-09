@@ -7,8 +7,8 @@
 // ===============================================
 @mixin helper-displays() {
 
-  // .helper-display
-  .helper-display {
+  // .helper-dsp
+  .helper-dsp {
 
     // &-none
     &-none {
@@ -59,8 +59,8 @@
 
       }
 
-      // &--justify
-      &--justify {
+      // &--just
+      &--just {
 
         // &-strt
         &-strt {
@@ -160,8 +160,8 @@
     &-grid {
       display: grid;
 
-      // &--justify-i
-      &--justify-i {
+      // &--just-i
+      &--just-i {
 
         // &-strt
         &-strt {
@@ -180,8 +180,8 @@
 
       }
 
-      // &--justify-cont
-      &--justify-cont {
+      // &--just-cont
+      &--just-cont {
 
         // &-strt
         &-strt {
@@ -311,7 +311,7 @@
         display: table-cell;
       }
 
-      &-column {
+      &-col {
         display: table-column;
 
         // &-group

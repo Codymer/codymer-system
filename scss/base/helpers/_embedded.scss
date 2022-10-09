@@ -10,8 +10,8 @@
   // .helper-embed
   .helper-embed {
 
-    // &-rd
-    &-rd {
+    // &-resp
+    &-resp {
       @include position(relative);
       @include padding(0);
       @include size(null, 0);

@@ -10,8 +10,8 @@
   // .helper-img
   .helper-img {
 
-    // &-rd
-    &-rd {
+    // &-resp
+    &-resp {
       @include size(null, auto);
       display: block;
       max-width: 100%;
