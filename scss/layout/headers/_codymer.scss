@@ -1,0 +1,226 @@
+// CORE
+// ===============================================
+@use './abstracts/index' as *;
+// ===============================================
+
+// LAYOUT HEADER: codymer
+// ===============================================
+.layout-header-codymer {
+  $self: &;
+  @include position(sticky, 0, null, null, null);
+  @include padding(.938rem null .938rem null);
+  z-index: 5;
+
+  // &__sidenav
+  &__sidenav {
+    @include position(fixed, 0, -62.438rem, null, null);
+    @include size(15rem, 100%);
+    z-index: 500;
+    overflow-x: hidden;
+    transition: all .5s;
+    box-shadow: .625rem 0 .313rem -.188rem rgba(0,0,0,.15);
+  }
+
+  // &__header
+  &__header {
+    min-height: 3.5rem;
+    flex-basis: 100%;
+  }
+
+  // &__content
+  &__content {
+    @include padding(1rem);
+    flex-basis: 100%;
+  }
+
+  // &__footer
+  &__footer {
+    @include padding(1rem);
+    flex-basis: 100%;
+    align-self: flex-end;
+  }
+
+  // &__logo
+  &__logo {
+    @include position(relative);
+    @include padding(null null null 1.6rem);
+    transition: color .25s ease-out;
+    color: map-colors(purples, theme-codymer--600);
+    @include min-screen(768px) {
+      @include padding(null null null 2rem);
+    }
+
+    // &:before
+    &:before {
+      content: "";
+      @include position(absolute, 0, null, 0, 0);
+      @include margin(auto null auto null);
+      @include size(1.25rem);
+      transition: all .25s ease-out;
+      @include background-setup(
+        map-icons(logo, theme-codymer--logo), // img path
+        '0 0 / contain', // position and size
+        no-repeat, // repeat
+        null, // attachment
+        null, // origin
+        null, // clip
+        null, // color
+      );
+      filter: map-filters(purples, theme-codymer--600);
+      @include min-screen(768px) {
+        @include size(1.625rem);
+      }
+
+    }
+
+    // &:hover
+    &:hover {
+      color: map-colors(fucsias, theme-codymer--500);
+
+      // &:before
+      &:before {
+        transform: rotate(90deg);
+        filter: map-filters(fucsias, theme-codymer--500);
+      }
+
+    }
+
+    // &:focus-visible
+    &:focus-visible {
+      @include focus-custom($color-focus--codymer);
+    }
+
+  }
+
+  // &__nav
+  &__nav {
+    @include margin(null null null auto);
+  }
+
+  // &-nav
+  &-nav {
+    @include margin(0 null null null 0);
+    @include padding(null null null 0);
+
+    // &__item
+    &__item {
+      @include margin(null null .5rem null);
+    }
+
+    // &__link
+    &__link {
+      @include position(relative);
+      @include padding(.7rem 1.5rem .7rem null);
+      @include size(100%, null);
+      color: map-colors(whites, theme--all);
+      display: block;
+
+      // &:before
+      &:before {
+        content: '';
+        @include position(absolute, .6rem, 0, null, null);
+        @include size(1.3rem);
+        @include background-setup(
+          map-icons(arrows, theme-unicons--circled-rgt), // img path
+          '0 0 / contain', // position and size
+          no-repeat, // repeat
+          null, // attachment
+          null, // origin
+          null, // clip
+          transparent, // color
+        );
+        filter: map-filters(whites, theme--all);
+      }
+
+      // &:hover
+      &:hover {
+        text-decoration: underline;
+      }
+
+      // &:focus-visible
+      &:focus-visible {
+        @include focus-custom($color-focus--codymer);
+      }
+
+    }
+
+    // &__lvl2
+    &__lvl2 {
+      @include margin(.7rem null 1rem null);
+      @include padding(null null null .5rem);
+    }
+
+  }
+
+  // &-rrss
+  &-rrss {
+    @include margin(1rem null 1rem null);
+    @include padding(null null null 0);
+    gap: 1rem;
+
+    // .helper
+    .helper {
+
+      // &-icon
+      &-icon {
+        @include size(2.5rem);
+
+        // &:before
+        &:before {
+          @include size(2rem);
+          filter: map-filters(whites, theme--all);
+        }
+
+      }
+
+    }
+
+    // &__link
+    &__link {
+      @include position(relative);
+      @include size(2.5rem);
+      display: block;
+
+      // &:focus-visible
+      &:focus-visible {
+        @include focus-custom($color-focus--codymer);
+      }
+
+    }
+
+  }
+
+  // &__close
+  &__close {
+    @include position(absolute, 1rem, 1rem, null, null);
+
+    // .cdmr
+    .cdmr {
+
+      // &-btn
+      &-btn {
+        background-color: map-colors(whites, theme--all);
+
+        // &:not(:hover)
+        &:not(:hover) {
+          background-color: transparent;
+
+          // .cdmr-icon
+          .cdmr-icon {
+
+            // &:before
+            &:before {
+              filter: map-filters(whites, theme--all);
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
