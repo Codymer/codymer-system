@@ -17,7 +17,13 @@
   $grid-flex-breakpoint-02--gap: null,
   $grid-flex-breakpoint--03: null,
   $grid-flex-breakpoint-03--padding-x: null,
-  $grid-flex-breakpoint-03--gap: null
+  $grid-flex-breakpoint-03--gap: null,
+  $grid-flex-breakpoint--04: null,
+  $grid-flex-breakpoint-04--padding-x: null,
+  $grid-flex-breakpoint-04--gap: null,
+  $grid-flex-breakpoint--05: null,
+  $grid-flex-breakpoint-05--padding-x: null,
+  $grid-flex-breakpoint-05--gap: null
 ) {
 
   // .layout-grid
@@ -44,6 +50,16 @@
       padding-right: $grid-flex-breakpoint-03--padding-x;
       padding-left: $grid-flex-breakpoint-03--padding-x;
       gap: $grid-flex-breakpoint-03--gap;
+    }
+    @include min-screen($grid-flex-breakpoint--04) {
+      padding-right: $grid-flex-breakpoint-04--padding-x;
+      padding-left: $grid-flex-breakpoint-04--padding-x;
+      gap: $grid-flex-breakpoint-04--gap;
+    }
+    @include min-screen($grid-flex-breakpoint--05) {
+      padding-right: $grid-flex-breakpoint-05--padding-x;
+      padding-left: $grid-flex-breakpoint-05--padding-x;
+      gap: $grid-flex-breakpoint-05--gap;
     }
 
     // > *

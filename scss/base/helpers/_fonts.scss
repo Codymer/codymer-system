@@ -239,11 +239,11 @@
 
 }
 
-// MIXIN HELPER: font-size
+// MIXIN HELPER: font-scope
 // ===============================================
-@mixin helper-font-size(
-  $helper-font-size--density: null,
-  $helper-font-size--unit: null,
+@mixin helper-font-scope(
+  $helper-font-scope--density: null,
+  $helper-font-scope--unit: null,
   $helper-lineheight--unit: null,
   $helper-spacing--unit: null,
   $helper-font--breakpoint-01: null,
@@ -276,12 +276,12 @@
   $helper-spacing-breakpoint-07--unit: null
 ) {
 
-  // .helper-font-size
-  .helper-font-size {
+  // .helper-font-scope
+  .helper-font-scope {
 
     // set density
-    &-#{$helper-font-size--density} {
-      font-size: $helper-font-size--unit;
+    &-#{$helper-font-scope--density} {
+      font-size: $helper-font-scope--unit;
       line-height: $helper-lineheight--unit;
       letter-spacing: $helper-spacing--unit;
       @include min-screen($helper-font--breakpoint-01) {

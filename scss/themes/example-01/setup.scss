@@ -1,4 +1,4 @@
-// CORE
+// CORE 
 // ===============================================
 @use '../../abstracts/index' as *;
 @use '../../base/index' as *;
@@ -82,6 +82,60 @@
   // FONT FAMILY SECONDARY
   map-fonts(Google, Syne--600),
 
+  // H1: font-size
+  3.052rem,
+
+  // H1: line-height
+  3.177rem,
+
+  // H1: letter-spacing
+  null,
+
+  // H2: font-size
+  2.441rem,
+
+  // H2: line-height
+  2.566rem,
+
+  // H2: letter-spacing
+  null,
+
+  // H3: font-size
+  1.953rem,
+
+  // H3: line-height
+  2.078rem,
+
+  // H3: letter-spacing
+  null,
+
+  // H4: font-size
+  1.563rem,
+
+  // H4: line-height
+  1.688rem,
+
+  // H4: letter-spacing
+  null,
+
+  // H5: font-size
+  1.25rem,
+
+  // H5: line-height
+  1.375rem,
+
+  // H5: letter-spacing
+  null,
+
+  // H6: font-size
+  1.125rem,
+
+  // H6: line-height
+  1.25rem,
+
+  // H6: letter-spacing
+  null,
+
   // RESET TEXT SELECTION COLOR
   map-colors(blacks, theme--all),
 
@@ -137,10 +191,10 @@
 @include helper-objetcs();
 // ===============================================
 
-// HELPER: sizes
+// HELPER: scopes
 // ===============================================
 // 100
-@include helper-size(
+@include helper-scope(
 
   // density
   100,
@@ -303,10 +357,10 @@
 );
 // ===============================================
 
-// HELPER: font sizes
+// HELPER: font scopes
 // ===============================================
 // 100
-@include helper-font-size(
+@include helper-font-scope(
 
   // density
   100,
@@ -319,7 +373,7 @@
 
 );
 // 200
-@include helper-font-size(
+@include helper-font-scope(
 
   // density
   200,
@@ -344,7 +398,7 @@
 
 );
 // 300
-@include helper-font-size(
+@include helper-font-scope(
 
   // density
   300,
@@ -372,7 +426,7 @@
 
 );
 // 400
-@include helper-font-size(
+@include helper-font-scope(
 
   // density
   400,
@@ -400,7 +454,7 @@
 
 );
 // 500
-@include helper-font-size(
+@include helper-font-scope(
 
   // density
   500,
@@ -527,34 +581,52 @@
   .625rem,
 
   // first gap value
-  .313rem,
+  .375rem,
 
   // max width
   1920px,
+
+  // breakpoint: 480px
+  480px,
+
+  // breakpoint 480px: padding axis: x
+  null,
+
+  // breakpoint 480px: gap
+  null,
 
   // breakpoint: 768px
   768px,
 
   // breakpoint 768px: padding axis: x
-  null,
+  .75rem,
 
   // breakpoint 768px: gap
-  1rem,
+  1.125rem,
+
+  // breakpoint: 1024px
+  1024px,
+
+  // breakpoint 1024px: padding axis: x
+  1.5rem,
+
+  // breakpoint 1024px: gap
+  1.125rem,
 
   // breakpoint: 1280px
   1280px,
 
-  // breakpoint 1280px: padding axis: x
-  3.5rem,
+  // breakpoint 1280px: padding axis x
+  2.625rem,
 
   // breakpoint 1280px: gap
-  null,
+  1.875rem,
 
   // breakpoint: 1440px
   1440px,
 
   // breakpoint 1440px: padding axis x
-  10rem,
+  3.75rem,
 
   // breakpoint 1440px: gap
   null,

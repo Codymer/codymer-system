@@ -126,6 +126,24 @@
 	$resets-custom--brand: null,
 	$resets-custom-font-family--primary: null,
 	$resets-custom-font-family--secondary: null,
+	$resets-custom-h1-font--size: null,
+	$resets-custom-h1-font--line-height: null,
+	$resets-custom-h1-font--letter-space: null,
+	$resets-custom-h2-font--size: null,
+	$resets-custom-h2-font--line-height: null,
+	$resets-custom-h2-font--letter-space: null,
+	$resets-custom-h3-font--size: null,
+	$resets-custom-h3-font--line-height: null,
+	$resets-custom-h3-font--letter-space: null,
+	$resets-custom-h4-font--size: null,
+	$resets-custom-h4-font--line-height: null,
+	$resets-custom-h4-font--letter-space: null,
+	$resets-custom-h5-font--size: null,
+	$resets-custom-h5-font--line-height: null,
+	$resets-custom-h5-font--letter-space: null,
+	$resets-custom-h6-font--size: null,
+	$resets-custom-h6-font--line-height: null,
+	$resets-custom-h6-font--letter-space: null,
 	$resets-custom-text-selection--color: null,
 	$resets-custom-text-selection-background--color: null,
 	$resets-custom-link-selection--color: null,
@@ -159,36 +177,55 @@
 		h1 {
 			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
 			font-family: $resets-custom-font-family--secondary;
+			font-size: 	$resets-custom-h1-font--size;
+			line-height: $resets-custom-h1-font--line-height;
+			letter-spacing: $resets-custom-h1-font--letter-space;
+			
 		}
 
 		// h2
 		h2 {
 			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
 			font-family: $resets-custom-font-family--secondary;
+			font-size: 	$resets-custom-h2-font--size;
+			line-height: $resets-custom-h2-font--line-height;
+			letter-spacing: $resets-custom-h2-font--letter-space;
 		}
 
 		// h3
 		h3 {
 			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
 			font-family: $resets-custom-font-family--secondary;
+			font-size: 	$resets-custom-h3-font--size;
+			line-height: $resets-custom-h3-font--line-height;
+			letter-spacing: $resets-custom-h3-font--letter-space;
 		}
 
 		// h4
 		h4 {
 			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
 			font-family: $resets-custom-font-family--secondary;
+			font-size: 	$resets-custom-h4-font--size;
+			line-height: $resets-custom-h4-font--line-height;
+			letter-spacing: $resets-custom-h4-font--letter-space;
 		}
 
 		// h5
 		h5 {
 			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
 			font-family: $resets-custom-font-family--secondary;
+			font-size: 	$resets-custom-h5-font--size;
+			line-height: $resets-custom-h5-font--line-height;
+			letter-spacing: $resets-custom-h5-font--letter-space;
 		}
 
 		// h6
 		h6 {
 			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
 			font-family: $resets-custom-font-family--secondary;
+			font-size: 	$resets-custom-h6-font--size;
+			line-height: $resets-custom-h6-font--line-height;
+			letter-spacing: $resets-custom-h6-font--letter-space;
 		}
 
 		// p
