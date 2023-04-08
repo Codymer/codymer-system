@@ -69,13 +69,13 @@
 
     // &--primary
     &--primary {
-      @include size(null, 2.5rem);
+      @include size(null, 2.625rem);
       font-family: map-fonts(Google, Space-Grotesk--400);
     }
 
     // &--select
     &--select {
-      @include size(null, 2.5rem);
+      @include size(null, 2.625rem);
       font-family: map-fonts(Google, Space-Grotesk--500);
     }
 
