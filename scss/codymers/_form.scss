@@ -1,0 +1,175 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: form
+// ===============================================
+@mixin cdmr-form($theme: null) {
+  .cdmr-form {
+    $self: &;
+
+    // &-label
+    &-label {
+      // theme: codymer
+      @if $theme == codymer {
+        font-family: map-fonts(Google, Space-Grotesk--50);
+        font-size: 1rem;
+        line-height: 1.125rem;
+        color: map-colors(purples, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        font-family: map-fonts(Google, Syne--75);
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: map-colors(browns, theme-example-01--75);
+      }
+    }
+
+    // &-field
+    &-field {
+      @include size(100%, null);
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+      box-shadow: none;
+      background-clip: padding-box;
+      // theme: codymer
+      @if $theme == codymer {
+        @include padding(0.625rem);
+        @include border(
+          all,
+          0.125rem,
+          solid,
+          map-colors(purples, theme-codymer--50)
+        );
+        @include border-radius(0.2rem);
+        font-size: 1rem;
+        line-height: 1rem;
+        color: map-colors(purples, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        @include padding(1rem);
+        @include border(
+          all,
+          0.25rem,
+          solid,
+          map-colors(browns, theme-example-01--75)
+          
+        );
+        @include border-radius(1rem);
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: map-colors(browns, theme-example-01--75);
+      }
+
+      // &::placeholder
+      &::placeholder {
+        // theme: codymer
+        @if $theme == codymer {
+          color: map-colors(purples, theme-codymer--50);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          color: map-colors(blacks, theme--all);
+        }
+      }
+
+      // &:hover:not(:disabled)
+      &:hover:not(:disabled) {
+        // theme: codymer
+        @if $theme == codymer {
+          border-color: map-colors(blues, theme-codymer--50);
+          box-shadow: 0 0 0.313rem 0 map-colors(blues, theme-codymer--50);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          border-color: map-colors(browns, theme-example-01--25);
+          box-shadow: 0 0 0.313rem 0 map-colors(browns, theme-example-01--25);
+        }
+      }
+
+      // &:focus
+      &:focus {
+        outline: none;
+      }
+
+      // &:focus-visible
+      &:focus-visible {
+        // theme: codymer
+        @if $theme == codymer {
+          outline: 0.2rem solid map-colors(fucsias, theme-codymer--75);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          outline: 0.2rem solid map-colors(blues, theme-example-01--25);
+        }
+      }
+
+      // &:disabled
+      &:disabled {
+        color: map-colors(purples, theme-codymer--50);
+        background-color: map-colors(greys, theme-all--25);
+
+        // &:hover
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+
+      // &:not(:disabled)
+      &:not(:disabled) {
+        background-color: map-colors(whites, theme--all);
+      }
+
+      // &--primary
+      &--primary {
+        // theme: codymer
+        @if $theme == codymer {
+          @include size(null, 2.625rem);
+          font-family: map-fonts(Google, Space-Grotesk--25);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          @include size(null, 4rem); 
+          font-family: map-fonts(Google, Syne--75); 
+        }
+      }
+
+      // &--select
+      &--select {
+        // theme: codymer
+        @if $theme == codymer {
+          @include size(null, 2.625rem);
+          font-family: map-fonts(Google, Space-Grotesk--50);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          @include size(null, 4rem);
+          font-family: map-fonts(Google, Syne--75);
+        }
+      }
+
+      // &--txtarea
+      &--txtarea {
+        // theme: codymer
+        @if $theme == codymer {
+          font-family: map-fonts(Google, Space-Grotesk--50);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-family: map-fonts(Google, Syne--75);
+        }
+      }
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
+    }
+  }
+}

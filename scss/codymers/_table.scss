@@ -1,0 +1,163 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: table
+// ===============================================
+@mixin cdmr-table($theme: null) {
+  .cdmr-table {
+    $self: &;
+    word-break: normal;
+
+    // &__container
+    &__container {
+      @include position(relative);
+      width: 100%;
+    }
+
+    // &__th
+    &__th {
+      @include padding(0.625rem);
+      vertical-align: bottom;
+      @include min-screen(768px) {
+        font-size: 1rem;
+        line-height: 1.125rem;
+      }
+
+      // &:first-of-type
+      &:first-of-type {
+        @include border(left, 0.625rem, null, null);
+      }
+
+      // &:last-of-type
+      &:last-of-type {
+        @include border(right, 0.625rem, null, null);
+      }
+    }
+
+    // &__td
+    &__td {
+      @include padding(0.625rem);
+      @include border(
+        bottom,
+        0.125rem,
+        solid,
+        map-colors(greys, theme-all--25)
+      );
+    }
+
+    // &--primary
+    &--primary {
+      // #{ $self }
+      #{ $self } {
+        // &__th
+        &__th {
+          color: map-colors(whites, theme--all);
+          // theme: codymer
+          @if $theme == codymer {
+            background-color: map-colors(purples, theme-codymer--50);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            background-color: map-colors(browns, theme-example-01--75);
+          }
+        }
+
+        // &__td
+        &__td {
+          // &:hover, &:focus
+          &:hover,
+          &:focus {
+            background-color: map-colors(yellows, theme-codymer--50);
+            // theme: codymer
+            @if $theme == codymer {
+              border-color: map-colors(blues, theme-codymer--50);
+              box-shadow: 0 0 0.313rem 0 map-colors(blues, theme-codymer--50);
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              border-color: map-colors(browns, theme-example-01--25);
+              box-shadow: 0
+                0
+                0.313rem
+                0
+                map-colors(browns, theme-example-01--25);
+            }
+          }
+        }
+
+        // &__foot
+        &__tfoot {
+          background-color: map-colors(greys, theme-all--25);
+        }
+      }
+    }
+
+    // &--resp
+    &--resp {
+      @include margin(null null 1.25rem null);
+      clear: both;
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
+      // &-stick
+      &-stick {
+        // &-thead
+        &-thead {
+          overflow-y: auto;
+          max-height: 450px;
+
+          // #{ $self }
+          #{ $self } {
+            // &__th
+            &__th {
+              @include position(sticky, 0, null, null, null);
+              z-index: 3;
+            }
+
+            // &__td
+            &__td {
+              // &:first-of-type
+              &:first-of-type {
+                @include position(sticky, null, null, null, 0);
+                z-index: 2;
+                color: map-colors(whites, theme--all);
+                // theme: codymer
+                @if $theme == codymer {
+                  background-color: map-colors(purples, theme-codymer--50);
+                }
+                // theme: example-01
+                @if $theme == example-01 {
+                  background-color: map-colors(browns, theme-example-01--75);
+                }
+
+                // &:hover, &:focus
+                &:hover,
+                &:focus {
+                  background-color: map-colors(yellows, theme-codymer--50);
+                  // theme: codymer
+                  @if $theme == codymer {
+                    color: map-colors(purples, theme-codymer--50);
+                  }
+                  // theme: example-01
+                  @if $theme == example-01 {
+                    color: map-colors(browns, theme-example-01--75);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

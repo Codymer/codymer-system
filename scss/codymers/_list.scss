@@ -1,0 +1,181 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: list
+// ===============================================
+@mixin cdmr-list($theme: null) {
+  .cdmr-list {
+    $self: &;
+
+    // &--primary
+    &--primary {
+      @include padding(null null null 0);
+
+      // #{ $self }
+      #{ $self } {
+        // &__item
+        &__item {
+          @include position(relative);
+          // theme: codymer
+          @if $theme == codymer {
+            @include padding(null null null 1.5rem);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            @include padding(null null null 3rem);
+          }
+
+          // &:before
+          &:before {
+            content: "";
+            @include position(absolute, null, null, null, 0);
+            // theme: codymer
+            @if $theme == codymer {
+              @include size(1rem);
+              top: 0;
+              filter: map-filters(purples, theme-codymer--50);
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include size(2rem);
+              top: -.4rem; 
+              filter: map-filters(browns, theme-example-01--50);
+            }
+          }
+
+          // &:not(:first-child)
+          &:not(:first-child) {
+            // theme: codymer
+            @if $theme == codymer {
+              @include margin(0.313rem null null null);
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include margin(1rem null null null);
+            }
+          }
+
+          // &:not(.cdmr-list__lvl2 .cdmr-list__item):before
+          &:not(#{ $self }__lvl2 #{ $self }__item):before {
+            // theme: codymer
+            @if $theme == codymer {
+              @include background-setup(
+                // img path
+                map-icons(arrows, theme-unicons--rgt),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                transparent
+              );
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include background-setup(
+                // img path
+                map-icons(arrows, theme-unicons--rgt),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                transparent
+              );
+            }
+          }
+        }
+
+        // &__lvl2
+        &__lvl2 {
+          @include margin(1rem null null null);
+          @include padding(null null null 1rem);
+
+          // #{ $self }
+          #{ $self } {
+            // &__item
+            &__item {
+              // &:before
+              &:before {
+                // theme: codymer
+                @if $theme == codymer {
+                  @include background-setup(
+                    // img path
+                    map-icons(arrows, theme-unicons--double-rgt),
+                    // position and size
+                    "0 0 / contain",
+                    // repeat
+                    no-repeat,
+                    // attachment
+                    null,
+                    // origin
+                    null,
+                    // clip
+                    null,
+                    // color
+                    transparent
+                  );
+                }
+                // theme: example-01
+                @if $theme == example-01 {
+                  @include background-setup(
+                    // img path
+                    map-icons(arrows, theme-unicons--double-rgt),
+                    // position and size
+                    "0 0 / contain",
+                    // repeat
+                    no-repeat,
+                    // attachment
+                    null,
+                    // origin
+                    null,
+                    // clip
+                    null,
+                    // color
+                    transparent
+                  );
+                }
+              }
+            }
+          }
+        }
+
+        // &__lvl3
+        &__lvl3 {
+          // theme: codymer
+          @if $theme == codymer {
+            @include margin(1rem null null null);
+            @include padding(null null null 1rem);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            @include margin(2rem null null null);
+            @include padding(null null null 2rem);
+          }
+        }
+      }
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
+    }
+  }
+}

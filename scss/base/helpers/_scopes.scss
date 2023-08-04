@@ -1,0 +1,22 @@
+// CORE
+// ===============================================
+@use '../../abstracts/index' as *;
+// ===============================================
+
+// SCOPE
+// ===============================================
+@mixin helper-scope($theme: null) {
+  .helper-scope {
+    // &-10
+    &-10 {
+      // thene: codymer
+      @if $theme == codymer  {
+        @include size(1.563rem);
+      }
+      // thene: example-01
+      @if $theme == example-01  {
+        @include size(2rem);
+      }
+    }
+  }
+}

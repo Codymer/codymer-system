@@ -1,0 +1,173 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: breadcrumb
+// ===============================================
+@mixin cdmr-breadcrumb($theme: null) {
+  .cdmr-breadcrumb {
+    $self: &;
+    @include position(relative);
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    gap: 1.2rem;
+    list-style-type: none;
+
+    // &:focus-visible
+    &:focus-visible {
+      // theme: codymer
+      @if $theme == codymer {
+        outline: .2rem solid map-colors(fucsias, theme-codymer--75);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        outline: .2rem solid map-colors(blues, theme-example-01--25);
+      }
+    }
+
+    // &__item
+    &__item {
+      @include position(relative);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      // &:last-child
+      &:last-child {
+        @include padding(null 0.313rem null 0.313rem);
+        // theme: codymer
+        @if $theme == codymer {
+          color: map-colors(blues, theme-codymer--50);
+          background-color: map-colors(fucsias, theme-codymer--50);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          color: map-colors(whites, theme--all);
+          background-color: map-colors(blacks, theme-example-01--50);
+        }
+      }
+
+      // &:not(:last-child)
+      &:not(:last-child) {
+        // &:after
+        &:after {
+          content: "";
+          @include margin(auto null auto null);
+          @include position(absolute, 0, -1.25rem, 0, null);
+          @include size(1.2rem);
+          @include background-setup(
+            // img path
+            map-icons(arrows, theme-unicons--rgt),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null,
+          );
+          // theme: codymer
+          @if $theme == codymer {
+            filter: map-filters(purples, theme-codymer--50);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            filter: map-filters(browns, theme-example-01--50);
+          }
+        }
+      }
+    }
+
+    // &__link
+    &__link {
+      transition: color 200ms ease;
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(purples, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme-example-01--50);
+      }
+
+      // &:hover, &:focus-visible
+      &:hover,
+      &:focus-visible {
+        outline: none;
+        text-decoration: underline;
+        // theme: codymer
+        @if $theme == codymer {
+          color: map-colors(fucsias, theme-codymer--50);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          color: map-colors(browns, theme-example-01--50);
+        }
+      }
+    }
+
+    // &--primary
+    &--primary {
+      // &:before
+      &:before {
+        @include background-setup(
+          // img path
+          map-icons(user-interface, theme-unicons--house),
+          // position and size
+          "0 0 / contain",
+          // repeat
+          no-repeat,
+          // attachment
+          null,
+          // origin
+          null,
+          // clip
+          null,
+          // color
+          null,
+        );
+        // theme: codymer
+        @if $theme == codymer {
+          filter: map-filters(purples, theme-codymer--25);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          filter: map-filters(browns, theme-example-01--50);
+        }
+      }
+    }
+
+    // &--has
+    &--has {
+      // &-icon
+      &-icon {
+        @include padding(null null null 1.875rem);
+        line-height: 1.25rem;
+
+        // &:before
+        &:before {
+          content: "";
+          @include position(absolute, 0, null, 0, 0);
+          @include size(1.25rem);
+        }
+      }
+    }
+
+    // &--is
+    &--is {
+    }
+
+    // &:not()
+    &:not(#{ $self }--has-icon) {
+      @include padding(null null null 0);
+    }
+  }
+}

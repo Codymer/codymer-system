@@ -1,0 +1,80 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: icon
+// ===============================================
+@mixin cdmr-icon($theme: null) {
+  .cdmr-icon {
+    $self: &;
+    display: inline-block;
+
+    // &:before
+    &:before {
+      content: "";
+      @include position(absolute, 0, 0, 0, 0);
+      @include margin(auto);
+    }
+
+    // &--content
+    &--content {
+      // &-bars
+      &-bars {
+        // &:before
+        &:before {
+          @include background-setup(
+            // img path
+            map-icons(content, theme-unicons--bars),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null,
+          );
+        }
+      }
+    }
+
+    // &--userinterface
+    &--userinterface {
+      // &-cancel
+      &-cancel {
+        // &:before
+        &:before {
+          @include background-setup(
+            // img path
+            map-icons(user-interface, theme-unicons--cancel),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null,
+          );
+        }
+      }
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
+    }
+  }
+}

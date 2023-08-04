@@ -1,0 +1,25 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: txt
+// ===============================================
+@mixin cdmr-txt($theme: null) {
+  .cdmr-txt {
+    $self: &;
+
+    // &--primary
+    &--primary {
+      @include margin(0 null 0.938rem null);
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
+    }
+  }
+}

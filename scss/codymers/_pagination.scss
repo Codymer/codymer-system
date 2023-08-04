@@ -1,0 +1,382 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: pagination
+// ===============================================
+@mixin cdmr-pagination($theme: null) {
+  .cdmr-pagination {
+    $self: &;
+    @include padding(null null null 0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+
+    // &__item
+    &__item {
+      @include position(relative);
+      transition: background-color 200ms ease;
+      // theme: codymer
+      @if $theme == codymer {
+        @include size(2.5rem);
+        @include border-radius(.6rem);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        @include size(4rem);
+        @include border-radius(1rem);
+      }
+
+      // &--has
+      &--has {
+        // &-icon
+        &-icon {
+          // &:after
+          &:after {
+            content: "";
+            @include position(absolute, 0, 0, 0, 0);
+            @include margin(auto);
+            @include size(1.875rem);
+            pointer-events: none;
+            // theme: codymer
+            @if $theme == codymer {
+              @include size(1.875rem);
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include size(2.5rem);
+            }
+          }
+
+          // #{ $self }
+          #{ $self } {
+            // &__trigger
+            &__trigger {
+              text-indent: -9999px;
+            }
+          }
+
+          // &:not()
+          &:not(#{ $self }__item--is-disabled) {
+            // &:after
+            &:after {
+              // theme: codymer
+              @if $theme == codymer {
+                filter: map-filters(purples, theme-codymer--25);
+              }
+              // theme: example-01
+              @if $theme == example-01 {
+                filter: map-filters(browns, theme-example-01--50);
+              }
+            }
+          }
+
+          // &:focus-visible
+          &:focus-visible {
+            // :after
+            &:after {
+              filter: map-filters(whites, theme--all);
+            }
+          }
+        }
+      }
+
+      // &--is
+      &--is {
+        // &-nav
+        &-nav {
+          // &-prev
+          &-prev {
+            // &:after
+            &:after {
+              // theme: codymer
+              @if $theme == codymer {
+                @include background-setup(
+                  // img path
+                  map-icons(arrows, theme-unicons--rgt),
+                  // position and size
+                  "0 0 / contain",
+                  // repeat
+                  no-repeat,
+                  // attachment
+                  null,
+                  // origin
+                  null,
+                  // clip
+                  null,
+                  // color
+                  null
+                );
+                transform: rotate(-180deg);
+              }
+              // theme: example-01
+              @if $theme == example-01 {
+                @include background-setup(
+                  // img path
+                  map-icons(arrows, theme-unicons--rgt),
+                  // position and size
+                  "0 0 / contain",
+                  // repeat
+                  no-repeat,
+                  // attachment
+                  null,
+                  // origin
+                  null,
+                  // clip
+                  null,
+                  // color
+                  null
+                );
+                transform: rotate(-180deg);
+              }
+            }
+          }
+
+          // &-next
+          &-next {
+            // &:after
+            &:after {
+              // theme: codymer
+              @if $theme == codymer {
+                @include background-setup(
+                  // img path
+                  map-icons(arrows, theme-unicons--rgt),
+                  // position and size
+                  "0 0 / contain",
+                  // repeat
+                  no-repeat,
+                  // attachment
+                  null,
+                  // origin
+                  null,
+                  // clip
+                  null,
+                  // color
+                  null
+                );
+              }
+
+              // theme: example-01
+              @if $theme == example-01 {
+                @include background-setup(
+                  // img path
+                  map-icons(arrows, theme-unicons--rgt),
+                  // position and size
+                  "0 0 / contain",
+                  // repeat
+                  no-repeat,
+                  // attachment
+                  null,
+                  // origin
+                  null,
+                  // clip
+                  null,
+                  // color
+                  null
+                );
+              }
+            }
+          }
+        }
+
+        // &-first
+        &-first {
+          // &:after
+          &:after {
+            // theme: codymer
+            @if $theme == codymer {
+              @include background-setup(
+                // img path
+                map-icons(arrows, theme-unicons--double-rgt),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                null
+              );
+              transform: rotate(180deg);
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include background-setup(
+                // img path
+                map-icons(arrows, theme-unicons--double-rgt),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                null
+              );
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        // &-last
+        &-last {
+          // &:after
+          &:after {
+            // theme: codymer
+            @if $theme == codymer {
+              @include background-setup(
+                // img path
+                map-icons(arrows, theme-unicons--double-rgt),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                null
+              );
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include background-setup(
+                // img path
+                map-icons(arrows, theme-unicons--double-rgt),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                null
+              );
+            }
+          }
+        }
+
+        // &-active
+        &-active {
+          // theme: codymer
+          @if $theme == codymer {
+            border-color: map-colors(purples, theme-codymer--50);
+            background-color: map-colors(purples, theme-codymer--50);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            border-color: map-colors(browns, theme-example-01--75);
+            background-color: map-colors(browns, theme-example-01--75);
+          }
+
+          // #{ $self }
+          #{ $self } {
+            // &__trigger
+            &__trigger {
+              color: map-colors(whites, theme--all);
+            }
+          }
+        }
+
+        // &-disabled
+        &-disabled {
+          // &:after
+          &:after {
+            filter: map-filters(whites, theme--all);
+          }
+        }
+      }
+    }
+
+    // &__trigger
+    &__trigger {
+      @include position(relative);
+      @include size(100%);
+      @include border(all, null, solid, transparent);
+      transition: border-color 200ms ease, color 200ms ease;
+      background-color: transparent;
+      // theme: codymer
+      @if $theme == codymer {
+        @include border-radius(.6rem);
+        border-width: 0.125rem;
+        color: map-colors(purples, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        @include border-radius(1rem);
+        color: map-colors(browns, theme-example-01--75);
+      }
+
+      // &:not(:disabled)
+      &:not(:disabled) {
+        // &:hover
+        &:hover {
+          // theme: codymer
+          @if $theme == codymer {
+            border-color: map-colors(purples, theme-codymer--50); 
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            border-color: map-colors(browns, theme-example-01--75);
+          }
+        }
+      }
+
+      // &:focus-visible
+      &:focus-visible {
+        // theme: codymer
+        @if $theme == codymer {
+          outline: 0.2rem solid map-colors(fucsias, theme-codymer--75);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          outline: 0.2rem solid map-colors(blues, theme-example-01--25);
+        }
+      }
+
+      // &:disabled
+      &:disabled {
+        color: map-colors(whites, theme--all);
+        border-color: map-colors(greys, theme-all--50);
+        background-color: map-colors(greys, theme-all--50);
+
+        // &:hover
+        &:hover {
+          cursor: not-allowed;
+        }
+
+        // &:focus-visible
+        &:focus-visible {
+          border-color: map-colors(greys, theme-all--25);
+          color: map-colors(greys, theme-all--50);
+          background-color: map-colors(greys, theme-all--25);
+        }
+      }
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
+    }
+  }
+}

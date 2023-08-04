@@ -1,0 +1,74 @@
+// CORE
+// ===============================================
+@use "../../abstracts/index" as *;
+// ===============================================
+
+// CONT SET: form-field
+// ===============================================
+@mixin cont-set-form-field($theme: null) {
+  .cont-set-form-field {
+    $self: &;
+
+    // .cont
+    .cont {
+      // &-group
+      &-group {
+        // &-form-field
+        &-form-field {
+          flex-basis: 100%;
+
+          // &:not(:first-child)
+          &:not(:first-child) {
+            @include margin(0.938rem null null null);
+          }
+        }
+      }
+    }
+
+    // &--inline
+    &--inline {
+      // .cont
+      .cont {
+        // &-group
+        &-group {
+          // &-form-field
+          &-form-field {
+            @include min-screen(1024px) {
+              flex-basis: auto;
+            }
+
+            // &:not(:first-child)
+            &:not(:first-child) {
+              @include min-screen(1024px) {
+                @include margin(0 null null null);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // &--gap
+    &--gap {
+      // &-25
+      &-25 {
+        // theme: codymer
+        @if $theme == codymer {
+          gap: 0.625rem;
+        }
+        // theme: example-01
+        @if $theme == example-01 { 
+          gap: 1rem; 
+        }
+      }
+    }
+
+    // &--is
+    &--is {
+    }
+
+    // &--has
+    &--has {
+    }
+  }
+}

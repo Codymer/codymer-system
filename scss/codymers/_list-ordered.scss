@@ -1,0 +1,90 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// CDMR: list-ordered
+// ===============================================
+@mixin cdmr-list-ordered($theme: null) {
+  .cdmr-list-ordered {
+    $self: &;
+    @include padding(null null null 0);
+    // theme: codymer
+    @if $theme == codymer {
+      @include margin(1.5rem null 2.5rem null);
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      @include margin(2rem null 4rem null);
+    }
+
+    // &--primary
+    &--primary {
+      list-style: none; 
+      counter-reset: list-number;
+      // #{ $self }
+      #{ $self } {
+        // &__item
+        &__item {
+          @include position(relative);
+
+          // theme: codymer
+          @if $theme == codymer {
+            @include padding(null null null 2.5rem);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            @include padding(null null null 3rem);
+          }
+
+          // &:before
+          &:before {
+            content: counter(list-number);
+            @include position(absolute);
+            counter-increment: list-number;
+            border-radius: 50%;
+            text-align: center;
+            // theme: codymer
+            @if $theme == codymer {
+              @include position(null, -0.25rem, null, null, 0);
+              @include size(1.563rem);
+              font-size: 0.938rem;
+              line-height: 1.563rem;
+              color: map-colors(whites, theme--all);
+              background-color: map-colors(purples, theme-codymer--50);
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include position(null, -0.25rem, null, null, 0);
+              @include size(2rem);
+              font-size: 1rem;
+              line-height: 2rem;
+              color: map-colors(whites, theme--all);
+              background-color: map-colors(browns, theme-example-01--75);
+            }
+          }
+
+          // &:not(:first-child)
+          &:not(:first-child) {
+            // theme: codymer
+            @if $theme == codymer {
+              @include margin(1.5rem null null null);
+            }
+            // theme: example-01
+            @if $theme == example-01 {
+              @include margin(3rem null null null);
+            }
+          }
+        }
+      }
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
+    }
+  }
+}
