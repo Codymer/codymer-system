@@ -1,327 +1,302 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
-// MIXIN HELPER: font-color
+// MIXIN HELPER: font
 // ===============================================
-@mixin helper-font-color(
-  $helper-color--primary: null,
-  $helper-color--secondary: null,
-  $helper-color--tertiary: null,
-  $helper-color--quaternary: null,
-  $helper-color--quinary: null,
-  $helper-color--senary: null,
-  $helper-color--septenary: null,
-  $helper-color--octonary: null,
-  $helper-color--nonary: null,
-  $helper-color--denary: null,
-  $helper-color--undenary: null,
-  $helper-color--duodenary: null,
-  $helper-color--tredenary: null,
-  $helper-color--quadrodenary: null
-) {
-
-  // .helper-font
-  .helper-font-color {
-
-    // &-black
-    &-black {
-      color: map-colors(blacks, theme--all);
-      @include behavior-in-ancestor(helper-bg-color-black) {
+@mixin helper-font($theme: null) {
+  .helper-font {
+    // &-color
+    &-color {
+      // &-black
+      &-black {
+        color: map-colors(blacks, theme--all);
+      }
+      // &-white
+      &-white {
         color: map-colors(whites, theme--all);
       }
-
-    }
-
-    // &-blue
-    &-blue {
-
-      // &-facebook
-      &-facebook {
-
-        // &-500
-        &-500 {
-          color: map-colors(blues, theme-facebook--500);
+      // &-blue
+      &-blue {
+        &-facebook {
+          &-25 {
+            color: map-colors(blues, theme-facebook--25);
+          }
         }
-
-      }
-
-      // &-instagram
-      &-instagram {
-
-        // generals
-        &-500 {
-          color: map-colors(blues, theme-instagram--500);
+        &-instagram {
+          &-25 {
+            color: map-colors(blues, theme-instagram--25);
+          }
         }
-
-      }
-
-      // &-twitter
-      &-twitter {
-
-        // &-500
-        &-500 {
-          color: map-colors(blues, theme-twitter--500);
+        &-twitter {
+          &-25 {
+            color: map-colors(blues, theme-twitter--25);
+          }
         }
-
       }
-
-    }
-
-    // &-green
-    &-green {
-
-      // &-whatsapp
-      &-whatsapp {
-
-        // &-500
-        &-500 {
-          color: map-colors(greens, theme-whatsapp--500);
+      // &-green
+      &-green {
+        &-whatsapp {
+          &-25 {
+            color: map-colors(greens, theme-whatsapp--25);
+          }
         }
-
-      // end // &Whatsapp
       }
-
-    }
-
-    // &-purple
-    &-purple {
-
-      // &-instagram
-      &-instagram {
-
-        // &-500
-        &-500 {
-          color: map-colors(purples, theme-instagram--500);
+      // &-purple
+      &-purple {
+        &-instagram {
+          &-25 {
+            color: map-colors(purples, theme-instagram--25);
+          }
         }
-
       }
-
+      // &-primary
+      &-primary {
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            color: map-colors(fucsias, theme-codymer--75);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            color: map-colors(blacks, theme-example-01--50);
+          }
+        }
+      }
+      // &-secondary
+      &-secondary {
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            color: map-colors(pinks, theme-codymer--50);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            color: map-colors(browns, theme-example-01--25);
+          }
+        }
+      }
+      // &-tertiary
+      &-tertiary {
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            color: map-colors(greens, theme-codymer--75);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            color: map-colors(browns, theme-example-01--50);
+          }
+        }
+      }
+      // &-quaternary
+      &-quaternary {
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            color: map-colors(yellows, theme-codymer--50);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            color: map-colors(browns, theme-example-01--75);
+          }
+        }
+      }
+      // &-quinary
+      &-quinary {
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            color: map-colors(pinks, theme-codymer--25);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            color: map-colors(blues, theme-example-01--25);
+          }
+        }
+      }
+      // &-septenary
+      &-septenary {
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            color: map-colors(blues, theme-codymer--25);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+          }
+        }
+      }
     }
 
-    // &-white
-    &-white {
-      color: map-colors(whites, theme--all);
+    // &-weight
+    &-weight {
+      // &-25
+      &-25 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-family: map-fonts(Google, Space-Grotesk--25);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-family: map-fonts(Google, Syne--25);
+        }
+      }
+      // &-50
+      &-50 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-family: map-fonts(Google, Space-Grotesk--50);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-family: map-fonts(Google, Syne--50);
+        }
+      }
+      // &-75
+      &-75 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-family: map-fonts(Google, Space-Grotesk--75);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-family: map-fonts(Google, Syne--75);
+        }
+      }
+      // &-100
+      &-100 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-family: map-fonts(Google, Space-Grotesk--100);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+        }
+      }
+      // &-125
+      &-125 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-family: map-fonts(Google, Space-Grotesk--125);
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+        }
+      }
     }
 
-    // &-primary
-    &-primary {
-      color: $helper-color--primary;
+    // &-scope
+    &-scope {
+      // &-10
+      &-10 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-size: 0.875rem;
+          line-height: 1rem;
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-size: 1rem;
+          line-height: 1.2rem;
+        }
+      }
+      // &-20
+      &-20 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-size: 0.875rem;
+          line-height: 1rem;
+          @include min-screen(768px) {
+            font-size: 1.25rem;
+            line-height: 1.375rem;
+          }
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-size: 1.5rem;
+          line-height: 1.7rem;
+          @include min-screen(768px) {
+            font-size: 2rem;
+            line-height: 2.2rem;
+          }
+        }
+      }
+      // &-30
+      &-30 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-size: 1.125rem;
+          line-height: 1.25rem;
+          @include min-screen(768px) {
+            font-size: 1.625rem;
+            line-height: 1.75rem;
+            letter-spacing: -0.063rem;
+          }
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-size: 2rem;
+          line-height: 2.2rem;
+          @include min-screen(768px) {
+            font-size: 2.2rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+      // &-40
+      &-40 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-size: 1.25rem;
+          line-height: 1.375rem;
+          @include min-screen(998px) {
+            font-size: 1.875rem;
+            line-height: 2rem;
+            letter-spacing: -0.063rem;
+          }
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-size: 2.2rem;
+          line-height: 2.4rem;
+          @include min-screen(998px) {
+            font-size: 3rem;
+            line-height: 3.2rem;
+            letter-spacing: -0.1rem;
+          }
+        }
+      }
+      // &-50
+      &-50 {
+        // theme: codymer
+        @if $theme == codymer {
+          font-size: 1.5rem;
+          line-height: 1.625rem;
+          @include min-screen(768px) {
+            font-size: 2.25rem;
+            line-height: 2.375rem;
+            letter-spacing: -0.063rem;
+          }
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          font-size: 3rem;
+          line-height: 3.2rem;
+          @include min-screen(768px) {
+            font-size: 3.5rem;
+            line-height: 3.7rem;
+            letter-spacing: -0.15rem;
+          }
+        }
+      }
     }
-
-    // &-secondary
-    &-secondary {
-      color: $helper-color--secondary;
-    }
-
-    // &-tertiary
-    &-tertiary {
-      color: $helper-color--tertiary;
-    }
-
-    // &-quaternary
-    &-quaternary {
-      color: $helper-color--quaternary;
-    }
-
-    // &-quinary
-    &-quinary {
-      color: $helper-color--quinary;
-    }
-
-    // &-senary
-    &-senary {
-      color: $helper-color--senary;
-    }
-
-    // &-septenary
-    &-septenary {
-      color: $helper-color--septenary;
-    }
-
-    // &-octonary
-    &-octonary {
-      color: $helper-color--octonary;
-    }
-
-    // &-nonary
-    &-nonary {
-      color: $helper-color--nonary;
-    }
-
-    // &-denary
-    &-denary {
-      color: $helper-color--denary;
-    }
-
-    // &-undenary
-    &-undenary {
-      color: $helper-color--undenary;
-    }
-
-    // &-duodenary
-    &-duodenary {
-      color: $helper-color--duodenary;
-    }
-
-    // &-tredenary
-    &-tredenary {
-      color: $helper-color--tredenary;
-    }
-
-    // &-quadrodenary
-    &-quadrodenary {
-      color: $helper-color--quadrodenary;
-    }
-
   }
-
-}
-
-// MIXIN HELPER: font-weight
-// ===============================================
-@mixin helper-font-weight(
-  $helper-weight--100: null,
-  $helper-weight--200: null,
-  $helper-weight--300: null,
-  $helper-weight--400: null,
-  $helper-weight--500: null,
-  $helper-weight--600: null,
-  $helper-weight--700: null,
-  $helper-weight--800: null
-) {
-
-  // .helper-font-weight
-  .helper-font-weight {
-
-    // &-100
-    &-100 {
-      font-family: $helper-weight--100;
-    }
-
-    // &-200
-    &-200 {
-      font-family: $helper-weight--200;
-    }
-
-    // &-300
-    &-300 {
-      font-family: $helper-weight--300;
-    }
-
-    // &-400
-    &-400 {
-      font-family: $helper-weight--400;
-    }
-
-    // &-500
-    &-500 {
-      font-family: $helper-weight--500;
-    }
-
-    // &-600
-    &-600 {
-      font-family: $helper-weight--600;
-    }
-
-    // &-600
-    &-700 {
-      font-family: $helper-weight--700;
-    }
-
-    // &-800
-    &-800 {
-      font-family: $helper-weight--800;
-    }
-
-  }
-
-}
-
-// MIXIN HELPER: font-scope
-// ===============================================
-@mixin helper-font-scope(
-  $helper-font-scope--density: null,
-  $helper-font-scope--unit: null,
-  $helper-lineheight--unit: null,
-  $helper-spacing--unit: null,
-  $helper-font--breakpoint-01: null,
-  $helper-font-breakpoint-01--unit: null,
-  $helper-line-breakpoint-01--unit: null,
-  $helper-spacing-breakpoint-01--unit: null,
-  $helper-font--breakpoint-02: null,
-  $helper-font-breakpoint-02--unit: null,
-  $helper-line-breakpoint-02--unit: null,
-  $helper-spacing-breakpoint-02--unit: null,
-  $helper-font--breakpoint-03: null,
-  $helper-font-breakpoint-03--unit: null,
-  $helper-line-breakpoint-03--unit: null,
-  $helper-spacing-breakpoint-03--unit: null,
-  $helper-font--breakpoint-04: null,
-  $helper-font-breakpoint-04--unit: null,
-  $helper-line-breakpoint-04--unit: null,
-  $helper-spacing-breakpoint-04--unit: null,
-  $helper-font--breakpoint-05: null,
-  $helper-font-breakpoint-05--unit: null,
-  $helper-line-breakpoint-05--unit: null,
-  $helper-spacing-breakpoint-05--unit: null,
-  $helper-font--breakpoint-06: null,
-  $helper-font-breakpoint-06--unit: null,
-  $helper-line-breakpoint-06--unit: null,
-  $helper-spacing-breakpoint-06--unit: null,
-  $helper-font--breakpoint-07: null,
-  $helper-font-breakpoint-07--unit: null,
-  $helper-line-breakpoint-07--unit: null,
-  $helper-spacing-breakpoint-07--unit: null
-) {
-
-  // .helper-font-scope
-  .helper-font-scope {
-
-    // set density
-    &-#{$helper-font-scope--density} {
-      font-size: $helper-font-scope--unit;
-      line-height: $helper-lineheight--unit;
-      letter-spacing: $helper-spacing--unit;
-      @include min-screen($helper-font--breakpoint-01) {
-        font-size: $helper-font-breakpoint-01--unit;
-        line-height: $helper-line-breakpoint-01--unit;
-        letter-spacing: $helper-spacing-breakpoint-01--unit;
-      }
-      @include min-screen($helper-font--breakpoint-02) {
-        font-size: $helper-font-breakpoint-02--unit;
-        line-height: $helper-line-breakpoint-02--unit;
-        letter-spacing: $helper-spacing-breakpoint-02--unit;
-      }
-      @include min-screen($helper-font--breakpoint-03) {
-        font-size: $helper-font-breakpoint-03--unit;
-        line-height: $helper-line-breakpoint-03--unit;
-        letter-spacing: $helper-spacing-breakpoint-03--unit;
-      }
-      @include min-screen($helper-font--breakpoint-04) {
-        font-size: $helper-font-breakpoint-04--unit;
-        line-height: $helper-line-breakpoint-04--unit;
-        letter-spacing: $helper-spacing-breakpoint-04--unit;
-      }
-      @include min-screen($helper-font--breakpoint-05) {
-        font-size: $helper-font-breakpoint-05--unit;
-        line-height: $helper-line-breakpoint-05--unit;
-        letter-spacing: $helper-spacing-breakpoint-05--unit;
-      }
-      @include min-screen($helper-font--breakpoint-06) {
-        font-size: $helper-font-breakpoint-06--unit;
-        line-height: $helper-line-breakpoint-06--unit;
-        letter-spacing: $helper-spacing-breakpoint-06--unit;
-      }
-      @include min-screen($helper-font--breakpoint-07) {
-        font-size: $helper-font-breakpoint-07--unit;
-        line-height: $helper-line-breakpoint-07--unit;
-        letter-spacing: $helper-spacing-breakpoint-07--unit;
-      }
-
-    }
-
-  }
-
 }

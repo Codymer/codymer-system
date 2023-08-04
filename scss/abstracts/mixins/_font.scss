@@ -51,21 +51,3 @@
 	@content;
 
 }
-
-// FONT-SETUP
-// ===============================================
-@mixin font-setup(
-	$font-setup--fontStyle: null,
-	$font-setup--fontVariant: null,
-	$font-setup--fontWeight: null,
-	$font-setup--fontSizeLineHeight: null,
-	$font-setup--fontFamily: null
-) {
-
-	font:
-		$font-setup--fontStyle // font-style
-		$font-setup--fontVariant // font-variant
-		#{$font-setup--fontWeight} // font-weight
-		#{$font-setup--fontSizeLineHeight} // font-size / line-height
-		$font-setup--fontFamily; // font-family
-}

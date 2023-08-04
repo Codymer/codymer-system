@@ -9,7 +9,7 @@ $map-filters:(
     'theme--all': invert(0%) sepia(40%) saturate(20%) hue-rotate(356deg) brightness(90%) contrast(104%),
 
     // theme example-01
-    'theme-example-01--600': invert(8%) sepia(63%) saturate(531%) hue-rotate(144deg) brightness(93%) contrast(94%),
+    'theme-example-01--25': invert(8%) sepia(63%) saturate(531%) hue-rotate(144deg) brightness(93%) contrast(94%),
 
   ),
 
@@ -17,7 +17,8 @@ $map-filters:(
   blues: (
 
     // theme codymer
-    'theme-codymer--500': invert(47%) sepia(78%) saturate(450%) hue-rotate(183deg) brightness(89%) contrast(92%),
+    'theme-codymer--25': invert(47%) sepia(78%) saturate(450%) hue-rotate(183deg) brightness(89%) contrast(92%),
+    'theme-codymer--50': invert(4%) sepia(97%) saturate(5998%) hue-rotate(253deg) brightness(96%) contrast(94%), 
 
   ),
 
@@ -25,8 +26,8 @@ $map-filters:(
   browns: (
 
     // theme example 01
-    'theme-example-01--200': invert(73%) sepia(24%) saturate(1275%) hue-rotate(324deg) brightness(91%) contrast(86%),
-    'theme-example-01--300': invert(53%) sepia(16%) saturate(2148%) hue-rotate(329deg) brightness(78%) contrast(90%),
+    'theme-example-01--25': invert(73%) sepia(24%) saturate(1275%) hue-rotate(324deg) brightness(91%) contrast(86%),
+    'theme-example-01--50': invert(53%) sepia(16%) saturate(2148%) hue-rotate(329deg) brightness(78%) contrast(90%),
 
   ),
 
@@ -34,7 +35,7 @@ $map-filters:(
   fucsias: (
 
     // theme codymer
-    'theme-codymer--500': invert(30%) sepia(81%) saturate(3677%) hue-rotate(321deg) brightness(96%),
+    'theme-codymer--25': invert(30%) sepia(81%) saturate(3677%) hue-rotate(321deg) brightness(96%),
 
   ),
 
@@ -42,9 +43,9 @@ $map-filters:(
   greens: (
 
     // theme codymer
-    'theme-codymer--500': invert(100%) sepia(59%) saturate(1662%) hue-rotate(94deg) brightness(94%) contrast(91%),
-    'theme-codymer--600': invert(22%) sepia(58%) saturate(6850%) hue-rotate(171deg) brightness(101%) contrast(85%),
-    'theme-codymer--700': invert(45%) sepia(59%) saturate(326%) hue-rotate(112deg) brightness(96%) contrast(85%),
+    'theme-codymer--25': invert(100%) sepia(59%) saturate(1662%) hue-rotate(94deg) brightness(94%) contrast(91%),
+    'theme-codymer--50': invert(22%) sepia(58%) saturate(6850%) hue-rotate(171deg) brightness(101%) contrast(85%),
+    'theme-codymer--75': invert(45%) sepia(59%) saturate(326%) hue-rotate(112deg) brightness(96%) contrast(85%),
     'theme-codymer--success': invert(20%) sepia(69%) saturate(1571%) hue-rotate(151deg) brightness(107%) contrast(102%),
 
     // theme example-01
@@ -56,8 +57,8 @@ $map-filters:(
   greys: (
 
     // theme all
-    'theme-all--200':  invert(93%) sepia(0%) saturate(76%) hue-rotate(153deg) brightness(91%) contrast(85%),
-    'theme-all--500': invert(54%) sepia(39%) saturate(0%) hue-rotate(202deg) brightness(105%) contrast(85%),
+    'theme-all--25':  invert(93%) sepia(0%) saturate(76%) hue-rotate(153deg) brightness(91%) contrast(85%),
+    'theme-all--50': invert(54%) sepia(39%) saturate(0%) hue-rotate(202deg) brightness(105%) contrast(85%),
 
   ),
 
@@ -65,7 +66,7 @@ $map-filters:(
   oranges: (
 
     // theme codymer
-    'theme-codymer--200': invert(78%) sepia(71%) saturate(610%) hue-rotate(300deg) brightness(98%) contrast(107%),
+    'theme-codymer--25': invert(78%) sepia(71%) saturate(610%) hue-rotate(300deg) brightness(98%) contrast(107%),
 
   ),
 
@@ -73,7 +74,7 @@ $map-filters:(
   purples: (
 
     // theme codymer
-    'theme-codymer--600': invert(11%) sepia(54%) saturate(2826%) hue-rotate(236deg) brightness(86%) contrast(106%),
+    'theme-codymer--25': invert(11%) sepia(54%) saturate(2826%) hue-rotate(236deg) brightness(86%) contrast(106%),
 
   ),
 

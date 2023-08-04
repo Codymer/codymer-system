@@ -3,15 +3,214 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Title</title>
+  <title>Codymers, a list of the most basic elements</title>
+  <meta name="keywords" content="CSS Helpers, SASS, CSS, Dart SASS, HTML Front-end, Design system">
+  <meta name="description" content="Codymer is a DART SASS and HTML architecture based system to bring multiple projects to live.">
+  <meta name="subject" content="Codymer is a pure DART SASS and HTML system">
+  <meta name="copyright" content="Codymer System">
+  <meta name="language" content="en">
+  <meta name="robots" content="index,follow">
+  <meta name="revised" content="Saturday, October 8th, 2022, 15:58 pm">
+  <meta name="abstract" content="Pure DART SASS design system">
+  <meta name="author" content="José Luis Pizarro, cody@codymer-system.com">
+  <meta name="designer" content="José Luis Pizarro Feo">
+  <meta name="copyright" content="José Luis Pizarro Feo">
+  <meta name="reply-to" content="cody@codymer-system.com">
+  <meta name="owner" content="José Luis Pizarro Feo">
+  <meta name="url" content="https://codymer-system.com/codymers.html">
+  <meta name="identifier-URL" content="https://codymer-system.com/codymers.html">
+  <meta name="directory" content="submission">
+  <meta name="category" content="coding">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="rating" content="General">
+  <meta name="revisit-after" content="7 days">
+  <meta name="og:title" content="Codymers, a list of the most basic elements">
+  <meta name="og:type" content="txt">
+  <meta name="og:url" content="https://codymer-system.com/codymers.html">
+  <meta name="og:site_name" content="Codymer System">
+  <meta name="og:description" content="Codymer System basic elements or codymers">
+  <meta name="og:email" content="cody@codymer-system.com">
+  <meta name="og:country-name" content="SPAIN">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="fonts/google-syne/Syne-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/google-syne/Syne-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/google-syne/Syne-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../css/styles-theme-example-01.css" type="text/css">
+  <link rel="canonical" href="https://codymer-system.com/codymers.html">
+  <link rel="preload" href="fonts/google-space-grotesk/SpaceGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/google-space-grotesk/SpaceGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/google-space-grotesk/SpaceGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/google-space-grotesk/SpaceGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/google-space-grotesk/SpaceGrotesk-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/styles-page-codymer.css" type="text/css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SBDND1PLT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3SBDND1PLT');
+  </script>
 </head>
 
-<body class="cdmr cdmr--theme-example-01">
+<body class="cdmr cdmr--theme-codymer">
+  <header class="layout-grid layout-header-codymer helper-bg-color-secondary-25">
+    <div class="layout-grid__col-xs-12 helper-dsp-flex helper-dsp-flex--algn-i-ctr">
+      <span class="helper-font-weight-125">
+        <a
+          href="./index.html"
+          class="layout-header-codymer__logo"
+          title="Back to main page">
+            Codymer
+        </a>
+      </span>
+      <nav class="layout-header-codymer__nav">
+        <!-- menu: open -->
+        <button
+          type="button"
+          name="trigger-sidenav"
+          class="layout-header-codymer__open cdmr-btn cdmr-btn--primary cdmr-btn--scope-25 cdmr-btn--has-icon cdmr-btn--has-icon-scope-25"
+          onclick="openNav()">
+            Menu
+            <span class="cdmr-icon cdmr-icon--content-bars"></span>
+        </button>
+        <!-- menu: content -->
+        <div id="codymerMenu" class="layout-header-codymer__sidenav helper-bg-color-primary-50  helper-dsp-flex helper-dsp-flex--wrap-yes">
+          <div class="layout-header-codymer__header">
+          </div>
+          <div class="layout-header-codymer__content">
+            <ul class="layout-header-codymer-nav helper-font-weight-125">
+              <li class="layout-header-codymer-nav__item">
+                <a
+                  href="documentation.html"
+                  class="layout-header-codymer-nav__link"
+                  title="Go to documentation page">
+                    Documentation
+                </a>
+              </li>
+              <li class="layout-header-codymer-nav__item">
+                Base
+                <ul class="layout-header-codymer-nav__lvl2">
+                  <li class="layout-header-codymer-nav__item">
+                    <a
+                      href="base-reset-basic.html"
+                      class="layout-header-codymer-nav__link"
+                      title="Go to basic reset page">
+                        Basic reset
+                    </a>
+                  </li>
+                  <li class="layout-header-codymer-nav__item">
+                    <a
+                      href="base-reset-custom.html"
+                      class="layout-header-codymer-nav__link"
+                      title="Go to custom reset page">
+                        Custom reset
+                    </a>
+                  </li>
+                  <li class="layout-header-codymer-nav__item">
+                    <a
+                      href="base-helpers.html"
+                      class="layout-header-codymer-nav__link"
+                      title="Go to helpers page">
+                        Helpers
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="layout-header-codymer-nav__item">
+                <a
+                  href="layout-grid.html"
+                  class="layout-header-codymer-nav__link"
+                  title="Go to layout grid page">
+                    Layout grid
+                </a>
+              </li>
+              <li class="layout-header-codymer-nav__item">
+                <a
+                  href="codymers.html"
+                  class="layout-header-codymer-nav__link"
+                  title="Go to codymers page">
+                    Codymers
+                </a>
+              </li>
+              <li class="layout-header-codymer-nav__item">
+                <a
+                  href="containers.html"
+                  class="layout-header-codymer-nav__link"
+                  title="Go to containers page">
+                    Containers
+                </a>
+              </li>
+              <li class="layout-header-codymer-nav__item">
+                <a
+                  href="mailto:cody@codymer-system.com"
+                  class="layout-header-codymer-nav__link"
+                  title="Send an email">
+                    Contact me
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="layout-header-codymer__footer">
+            <ul class="layout-header-codymer-rrss helper-dsp-flex helper-dsp-flex--wrap-yes helper-dsp-flex--just-ctr helper-dsp-flex--algn-i-ctr">
+              <li class="layout-header-codymer-rrss__item">
+                <a
+                  href="https://github.com/Codymer"
+                  class="layout-header-codymer-rrss__link"
+                  title="Go to the Github profile">
+                    <span class="helper-hide">Github</span>
+                    <span class="helper-icon helper-icon--github-primary"></span>
+                </a>
+              </li>
+              <li class="layout-header-codymer-rrss__item">
+                <a
+                  href="https://es.linkedin.com/in/joseluispizarrofeo"
+                  class="layout-header-codymer-rrss__link"
+                  title="Go to my Likedin profile">
+                    <span class="helper-hide">Likedin</span>
+                    <span class="helper-icon helper-icon--linkedin-primary"></span>
+                </a>
+              </li>
+              <li class="layout-header-codymer-rrss__item">
+                <a
+                  href="https://twitter.com/codymersystem"
+                  class="layout-header-codymer-rrss__link"
+                  title="Go to Codymer Twitter profile">
+                    <span class="helper-hide">Twitter</span>
+                    <span class="helper-icon helper-icon--twitter-primary"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--menu: close -->
+          <div class="layout-header-codymer__close">
+            <button
+              type="button"
+              name="menu-close"
+              class="cdmr-btn-iconized cdmr-btn-iconized--secondary cdmr-btn-iconized--shape-circle cdmr-btn-iconized--scope-25"
+              data-dismiss="modal"
+              onclick="closeNav()"
+              title="Close menu panel">
+              <span class="helper-hide">
+                Close menu
+              </span>
+              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+            </button>
+          </div>
+        </div>
+        <!-- end // sidenav: content -->
+      </nav>
+    </div>
+  </header>
   <main>
     <div class="cont-wrapper-aside-structure">
       <div class="layout-grid">
@@ -391,10 +590,10 @@
             </a>
             <a
               href="#"
-              class="cdmr-btn cdmr-btn--scope-25 helper-font-weight-100"
+              class="cdmr-btn cdmr-btn--scope-25 helper-font-weight-25"
               title="title text"
               target="_self">
-                helper-font-weight-100
+                helper-font-weight-25
             </a>
             <a
               href="#"
@@ -2109,6 +2308,16 @@
       </div>
     </div>
   </main>
+  <footer class="layout-grid">
+    <div class="layout-grid__col-xs-12">
+      <p class="cdmr-txt helper-txt-algn-ctr">
+        <span class="helper-font-scope-25">
+          Copyright&#169; 2022. Designed and built by <strong>José Luis Pizarro</strong>.
+        </span>
+      </p>
+    </div>
+  </footer>
+  <script rel="modulepreload" src="js/layout-header-codymer.js"></script>
 </body>
 
 </html>

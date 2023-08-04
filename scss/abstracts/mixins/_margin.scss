@@ -88,13 +88,13 @@
 ///
 /// @example scss
 ///   .element {
-///     @include _directional-property(border, width, null 5px);
+///     @include _directional-property(border, width, null .5rem);
 ///   }
 ///
 ///   // CSS Output
 ///   .element {
-///     border-right-width: 5px;
-///     border-left-width: 5px;
+///     border-right-width: .5rem;
+///     border-left-width: .5rem;
 ///   }
 ///
 /// @require {function} _compact-shorthand

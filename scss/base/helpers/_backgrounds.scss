@@ -3,411 +3,212 @@
 @use '../../abstracts/index'as *;
 // ===============================================
 
-// MIXIN HELPER: backgrounds
+// MIXIN HELPER: background
 // ===============================================
-@mixin helper-backgrounds(
-  $helper-background-color--primary: null,
-  $helper-background-color--secondary: null,
-  $helper-background-color--tertiary: null,
-  $helper-background-color--quaternary: null,
-  $helper-background-color--quinary: null,
-  $helper-background-color--senary: null,
-  $helper-background-color--septenary: null,
-  $helper-background-color--octonary: null,
-  $helper-background-color--nonary: null,
-  $helper-background-color--denary: null,
-  $helper-background-color--undenary: null,
-  $helper-background-color--duodenary: null,
-  $helper-background-color--trendary: null,
-) {
+@mixin helper-background($theme: null) {
 
-  // .helper-bg
+  // ALL
   .helper-bg {
-
-    // &-color
+    // &-auto
+    &-auto {
+      background-size: auto;
+    }
+    // &-cover
+    &-cover {
+      background-size: cover;
+    }
+    // &-contain
+    &-contain {
+      background-size: contain;
+    }
+    // color
     &-color {
-
       // &-black
       &-black {
         background-color: map-colors(blacks, theme--all);
+        	@if $theme == codymer {
+            * {
+              color: map-colors(whites, theme--all);
+            }
+          }
+          @if $theme == example-01 {
+            * {
+              color: map-colors(browns, theme-example-01--25);
+            }
+          }
       }
-
       // &-white
       &-white {
         background-color: map-colors(whites, theme--all);
       }
-
       // &-blue
       &-blue {
-
         // &-facebook
         &-facebook {
-
-          // &-500
-          &-500 {
-            background-color: map-colors(blues, theme-facebook--500);
+          // &-25
+          &-25 {
+            background-color: map-colors(blues, theme-facebook--25);
           }
-
         }
-
         // &-instagram
         &-instagram {
-
-          // generals
-          &-500 {
-            background-color: map-colors(blues, theme-instagram--500);
+          // &-25
+          &-25 {
+            background-color: map-colors(blues, theme-instagram--25);
           }
-
         }
-
         // &-twitter
         &-twitter {
-
-          // &-500
-          &-500 {
-            background-color: map-colors(blues, theme-twitter--500);
+          // &-25
+          &-25 {
+            background-color: map-colors(blues, theme-twitter--25);
           }
-
         }
-
       }
-
       // &-green
       &-green {
-
         // &-whatsapp
         &-whatsapp {
-
-          // &-400
-          &-400 {
-            background-color: map-colors(greens, theme-whatsapp--400);
+          // &-25
+          &-25 {
+            background-color: map-colors(greens, theme-whatsapp--25);
           }
-
-          // &-500
-          &-500 {
-            background-color: map-colors(greens, theme-whatsapp--500);
+          // &-50
+          &-50 {
+            background-color: map-colors(greens, theme-whatsapp--50);
           }
-
         }
-
       }
-
       // &-purple
       &-purple {
-
         // &-instagram
         &-instagram {
-
-          // &-500
-          &-500 {
-            background-color: map-colors(purples, theme-instagram--500);
+          // &-25
+          &-25 {
+            background-color: map-colors(purples, theme-instagram--25);
           }
-
         }
-
       }
-
       // &-transparent
       &-transparent {
-
         // &-mo
         &-mo {
           @include breakpoint(mobileonly) {
             background-color: transparent;
           }
-
         }
-
         // &-sm
         &-sm {
           @include min-screen(768px) {
             background-color: transparent;
           }
-
         }
-
         // &-md
         &-md {
           @include min-screen(1024px) {
             background-color: transparent;
           }
-
         }
-
         // &-lg
         &-lg {
           @include min-screen(1280px) {
             background-color: transparent;
           }
-
         }
-
       }
-
       // &-primary
       &-primary {
-        background-color: $helper-background-color--primary;
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            background-color: map-colors(blues, theme-codymer--25);
+          }
+          @if $theme == example-01 {
+            background-color: map-colors(browns, theme-example-01--75);
+          }
+        }
+        // &-50
+        &-50 {
+          // theme: codymer
+          @if $theme == codymer {
+            background-color: map-colors(blues, theme-codymer--50);
+            color: map-colors(whites, theme--all);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            background-color: map-colors(blacks, theme-example-01--50);
+            color: map-colors(whites, theme--all);
+          }
+        }
       }
-
       // &-secondary
       &-secondary {
-        background-color: $helper-background-color--secondary;
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+            background-color: map-colors(fucsias, theme-codymer--25);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            background-color: map-colors(browns, theme-example-01--25);
+          }
+        }
+        // &-50
+        &-50 {
+          // theme: codymer
+          @if $theme == codymer {
+            background-color: map-colors(fucsias, theme-codymer--50);
+            color: map-colors(purples, theme-codymer--50);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            background-color: map-colors(browns, theme-example-01--50);
+            color: map-colors(blacks, theme-example-01--50);
+          }
+        }
       }
-
       // &-tertiary
       &-tertiary {
-        background-color: $helper-background-color--tertiary;
+        // &-50
+        &-50 {
+          // theme: codymer
+          @if $theme == codymer {
+            background-color: map-colors(greens, theme-codymer--50);
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            background-color: map-colors(browns, theme-example-01--50);
+          }
+        }
       }
-
       // &-quaternary
       &-quaternary {
-        background-color: $helper-background-color--quaternary;
+        // &-75
+        &-75 {
+          // theme: codymer
+          @if $theme == codymer {
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            background-color: map-colors(browns, theme-example-01--75);
+          }
+        }
       }
-
-      // &-quinary
-      &-quinary {
-        background-color: $helper-background-color--quinary;
-      }
-
       // &-senary
       &-senary {
-        background-color: $helper-background-color--senary;
+        // &-25
+        &-25 {
+          // theme: codymer
+          @if $theme == codymer {
+          }
+          // theme: example-01
+          @if $theme == example-01 {
+            background-color: map-colors(blues, theme-example-01--25);
+          }
+        }
       }
-
-      // &-septenary
-      &-septenary {
-        background-color: $helper-background-color--septenary;
-      }
-
-      // &-octonary
-      &-octonary {
-        background-color: $helper-background-color--octonary;
-      }
-
-      // &-nonary
-      &-nonary {
-        background-color: $helper-background-color--nonary;
-      }
-
-      // &-denary
-      &-denary {
-        background-color: $helper-background-color--denary;
-      }
-
-      // &-undenary
-      &-undenary {
-        background-color: $helper-background-color--undenary;
-      }
-
-      // &-duodenary
-      &-duodenary {
-        background-color: $helper-background-color--duodenary;
-      }
-
-      // &-tredenary
-      &-tredenary {
-        background-color: $helper-background-color--trendary ;
-      }
-
     }
-
-    // &-auto
-    &-auto {
-      background-size: auto;
-    }
-
-    // &-cover
-    &-cover {
-      background-size: cover;
-    }
-
-    // &-contain
-    &-contain {
-      background-size: contain;
-    }
-
+   }
   }
-
-}
-
-// MIXIN HELPER: backgrounds color behavior
-// ===============================================
-@mixin helper-backgrounds-color-behavior(
-  $helper-background--black-behavior-color: null,
-  $helper-background--white-behavior-color: null,
-  $helper-background--primary-behavior-color: null,
-  $helper-background--secondary-behavior-color: null,
-  $helper-background--tertiary-behavior-color: null,
-  $helper-background--quaternary-behavior-color: null,
-  $helper-background--quinary-behavior-color: null,
-  $helper-background--senary-behavior-color: null,
-  $helper-background--septenary-behavior-color: null,
-  $helper-background--octonary-behavior-color: null,
-  $helper-background--nonary-behavior-color: null,
-  $helper-background--denary-behavior-color: null,
-  $helper-background--undenary-behavior-color: null,
-  $helper-background--duodenary-behavior-color: null,
-  $helper-background--tredenary-behavior-color: null,
-) {
-
-  // .helper-bg
-  .helper-bg {
-
-    // &-color
-    &-color {
-
-      // &-black
-      &-black {
-
-        // *
-        * {
-          color: $helper-background--black-behavior-color;
-        }
-
-      }
-
-      // &-white
-      &-white {
-
-        // *
-        * {
-          color: $helper-background--white-behavior-color;
-        }
-
-      }
-
-      // &-primary
-      &-primary {
-
-        // *
-        * {
-          color: $helper-background--primary-behavior-color;
-        }
-
-      }
-
-      // &-secondary
-      &-secondary {
-
-        // *
-        * {
-          color: $helper-background--secondary-behavior-color;
-        }
-
-      }
-
-      // &-tertiary
-      &-tertiary {
-
-        // *
-        * {
-          color: $helper-background--tertiary-behavior-color;
-        }
-
-      }
-
-      // &-quaternary
-      &-quaternary {
-
-        // *
-        * {
-          color: $helper-background--quaternary-behavior-color;
-        }
-
-      }
-
-      // &-quinary
-      &-quinary {
-
-        // *
-        * {
-          color: $helper-background--quinary-behavior-color;
-        }
-
-      }
-
-      // &-senary
-      &-senary {
-
-        // *
-        * {
-          color: $helper-background--senary-behavior-color;
-        }
-
-      }
-
-      // &-septenary
-      &-septenary {
-
-        // *
-        * {
-          color: $helper-background--septenary-behavior-color;
-        }
-
-      }
-
-      // &-octonary
-      &-octonary {
-
-        // *
-        * {
-          color: $helper-background--octonary-behavior-color;
-        }
-
-      }
-
-      // &-nonary
-      &-nonary {
-
-        // *
-        * {
-          color: $helper-background--nonary-behavior-color;
-        }
-
-      }
-
-      // &-denary
-      &-denary {
-
-        // *
-        * {
-          color: $helper-background--denary-behavior-color;
-        }
-
-      }
-
-      // &-undenary
-      &-undenary {
-
-        // *
-        * {
-          color: $helper-background--undenary-behavior-color;
-        }
-
-      }
-
-      // &-duodenary
-      &-duodenary {
-
-        // *
-        * {
-          color: $helper-background--duodenary-behavior-color;
-        }
-
-      }
-
-      // &-tredenary
-      &-tredenary {
-
-        // *
-        * {
-          color: $helper-background--tredenary-behavior-color;
-        }
-
-      }
-
-    }
-
-  }
-
-}

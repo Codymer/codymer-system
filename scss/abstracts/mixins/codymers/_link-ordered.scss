@@ -1,6 +1,0 @@
-// MIXIN: cdmr-link-ordered
-// ===============================================
-@mixin cdmr-link-ordered() {
-  list-style: none;
-  counter-reset: ordered-list;
-}

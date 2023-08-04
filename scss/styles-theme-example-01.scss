@@ -1,52 +1,28 @@
 // Sass Document
 
+// CORE
+// ===============================================
+@use 'abstracts/index' as *;
+@use 'base/index' as *;
+@use 'codymers/index' as *;
+@use 'containers/index' as *;
+// ===============================================
+
 // THEME SETUP
 // ================================================
 @use 'themes/example-01/setup';
 // ================================================
 
-// CODYMERS
+// LAYOUT
 // ================================================
-@use 'themes/example-01/codymers/breadcrumb' as *;
-@use 'themes/example-01/codymers/btn' as *;
-@use 'themes/example-01/codymers/btn-iconized' as *;
-@use 'themes/example-01/codymers/check' as *;
-@use 'themes/example-01/codymers/form' as *;
-@use 'themes/example-01/codymers/icon' as *;
-@use 'themes/example-01/codymers/label' as *;
-@use 'themes/example-01/codymers/link' as *;
-@use 'themes/example-01/codymers/list' as *;
-@use 'themes/example-01/codymers/list-ordered' as *;
-@use 'themes/example-01/codymers/pagination' as *;
-@use 'themes/example-01/codymers/radio' as *;
-@use 'themes/example-01/codymers/switch' as *;
-@use 'themes/example-01/codymers/table' as *;
-@use 'themes/example-01/codymers/title' as *;
-@use 'themes/example-01/codymers/txt' as *;
 // ================================================
 
 // VENDORS
 // ================================================
 // ================================================
 
-// CONTAINERS: GROUPS
-// ================================================
-@use 'themes/example-01/containers/groups/form-field' as *;
-// ================================================
-
-// CONTAINERS: SETS
-// ================================================
-@use 'themes/example-01/containers/sets/btn' as *;
-@use 'themes/example-01/containers/sets/form-field' as *;
-@use 'themes/example-01/containers/sets/label' as *;
-// ================================================
-
-// CONTAINERS: WRAPPERS
-// ================================================
-@use 'themes/example-01/containers/wrappers/aside-structure' as *;
-@use 'themes/example-01/containers/wrappers/col-contents' as *;
-// ================================================
-
-// PAGES
-// ================================================
-// ================================================
+// WRAPPERS
+// ===============================================
+@include cont-wrapper-aside-structure();
+@include cont-wrapper-col-contents();
+// ===============================================

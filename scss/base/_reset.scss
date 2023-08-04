@@ -1,4 +1,4 @@
-// RESETS
+// CORE
 // ===============================================
 @use '../abstracts/index' as *;
 // ===============================================
@@ -180,7 +180,7 @@
 			font-size: 	$resets-custom-h1-font--size;
 			line-height: $resets-custom-h1-font--line-height;
 			letter-spacing: $resets-custom-h1-font--letter-space;
-			
+
 		}
 
 		// h2

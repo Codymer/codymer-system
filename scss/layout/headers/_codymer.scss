@@ -1,6 +1,6 @@
 // CORE
 // ===============================================
-@use './abstracts/index' as *;
+@use "./abstracts/index" as *;
 // ===============================================
 
 // LAYOUT HEADER: codymer
@@ -8,7 +8,7 @@
 .layout-header-codymer {
   $self: &;
   @include position(sticky, 0, null, null, null);
-  @include padding(.938rem null .938rem null);
+  @include padding(0.938rem null 0.938rem null);
   z-index: 5;
 
   // &__sidenav
@@ -17,8 +17,8 @@
     @include size(15rem, 100%);
     z-index: 500;
     overflow-x: hidden;
-    transition: all .5s;
-    box-shadow: .625rem 0 .313rem -.188rem rgba(0,0,0,.15);
+    transition: all 0.5s;
+    box-shadow: 0.625rem 0 0.313rem -0.188rem rgba(0, 0, 0, 0.15);
   }
 
   // &__header
@@ -44,8 +44,8 @@
   &__logo {
     @include position(relative);
     @include padding(null null null 1.6rem);
-    transition: color .25s ease-out;
-    color: map-colors(purples, theme-codymer--600);
+    transition: color 0.25s ease-out;
+    color: map-colors(blues, theme-codymer--50);
     @include min-screen(768px) {
       @include padding(null null null 2rem);
     }
@@ -56,40 +56,38 @@
       @include position(absolute, 0, null, 0, 0);
       @include margin(auto null auto null);
       @include size(1.25rem);
-      transition: all .25s ease-out;
+      transition: all 0.25s ease-out;
       @include background-setup(
-        map-icons(logo, theme-codymer--logo), // img path
-        '0 0 / contain', // position and size
-        no-repeat, // repeat
-        null, // attachment
-        null, // origin
-        null, // clip
-        null, // color
+        // img path
+        map-icons(logo, theme-codymer--logo),
+        // position and size
+        "0 0 / contain",
+        // repeat
+        no-repeat,
+        // attachment
+        null,
+        // origin
+        null,
+        // clip
+        null,
+        // color
+        null,
       );
-      filter: map-filters(purples, theme-codymer--600);
+      filter: map-filters(blues, theme-codymer--50);
       @include min-screen(768px) {
         @include size(1.625rem);
       }
-
     }
 
     // &:hover
     &:hover {
-      color: map-colors(fucsias, theme-codymer--500);
-
-      // &:before
-      &:before {
-        transform: rotate(90deg);
-        filter: map-filters(fucsias, theme-codymer--500);
-      }
-
+      color: map-colors(fucsias, theme-codymer--75);
     }
 
     // &:focus-visible
     &:focus-visible {
-      @include focus-custom($color-focus--codymer);
+      outline: .2rem solid map-colors(fucsias, theme-codymer--75);
     }
-
   }
 
   // &__nav
@@ -104,30 +102,37 @@
 
     // &__item
     &__item {
-      @include margin(null null .5rem null);
+      @include margin(null null 0.5rem null);
     }
 
     // &__link
     &__link {
       @include position(relative);
-      @include padding(.7rem 1.5rem .7rem null);
+      @include padding(0.7rem 1.5rem 0.7rem null);
       @include size(100%, null);
       color: map-colors(whites, theme--all);
       display: block;
 
       // &:before
       &:before {
-        content: '';
-        @include position(absolute, .6rem, 0, null, null);
+        content: "";
+        @include position(absolute, 0.6rem, 0, null, null);
         @include size(1.3rem);
         @include background-setup(
-          map-icons(arrows, theme-unicons--circled-rgt), // img path
-          '0 0 / contain', // position and size
-          no-repeat, // repeat
-          null, // attachment
-          null, // origin
-          null, // clip
-          transparent, // color
+          // img path
+          map-icons(arrows, theme-unicons--circled-rgt),
+          // position and size
+          "0 0 / contain",
+          // repeat
+          no-repeat,
+          // attachment
+          null,
+          // origin
+          null,
+          // clip
+          null,
+          // color
+          transparent,
         );
         filter: map-filters(whites, theme--all);
       }
@@ -139,17 +144,15 @@
 
       // &:focus-visible
       &:focus-visible {
-        @include focus-custom($color-focus--codymer);
+        outline: .2rem solid map-colors(fucsias, theme-codymer--75);
       }
-
     }
 
     // &__lvl2
     &__lvl2 {
-      @include margin(.7rem null 1rem null);
-      @include padding(null null null .5rem);
+      @include margin(0.7rem null 1rem null);
+      @include padding(null null null 0.5rem);
     }
-
   }
 
   // &-rrss
@@ -160,7 +163,6 @@
 
     // .helper
     .helper {
-
       // &-icon
       &-icon {
         @include size(2.5rem);
@@ -170,24 +172,20 @@
           @include size(2rem);
           filter: map-filters(whites, theme--all);
         }
-
       }
-
     }
 
     // &__link
     &__link {
       @include position(relative);
       @include size(2.5rem);
-      display: block;
+      display: block; 
 
       // &:focus-visible
       &:focus-visible {
-        @include focus-custom($color-focus--codymer);
+        outline: .2rem solid map-colors(fucsias, theme-codymer--75);
       }
-
     }
-
   }
 
   // &__close
@@ -196,7 +194,6 @@
 
     // .cdmr
     .cdmr {
-
       // &-btn
       &-btn {
         background-color: map-colors(whites, theme--all);
@@ -207,20 +204,13 @@
 
           // .cdmr-icon
           .cdmr-icon {
-
             // &:before
             &:before {
               filter: map-filters(whites, theme--all);
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
