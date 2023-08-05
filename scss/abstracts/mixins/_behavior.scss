@@ -14,18 +14,3 @@
   }
 
 }
-
-// MIXIN BEHAVIOR: text-selection
-// ================================================
-@mixin behavior-text-selection(
-  $behavior-text-selection--color,
-  $behavior-text-selection--background
-) {
-
-  // &:SELECTION
-  &::selection {
-    color: $behavior-text-selection--color;
-    background-color: $behavior-text-selection--background;
-  }
-
-}

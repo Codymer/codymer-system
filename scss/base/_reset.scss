@@ -1,642 +1,953 @@
 // CORE
 // ===============================================
-@use '../abstracts/index' as *;
+@use "../abstracts/index" as *;
 // ===============================================
 
 // MIXIN: reset-global
 // ===============================================
-@mixin resets-global(
-	$resets-global-font-style--html: null,
-	$resets-global-font-variant--html: null,
-	$resets-global-font-weight--html: null,
-	$resets-global-font-size--html: null,
-	$resets-global-line-height--html: null,
-	$resets-global-font-family--html: null,
-	$resets-global-font-size--body: null,
-	$resets-global-line-height--body: null,
-	$resets-global-font-color--body: null,
-	$resets-global-letter-spacing--body: null,
-	$resets-global-background-color--body: null
-) {
-
-	// *
-	* {
-
-		// generals
-		-webkit-tap-highlight-color: map-colors(whites, theme--all);
-		-webkit-focus-ring-color: map-colors(blacks, theme--all);
-		box-sizing: border-box;
-
-		// &:before
-		&:before {
-			box-sizing: border-box;
-		}
-
-		// &:after
-		&:after {
-			box-sizing: border-box;
-		}
-
-	}
-
-	// html
-	html {
-		-webkit-text-size-adjust: 100%;
-		-ms-text-size-adjust: 100%;
-		-ms-overflow-style: scrollbar;
-		font: $resets-global-font-style--html $resets-global-font-variant--html $resets-global-font-weight--html #{$resets-global-font-size--html}/#{$resets-global-line-height--html}  $resets-global-font-family--html;
-	}
-
-	// body
-	body {
-		@include margin(0);
-		-webkit-font-smoothing: antialiased;
-	  -moz-osx-font-smoothing: grayscale;
-		font-size: $resets-global-font-size--body;
-		line-height: $resets-global-line-height--body;
-		color: $resets-global-font-color--body;
-		letter-spacing: $resets-global-letter-spacing--body;
-		text-align: left;
-		background-color: $resets-global-background-color--body;
-	}
-
-	// article
-	article {
-		display: block;
-	}
-
-	// aside
-	aside {
-		display: block;
-	}
-
-	// dialog
-	dialog {
-		display: block;
-	}
-
-	// figcaption
-	figcaption {
-		display: block;
-	}
-
-	// figure
-	figure {
-		display: block;
-	}
-
-	// footer
-	footer {
-		display: block;
-	}
-
-	// header
-	header {
-		display: block;
-	}
-
-	// hgroup
-	hgroup {
-		display: block;
-	}
-
-	// main
-	main {
-		display: block;
-	}
-
-	// nav
-	nav {
-		display: block;
-	}
-
-	// section
-	section {
-		display: block;
-	}
-
-};
-// -----------------------------------------------
-
-// MIXIN: RESETS-CUSTOM
-// -----------------------------------------------
-@mixin resets-custom(
-
-	// arguments
-	$resets-custom--brand: null,
-	$resets-custom-font-family--primary: null,
-	$resets-custom-font-family--secondary: null,
-	$resets-custom-h1-font--size: null,
-	$resets-custom-h1-font--line-height: null,
-	$resets-custom-h1-font--letter-space: null,
-	$resets-custom-h2-font--size: null,
-	$resets-custom-h2-font--line-height: null,
-	$resets-custom-h2-font--letter-space: null,
-	$resets-custom-h3-font--size: null,
-	$resets-custom-h3-font--line-height: null,
-	$resets-custom-h3-font--letter-space: null,
-	$resets-custom-h4-font--size: null,
-	$resets-custom-h4-font--line-height: null,
-	$resets-custom-h4-font--letter-space: null,
-	$resets-custom-h5-font--size: null,
-	$resets-custom-h5-font--line-height: null,
-	$resets-custom-h5-font--letter-space: null,
-	$resets-custom-h6-font--size: null,
-	$resets-custom-h6-font--line-height: null,
-	$resets-custom-h6-font--letter-space: null,
-	$resets-custom-text-selection--color: null,
-	$resets-custom-text-selection-background--color: null,
-	$resets-custom-link-selection--color: null,
-	$resets-custom-link-selection-background--color: null,
-) {
-
-	// .BRAND
-	#{functionBrandSet($resets-custom--brand)} {
-
-		// span
-		span {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// data
-		data {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// address
-		address {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// time
-		time {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// h1
-		h1 {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-			font-size: 	$resets-custom-h1-font--size;
-			line-height: $resets-custom-h1-font--line-height;
-			letter-spacing: $resets-custom-h1-font--letter-space;
-
-		}
-
-		// h2
-		h2 {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-			font-size: 	$resets-custom-h2-font--size;
-			line-height: $resets-custom-h2-font--line-height;
-			letter-spacing: $resets-custom-h2-font--letter-space;
-		}
-
-		// h3
-		h3 {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-			font-size: 	$resets-custom-h3-font--size;
-			line-height: $resets-custom-h3-font--line-height;
-			letter-spacing: $resets-custom-h3-font--letter-space;
-		}
-
-		// h4
-		h4 {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-			font-size: 	$resets-custom-h4-font--size;
-			line-height: $resets-custom-h4-font--line-height;
-			letter-spacing: $resets-custom-h4-font--letter-space;
-		}
-
-		// h5
-		h5 {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-			font-size: 	$resets-custom-h5-font--size;
-			line-height: $resets-custom-h5-font--line-height;
-			letter-spacing: $resets-custom-h5-font--letter-space;
-		}
-
-		// h6
-		h6 {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-			font-size: 	$resets-custom-h6-font--size;
-			line-height: $resets-custom-h6-font--line-height;
-			letter-spacing: $resets-custom-h6-font--letter-space;
-		}
-
-		// p
-		p {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// strong
-		strong {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-		}
-
-		// em
-		em {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-family: $resets-custom-font-family--secondary;
-		}
-
-		// ul
-		ul {
-			list-style: none;
-		}
-
-		// li
-		li {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// dt
-		dt {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// dd
-		dd {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// mark
-		mark {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// u
-		u {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// del
-		del {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// anchor
-		a {
-
-			// generals
-			text-decoration: none;
-			-webkit-text-decoration-skip: objects;
-
-			// link selection
-			@include behavior-text-selection($resets-custom-link-selection--color, $resets-custom-link-selection-background--color);
-
-			// &:focus
-			&:focus {
-				box-shadow: 0 0 0 rgb(255, 255, 255);
-			}
-
-			// &:active
-			&:active {
-				cursor: pointer;
-			}
-
-		}
-
-		// button
-		button {
-
-			// generals
-			overflow: visible;
-			text-transform: none;
-
-			// &:focus
-			&:focus {
-				box-shadow: 0 0 0 rgb(255, 255, 255);
-			}
-
-		}
-
-		// h4
-		hr {
-			box-sizing: content-box;
-			height: 0;
-			overflow: visible;
-		}
-
-		// abbr
-		abbr {
-
-			// &[title]
-			&[title] {
-				text-decoration: underline dotted;
-				cursor: help;
-				border-bottom: 0;
-			}
-
-			// &[data-original-title]
-			&[data-original-title] {
-				text-decoration: underline dotted;
-				cursor: help;
-				border-bottom: 0;
-			}
-
-		}
-
-		// address
-		address {
-			@include margin(null null 1rem null);
-			font-style: normal;
-			line-height: inherit;
-		}
-
-		// blockquote
-		blockquote {
-			@include margin(null null 1rem null);
-		}
-
-		// dfn
-		dfn {
-			font-style: italic;
-		}
-
-		// small
-		small {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-size: 80%;
-		}
-
-		// sub
-		sub {
-			@include position(relative, null null -.25rem null);
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-size: 75%;
-			line-height: 0;
-			vertical-align: baseline;
-		}
-
-		// SUB
-		sup {
-			@include position(relative, -.5rem null null null);
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-			font-size: 75%;
-			line-height: 0;
-			vertical-align: baseline;
-		}
-
-		// CODE
-		code {
-			font-family: monospace, monospace;
-			font-size: 1em;
-		}
-
-		// KBD
-		kbd {
-			font-family: monospace, monospace;
-			font-size: 1em;
-		}
-
-		// SAMP
-		samp {
-			font-family: monospace, monospace;
-			font-size: 1em;
-		}
-
-		// PRE
-		pre {
-			overflow: auto;
-			font-family: monospace, monospace;
-			font-size: 1em;
-			-ms-overflow-style: scrollbar;
-		}
-
-		// IMG
-		img {
-			border-style: none;
-		}
-
-		// SVG
-		svg:not(:root) {
-			overflow: hidden;
-		}
-
-		// CAPTION
-		caption {
-			@include padding(null 1rem null 1rem);
-			text-align: left;
-			caption-side: bottom;
-		}
-
-		// OUTPUT
-		output {
-			display: inline-block;
-		}
-
-		// SUMMARY
-		summary {
-			display: list-item;
-			cursor: pointer;
-		}
-
-		// TEMPLATE
-		template {
-			display: none;
-		}
-
-		// VIDEO
-		video {
-			object-fit: cover;
-		}
-
-		// MAP
-		map {
-			@include margin(5rem null 5rem null);
-		}
-
-		// TABLE
-		table {
-			border-collapse: collapse;
-		}
-
-		// TH
-		th {
-
-			// generals
-			font-family: $resets-custom-font-family--secondary;
-			text-align: inherit;
-
-			// text-selection
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-
-		}
-
-		// TD
-		td {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// HIDDEN
-		[hidden] {
-			display: none;
-		}
-		// HIDDEN
-		[hidden="false"] {
-			display: block;
-		}
-
-		// [TYPE="RESET"]
-		[type="reset"] {
-			-webkit-appearance: button;
-		}
-
-		// [TYPE="BUTTON"]
-		[type="button"] {
-			-webkit-appearance: button;
-		}
-
-		// [TYPE="SUBMIT"]
-		[type="submit"] {
-			-webkit-appearance: button;
-		}
-
-		// [TYPE="NUMBER"]
-		[type="number"] {
-
-			// &::-webkit-inner-spin-button
-			&::-webkit-inner-spin-button {
-				height: auto;
-			}
-
-			// &::-webkit-outer-spin-button
-			&::-webkit-outer-spin-button {
-				height: auto;
-			}
-
-		}
-
-		// [TYPE="SEARCH"]
-		[type="search"] {
-
-			// generals
-			outline-offset: -2px;
-			-webkit-appearance: none;
-
-			// &::-webkit-search-cancel-button
-			&::-webkit-search-cancel-button {
-				-webkit-appearance: none;
-			}
-
-			// &::-webkit-search-decoration
-			&::-webkit-search-decoration {
-				-webkit-appearance: none;
-			}
-
-		}
-
-		// ::-WEBKIT-FILE-UPLOAD-BUTTON
-		::-webkit-file-upload-button {
-			font: inherit;
-			-webkit-appearance: button;
-		}
-
-		// FIELDSET
-		fieldset {
-			@include margin(0);
-			@include padding(0);
-			min-width: 0;
-			border: 0;
-		}
-
-		// LEGEND
-		legend {
-			@include margin(0 0 .5rem 0);
-			@include padding(1rem 0 0 0);
-			border-width: 0;
-			width: 100%;
-			max-width: 100%;
-			font-size: 1.5rem;
-			line-height: 1.5rem;
-			text-align: left;
-			white-space: normal;
-		}
-
-		// LABEL
-		label {
-			@include behavior-text-selection($resets-custom-text-selection--color, $resets-custom-text-selection-background--color);
-		}
-
-		// SELECT
-		select {
-			-webkit-appearance: none;
-			text-transform: none;
-
-			// ie fix // remove arrow select
-			&::-ms-expand {
-				display: none;
-			}
-
-		}
-
-		// INPUT
-		input {
-			@include margin(0);
-			-webkit-appearance: none;
-			overflow: visible;
-			line-height: inherit;
-
-			// type
-			&[type="radio"],
-			&[type="checkbox"] {
-				@include padding(0);
-				-webkit-box-sizing: border-box;
-				box-sizing: border-box;
-			}
-			&[type="date"],
-			&[type="time"],
-			&[type="datetime-local"],
-			&[type="month"] {
-				-webkit-appearance: listbox;
-			}
-
-			// &[type="password"]::-ms-reveal
-			&[type="password"]::-ms-reveal {
-				display: none;
-			}
-
-			// &:-webkit-autofill // chrome focus reset
-			&:-webkit-autofill {
-				transition: background-color 600000s 0s, color 600000s 0s;
-			}
-
-		}
-
-		// OPTGROUP
-		optgroup {
-			@include margin(0);
-			font-size: inherit;
-			line-height: inherit;
-		}
-
-		// TEXTAREA
-		textarea {
-			@include margin(0);
-			@include padding(1rem null null null);
-			-webkit-appearance: none;
-			overflow: auto;
-			resize: vertical;
-			min-height: 13rem;
-			font-size: inherit;
-			line-height: inherit;
-			border-radius: 0;
-		}
-
-		// PROGRESS
-		progress {
-			vertical-align: baseline;
-		}
-
-	}
-
-	// @content
-	@content;
-
+@mixin resets-global($theme: null) {
+  // *
+  * {
+    // generals
+    -webkit-tap-highlight-color: map-colors(whites, theme--all);
+    -webkit-focus-ring-color: map-colors(blacks, theme--all);
+    box-sizing: border-box;
+
+    // &:before
+    &:before {
+      box-sizing: border-box;
+    }
+
+    // &:after
+    &:after {
+      box-sizing: border-box;
+    }
+  }
+
+  // html
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    // theme: codymer
+    @if $theme == codymer {
+      font: normal normal 500 16px/18px map-fonts(Google, Space-Grotesk--50);
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font: normal normal 500 100%/18px map-fonts(Google, Syne--50);
+    }
+  }
+
+  // body
+  body {
+    @include margin(0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+    // theme: codymer
+    @if $theme == codymer {
+      font-size: 16px;
+      line-height: 18px;
+      color: map-colors(purples, theme-codymer--50);
+      background-color: map-colors(pinks, theme-codymer--25);
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-size: 16px;
+      line-height: 18px;
+      color: map-colors(blacks, theme-example-01--50);
+      background-color: map-colors(greys, theme-example-01--50);
+    }
+  }
+
+  // article
+  article {
+    display: block;
+  }
+
+  // aside
+  aside {
+    display: block;
+  }
+
+  // dialog
+  dialog {
+    display: block;
+  }
+
+  // figcaption
+  figcaption {
+    display: block;
+  }
+
+  // figure
+  figure {
+    display: block;
+  }
+
+  // footer
+  footer {
+    display: block;
+  }
+
+  // header
+  header {
+    display: block;
+  }
+
+  // hgroup
+  hgroup {
+    display: block;
+  }
+
+  // main
+  main {
+    display: block;
+  }
+
+  // nav
+  nav {
+    display: block;
+  }
+
+  // section
+  section {
+    display: block;
+  }
+  // span
+  span {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // data
+  data {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // address
+  address {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // time
+  time {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // h1
+  h1 {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+      font-size: 3.052rem;
+      line-height: 3.177rem;
+      letter-spacing: -0.1rem;
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+      font-size: 3.052rem;
+      line-height: 3.177rem;
+      letter-spacing: -0.1rem;
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // h2
+  h2 {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+      font-size: 2.441rem;
+      line-height: 2.566rem;
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // h3
+  h3 {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+      font-size: 1.953rem;
+      line-height: 2.078rem;
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // h4
+  h4 {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+      font-size: 1.563rem;
+      line-height: 1.688rem;
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // h5
+  h5 {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+      font-size: 1.25rem;
+      line-height: 1.375rem;
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // h6
+  h6 {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+      font-size: 1.125rem;
+      line-height: 1.25rem;
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        bbackground-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // p
+  p {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // strong
+  strong {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // em
+  em {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // ul
+  ul {
+    list-style: none;
+  }
+
+  // li
+  li {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // dt
+  dt {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // dd
+  dd {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // mark
+  mark {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // u
+  u {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // del
+  del {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // anchor
+  a {
+    // generals
+    text-decoration: none;
+    -webkit-text-decoration-skip: objects;
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+
+    // &:focus
+    &:focus {
+      box-shadow: 0 0 0 rgb(255, 255, 255);
+    }
+
+    // &:active
+    &:active {
+      cursor: pointer;
+    }
+  }
+
+  // button
+  button {
+    // generals
+    overflow: visible;
+    text-transform: none;
+
+    // &:focus
+    &:focus {
+      box-shadow: 0 0 0 rgb(255, 255, 255);
+    }
+  }
+
+  // h4
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+
+  // abbr
+  abbr {
+    // &[title]
+    &[title] {
+      text-decoration: underline dotted;
+      cursor: help;
+      border-bottom: 0;
+    }
+
+    // &[data-original-title]
+    &[data-original-title] {
+      text-decoration: underline dotted;
+      cursor: help;
+      border-bottom: 0;
+    }
+  }
+
+  // address
+  address {
+    @include margin(null null 1rem null);
+    font-style: normal;
+    line-height: inherit;
+  }
+
+  // blockquote
+  blockquote {
+    @include margin(null null 1rem null);
+  }
+
+  // dfn
+  dfn {
+    font-style: italic;
+  }
+
+  // small
+  small {
+    font-size: 80%;
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // sub
+  sub {
+    @include position(relative, null null -0.25rem null);
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // SUB
+  sup {
+    @include position(relative, -0.5rem null null null);
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // CODE
+  code {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  // KBD
+  kbd {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  // SAMP
+  samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  // PRE
+  pre {
+    overflow: auto;
+    font-family: monospace, monospace;
+    font-size: 1em;
+    -ms-overflow-style: scrollbar;
+  }
+
+  // IMG
+  img {
+    border-style: none;
+  }
+
+  // SVG
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  // CAPTION
+  caption {
+    @include padding(null 1rem null 1rem);
+    text-align: left;
+    caption-side: bottom;
+  }
+
+  // OUTPUT
+  output {
+    display: inline-block;
+  }
+
+  // SUMMARY
+  summary {
+    display: list-item;
+    cursor: pointer;
+  }
+
+  // TEMPLATE
+  template {
+    display: none;
+  }
+
+  // VIDEO
+  video {
+    object-fit: cover;
+  }
+
+  // MAP
+  map {
+    @include margin(5rem null 5rem null);
+  }
+
+  // TABLE
+  table {
+    border-collapse: collapse;
+  }
+
+  // TH
+  th {
+    // theme: codymer
+    @if $theme == codymer {
+      font-family: map-fonts(Google, Space-Grotesk--75);
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      font-family: map-fonts(Google, Syne--75);
+    }
+    text-align: inherit;
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // TD
+  td {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // HIDDEN
+  [hidden] {
+    display: none;
+  }
+
+  // HIDDEN
+  [hidden="false"] {
+    display: block;
+  }
+
+  // [TYPE="RESET"]
+  [type="reset"] {
+    -webkit-appearance: button;
+  }
+
+  // [TYPE="BUTTON"]
+  [type="button"] {
+    -webkit-appearance: button;
+  }
+
+  // [TYPE="SUBMIT"]
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+
+  // [TYPE="NUMBER"]
+  [type="number"] {
+    // &::-webkit-inner-spin-button
+    &::-webkit-inner-spin-button {
+      height: auto;
+    }
+
+    // &::-webkit-outer-spin-button
+    &::-webkit-outer-spin-button {
+      height: auto;
+    }
+  }
+
+  // [TYPE="SEARCH"]
+  [type="search"] {
+    // generals
+    outline-offset: -2px;
+    -webkit-appearance: none;
+
+    // &::-webkit-search-cancel-button
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+
+    // &::-webkit-search-decoration
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+
+  // ::-WEBKIT-FILE-UPLOAD-BUTTON
+  ::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+  }
+
+  // FIELDSET
+  fieldset {
+    @include margin(0);
+    @include padding(0);
+    min-width: 0;
+    border: 0;
+  }
+
+  // LEGEND
+  legend {
+    @include margin(0 0 0.5rem 0);
+    @include padding(1rem 0 0 0);
+    border-width: 0;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: left;
+    white-space: normal;
+  }
+
+  // LABEL
+  label {
+    // &::selection
+    &::selection {
+      // theme: codymer
+      @if $theme == codymer {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-codymer--50);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        color: map-colors(blacks, theme--all);
+        background-color: map-colors(yellows, theme-example-01--25);
+      }
+    }
+  }
+
+  // SELECT
+  select {
+    -webkit-appearance: none;
+    text-transform: none;
+
+    // ie fix // remove arrow select
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  // INPUT
+  input {
+    @include margin(0);
+    -webkit-appearance: none;
+    overflow: visible;
+    line-height: inherit;
+
+    // type
+    &[type="radio"],
+    &[type="checkbox"] {
+      @include padding(0);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    &[type="date"],
+    &[type="time"],
+    &[type="datetime-local"],
+    &[type="month"] {
+      -webkit-appearance: listbox;
+    }
+
+    // &[type="password"]::-ms-reveal
+    &[type="password"]::-ms-reveal {
+      display: none;
+    }
+
+    // &:-webkit-autofill // chrome focus reset
+    &:-webkit-autofill {
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+  }
+
+  // OPTGROUP
+  optgroup {
+    @include margin(0);
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  // TEXTAREA
+  textarea {
+    @include margin(0);
+    @include padding(1rem null null null);
+    -webkit-appearance: none;
+    overflow: auto;
+    resize: vertical;
+    min-height: 13rem;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 0;
+  }
+
+  // PROGRESS
+  progress {
+    vertical-align: baseline;
+  }
 }
+// -----------------------------------------------

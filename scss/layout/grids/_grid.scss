@@ -1,65 +1,82 @@
 // CORE
 // ===============================================
-@use './abstracts/index' as *;
+@use "./abstracts/index" as *;
 // ===============================================
 
 // MIXIN: layout-grid
 // ===============================================
-@mixin layout-grid(
-  $grid-flex-padding--x: null,
-  $grid-flex-gap--unit: null,
-  $grid-flex-max-width: null,
-  $grid-flex-breakpoint--01: null,
-  $grid-flex-breakpoint-01--padding-x: null,
-  $grid-flex-breakpoint-01--gap: null,
-  $grid-flex-breakpoint--02: null,
-  $grid-flex-breakpoint-02--padding-x: null,
-  $grid-flex-breakpoint-02--gap: null,
-  $grid-flex-breakpoint--03: null,
-  $grid-flex-breakpoint-03--padding-x: null,
-  $grid-flex-breakpoint-03--gap: null,
-  $grid-flex-breakpoint--04: null,
-  $grid-flex-breakpoint-04--padding-x: null,
-  $grid-flex-breakpoint-04--gap: null,
-  $grid-flex-breakpoint--05: null,
-  $grid-flex-breakpoint-05--padding-x: null,
-  $grid-flex-breakpoint-05--gap: null
-) {
-
+@mixin layout-grid($theme: null) {
   // .layout-grid
   .layout-grid {
     @include margin(null auto null auto);
-    padding-right: $grid-flex-padding--x;
-    padding-left: $grid-flex-padding--x;
+    // theme: codymer
+    @if $theme == codymer {
+      @include padding(null 0.625rem null 0.625rem);
+    }
+    // theme: example-01
+    @if $theme == example-01 {
+      @include padding(null 0.8rem null 0.8rem);
+    }
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: 1fr;
-    gap: $grid-flex-gap--unit;
-    max-width: $grid-flex-max-width;
-    @include min-screen($grid-flex-breakpoint--01) {
-      padding-right: $grid-flex-breakpoint-01--padding-x;
-      padding-left: $grid-flex-breakpoint-01--padding-x;
-      gap: $grid-flex-breakpoint-01--gap;
+    // theme: codymer
+    @if $theme == codymer {
+      gap: 0.375rem;
+      max-width: 1920px;
     }
-    @include min-screen($grid-flex-breakpoint--02) {
-      padding-right: $grid-flex-breakpoint-02--padding-x;
-      padding-left: $grid-flex-breakpoint-02--padding-x;
-      gap: $grid-flex-breakpoint-02--gap;
+    // theme: example-01
+    @if $theme == example-01 {
+      gap: 0.5rem;
+      max-width: 1440px;
     }
-    @include min-screen($grid-flex-breakpoint--03) {
-      padding-right: $grid-flex-breakpoint-03--padding-x;
-      padding-left: $grid-flex-breakpoint-03--padding-x;
-      gap: $grid-flex-breakpoint-03--gap;
+    @include min-screen(480px) {
     }
-    @include min-screen($grid-flex-breakpoint--04) {
-      padding-right: $grid-flex-breakpoint-04--padding-x;
-      padding-left: $grid-flex-breakpoint-04--padding-x;
-      gap: $grid-flex-breakpoint-04--gap;
+    @include min-screen(768px) {
+      // theme: codymer
+      @if $theme == codymer {
+        @include padding(null 0.75rem null 0.75rem);
+        gap: 1.125rem;
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        @include padding(null 1rem null 1rem);
+        gap: 2rem;
+      }
     }
-    @include min-screen($grid-flex-breakpoint--05) {
-      padding-right: $grid-flex-breakpoint-05--padding-x;
-      padding-left: $grid-flex-breakpoint-05--padding-x;
-      gap: $grid-flex-breakpoint-05--gap;
+    @include min-screen(1024px) {
+      // theme: codymer
+      @if $theme == codymer {
+        @include padding(null 1.5rem null 1.5rem);
+        gap: 1.125rem;
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        @include padding(null 2rem null 2rem);
+        gap: 2.5rem;
+      }
+    }
+    @include min-screen(1280px) {
+      // theme: codymer
+      @if $theme == codymer {
+        @include padding(null 2.625rem null 2.625rem);
+        gap: 1.875rem;
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        @include padding(null 3rem null 3rem);
+        gap: 3.2rem;
+      }
+    }
+    @include min-screen(1440px) {
+      // theme: codymer
+      @if $theme == codymer {
+        @include padding(null 3.75rem null 3.75rem);
+      }
+      // theme: example-01
+      @if $theme == example-01 {
+        @include padding(null 4rem null 4rem);
+      }
     }
 
     // > *
@@ -69,10 +86,8 @@
 
     // &__col
     &__col {
-
       // &-xs
       &-xs {
-
         // &-1
         &-1 {
           grid-column: auto/span 1;
@@ -132,13 +147,11 @@
         &-12 {
           grid-column: auto/span 12;
         }
-
       }
 
       // &-sm
       &-sm {
         @include min-screen(768px) {
-
           // &-1
           &-1 {
             grid-column: auto/span 1;
@@ -198,15 +211,12 @@
           &-12 {
             grid-column: auto/span 12;
           }
-
         }
-
       }
 
       // &-md
       &-md {
         @include min-screen(1024px) {
-
           // &-1
           &-1 {
             grid-column: auto/span 1;
@@ -266,15 +276,12 @@
           &-12 {
             grid-column: auto/span 12;
           }
-
         }
-
       }
 
       // &-lg
       &-lg {
         @include min-screen(1280px) {
-
           // &-1
           &-1 {
             grid-column: auto/span 1;
@@ -334,11 +341,8 @@
           &-12 {
             grid-column: auto/span 12;
           }
-
         }
-
       }
-
     }
 
     // &__nested
@@ -346,26 +350,32 @@
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: 1fr;
-      gap: $grid-flex-gap--unit;
-      @include min-screen($grid-flex-breakpoint--01) {
-        gap: $grid-flex-breakpoint-01--gap;
+      // theme: codymer
+      @if $theme == codymer {
+        gap: 0.375rem;
       }
-      @include min-screen($grid-flex-breakpoint--02) {
-        gap: $grid-flex-breakpoint-02--gap;
+      // theme: example-01
+      @if $theme == example-01 {
+        gap: 0.375rem;
       }
-
+      @include min-screen(768px) {
+        // theme: codymer
+        @if $theme == codymer {
+          gap: 1.125rem;
+        }
+        // theme: example-01
+        @if $theme == example-01 {
+          gap: 1.125rem;
+        }
+      }
     }
 
     // &--is
     &--is {
-
       // &-fs
       &-fs {
         @include padding(null 0 null 0);
       }
-
     }
-
   }
-
 }
