@@ -136,29 +136,11 @@
             </li>
             <li class="cdmr-list-ordered__item">
               <a
-                href="#fontScopeHelper"
+                href="#font"
                 class="cdmr-link cdmr-link--primary"
                 title="Go to the font-scope section"
                 target="_self">
-                  Font-scope
-              </a>
-            </li>
-            <li class="cdmr-list-ordered__item">
-              <a
-                href="#fontWeightHelper"
-                class="cdmr-link cdmr-link--primary"
-                title="Go to the font-weight section"
-                target="_self">
-                  Font-weight
-              </a>
-            </li>
-            <li class="cdmr-list-ordered__item">
-              <a
-                href="#fontColorHelper"
-                class="cdmr-link cdmr-link--primary"
-                title="Go to the font-color section"
-                target="_self">
-                  Font-color
+                  Font
               </a>
             </li>
             <li class="cdmr-list-ordered__item">
@@ -655,7 +637,7 @@
             </h2>
             <p class="cdmr-txt cdmr-txt--primary">
               <span>
-                Like in Size helper, Gap  depends on what you set in the <strong>setup file</strong> of each theme. You can create custom spaces based in <strong>css margin property</strong>, at the same time this classes can be set as 7 different breakpoints media-queries. This class can be set with <strong>@include helper-spacer-gap();</strong>.
+                Like in Size helper, Gap  depends on what you set in the <strong>setup file</strong> of each theme. You can create custom spaces based in <strong>css margin property</strong>, at the same time this classes can be set as 7 different breakpoints media-queries. This class can be set with <strong>@include helper-spacer();</strong>.
               </span>
             </p>
             <p class="cdmr-txt cdmr-txt--primary">
@@ -731,7 +713,7 @@
             </ul>
             <p class="cdmr-txt cdmr-txt--primary">
               <span>
-                And the other group that can change depending on the theme. You can set them in the <strong>setup file</strong> with the <strong>@include helper-backgrounds();</strong>:
+                And the other group that can change depending on the theme. You can set them in the <strong>setup file</strong> with the <strong>@include helper-background();</strong>:
               </span>
             </p>
             <ul class="cdmr-list cdmr-list--primary">
@@ -882,14 +864,14 @@
                 <span>.helper-bg-color-senary *</span>
               </li>
             </ul>
-            <h2 id="fontScopeHelper" class="cdmr-title">
+            <h2 id="font" class="cdmr-title">
               <span class="helper-font-scope-20">
-                font-scope
+                Font
               </span>
             </h2>
             <p class="cdmr-txt cdmr-txt--primary">
               <span>
-                Use <strong>@include helper-font-scope();</strong> in the <strong>setup file</strong> to generate custom responsive font sizes with the option of 7 different breakpoints.
+                Use <strong>@include helper-font();</strong> in the <strong>setup file</strong> to generate custom responsive font sizes, font weights and font colors.
               </span>
             </p>
             <ul class="cdmr-list cdmr-list--primary">
@@ -924,11 +906,6 @@
                 Font-weight
               </span>
             </h2>
-            <p class="cdmr-txt cdmr-txt--primary">
-              <span>
-                Use <strong>@include helper-font-weight();</strong> in the <strong>setup file</strong> to generate custom font weights.
-              </span>
-            </p>
             <ul class="cdmr-list cdmr-list--primary">
               <li class="cdmr-list__item">
                 <span class="helper-font-weight-25">
@@ -941,7 +918,7 @@
                 </span>
               </li>
               <li class="cdmr-list__item">
-                <span class="helper-font-scope-40">
+                <span class="helper-font-weight-75">
                   .helper-font-weight-75
                 </span>
               </li>
@@ -961,11 +938,6 @@
                 Font-color
               </span>
             </h2>
-            <p class="cdmr-txt cdmr-txt--primary">
-              <span>
-                Works the same way as background  but with the color property. Some works the same way, no matter the theme:
-              </span>
-            </p>
             <ul class="cdmr-list cdmr-list--primary">
               <li class="cdmr-list__item">
                 <span class="helper-font-color-black">
@@ -1003,11 +975,6 @@
                 </span>
               </li>
             </ul>
-            <p class="cdmr-txt cdmr-txt--primary">
-              <span>
-                And the other group, you can control with the <strong>@include helper-font-color();</strong> depends of the theme:
-              </span>
-            </p>
             <ul class="cdmr-list cdmr-list--primary">
               <li class="cdmr-list__item">
                 <span class="helper-font-color-primary-25">
