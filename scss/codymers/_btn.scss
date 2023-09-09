@@ -8,12 +8,12 @@
 @mixin cdmr-btn($theme: null) {
   .cdmr-btn {
     $self: &;
+    @include border(all, 0.188rem, solid, null);
     overflow-wrap: break-word;
     display: inline-block;
     user-select: none;
     text-align: center;
     box-shadow: none;
-    @include border(all, 0.188rem, solid, null);
     transition: border-color 0.25s ease-out, color 0.25s ease-out,
       background-color 0.25s ease-out;
     // theme: codymer
