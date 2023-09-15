@@ -1,5 +1,5 @@
 # Codymer System
-This is the entire Codymer System: V.4.2.1
+This is the entire Codymer System: V.5.2.2
 
 You can read more information in:
 https://codymer-system.com/documentation.html
