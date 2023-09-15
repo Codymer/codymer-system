@@ -1,22 +1,18 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: images
 // ===============================================
 @mixin helper-images() {
-
   // .helper-img
   .helper-img {
-
     // &-resp
     &-resp {
       @include size(null, auto);
       display: block;
       max-width: 100%;
     }
-
   }
-
 }

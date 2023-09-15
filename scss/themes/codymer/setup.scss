@@ -7,15 +7,13 @@
 @use '../../containers/index' as *;
 // ===============================================
 
+// :ROOT
+// ===============================================
+@include root(codymer);
+// ===============================================
+
 // FONT SETUP
 // ===============================================
-// &--medium
-@include font-family("Google-Space-Grotesk--light",
-  "#{$fonts-path}/google-space-grotesk/SpaceGrotesk-Light",
-  300,
-  normal,
-  eot woff2 woff ttf svg);
-
 // &--regular
 @include font-family("Google-Space-Grotesk--regular",
   "#{$fonts-path}/google-space-grotesk/SpaceGrotesk-Regular",

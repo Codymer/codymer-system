@@ -1,14 +1,12 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: maps
 // ===============================================
 @mixin helper-maps() {
-
   .helper-map {
-
     // &-resp
     &-resp {
       @include position(relative);
@@ -46,9 +44,6 @@
       &--h100 {
         @include padding(null null 100vh null);
       }
-
     }
-
   }
-
 }

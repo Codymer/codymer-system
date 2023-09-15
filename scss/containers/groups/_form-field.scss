@@ -22,6 +22,7 @@
     &:before {
       content: "";
       @include position(absolute);
+      filter: var(--filter-primary);
       // theme: codymer
       @if $theme == codymer {
         @include position(null, 2rem, 0.625rem, null, null);
@@ -117,6 +118,7 @@
       &-error {
         // &:before
         &:before {
+          filter: var(--filter-state-ko);
           // theme: codymer
           @if $theme == codymer {
             @include background-setup(
@@ -135,7 +137,6 @@
               // color
               null
             );
-            filter: map-filters(reds, theme-codymer--error);
           }
           // theme: example-01
           @if $theme == example-01 {
@@ -155,7 +156,6 @@
               // color
               null
             );
-            filter: map-filters(reds, theme-example-01--error);
           }
         }
 
@@ -165,40 +165,19 @@
           &-form {
             // &-label
             &-label {
-              // theme: codymer
-              @if $theme == codymer {
-                color: map-colors(reds, theme-codymer--error);
-              }
-              // theme: example-01
-              @if $theme == example-01 {
-                color: map-colors(reds, theme-example-01--error);
-              }
+              color: var(--color-state-ko);
             }
 
             // &-field
             &-field {
-              // theme: codymer
-              @if $theme == codymer {
-                border-color: map-colors(reds, theme-codymer--error);
-              }
-              // theme: example-01
-              @if $theme == example-01 {
-                border-color: map-colors(reds, theme-example-01--error);
-              }
+              border-color: var(--color-state-ko);
             }
           }
         }
 
         // .cdmr-form-label-field__msg
         #{ $self }__msg {
-          // theme: codymer
-          @if $theme == codymer {
-            color: map-colors(reds, theme-codymer--error);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            color: map-colors(reds, theme-example-01--error);
-          }
+          color: var(--color-state-ko);
         }
       }
 
@@ -206,6 +185,7 @@
       &-success {
         // &:before
         &:before {
+          filter: var(--filter-state-ok);
           // theme: codymer
           @if $theme == codymer {
             @include background-setup(
@@ -224,7 +204,6 @@
               // color
               null
             );
-            filter: map-filters(greens, theme-codymer--success);
           }
           // theme: example-01
           @if $theme == example-01 {
@@ -244,7 +223,6 @@
               // color
               null
             );
-            filter: map-filters(greens, theme-example-01--success);
           }
         }
 
@@ -254,26 +232,12 @@
           &-form {
             // &-label
             &-label {
-              // theme: codymer
-              @if $theme == codymer {
-                color: map-colors(greens, theme-codymer--success);
-              }
-              // theme: example-01
-              @if $theme == example-01 {
-                color: map-colors(greens, theme-example-01--success);
-              }
+              color: var(--color-state-ok);
             }
 
             // &-field
             &-field {
-              // theme: codymer
-              @if $theme == codymer {
-                border-color: map-colors(greens, theme-codymer--success);
-              }
-              // theme: example-01
-              @if $theme == example-01 {
-                border-color: map-colors(greens, theme-example-01--success);
-              }
+              border-color: var(--color-state-ok);
             }
           }
         }
@@ -282,14 +246,7 @@
         #{ $self } {
           // &__msg
           &__msg {
-            // theme: codymer
-            @if $theme == codymer {
-              color: map-colors(greens, theme-codymer--success);
-            }
-            // theme: example-01
-            @if $theme == example-01 {
-              color: map-colors(greens, theme-example-01--success);
-            }
+            color: var(--color-state-ok);
           }
         }
       }
@@ -298,6 +255,7 @@
       &-warning {
         // &:before
         &:before {
+          filter: var(--filter-state-warning);
           // theme: codymer
           @if $theme == codymer {
             @include background-setup(
@@ -316,7 +274,6 @@
               // color
               null
             );
-            filter: map-filters(yellows, theme-codymer--warning);
           }
           // theme: example-01
           @if $theme == example-01 {
@@ -336,7 +293,6 @@
               // color
               null
             );
-            filter: map-filters(yellows, theme-example-01--warning);
           }
         }
 
@@ -346,26 +302,12 @@
           &-form {
             // &-label
             &-label {
-              // theme: codymer
-              @if $theme == codymer {
-                color: map-colors(yellows, theme-codymer--warning);
-              }
-              // theme: example-01
-              @if $theme == example-01 {
-                color: map-colors(yellows, theme-example-01--warning);
-              }
+              color: var(--color-state-warning);
             }
 
             // &-field
             &-field {
-              // theme: codymer
-              @if $theme == codymer {
-                border-color: map-colors(yellows, theme-codymer--warning);
-              }
-              // theme: example-01
-              @if $theme == example-01 {
-                border-color: map-colors(yellows, theme-example-01--warning);
-              }
+              border-color: var(--color-state-warning);
             }
           }
         }
@@ -374,14 +316,7 @@
         #{ $self } {
           // &__msg
           &__msg {
-            // theme: codymer
-            @if $theme == codymer {
-              color: map-colors(yellows, theme-codymer--warning);
-            }
-            // theme: example-01
-            @if $theme == example-01 {
-              color: map-colors(yellows, theme-example-01--warning);
-            }
+            color: var(--color-state-warning);
           }
         }
       }

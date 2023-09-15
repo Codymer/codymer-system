@@ -1,28 +1,24 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: displays
 // ===============================================
 @mixin helper-displays() {
-
   // .helper-dsp
   .helper-dsp {
-
     // &-none
     &-none {
       display: none;
 
       // &-mo
       &-mo {
-
         display: none;
         @include min-screen(768px) {
           display: block;
         }
       }
-
     }
 
     // &-block
@@ -46,7 +42,6 @@
 
       // &--wrap
       &--wrap {
-
         // &-yes
         &-yes {
           flex-wrap: wrap;
@@ -56,12 +51,10 @@
         &-reverse {
           flex-wrap: wrap-reverse;
         }
-
       }
 
       // &--just
       &--just {
-
         // &-strt
         &-strt {
           justify-content: flex-start;
@@ -96,12 +89,10 @@
         &-s-ard {
           justify-content: space-around;
         }
-
       }
 
       // &--algn-i
       &--algn-i {
-
         // &-strt
         &-strt {
           align-items: flex-start;
@@ -121,12 +112,10 @@
         &-bline {
           align-items: baseline;
         }
-
       }
 
       // &--algn-cont
       &--algn-cont {
-
         // &-strt
         &-strt {
           align-content: flex-start;
@@ -151,9 +140,7 @@
         &-space-ard {
           align-content: space-around;
         }
-
       }
-
     }
 
     // &-grid
@@ -162,7 +149,6 @@
 
       // &--just-i
       &--just-i {
-
         // &-strt
         &-strt {
           justify-items: start;
@@ -177,12 +163,10 @@
         &-ctr {
           justify-items: center;
         }
-
       }
 
       // &--just-cont
       &--just-cont {
-
         // &-strt
         &-strt {
           justify-content: start;
@@ -212,12 +196,10 @@
         &-space-evly {
           justify-content: space-evenly;
         }
-
       }
 
       // &--algn-i
       &--algn-i {
-
         // &-strt
         &-strt {
           align-items: start;
@@ -232,12 +214,10 @@
         &-ctr {
           align-items: center;
         }
-
       }
 
       // &--algn-cont
       &--algn-cont {
-
         // &-strt
         &-strt {
           align-content: start;
@@ -267,9 +247,7 @@
         &-space-evly {
           align-content: space-evenly;
         }
-
       }
-
     }
 
     // &-inline
@@ -290,7 +268,6 @@
       &-table {
         display: inline-table;
       }
-
     }
 
     // &-list-item
@@ -316,29 +293,24 @@
 
         // &-group
         &-group {
-          display: table-column-group
+          display: table-column-group;
         }
-
       }
 
       // &-footer
       &-footer {
-
         // &-group
         &-group {
           display: table-footer-group;
         }
-
       }
 
       // &-header
       &-header {
-
         // &-group
         &-group {
           display: table-header-group;
         }
-
       }
 
       // &-row
@@ -349,9 +321,7 @@
         &-group {
           display: table-row-group;
         }
-
       }
-
     }
 
     // &-mo
@@ -359,7 +329,6 @@
       @include min-screen(768px) {
         @include hide-visually;
       }
-
     }
 
     // &-sm
@@ -369,7 +338,6 @@
       @include min-screen(768px) {
         @include unhide-visually;
       }
-
     }
 
     // &-md
@@ -379,7 +347,6 @@
       @include min-screen(1024px) {
         @include unhide-visually;
       }
-
     }
 
     // &-lg
@@ -389,7 +356,6 @@
       @include min-screen(1280px) {
         @include unhide-visually;
       }
-
     }
 
     // &-xlg
@@ -399,9 +365,6 @@
       @include min-screen(1440px) {
         @include unhide-visually;
       }
-
     }
-
   }
-
 }

@@ -1,15 +1,13 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: links
 // ===============================================
 @mixin helper-links() {
-
   // .helper-link
   .helper-link {
-
     // &-block
     &-block {
       @include hide-visually;
@@ -17,7 +15,5 @@
       @include border(all, 0, null, null);
       opacity: 0;
     }
-
   }
-
 }

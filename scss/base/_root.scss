@@ -1,0 +1,154 @@
+// CORE
+// ===============================================
+@use "../abstracts/index" as *;
+// ===============================================
+
+// MIXIN: root 
+// ===============================================
+@mixin root($theme: null) {
+  :root {
+    // FONTS
+
+    // theme: codymer
+    @if $theme==codymer {
+      --font-weight-50: "Google-Space-Grotesk--regular",Arial,sans-serif;
+      --font-weight-75: "Google-Space-Grotesk--bold",Arial,sans-serif;
+      --font-weight-125: "Google-Space-Grotesk--bold",Arial,sans-serif;  
+      --font-body: var(--font-weight-50);
+      --font-title: var(--font-weight-75);
+      --font-bold: var(--font-weight-75);
+      --font-label: var(--font-weight-75);
+      --font-select: var(--font-weight-50);
+      --font-field: var(--font-weight-75);
+      --font-textarea: var(--font-weight-50);
+    }
+
+    // theme: example-01
+    @if $theme==example-01 {
+      --font-weight-50: "Google-Syne--medium", Arial, sans-serif;
+      --font-weight-75: "Google-Syne--bold", Arial, sans-serif;
+      --font-body: var(--font-weight-50);
+      --font-title: var(--font-weight-75);
+      --font-bold: var(--font-weight-75);
+      --font-label: var(--font-weight-75);
+      --font-select: var(--font-weight-75);
+      --font-field: var(--font-weight-75);
+      --font-textarea: var(--font-weight-50);
+    }
+
+    // COLORS
+
+    // colors: system
+    --color-black: black;
+    --color-white: white;
+    --color-grey-25: lch(94.1% 0 0);   
+
+    // colors: brands
+    --color-brand-fb-blue-25: #3b5998;
+    --color-brand-instagram-blue-25: #3f729b;
+    --color-brand-instagram-purple-25: #8a3ab9;
+    --color-brand-linkedin-blue-25: #0077b5;
+    --color-brand-paypal-blue-25: #009cde;
+    --color-brand-paypal-blue-50: #003087;
+    --color-brand-pinterest-red-25: #E60023;
+    --color-brand-twitter-blue-25: #5ea9dd;
+    --color-brand-whatsapp-green-25: #41C75D;
+    --color-brand-whatsapp-green-50: #40a73b;
+    --color-brand-youtube-red-25: #CC181E;
+    --filter-color-black: invert(0%) sepia(40%) saturate(20%) hue-rotate(356deg) brightness(90%) contrast(104%);
+    --filter-color-white: invert(99%) sepia(1%) saturate(4%) hue-rotate(355deg) brightness(103%) contrast(104%);
+
+    // theme: codymer
+    @if $theme==codymer {
+      --color-blue-25: lch(74.7% 33.34 232.94);
+      --color-green-25: lch(53.24% 27.48 172.66);
+      --color-pink-15: lch(95.42% 9.27 313.72);
+      --color-pink-25: lch(72.35% 41.05 350.11);
+      --color-pink-50: lch(41.99% 66.45 11.78);
+      --color-purple-50: lch(12.17% 45.95 298.86);
+      --color-yellow-50: lch(79.54% 78.02 82.02);
+      --color-body: var(--color-purple-50);
+      --color-primary: var(--color-purple-50);
+      --color-primary-25: var(--color-blue-25);
+      --color-primary-50: var(--color-purple-50); 
+      --color-secondary: var(--color-purple-50);
+      --color-secondary-25: var(--color-pink-15);
+      --color-secondary-50: var(--color-pink-50); 
+      --color-tertiary: var(--color-pink-50);
+      --color-tertiary-25: var(--color-green-25);
+      --color-quaternary: var(--color-pink-50);
+      --color-quaternary-25: var(--color-yellow-50);
+      --color-quinary: var(--color-pink-25);
+      --color-quinary-25: initial;
+      --color-septenary: var(--color-purple-50);
+      --color-septenary-25: var(--color-purple-50);
+      --color-action-link: var(--color-pink-50);
+      --color-state-disabled: lch(75.88% 0 0);
+      --color-state-focus: var(--color-pink-50);
+      --color-state-hover-primary: var(--color-pink-50);
+      --color-state-hover-secondary: var(--color-pink-50);
+      --color-state-hover-tertiary: var(--color-purple-50);
+      --color-state-hover-quaternary: var(--color-purple-50);
+      --color-state-ok: lch(53.24% 27.48 172.66);
+      --color-state-ko: lch(45.37% 93.27 40.86);
+      --color-state-warning: lch(78.29% 80.45 80.6);
+      --color-action-selection: var(--color-black);
+      --background-color-body: var(--color-pink-15);
+      --background-action-selection: var(--color-yellow-50); 
+      --filter-color-purple-50: invert(11%) sepia(54%) saturate(2826%) hue-rotate(236deg) brightness(86%) contrast(106%);
+      --filter-color-pink-50: invert(15%) sepia(66%) saturate(3946%) hue-rotate(323deg) brightness(98%) contrast(102%);
+      --filter-primary: var(--filter-color-purple-50);
+      --filter-secondary: var(--filter-color-purple-50);
+      --filter-tertiary: var(--filter-color-pink-50);
+      --filter-quaternary: var(--filter-color-purple-50);
+      --filter-state-ko: invert(26%) sepia(84%) saturate(6466%) hue-rotate(356deg) brightness(76%) contrast(131%);
+      --filter-state-ok: invert(20%) sepia(69%) saturate(1571%) hue-rotate(151deg) brightness(107%) contrast(102%);
+      --filter-state-warning: invert(35%) sepia(55%) saturate(1731%) hue-rotate(33deg) brightness(92%);
+    }
+    // theme: example-01
+    @if $theme==example-01 {
+      --color-black-50: lch(11.2% 9.58 219.67);
+      --color-brown-25: lch(96.16% 5.976732700387939 44.62673559902277);
+      --color-brown-50: lch(50.86% 56.53 45.42);
+      --color-blue-25: lch(51.41% 54.88 267.72);
+      --color-grey-25: lch(94.1% 0 0);
+      --color-yellow-50: lch(79.54% 78.02 82.02);
+      --color-body: var(--color-black-50);
+      --color-primary: var(--color-brown-50);
+      --color-primary-25: initial;
+      --color-primary-50: initial; 
+      --color-secondary: var(--color-blue-25);
+      --color-secondary-25: initial;
+      --color-secondary-50: initial; 
+      --color-tertiary: var(--color-blue-25);
+      --color-tertiary-25: initial;
+      --color-quaternary: var(--color-brown-50);
+      --color-quaternary-25: initial;
+      --color-quinary: initial;
+      --color-quinary-25: initial;
+      --color-septenary: initial;
+      --color-septenary-25: initial;
+      --color-action-link: var(--color-blue-25);
+      --color-state-disabled: lch(75.88% 0 0);
+      --color-state-focus: var(--color-blue-25);
+      --color-state-hover-primary: var(--color-black-50);
+      --color-state-hover-secondary: var(--color-black-50);
+      --color-state-hover-tertiary: var(--color-black-50);
+      --color-state-hover-quaternary: var(--color-black-50);
+      --color-state-ok: lch(53.24% 27.48 172.66);
+      --color-state-ko: lch(51.41% 54.88 267.72);
+      --color-state-warning: lch(78.29% 80.45 80.6);
+      --color-action-selection: var(--color-black);
+      --background-color-body: var(--color-brown-25);
+      --background-action-selection: var(--color-blue-25); 
+      --filter-color-brown-50: invert(46%) sepia(15%) saturate(2188%) hue-rotate(330deg) brightness(88%) contrast(91%);
+      --filter-color-blue-25: invert(36%) sepia(25%) saturate(5357%) hue-rotate(191deg) brightness(94%) contrast(81%);
+      --filter-primary: var(--filter-color-brown-50);
+      --filter-secondary: var(--filter-color-blue-25);
+      --filter-quaternary: var(--filter-color-brown-50);
+      --filter-state-ko: invert(26%) sepia(84%) saturate(6466%) hue-rotate(356deg) brightness(76%) contrast(131%);
+      --filter-state-ok: invert(20%) sepia(69%) saturate(1571%) hue-rotate(151deg) brightness(107%) contrast(102%);
+      --filter-state-warning: invert(35%) sepia(55%) saturate(1731%) hue-rotate(33deg) brightness(92%);
+    }
+  }
+}

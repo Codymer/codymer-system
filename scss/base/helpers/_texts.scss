@@ -1,15 +1,13 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: texts
 // ===============================================
 @mixin helper-texts() {
-
   // .helper-txt
   .helper-txt {
-
     // &-hide
     &-hide {
       @include hide-visually;
@@ -27,12 +25,10 @@
           @include hide-visually;
         }
       }
-
     }
 
     // &-algn
     &-algn {
-
       // &-ctr
       &-ctr {
         text-align: center;
@@ -57,12 +53,10 @@
       &-str {
         text-align: start;
       }
-
     }
 
     // &-decor
     &-decor {
-
       // &-underline
       &-underline {
         text-decoration-line: underline;
@@ -77,9 +71,6 @@
       &-line-through {
         text-decoration-line: line-through;
       }
-
     }
-
   }
-
 }

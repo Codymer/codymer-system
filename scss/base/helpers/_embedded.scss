@@ -1,15 +1,13 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: embedded
 // ===============================================
 @mixin helper-embedded() {
-
   // .helper-embed
   .helper-embed {
-
     // &-resp
     &-resp {
       @include position(relative);
@@ -49,9 +47,6 @@
       &--1by1 {
         @include padding(null null 100% null);
       }
-
     }
-
   }
-
 }

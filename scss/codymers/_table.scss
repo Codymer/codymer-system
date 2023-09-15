@@ -43,7 +43,7 @@
         bottom,
         0.125rem,
         solid,
-        map-colors(greys, theme-all--25)
+        var(--color-grey-25)
       );
     }
 
@@ -53,15 +53,8 @@
       #{ $self } {
         // &__th
         &__th {
-          color: map-colors(whites, theme--all);
-          // theme: codymer
-          @if $theme == codymer {
-            background-color: map-colors(purples, theme-codymer--50);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            background-color: map-colors(browns, theme-example-01--75);
-          }
+          color: var(--color-white);
+          background-color: var(--color-primary);
         }
 
         // &__td
@@ -69,27 +62,15 @@
           // &:hover, &:focus
           &:hover,
           &:focus {
-            background-color: map-colors(yellows, theme-codymer--50);
-            // theme: codymer
-            @if $theme == codymer {
-              border-color: map-colors(blues, theme-codymer--50);
-              box-shadow: 0 0 0.313rem 0 map-colors(blues, theme-codymer--50);
-            }
-            // theme: example-01
-            @if $theme == example-01 {
-              border-color: map-colors(browns, theme-example-01--25);
-              box-shadow: 0
-                0
-                0.313rem
-                0
-                map-colors(browns, theme-example-01--25);
-            }
+            background-color: var(--color-state-focus);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0.313rem 0 var(--color-primary);
           }
         }
 
         // &__foot
         &__tfoot {
-          background-color: map-colors(greys, theme-all--25);
+          background-color: var(--color-grey-25);
         }
       }
     }
@@ -130,28 +111,14 @@
               &:first-of-type {
                 @include position(sticky, null, null, null, 0);
                 z-index: 2;
-                color: map-colors(whites, theme--all);
-                // theme: codymer
-                @if $theme == codymer {
-                  background-color: map-colors(purples, theme-codymer--50);
-                }
-                // theme: example-01
-                @if $theme == example-01 {
-                  background-color: map-colors(browns, theme-example-01--75);
-                }
+                color: var(--color-white);
+                background-color: var(--color-primary);
 
                 // &:hover, &:focus
                 &:hover,
                 &:focus {
-                  background-color: map-colors(yellows, theme-codymer--50);
-                  // theme: codymer
-                  @if $theme == codymer {
-                    color: map-colors(purples, theme-codymer--50);
-                  }
-                  // theme: example-01
-                  @if $theme == example-01 {
-                    color: map-colors(browns, theme-example-01--75);
-                  }
+                  color: var(--color-primary);
+                  background-color: var(--color-state-focus);
                 }
               }
             }

@@ -1,15 +1,13 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: positioning
 // ===============================================
 @mixin helper-positioning() {
-
   // .helper-pos
   .helper-pos {
-
     // &-absolute
     &-absolute {
       @include position(absolute);
@@ -61,7 +59,5 @@
       right: 0;
       left: 0;
     }
-
   }
-
 }

@@ -37,70 +37,35 @@
 
     // &:focus-visible
     &:focus-visible {
-      // theme: codymer
-      @if $theme == codymer {
-        outline: .2rem solid map-colors(fucsias, theme-codymer--75);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        outline: .2rem solid map-colors(blues, theme-example-01--25);
-      }
+      outline: 0.2rem solid var(--color-state-focus);
     }
 
     // &--primary
     &--primary {
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(purples, theme-codymer--50);
-        background-color: map-colors(purples, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        border-color: map-colors(browns, theme-example-01--75);
-        background-color: map-colors(browns, theme-example-01--75);
-      }
+      color: var(--color-white);
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
     }
 
     // &--secondary
     &--secondary {
+      color: var(--color-secondary);
       background-color: transparent;
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(purples, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(browns, theme-example-01--75);
-        border-color: map-colors(browns, theme-example-01--75);
-      }
+      border-color: var(--color-secondary);
     }
 
     // &--tertiary
     &--tertiary {
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(pinks, theme-codymer--50);
-        background-color: map-colors(pinks, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        border-color: map-colors(blues, theme-example-01--25);
-        background-color: map-colors(blues, theme-example-01--25);
-      }
+      color: var(--color-white);
+      border-color: var(--color-tertiary);
+      background-color: var(--color-tertiary);
     }
 
     // &--quaternary
     &--quaternary {
+      color: var(--color-quaternary);
+      border-color: var(--color-quaternary);
       background-color: transparent;
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(blues, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blues, theme-example-01--25);
-        border-color: map-colors(blues, theme-example-01--25);
-      }
     }
 
     // &--scope
@@ -156,146 +121,95 @@
 
     // &:where()
     &:where(#{ $self }--primary) {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(whites, theme--all);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(whites, theme--all);
-      }
-
       // .cdmr
       .cdmr {
         // &-icon
         &-icon {
           // &:before
           &:before {
-            // theme: codymer
-            @if $theme == codymer {
-              filter: map-filters(whites, theme--all);
-            }
-            // theme: example-01
-            @if $theme == example-01 {
-              filter: map-filters(whites, theme--all);
-            }
+            filter: var(--filter-color-white);
           }
         }
       }
 
       // &:hover
       &:hover {
-        // theme: codymer
-        @if $theme == codymer {
-          border-color: map-colors(fucsias, theme-codymer--75);
-          background-color: map-colors(fucsias, theme-codymer--75);
+        border-color: var(--color-state-hover-primary);
+        background-color: var(--color-state-hover-primary);
+      }
+    }
+
+    // &:where()
+    &:where(#{ $self }--secondary) {
+      // .cdmr
+      .cdmr {
+        // &-icon
+        &-icon {
+          // &:before
+          &:before {
+            filter: var(--filter-secondary);
+          }
         }
-        // theme: example-01
-        @if $theme == example-01 {
-          border-color: map-colors(blacks, theme-example-01--50);
-          background-color: map-colors(blacks, theme-example-01--50);
-        }
+      }
+
+      // &:hover
+      &:hover {
+        border-color: var(--color-state-hover-secondary);
+        color: var(--color-state-hover-secondary);
       }
     }
 
     // &:where()
     &:where(#{ $self }--tertiary) {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(purples, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme-example-01--50); 
-      }
-
       // .cdmr
       .cdmr {
         // &-icon
         &-icon {
           // &:before
           &:before {
-            filter: map-filters(whites, theme--all);
+            filter: var(--filter-color-white);
           }
         }
       }
 
       // &:hover
       &:hover {
-        // theme: codymer
-        @if $theme == codymer {
-          color: map-colors(whites, theme--all);
-          border-color: map-colors(fucsias, theme-codymer--75);
-          background-color: map-colors(fucsias, theme-codymer--75);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-          color: map-colors(whites, theme--all);
-          border-color: map-colors(blacks, theme-example-01--50);
-          background-color: map-colors(blacks, theme-example-01--50);
-        }
+        border-color: var(--color-state-hover-tertiary);
+        background-color: var(--color-state-hover-tertiary);
       }
     }
 
     // &:where()
-    &:where(#{ $self }--secondary, #{ $self }--quaternary) {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(purples, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme-example-01--50);
-      }
-
+    &:where(#{ $self }--quaternary) {
       // .cdmr
       .cdmr {
         // &-icon
         &-icon {
           // &:before
           &:before {
-            // theme: codymer
-            @if $theme == codymer {
-              filter: map-filters(purples, theme-codymer--50);
-            }
-            // theme: example-01
-            @if $theme == example-01 {
-              filter: map-filters(blacks, theme--all);
-            }
+            filter: var(--filter-primary);
           }
         }
       }
 
       // &:hover
       &:hover {
-        // theme: codymer
-        @if $theme == codymer {
-          border-color: map-colors(fucsias, theme-codymer--75);
-          color: map-colors(fucsias, theme-codymer--75);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-          border-color: map-colors(blacks, theme-example-01--50);
-          color: map-colors(blacks, theme-example-01--50);
-        }
+        border-color: var(--color-state-hover-quaternary);
+        color: var(--color-state-hover-quaternary);
       }
     }
 
     // &:disabled
     &:disabled {
       cursor: not-allowed;
-      border-color: map-colors(greys, theme-all--50);
+      color: var(--color-black);
+      border-color: var(--color-state-disabled);
     }
 
     // &:where():disabled
     &:where(#{ $self }--primary, #{ $self }--tertiary):disabled {
-      color: map-colors(whites, theme--all);
-      background-color: map-colors(greys, theme-all--50);
-    }
-
-    // &:where():disabled
-    &:where(#{ $self }--secondary, #{ $self }--quaternary):disabled {
-      color: map-colors(greys, theme-all--50);
+      border-color: var(--color-state-disabled);
+      background-color: var(--color-state-disabled);
     }
 
     // &--has

@@ -31,17 +31,16 @@
           &:before {
             content: "";
             @include position(absolute, null, null, null, 0);
+            filter: var(--filter-primary); 
             // theme: codymer
             @if $theme == codymer {
               @include size(1rem);
               top: 0;
-              filter: map-filters(purples, theme-codymer--50);
             }
             // theme: example-01
             @if $theme == example-01 {
               @include size(2rem);
               top: -.4rem; 
-              filter: map-filters(browns, theme-example-01--50);
             }
           }
 

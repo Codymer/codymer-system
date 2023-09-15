@@ -43,15 +43,15 @@
             @include position(absolute);
             counter-increment: list-number;
             border-radius: 50%;
+            color: var(--color-white);
             text-align: center;
+            background-color: var(--color-primary); 
             // theme: codymer
             @if $theme == codymer {
               @include position(null, -0.25rem, null, null, 0);
               @include size(1.563rem);
               font-size: 0.938rem;
               line-height: 1.563rem;
-              color: map-colors(whites, theme--all);
-              background-color: map-colors(purples, theme-codymer--50);
             }
             // theme: example-01
             @if $theme == example-01 {
@@ -59,8 +59,6 @@
               @include size(2rem);
               font-size: 1rem;
               line-height: 2rem;
-              color: map-colors(whites, theme--all);
-              background-color: map-colors(browns, theme-example-01--75);
             }
           }
 

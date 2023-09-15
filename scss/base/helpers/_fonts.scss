@@ -11,27 +11,27 @@
     &-color {
       // &-black
       &-black {
-        color: map-colors(blacks, theme--all);
+        color: var(--color-black);
       }
       // &-white
       &-white {
-        color: map-colors(whites, theme--all);
+        color: var(--color-white);
       }
       // &-blue
       &-blue {
         &-facebook {
           &-25 {
-            color: map-colors(blues, theme-facebook--25);
+            color: var(--color-brand-fb-blue-25);
           }
         }
         &-instagram {
           &-25 {
-            color: map-colors(blues, theme-instagram--25);
+            color: var(--color-brand-instagram-blue-25);
           }
         }
         &-twitter {
           &-25 {
-            color: map-colors(blues, theme-twitter--25);
+            color: var(--color-brand-twitter-blue-25);
           }
         }
       }
@@ -39,7 +39,7 @@
       &-green {
         &-whatsapp {
           &-25 {
-            color: map-colors(greens, theme-whatsapp--25);
+            color: var(--color-brand-whatsapp-green-25);
           }
         }
       }
@@ -47,7 +47,7 @@
       &-purple {
         &-instagram {
           &-25 {
-            color: map-colors(purples, theme-instagram--25);
+            color: var(--color-brand-instagram-purple-25);
           }
         }
       }
@@ -55,83 +55,42 @@
       &-primary {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            color: map-colors(fucsias, theme-codymer--75);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            color: map-colors(blacks, theme-example-01--50);
-          }
+          color: var(--color-primary-25);
         }
       }
       // &-secondary
       &-secondary {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            color: map-colors(pinks, theme-codymer--50);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            color: map-colors(browns, theme-example-01--25);
-          }
+          color: var(--color-secondary-25);
         }
       }
       // &-tertiary
       &-tertiary {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            color: map-colors(greens, theme-codymer--75);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            color: map-colors(browns, theme-example-01--50);
-          }
+          color: var(--color-tertiary-25);
         }
       }
       // &-quaternary
       &-quaternary {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            color: map-colors(yellows, theme-codymer--50);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            color: map-colors(browns, theme-example-01--75);
-          }
+          color: var(--color-quaternary-25);
         }
       }
       // &-quinary
       &-quinary {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            color: map-colors(pinks, theme-codymer--25);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            color: map-colors(blues, theme-example-01--25);
-          }
+          color: var(--color-quinary-25);
         }
       }
       // &-septenary
       &-septenary {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            color: map-colors(blues, theme-codymer--25);
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-          }
+          color: var(--color-septenary-25);
         }
       }
     }
@@ -140,56 +99,23 @@
     &-weight {
       // &-25
       &-25 {
-        // theme: codymer
-        @if $theme == codymer {
-          font-family: map-fonts(Google, Space-Grotesk--25);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-          font-family: map-fonts(Google, Syne--25);
-        }
+        font-family: var(--font-weight-25);
       }
       // &-50
       &-50 {
-        // theme: codymer
-        @if $theme == codymer {
-          font-family: map-fonts(Google, Space-Grotesk--50);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-          font-family: map-fonts(Google, Syne--50);
-        }
+        font-family: var(--font-weight-50);
       }
       // &-75
       &-75 {
-        // theme: codymer
-        @if $theme == codymer {
-          font-family: map-fonts(Google, Space-Grotesk--75);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-          font-family: map-fonts(Google, Syne--75);
-        }
+        font-family: var(--font-weight-75);
       }
       // &-100
       &-100 {
-        // theme: codymer
-        @if $theme == codymer {
-          font-family: map-fonts(Google, Space-Grotesk--100);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-        }
+        font-family: var(--font-weight-100);
       }
       // &-125
       &-125 {
-        // theme: codymer
-        @if $theme == codymer {
-          font-family: map-fonts(Google, Space-Grotesk--125);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-        }
+        font-family: var(--font-weight-125);
       }
     }
 

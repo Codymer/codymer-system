@@ -27,71 +27,29 @@
 
     // &:focus-visible
     &:focus-visible {
-      // theme: codymer
-      @if $theme == codymer {
-        box-shadow: 0 0 0.313rem 0 map-colors(blues, theme-codymer--25);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        box-shadow: 0 0 0.5rem 0 map-colors(blues, theme-example-01--25);
-      }
+      outline: 0.2rem solid var(--color-state-focus);
     }
 
     // &--primary
     &--primary {
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(fucsias, theme-codymer--75);
-        background-color: map-colors(fucsias, theme-codymer--75);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        border-color: map-colors(browns, theme-example-01--75);
-        background-color: map-colors(browns, theme-example-01--75);
-      }
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
     }
 
     // &--secondary
     &--secondary {
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(fucsias, theme-codymer--75);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        border-color: map-colors(browns, theme-example-01--75);
-      }
+      border-color: var(--color-secondary);
     }
 
     // &--tertiary
     &--tertiary {
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(greens, theme-codymer--25);
-        background-color: map-colors(greens, theme-codymer--25);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        border-color: map-colors(blues, theme-example-01--25);
-        background-color: map-colors(blues, theme-example-01--25);
-      }
+      border-color: var(--color-tertiary);
+      background-color: var(--color-tertiary);
     }
 
     // &--quaternary
     &--quaternary {
-      // theme: codymer
-      @if $theme == codymer {
-        border-color: map-colors(greens, theme-codymer--25);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        border-color: map-colors(blues, theme-example-01--25);
-      }
+      border-color: var(--color-quaternary);
     }
 
     // &--shape
@@ -100,7 +58,7 @@
       &-box {
         // theme: codymer
         @if $theme == codymer {
-          @include border-radius(.6rem);
+          @include border-radius(0.6rem);
         }
 
         // theme: example-01
@@ -120,7 +78,7 @@
       // &-25
       &-25 {
         // theme: codymer
-        @if $theme == codymer { 
+        @if $theme == codymer {
           @include size(2.5rem);
         }
 
@@ -151,71 +109,74 @@
     }
 
     // &:where()
-    &:where(
-      #{ $self }--primary,
-      #{ $self }--tertiary
-      ) {
+    &:where(#{ $self }--primary) {
       // .cdmr
       .cdmr {
         // &-icon
         &-icon {
           // &:before
           &:before {
-            // theme: codymer
-            @if $theme == codymer {
-              filter: map-filters(whites, theme--all);
-            }
-            // theme: example-01
-            @if $theme == example-01 {
-              filter: map-filters(whites, theme--all);
-            }
+            filter: var(--filter-color-white);
           }
         }
       }
 
       // &:hover
       &:hover {
-        // theme: codymer
-        @if $theme == codymer {
-          border-color: map-colors(purples, theme-codymer--50);
-          background-color: map-colors(purples, theme-codymer--50);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          border-color: map-colors(blacks, theme-example-01--50);
-          background-color: map-colors(blacks, theme-example-01--50);
-        }
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
       }
     }
 
-    // &:where
-    &:where( 
-        #{ $self }--secondary,
-        #{ $self }--quaternary
-      ) {
+    // &:where()
+    &:where(#{ $self }--secondary) {
       // .cdmr
       .cdmr {
         // &-icon
         &-icon {
           // &:before
           &:before {
-            // theme: codymer
-            @if $theme == codymer {
-              filter: map-filters(blues, theme-codymer--50);
+            filter: var(--filter-secondary);
+            // behavior-in-ancestor
+            @include behavior-in-ancestor(helper-bg-color-primary-50) {
+              // theme: codymer
+              @if $theme == codymer {
+                filter: var(--filter-color-white); 
+              }
             }
+          }
+        }
+      }
+      // behavior-in-ancestor
+      @include behavior-in-ancestor(helper-bg-color-primary-50) {
+        // theme: codymer
+        @if $theme == codymer {
+          border-color: var(--color-white);
+        }
+      }
+      // &:hover
+      &:hover {
+        border-color: var(--color-secondary);
+        background-color: var(--color-secondary);
+      }
+    }
 
-            // theme: example-01
-            @if $theme == example-01 {
-              filter: map-filters(blacks, theme--all);
-            }
+    // &:where
+    &:where(#{ $self }--tertiary) {
+      // .cdmr
+      .cdmr {
+        // &-icon
+        &-icon {
+          // &:before
+          &:before {
+            filter: var(--filter-color-white);
           }
         }
       }
 
       // behavior-in-ancestor
       @include behavior-in-ancestor(helper-bg-color-primary-50) {
-        border-color: map-colors(whites, theme--all);
+        border-color: var(--color-white);
 
         // .cdmr
         .cdmr {
@@ -223,7 +184,7 @@
           &-icon {
             // &:before
             &:before {
-              filter: map-filters(whites, theme--all);
+              filter: var(--filter-color-white);
             }
           }
         }
@@ -231,15 +192,7 @@
 
       // &:hover
       &:hover {
-        // theme: codymer
-        @if $theme == codymer {
-          border-color: map-colors(purples, theme-codymer--50);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          border-color: map-colors(blacks, theme-example-01--50);
-        }
+        border-color: var(--color-tertiary);
 
         // .cdmr
         .cdmr {
@@ -247,15 +200,53 @@
           &-icon {
             // &:before
             &:before {
-              // theme: codymer
-              @if $theme == codymer {
-                filter: map-filters(blacks, theme--all);
-              }
+              filter: var(--filter-color-black);
+            }
+          }
+        }
+      }
+    }
 
-              // theme: example-01
-              @if $theme == example-01 {
-                filter: map-filters(blacks, theme--all);
-              }
+    // &:where
+    &:where(#{ $self }--quaternary) {
+      // .cdmr
+      .cdmr {
+        // &-icon
+        &-icon {
+          // &:before
+          &:before {
+            filter: var(--filter-quaternary);
+          }
+        }
+      }
+
+      // behavior-in-ancestor
+      @include behavior-in-ancestor(helper-bg-color-primary-50) {
+        border-color: var(--color-white);
+
+        // .cdmr
+        .cdmr {
+          // &-icon
+          &-icon {
+            // &:before
+            &:before {
+              filter: var(--filter-color-white);
+            }
+          }
+        }
+      }
+
+      // &:hover
+      &:hover {
+        border-color: var(--color-primary);
+
+        // .cdmr
+        .cdmr {
+          // &-icon
+          &-icon {
+            // &:before
+            &:before {
+              filter: var(--filter-quaternary);
             }
           }
         }

@@ -18,7 +18,7 @@
     z-index: 500;
     overflow-x: hidden;
     transition: all 0.5s;
-    box-shadow: 0.625rem 0 0.313rem -0.188rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0.625rem 0 0.313rem -0.188rem var(--color-primary); 
   }
 
   // &__header
@@ -45,7 +45,7 @@
     @include position(relative);
     @include padding(null null null 1.6rem);
     transition: color 0.25s ease-out;
-    color: map-colors(blues, theme-codymer--50);
+    color: var(--color-primary);
     @include min-screen(768px) {
       @include padding(null null null 2rem);
     }
@@ -73,7 +73,7 @@
         // color
         null,
       );
-      filter: map-filters(blues, theme-codymer--50);
+      filter: var(--filter-primary);
       @include min-screen(768px) {
         @include size(1.625rem);
       }
@@ -81,12 +81,12 @@
 
     // &:hover
     &:hover {
-      color: map-colors(fucsias, theme-codymer--75);
+      color: var(--color-pink-50);
     }
 
     // &:focus-visible
     &:focus-visible {
-      outline: .2rem solid map-colors(fucsias, theme-codymer--75);
+      outline: .2rem solid var(--color-state-focus);
     }
   }
 
@@ -110,8 +110,8 @@
       @include position(relative);
       @include padding(0.7rem 1.5rem 0.7rem null);
       @include size(100%, null);
-      color: map-colors(whites, theme--all);
       display: block;
+      font-weight: var(--font-bold);
 
       // &:before
       &:before {
@@ -134,7 +134,7 @@
           // color
           transparent,
         );
-        filter: map-filters(whites, theme--all);
+        filter: var(--filter-color-white);
       }
 
       // &:hover
@@ -144,7 +144,7 @@
 
       // &:focus-visible
       &:focus-visible {
-        outline: .2rem solid map-colors(fucsias, theme-codymer--75);
+        outline: .2rem solid var(--color-state-focus);
       }
     }
 
@@ -170,7 +170,7 @@
         // &:before
         &:before {
           @include size(2rem);
-          filter: map-filters(whites, theme--all);
+          filter: var(--filter-color-white);
         }
       }
     }
@@ -183,7 +183,7 @@
 
       // &:focus-visible
       &:focus-visible {
-        outline: .2rem solid map-colors(fucsias, theme-codymer--75);
+        outline: .2rem solid var(--color-state-focus);
       }
     }
   }
@@ -196,7 +196,7 @@
     .cdmr {
       // &-btn
       &-btn {
-        background-color: map-colors(whites, theme--all);
+        background-color: var(--color-white);
 
         // &:not(:hover)
         &:not(:hover) {
@@ -206,7 +206,7 @@
           .cdmr-icon {
             // &:before
             &:before {
-              filter: map-filters(whites, theme--all);
+              filter: var(--filter-color-white);
             }
           }
         }

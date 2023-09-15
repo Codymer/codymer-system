@@ -9,8 +9,8 @@
   // *
   * {
     // generals
-    -webkit-tap-highlight-color: map-colors(whites, theme--all);
-    -webkit-focus-ring-color: map-colors(blacks, theme--all);
+    -webkit-tap-highlight-color: var(--color-white);
+    -webkit-focus-ring-color: var(--color-black);
     box-sizing: border-box;
 
     // &:before
@@ -31,11 +31,11 @@
     -ms-overflow-style: scrollbar;
     // theme: codymer
     @if $theme == codymer {
-      font: normal normal 500 16px/18px map-fonts(Google, Space-Grotesk--50);
+      font: normal normal 500 16px/18px var(--font-body);
     }
     // theme: example-01
     @if $theme == example-01 {
-      font: normal normal 500 100%/18px map-fonts(Google, Syne--50);
+      font: normal normal 500 100%/18px var(--font-body);
     }
   }
 
@@ -44,20 +44,18 @@
     @include margin(0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--color-body);
     text-align: left;
+    background-color: var(--background-color-body);
     // theme: codymer
     @if $theme == codymer {
       font-size: 16px;
       line-height: 18px;
-      color: map-colors(purples, theme-codymer--50);
-      background-color: map-colors(pinks, theme-codymer--25);
     }
     // theme: example-01
     @if $theme == example-01 {
-      font-size: 16px;
-      line-height: 18px;
-      color: map-colors(blacks, theme-example-01--50);
-      background-color: map-colors(greys, theme-example-01--50);
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 
@@ -119,16 +117,8 @@
   span {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -136,16 +126,8 @@
   data {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -153,16 +135,8 @@
   address {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -170,182 +144,105 @@
   time {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // h1
   h1 {
+    font-family: var(--font-title);
     // theme: codymer
     @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
       font-size: 3.052rem;
       line-height: 3.177rem;
       letter-spacing: -0.1rem;
     }
     // theme: example-01
     @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
       font-size: 3.052rem;
       line-height: 3.177rem;
       letter-spacing: -0.1rem;
     }
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // h2
   h2 {
+    font-family: var(--font-title);
     // theme: codymer
     @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
       font-size: 2.441rem;
       line-height: 2.566rem;
     }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // h3
   h3 {
+    font-family: var(--font-title);
     // theme: codymer
     @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
       font-size: 1.953rem;
       line-height: 2.078rem;
     }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // h4
   h4 {
+    font-family: var(--font-title);
     // theme: codymer
     @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
       font-size: 1.563rem;
       line-height: 1.688rem;
     }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // h5
   h5 {
+    font-family: var(--font-title);
     // theme: codymer
     @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
       font-size: 1.25rem;
       line-height: 1.375rem;
     }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // h6
   h6 {
+    font-family: var(--font-title);
     // theme: codymer
     @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
       font-size: 1.125rem;
       line-height: 1.25rem;
     }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        bbackground-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -353,66 +250,28 @@
   p {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // strong
   strong {
-    // theme: codymer
-    @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
-    }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
+    font-family: var(--font-bold);
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
   // em
   em {
-    // theme: codymer
-    @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
-    }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
+    font-family: var(--font-bold);
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -425,16 +284,8 @@
   li {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -442,16 +293,8 @@
   dt {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -459,16 +302,8 @@
   dd {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -476,16 +311,8 @@
   mark {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -493,16 +320,8 @@
   u {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -510,16 +329,8 @@
   del {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -530,16 +341,8 @@
     -webkit-text-decoration-skip: objects;
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
 
     // &:focus
@@ -611,16 +414,8 @@
     font-size: 80%;
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -632,16 +427,8 @@
     vertical-align: baseline;
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -653,16 +440,8 @@
     vertical-align: baseline;
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -742,27 +521,12 @@
 
   // TH
   th {
-    // theme: codymer
-    @if $theme == codymer {
-      font-family: map-fonts(Google, Space-Grotesk--75);
-    }
-    // theme: example-01
-    @if $theme == example-01 {
-      font-family: map-fonts(Google, Syne--75);
-    }
+    font-family: var(--font-bold);
     text-align: inherit;
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -770,16 +534,8 @@
   td {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -869,16 +625,8 @@
   label {
     // &::selection
     &::selection {
-      // theme: codymer
-      @if $theme == codymer {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-codymer--50);
-      }
-      // theme: example-01
-      @if $theme == example-01 {
-        color: map-colors(blacks, theme--all);
-        background-color: map-colors(yellows, theme-example-01--25);
-      }
+      color: var(--color-action-selection);
+      background-color: var(--background-action-selection);
     }
   }
 
@@ -950,4 +698,3 @@
     vertical-align: baseline;
   }
 }
-// -----------------------------------------------

@@ -35,7 +35,7 @@
     // &__section
     &__section {
       @include padding(0.938rem);
-      background-color: map-colors(whites, theme--all);
+      background-color: var(--color-white);
       border-radius: 0.313rem; 
       @include min-screen(768px) {
         @include padding(1.563rem);
@@ -51,7 +51,7 @@
             @include margin(0 null 0.5rem null);
             @include padding(1rem null 1rem null);
             z-index: 3;
-            background-color: map-colors(whites, theme--all);
+            background-color: var(--color-white);
           }
         }
       }

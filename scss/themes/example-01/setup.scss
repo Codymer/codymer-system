@@ -7,19 +7,17 @@
 @use '../../containers/index' as *;
 // ===============================================
 
+// :ROOT
+// ===============================================
+@include root(example-01);
+// ===============================================
+
 // FONT SETUP
 // ===============================================
 // &--regular
 @include font-family("Google-Syne--regular",
   "#{$fonts-path}/google-syne/Syne-Regular",
   500,
-  normal,
-  eot woff2 woff ttf svg);
-
-// &--medium
-@include font-family("Google-Syne--medium",
-  "#{$fonts-path}/google-syne/Syne-Medium",
-  600,
   normal,
   eot woff2 woff ttf svg);
 

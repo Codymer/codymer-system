@@ -1,18 +1,15 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: objects
 // ===============================================
 @mixin helper-objetcs() {
-
   // .helper-obj
   .helper-obj {
-
     // &-fit
     &-fit {
-
       // &-fill
       &-fill {
         object-fit: fill;
@@ -37,9 +34,6 @@
       &-none {
         object-fit: none;
       }
-
     }
-
   }
-
 }

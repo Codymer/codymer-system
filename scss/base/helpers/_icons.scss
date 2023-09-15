@@ -1,239 +1,254 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: rrss
 // ===============================================
 @mixin helper-icons() {
-
   // .helper-icon
   .helper-icon {
     display: inline-block;
 
     // &:before
     &:before {
-      content: '';
+      content: "";
       @include position(absolute, 0, 0, 0, 0);
       @include margin(auto);
     }
 
     // &--facebook
     &--facebook {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-facebook--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-facebook--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &--github
     &--github {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-github--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-github--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &--instagram
     &--instagram {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-instagram--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-instagram--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &-linkedin
     &--linkedin {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-linkedin--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-linkedin--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &--pinterest
     &--pinterest {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-pinterest--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-pinterest--default),
+            // position and size
+            "center center / contain",
+             // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &--snapchat
     &--snapchat {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-snapchat--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-snapchat--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &-twitter
     &--twitter {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-twitter--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-twitter--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &--whatsapp
     &--whatsapp {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-whatsapp--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-whatsapp--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
 
     // &--youtube
     &--youtube {
-
       // &-primary
       &-primary {
-
         // &:before
         &:before {
           @include background-setup(
-            map-icons(rrss, theme-youtube--default), // img path
-            'center center / contain', // position and size
-            no-repeat, // repeat
-            null, // attachment
-            null, // origin
-            null, // clip
-            transparent, // color
+            // img path
+            map-icons(rrss, theme-youtube--default),
+            // position and size
+            "center center / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            transparent,
           );
-
         }
-
       }
-
     }
-
   }
-
 }
