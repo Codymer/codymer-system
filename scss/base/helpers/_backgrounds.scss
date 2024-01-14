@@ -126,6 +126,10 @@
           background-color: var(--color-primary-50);
           // theme: codymer
           @if $theme == codymer {
+            color: var(--color-white);
+          }
+          // theme: codymer
+          @if $theme == codymer {
             * {
               color: var(--color-white);
             }
@@ -141,6 +145,10 @@
         // &-50
         &-50 {
           background-color: var(--color-secondary-50);
+          // theme: codymer
+          @if $theme == codymer {
+            color: var(--color-white);
+          }
           // theme: codymer
           @if $theme == codymer {
             * {
