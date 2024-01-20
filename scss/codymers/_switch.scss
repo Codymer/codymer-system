@@ -9,17 +9,18 @@
   .cdmr-switch {
     $self: &;
     @include position(relative);
+    display: inline-block;
+    vertical-align: middle;
+
     // theme: codymer
     @if $theme == codymer {
       @include size(4rem, 2.5rem);
     }
+
     // theme: example-01
     @if $theme == example-01 {
       @include size(4rem, 2rem);
     }
-
-    display: inline-block;
-    vertical-align: middle;
 
     // &:before
     &:before {
@@ -28,10 +29,12 @@
       @include size(100%);
       @include border(all, 0.188rem, solid, var(--color-primary));
       z-index: 2;
+
       // theme: codymer
       @if $theme == codymer {
         @include border-radius(0.313rem);
       }
+
       // theme: example-01
       @if $theme == example-01 {
         @include border-radius(1rem);
@@ -55,11 +58,13 @@
         @include margin(auto null auto null);
         z-index: 1;
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
         // theme: codymer
         @if $theme == codymer {
           @include size(2rem, 2.5rem);
           background-color: var(--color-white);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include size(2rem, 2rem);
@@ -112,6 +117,7 @@
       @if $theme == codymer {
         @include size(2rem, 2.25rem);
       }
+
       // theme: example-01
       @if $theme == example-01 {
         @include size(1.5rem, 1.25rem);
@@ -122,11 +128,13 @@
         content: "";
         @include position(absolute, 0, 0, 0, 0);
         @include margin(auto);
+
         // theme: codymer
         @if $theme == codymer {
           @include size(1.25rem);
           filter: var(--filter-color-white);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include size(0.9rem);
@@ -142,6 +150,7 @@
           @include border-radius(0.313rem, 0, 0, 0.313rem);
           background-color: var(--color-state-ok);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include position(null, null, null, null, 0.5rem);
@@ -252,32 +261,35 @@
       }
     }
 
+    // &:has()
+    &:has(input:disabled) {
+      // &:before
+      &:before {
+        border-color: var(--color-state-disabled); 
+      }
+
+      // #{ $self }
+      #{ $self } {
+        // &__status
+        &__status {
+          // theme: codymer
+          @if $theme == codymer {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
     // &--has
     &--has {
     }
 
     // &--is
     &--is {
-      // &-disabled
-      &-disabled {
-        // theme: example-01
-        @if $theme == example-01 {
-        }
-        // #{ $self }
-        #{ $self } {
-          // &__status
-          &__status {
-            // theme: codymer
-            @if $theme == codymer {
-              opacity: 0.5;
-            }
-          }
-        }
-      }
     }
 
-    // &:not(.cdmr-switch--is-disabled)
-    &:not(#{ $self }--is-disabled) {
+    // &:not(:has(input:disabled))
+    &:not(:has(input:disabled)) {
       // &:hover
       &:hover {
         // &:before
