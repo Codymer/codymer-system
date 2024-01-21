@@ -280,14 +280,6 @@
       }
     }
 
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
-    }
-
     // &:not(:has(input:disabled))
     &:not(:has(input:disabled)) {
       // &:hover
@@ -298,6 +290,14 @@
           box-shadow: 0 0 0.313rem 0 var(--color-state-focus);
         }
       }
+    }
+
+    // &--has
+    &--has {
+    }
+
+    // &--is
+    &--is {
     }
   }
 }
