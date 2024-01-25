@@ -13,16 +13,17 @@
 
     // &__label
     &__label {
-      
       display: flex;
+
       // theme: codymer
       @if $theme == codymer {
         @include padding(null null null 2rem);
         line-height: 1.563rem;
       }
+
       // theme: example-01
       @if $theme == example-01 {
-        @include padding(null null null 3.5rem); 
+        @include padding(null null null 3.5rem);
         line-height: 2rem;
       }
 
@@ -31,17 +32,14 @@
         content: "";
         @include position(absolute, 0, null, null, 0);
         @include border-radius(100%);
-        @include border(
-          all,
-          0.188rem,
-          solid,
-          var(--color-primary)
-        );
+        @include border(all, 0.188rem, solid, var(--color-primary));
         transition: all 250ms ease;
+
         // theme: codymer
         @if $theme == codymer {
           @include size(1.563rem);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include size(2rem);
@@ -77,10 +75,12 @@
             &:before {
               border-color: var(--color-state-ok);
               background-color: var(--color-white);
+
               // theme: codymer
               @if $theme == codymer {
                 border-width: 0.5rem;
               }
+              
               // theme: example-01
               @if $theme == example-01 {
                 border-width: 0.5rem;
@@ -98,7 +98,7 @@
           &__label {
             // &:before
             &:before {
-              border-color: var(--color-state-disabled); 
+              border-color: var(--color-state-disabled);
             }
           }
         }
@@ -138,7 +138,7 @@
           &__label {
             // &:before
             &:before {
-              outline: 0.2rem solid var(--color-state-focus); 
+              outline: 0.2rem solid var(--color-state-focus);
             }
           }
         }
