@@ -9,10 +9,12 @@
   .cont-group-form-field {
     $self: &;
     @include position(relative);
+
     // theme: codymer
     @if $theme == codymer {
       @include padding(null null 0.5rem null);
     }
+
     // theme: example-01
     @if $theme == example-01 {
       @include padding(null null 0.8rem null);
@@ -23,11 +25,13 @@
       content: "";
       @include position(absolute);
       filter: var(--filter-primary);
+
       // theme: codymer
       @if $theme == codymer {
         @include position(null, 2rem, 0.625rem, null, null);
         @include size(1.25rem);
       }
+
       // theme: example-01
       @if $theme == example-01 {
         @include position(null, 3.3rem, 0.9rem, null, null);
@@ -87,6 +91,7 @@
               );
               transform: rotate(90deg);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include background-setup(
@@ -138,6 +143,7 @@
               null
             );
           }
+
           // theme: example-01
           @if $theme == example-01 {
             @include background-setup(
@@ -205,6 +211,7 @@
               null
             );
           }
+
           // theme: example-01
           @if $theme == example-01 {
             @include background-setup(
@@ -275,6 +282,7 @@
               null
             );
           }
+          
           // theme: example-01
           @if $theme == example-01 {
             @include background-setup(

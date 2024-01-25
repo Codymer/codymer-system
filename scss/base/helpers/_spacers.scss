@@ -20,6 +20,7 @@
               @include margin(2rem null null null);
             }
           }
+
           // theme: example-01
           @if $theme == example-01 {
             @include margin(2rem null null null);
@@ -30,6 +31,7 @@
         }
       }
     }
+
     // &-inner
     &-inner {
       // &-t
@@ -43,6 +45,7 @@
               @include padding(2rem null null null);
             }
           }
+          
           // theme: example-01
           @if $theme == example-01 {
             @include padding(2rem null null null);

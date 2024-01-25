@@ -16,10 +16,12 @@
     box-shadow: none;
     transition: border-color 0.25s ease-out, color 0.25s ease-out,
       background-color 0.25s ease-out;
+
     // theme: codymer
     @if $theme == codymer {
       @include border-radius(0.2rem);
     }
+
     // theme: example-01
     @if $theme == example-01 {
       @include border-radius(1rem);
@@ -78,6 +80,7 @@
           font-size: 1rem;
           line-height: 1rem;
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include padding(1rem);
@@ -94,6 +97,7 @@
           font-size: 1.125rem;
           line-height: 1.25rem;
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include padding(1.5rem);
@@ -110,6 +114,7 @@
           font-size: 1.3rem;
           line-height: 1.3rem;
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include padding(2.5rem);
@@ -235,6 +240,7 @@
             @if $theme == codymer {
               @include padding(null null null 2rem);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include padding(null null null 4rem);
@@ -248,6 +254,7 @@
                 @if $theme == codymer {
                   @include size(1.5rem);
                 }
+
                 // theme: example-01
                 @if $theme == example-01 {
                   @include size(3rem);
@@ -262,6 +269,7 @@
             @if $theme == codymer {
               @include padding(null null null 2.8rem);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include padding(null null null 4rem);
@@ -275,6 +283,7 @@
                 @if $theme == codymer {
                   @include size(2.5rem);
                 }
+                
                 // theme: example-01
                 @if $theme == example-01 {
                   @include size(4rem);
@@ -289,6 +298,7 @@
             @if $theme == codymer {
               @include padding(null null null 3.2rem);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include padding(null null null 4rem);
@@ -302,6 +312,7 @@
                 @if $theme == codymer {
                   @include size(3rem);
                 }
+
                 // theme: example-01
                 @if $theme == example-01 {
                   @include size(4rem);

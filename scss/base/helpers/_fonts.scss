@@ -13,10 +13,12 @@
       &-black {
         color: var(--color-black);
       }
+
       // &-white
       &-white {
         color: var(--color-white);
       }
+
       // &-blue
       &-blue {
         &-facebook {
@@ -35,6 +37,7 @@
           }
         }
       }
+
       // &-green
       &-green {
         &-whatsapp {
@@ -43,6 +46,7 @@
           }
         }
       }
+
       // &-purple
       &-purple {
         &-instagram {
@@ -51,6 +55,7 @@
           }
         }
       }
+
       // &-primary
       &-primary {
         // &-25
@@ -65,6 +70,7 @@
           color: var(--color-secondary-25);
         }
       }
+
       // &-tertiary
       &-tertiary {
         // &-25
@@ -79,6 +85,7 @@
           color: var(--color-quaternary-25);
         }
       }
+
       // &-quinary
       &-quinary {
         // &-25
@@ -101,18 +108,22 @@
       &-25 {
         font-family: var(--font-weight-25);
       }
+
       // &-50
       &-50 {
         font-family: var(--font-weight-50);
       }
+
       // &-75
       &-75 {
         font-family: var(--font-weight-75);
       }
+
       // &-100
       &-100 {
         font-family: var(--font-weight-100);
       }
+
       // &-125
       &-125 {
         font-family: var(--font-weight-125);
@@ -128,12 +139,14 @@
           font-size: 0.875rem;
           line-height: 1rem;
         }
+
         // theme: example-01
         @if $theme == example-01 {
           font-size: 1rem;
           line-height: 1.2rem;
         }
       }
+
       // &-20
       &-20 {
         // theme: codymer
@@ -145,6 +158,7 @@
             line-height: 1.375rem;
           }
         }
+
         // theme: example-01
         @if $theme == example-01 {
           font-size: 1.5rem;
@@ -155,6 +169,7 @@
           }
         }
       }
+
       // &-30
       &-30 {
         // theme: codymer
@@ -167,6 +182,7 @@
             letter-spacing: -0.063rem;
           }
         }
+
         // theme: example-01
         @if $theme == example-01 {
           font-size: 2rem;
@@ -177,6 +193,7 @@
           }
         }
       }
+
       // &-40
       &-40 {
         // theme: codymer
@@ -189,6 +206,7 @@
             letter-spacing: -0.063rem;
           }
         }
+
         // theme: example-01
         @if $theme == example-01 {
           font-size: 2.2rem;
@@ -200,6 +218,7 @@
           }
         }
       }
+
       // &-50
       &-50 {
         // theme: codymer
@@ -212,6 +231,7 @@
             letter-spacing: -0.063rem;
           }
         }
+
         // theme: example-01
         @if $theme == example-01 {
           font-size: 3rem;

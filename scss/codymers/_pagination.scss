@@ -18,11 +18,13 @@
     &__item {
       @include position(relative);
       transition: background-color 200ms ease;
+
       // theme: codymer
       @if $theme == codymer {
         @include size(2.5rem);
         @include border-radius(.6rem);
       }
+
       // theme: example-01
       @if $theme == example-01 {
         @include size(4rem);
@@ -40,10 +42,12 @@
             @include margin(auto);
             @include size(1.875rem);
             pointer-events: none;
+
             // theme: codymer
             @if $theme == codymer {
               @include size(1.875rem);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include size(2.5rem);
@@ -104,6 +108,7 @@
                 );
                 transform: rotate(-180deg);
               }
+
               // theme: example-01
               @if $theme == example-01 {
                 @include background-setup(
@@ -198,6 +203,7 @@
               );
               transform: rotate(180deg);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include background-setup(
@@ -244,6 +250,7 @@
                 null
               );
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include background-setup(
@@ -298,11 +305,13 @@
       transition: border-color 200ms ease, color 200ms ease;
       background-color: transparent;
       color: var(--color-primary);
+
       // theme: codymer
       @if $theme == codymer {
         @include border-radius(.6rem);
         border-width: 0.125rem;
       }
+      
       // theme: example-01
       @if $theme == example-01 {
         @include border-radius(1rem);

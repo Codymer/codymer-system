@@ -3,16 +3,18 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: check
+// CDMR: check 
 // ===============================================
 @mixin cdmr-check($theme: null) {
   .cdmr-check {
     $self: &;
     @include position(relative);
+
     // theme: codymer
     @if $theme == codymer {
       @include margin(null null 0.938rem null);
     }
+
     // theme: example-01
     @if $theme == example-01 {
       @include margin(null null 1.2rem null);
@@ -22,11 +24,13 @@
     &__label {
       display: inline-flex;
       flex-wrap: wrap;
+
       // theme: codymer
       @if $theme == codymer {
         @include padding(null null null 2rem);
         line-height: 1.563rem;
       }
+
       // theme: example-01
       @if $theme == example-01 {
         @include padding(null null null 3rem);
@@ -38,26 +42,18 @@
         content: "";
         @include position(absolute, 0, null, null, 0);
         transition: border-color 250ms ease;
+
         // theme: codymer
         @if $theme == codymer {
           @include size(1.563rem);
-          @include border(
-            all,
-            0.188rem,
-            solid,
-            var(--color-primary)
-          );
+          @include border(all, 0.188rem, solid, var(--color-primary));
           @include border-radius(0.4rem);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include size(2rem);
-          @include border(
-            all,
-            0.4rem,
-            solid,
-            var(--color-primary)
-          );
+          @include border(all, 0.4rem, solid, var(--color-primary));
           @include border-radius(0.6rem);
         }
       }
@@ -68,6 +64,7 @@
         @include position(absolute, 0, 0, null, 0);
         opacity: 0;
         transition: all 250ms ease;
+
         // theme: codymer
         @if $theme == codymer {
           @include size(1.563rem, 1.563rem);
@@ -88,6 +85,7 @@
             transparent
           );
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include size(2rem, 2rem);
@@ -120,6 +118,7 @@
             @if $theme == codymer {
               box-shadow: 0 0 0.313rem 0 var(--color-primary);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               box-shadow: 0 0 0.5rem 0 var(--color-primary);
@@ -145,10 +144,12 @@
             &:before {
               border-color: var(--color-state-ok);
               background-color: var(--color-state-ok);
+
               // theme: codymer
               @if $theme == codymer {
                 border-width: 0.79rem;
               }
+
               // theme: example-01
               @if $theme == example-01 {
                 border-width: 0.79rem;
@@ -173,9 +174,9 @@
           &__label {
             // &:before
             &:before {
-              border-color: var(--color-state-disabled); 
-              background-color: var(--color-state-disabled); 
-              box-shadow: inset 0 0 0 0.4rem var(--color-state-disabled); 
+              border-color: var(--color-state-disabled);
+              background-color: var(--color-state-disabled);
+              box-shadow: inset 0 0 0 0.4rem var(--color-state-disabled);
             }
           }
         }
@@ -204,6 +205,7 @@
               @if $theme == codymer {
                 box-shadow: 0 0 0.313rem 0 var(--color-primary);
               }
+
               // theme: example-01
               @if $theme == example-01 {
                 box-shadow: 0 0 0.5rem 0 var(--color-primary);

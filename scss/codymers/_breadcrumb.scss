@@ -9,9 +9,9 @@
   .cdmr-breadcrumb {
     $self: &;
     @include position(relative);
+    @include size(100%, null);
     overflow: hidden;
     display: flex;
-    width: 100%;
     white-space: nowrap;
     gap: 1.2rem;
     list-style-type: none;

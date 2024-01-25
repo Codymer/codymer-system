@@ -12,12 +12,14 @@
     // &-label
     &-label {
       font-family: var(--font-label);
-      color: var(--color-primary); 
+      color: var(--color-primary);
+      
       // theme: codymer
       @if $theme == codymer {
         font-size: 1rem;
         line-height: 1.125rem;
       }
+
       // theme: example-01
       @if $theme == example-01 {
         font-size: 1.2rem;
@@ -33,30 +35,21 @@
       box-shadow: none;
       background-clip: padding-box;
       font-family: var(--font-field);
+
       // theme: codymer
       @if $theme == codymer {
         @include padding(0.625rem);
-        @include border(
-          all,
-          0.125rem,
-          solid,
-          var(--color-primary)
-        );
+        @include border(all, 0.125rem, solid, var(--color-primary));
         @include border-radius(0.2rem);
         font-size: 1rem;
         line-height: 1rem;
         color: var(--color-primary);
       }
+
       // theme: example-01
       @if $theme == example-01 {
         @include padding(1rem);
-        @include border(
-          all,
-          0.25rem,
-          solid,
-          var(--color-primary)
-          
-        );
+        @include border(all, 0.25rem, solid, var(--color-primary));
         @include border-radius(1rem);
         font-size: 1.2rem;
         line-height: 2rem;
@@ -87,14 +80,14 @@
       }
 
       // &:focus-visible
-      &:focus-visible { 
+      &:focus-visible {
         outline: 0.2rem solid var(--color-state-focus);
       }
 
       // &:disabled
       &:disabled {
         color: var(--color-primary);
-        background-color: var(--color-state-disabled); 
+        background-color: var(--color-state-disabled);
 
         // &:hover
         &:hover {
@@ -115,7 +108,7 @@
         }
         // theme: example-01
         @if $theme == example-01 {
-          @include size(null, 4rem); 
+          @include size(null, 4rem);
         }
       }
 

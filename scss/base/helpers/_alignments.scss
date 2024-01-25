@@ -1,15 +1,13 @@
 // CORE
 // ===============================================
-@use '../../abstracts/index' as *;
+@use "../../abstracts/index" as *;
 // ===============================================
 
 // MIXIN HELPER: alignments
 // ===============================================
 @mixin helper-alignments() {
-
   // .helper-algn
   .helper-algn {
-
     // &-b
     &-b {
       vertical-align: bottom;
@@ -47,19 +45,15 @@
 
     // &-txt
     &-txt {
-
       // &-t
       &-b {
-        vertical-align: text-bottom
+        vertical-align: text-bottom;
       }
 
       // &-t
       &-t {
-        vertical-align: text-top
+        vertical-align: text-top;
       }
-
     }
-
   }
-
 }
