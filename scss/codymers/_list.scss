@@ -18,10 +18,12 @@
         // &__item
         &__item {
           @include position(relative);
+
           // theme: codymer
           @if $theme == codymer {
             @include padding(null null null 1.5rem);
           }
+
           // theme: example-01
           @if $theme == example-01 {
             @include padding(null null null 3rem);
@@ -32,11 +34,13 @@
             content: "";
             @include position(absolute, null, null, null, 0);
             filter: var(--filter-primary); 
+
             // theme: codymer
             @if $theme == codymer {
               @include size(1rem);
               top: 0;
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include size(2rem);
@@ -50,6 +54,7 @@
             @if $theme == codymer {
               @include margin(0.313rem null null null);
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include margin(1rem null null null);
@@ -77,6 +82,7 @@
                 transparent
               );
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include background-setup(
@@ -129,6 +135,7 @@
                     transparent
                   );
                 }
+
                 // theme: example-01
                 @if $theme == example-01 {
                   @include background-setup(
@@ -160,6 +167,7 @@
             @include margin(1rem null null null);
             @include padding(null null null 1rem);
           }
+          
           // theme: example-01
           @if $theme == example-01 {
             @include margin(2rem null null null);

@@ -9,10 +9,12 @@
   .cdmr-list-ordered {
     $self: &;
     @include padding(null null null 0);
+
     // theme: codymer
     @if $theme == codymer {
       @include margin(1.5rem null 2.5rem null);
     }
+
     // theme: example-01
     @if $theme == example-01 {
       @include margin(2rem null 4rem null);
@@ -22,6 +24,7 @@
     &--primary {
       list-style: none; 
       counter-reset: list-number;
+
       // #{ $self }
       #{ $self } {
         // &__item
@@ -32,6 +35,7 @@
           @if $theme == codymer {
             @include padding(null null null 2.5rem);
           }
+
           // theme: example-01
           @if $theme == example-01 {
             @include padding(null null null 3rem);
@@ -46,6 +50,7 @@
             color: var(--color-white);
             text-align: center;
             background-color: var(--color-primary); 
+
             // theme: codymer
             @if $theme == codymer {
               @include position(null, -0.25rem, null, null, 0);
@@ -53,6 +58,7 @@
               font-size: 0.938rem;
               line-height: 1.563rem;
             }
+
             // theme: example-01
             @if $theme == example-01 {
               @include position(null, -0.25rem, null, null, 0);
@@ -68,6 +74,7 @@
             @if $theme == codymer {
               @include margin(1.5rem null null null);
             }
+            
             // theme: example-01
             @if $theme == example-01 {
               @include margin(3rem null null null);
