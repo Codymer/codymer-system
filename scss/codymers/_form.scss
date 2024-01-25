@@ -62,6 +62,7 @@
         @if $theme == codymer {
           color: var(--color-primary);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           color: var(--color-black);
@@ -106,6 +107,7 @@
         @if $theme == codymer {
           @include size(null, 2.625rem);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include size(null, 4rem);
@@ -115,10 +117,12 @@
       // &--select
       &--select {
         font-family: var(--font-select);
+        
         // theme: codymer
         @if $theme == codymer {
           @include size(null, 2.625rem);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include size(null, 4rem);
