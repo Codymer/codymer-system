@@ -13,7 +13,7 @@
     // &__container
     &__container {
       @include position(relative);
-      width: 100%;
+      @include size(100%, null);
     }
 
     // &__th
@@ -39,12 +39,7 @@
     // &__td
     &__td {
       @include padding(0.625rem);
-      @include border(
-        bottom,
-        0.125rem,
-        solid,
-        var(--color-grey-25)
-      );
+      @include border(bottom, 0.125rem, solid, var(--color-grey-25));
     }
 
     // &--primary
@@ -78,10 +73,10 @@
     // &--resp
     &--resp {
       @include margin(null null 1.25rem null);
+      @include size(100%, null);
       clear: both;
       overflow-x: auto;
       overflow-y: hidden;
-      width: 100%;
     }
 
     // &--has
