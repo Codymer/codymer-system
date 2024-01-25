@@ -16,6 +16,7 @@
       @if $theme == codymer {
         @include border-radius(.2rem);
       }
+
       // theme: example-01
       @if $theme == example-01 {
         @include border-radius(1rem); 
@@ -30,6 +31,7 @@
         @if $theme == codymer {
           @include padding(0.25rem);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include padding(1rem);
@@ -42,6 +44,7 @@
         @if $theme == codymer {
           @include padding(0.625rem);
         }
+
         // theme: example-01
         @if $theme == example-01 {
           @include padding(1.5rem);
@@ -54,6 +57,7 @@
         @if $theme == codymer {
           @include padding(0.938rem);
         }
+        
         // theme: example-01
         @if $theme == example-01 {
           @include padding(3.5rem);
