@@ -237,6 +237,7 @@
               null
             );
           }
+          
           // theme: example-01
           @if $theme == example-01 {
             @include background-setup(
