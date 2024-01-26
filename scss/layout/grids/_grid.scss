@@ -370,6 +370,7 @@
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: 1fr;
+      
       // theme: codymer
       @if $theme == codymer {
         max-width: 1920px;
