@@ -137,16 +137,18 @@
           // &:before
           &:before {
             filter: var(--filter-secondary);
+
             // behavior-in-ancestor
             @include behavior-in-ancestor(helper-bg-color-primary-50) {
               // theme: codymer
               @if $theme == codymer {
-                filter: var(--filter-color-white); 
+                filter: var(--filter-color-white);
               }
             }
           }
         }
       }
+
       // behavior-in-ancestor
       @include behavior-in-ancestor(helper-bg-color-primary-50) {
         // theme: codymer
@@ -154,6 +156,7 @@
           border-color: var(--color-white);
         }
       }
+
       // &:hover
       &:hover {
         border-color: var(--color-secondary);
