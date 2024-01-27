@@ -29,10 +29,12 @@
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
+
     // theme: codymer
     @if $theme == codymer {
       font: normal normal 500 16px/18px var(--font-body);
     }
+
     // theme: example-01
     @if $theme == example-01 {
       font: normal normal 500 100%/18px var(--font-body);
@@ -47,11 +49,13 @@
     color: var(--color-body);
     text-align: left;
     background-color: var(--background-color-body);
+
     // theme: codymer
     @if $theme == codymer {
       font-size: 16px;
       line-height: 18px;
     }
+    
     // theme: example-01
     @if $theme == example-01 {
       font-size: 18px;
@@ -152,18 +156,21 @@
   // h1
   h1 {
     font-family: var(--font-title);
+
     // theme: codymer
     @if $theme == codymer {
       font-size: 3.052rem;
       line-height: 3.177rem;
       letter-spacing: -0.1rem;
     }
+
     // theme: example-01
     @if $theme == example-01 {
       font-size: 3.052rem;
       line-height: 3.177rem;
       letter-spacing: -0.1rem;
     }
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -174,11 +181,13 @@
   // h2
   h2 {
     font-family: var(--font-title);
+
     // theme: codymer
     @if $theme == codymer {
       font-size: 2.441rem;
       line-height: 2.566rem;
     }
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -189,11 +198,13 @@
   // h3
   h3 {
     font-family: var(--font-title);
+
     // theme: codymer
     @if $theme == codymer {
       font-size: 1.953rem;
       line-height: 2.078rem;
     }
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -204,11 +215,13 @@
   // h4
   h4 {
     font-family: var(--font-title);
+
     // theme: codymer
     @if $theme == codymer {
       font-size: 1.563rem;
       line-height: 1.688rem;
     }
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -219,11 +232,13 @@
   // h5
   h5 {
     font-family: var(--font-title);
+
     // theme: codymer
     @if $theme == codymer {
       font-size: 1.25rem;
       line-height: 1.375rem;
     }
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -234,11 +249,13 @@
   // h6
   h6 {
     font-family: var(--font-title);
+
     // theme: codymer
     @if $theme == codymer {
       font-size: 1.125rem;
       line-height: 1.25rem;
     }
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -258,6 +275,7 @@
   // strong
   strong {
     font-family: var(--font-bold);
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -268,6 +286,7 @@
   // em
   em {
     font-family: var(--font-bold);
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -425,6 +444,7 @@
     font-size: 75%;
     line-height: 0;
     vertical-align: baseline;
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -438,6 +458,7 @@
     font-size: 75%;
     line-height: 0;
     vertical-align: baseline;
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -523,6 +544,7 @@
   th {
     font-family: var(--font-bold);
     text-align: inherit;
+
     // &::selection
     &::selection {
       color: var(--color-action-selection);
@@ -579,7 +601,6 @@
 
   // [TYPE="SEARCH"]
   [type="search"] {
-    // generals
     outline-offset: -2px;
     -webkit-appearance: none;
 
