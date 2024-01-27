@@ -218,19 +218,5 @@
         hue-rotate(33deg)
         brightness(92%);
     }
-
-    // PROPERTIES
-
-    // theme: codymer
-    @if $theme==codymer {
-      --border-width-theme: calc(var(--measure-base) / 4);
-      --border-radius-theme: var(--measure-base);
-    }
-
-    // theme: example-01
-    @if $theme==example-01 {
-      --border-width-theme: var(--measure-base);
-      --border-radius-theme: calc(var(--measure-base) * 4);
-    }
   }
 }
