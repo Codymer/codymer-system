@@ -10,8 +10,8 @@
     // &-resp
     &-resp {
       @include position(relative);
+      @include size(null, 0);
       overflow: hidden;
-      height: 0;
 
       // &__iframe
       &__iframe {

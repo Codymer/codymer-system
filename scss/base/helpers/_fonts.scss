@@ -21,17 +21,25 @@
 
       // &-blue
       &-blue {
+        // &-facebook
         &-facebook {
+          // &-25
           &-25 {
             color: var(--color-brand-fb-blue-25);
           }
         }
+
+        // &-instagram
         &-instagram {
+          // &-25
           &-25 {
             color: var(--color-brand-instagram-blue-25);
           }
         }
+
+        // &-twitter
         &-twitter {
+          // &-25
           &-25 {
             color: var(--color-brand-twitter-blue-25);
           }
@@ -40,7 +48,9 @@
 
       // &-green
       &-green {
+        // &-whatsapp
         &-whatsapp {
+          // &-25
           &-25 {
             color: var(--color-brand-whatsapp-green-25);
           }
@@ -49,7 +59,9 @@
 
       // &-purple
       &-purple {
+        // &-instagram
         &-instagram {
+          // &-25
           &-25 {
             color: var(--color-brand-instagram-purple-25);
           }
@@ -63,6 +75,7 @@
           color: var(--color-primary-25);
         }
       }
+
       // &-secondary
       &-secondary {
         // &-25
@@ -78,6 +91,7 @@
           color: var(--color-tertiary-25);
         }
       }
+
       // &-quaternary
       &-quaternary {
         // &-25
@@ -93,6 +107,7 @@
           color: var(--color-quinary-25);
         }
       }
+
       // &-septenary
       &-septenary {
         // &-25

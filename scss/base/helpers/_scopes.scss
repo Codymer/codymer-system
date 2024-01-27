@@ -13,6 +13,7 @@
       @if $theme == codymer  {
         @include size(1.563rem);
       }
+      
       // thene: example-01
       @if $theme == example-01  {
         @include size(2rem);

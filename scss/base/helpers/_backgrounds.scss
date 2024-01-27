@@ -28,11 +28,15 @@
       // &-black
       &-black {
         background-color: var(--color-black);
+
+        // theme: codymer
         @if $theme == codymer {
           * {
             color: var(--color-white);
           }
         }
+
+        // theme: example-01
         @if $theme == example-01 {
           * {
             color: var(--color-primary);
@@ -139,10 +143,12 @@
         // &-50
         &-50 {
           background-color: var(--color-primary-50);
+
           // theme: codymer
           @if $theme == codymer {
             color: var(--color-white);
           }
+
           // theme: codymer
           @if $theme == codymer {
             * {
@@ -162,6 +168,7 @@
         // &-50
         &-50 {
           background-color: var(--color-secondary-50);
+
           // theme: codymer
           @if $theme == codymer {
             color: var(--color-white);
