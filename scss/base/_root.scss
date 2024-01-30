@@ -156,7 +156,7 @@
       --reset-h6-letter-spacing: initial;
       --layout-max-width: inherit;
       --layout-pad-1: calc(var(--measure-base) + 0.125rem);
-      --layout-gap-1: var(--measure-base);
+      --layout-gap-1: calc(var(--measure-base) * 1);
       --layout-pad-2: calc(var(--measure-base) * 2);
       --layout-gap-2: calc(var(--measure-base) * 2);
       --layout-pad-3: calc(var(--measure-base) * 2);
@@ -175,7 +175,7 @@
       --scope-50: calc(var(--measure-base) * 5);
       --scope-75: calc(var(--measure-base) * 5.4);
       --theme-focus: 0 0 0.313rem 0 var(--color-state-focus);
-      --theme-radius: var(--measure-base);
+      --theme-radius: calc(var(--measure-base) * 1);
       --theme-w-border: calc(var(--measure-base) * .4);
       --breadcrumb-gap: calc(var(--measure-base) * 3);
       --breadcrumb-item-highlighted-p-x: calc(var(--measure-base) * 1);
