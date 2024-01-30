@@ -25,7 +25,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(content, theme-unicons--bars),
+            var(--icon-content-bars),
             // position and size
             "0 0 / contain",
             // repeat
@@ -51,7 +51,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(user-interface, theme-unicons--cancel),
+            var(--icon-user-interface-cancel),
             // position and size
             "0 0 / contain",
             // repeat

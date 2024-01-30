@@ -3,7 +3,7 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: breadcrumb 
+// CDMR: breadcrumb  
 // ===============================================
 @mixin cdmr-breadcrumb($theme: null) {
   .cdmr-breadcrumb {
@@ -13,7 +13,7 @@
     overflow: hidden;
     display: flex;
     white-space: nowrap;
-    gap: 1.2rem;
+    gap: var(--breadcrumb-gap);
     list-style-type: none;
 
     // &:focus-visible
@@ -30,7 +30,7 @@
 
       // &:last-child
       &:last-child {
-        @include padding(null 0.313rem null 0.313rem);
+        @include padding(null var(--breadcrumb-item-highlighted-p-x) null var(--breadcrumb-item-highlighted-p-x));
       }
 
       // &:not(:last-child)
@@ -39,11 +39,11 @@
         &:after {
           content: "";
           @include margin(auto null auto null);
-          @include position(absolute, 0, -1.25rem, 0, null);
-          @include size(1.2rem);
+          @include position(absolute, 0, var(--breadcrumb-item-icon-p-r), 0, null);
+          @include size(var(--breadcrumb-item-icon-size));
           @include background-setup(
             // img path
-            map-icons(arrows, theme-unicons--rgt),
+            var(--breadcrumb-item-icon-pic),
             // position and size
             "0 0 / contain",
             // repeat
@@ -82,7 +82,7 @@
       &:before {
         @include background-setup(
           // img path
-          map-icons(user-interface, theme-unicons--house),
+          var(--icon-user-interface-home),
           // position and size
           "0 0 / contain",
           // repeat

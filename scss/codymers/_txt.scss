@@ -11,7 +11,7 @@
 
     // &--primary
     &--primary {
-      @include margin(0 null 0.938rem null);
+      @include margin(0 null var(--txt-m-b) null);
     }
 
     // &--has

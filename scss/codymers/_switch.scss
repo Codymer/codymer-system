@@ -9,36 +9,18 @@
   .cdmr-switch {
     $self: &;
     @include position(relative);
+    @include size(var(--switch-w-size), var(--switch-h-size));
     display: inline-block;
     vertical-align: middle;
-
-    // theme: codymer
-    @if $theme == codymer {
-      @include size(4rem, 2.5rem);
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      @include size(4rem, 2rem);
-    }
 
     // &:before
     &:before {
       content: "";
       @include position(absolute, 0, 0, 0, 0);
       @include size(100%);
-      @include border(all, 0.188rem, solid, var(--color-primary));
+      @include border(all, var(--theme-w-border), solid, var(--color-primary));
+      @include border-radius(var(--theme-radius));
       z-index: 2;
-
-      // theme: codymer
-      @if $theme == codymer {
-        @include border-radius(0.313rem);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include border-radius(1rem);
-      }
     }
 
     // &__label
@@ -56,21 +38,11 @@
         content: "";
         @include position(absolute, 0, null, 0, 0);
         @include margin(auto null auto null);
+        @include size(var(--switch-slider-w-size), var(--switch-slider-h-size));
+        @include border-radius(var(--switch-slider-radius));
         z-index: 1;
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-
-        // theme: codymer
-        @if $theme == codymer {
-          @include size(2rem, 2.5rem);
-          background-color: var(--color-white);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include size(2rem, 2rem);
-          border-radius: 1rem;
-          background-color: var(--color-primary);
-        }
+        background-color: var(--switch-slider-background-color); 
       }
     }
 
@@ -112,152 +84,68 @@
     &__status {
       @include position(absolute, 0, null, 0, null);
       @include margin(auto null auto null);
+      @include size(var(--switch-status-w-size), var(--switch-status-h-size));
 
-      // theme: codymer
-      @if $theme == codymer {
-        @include size(2rem, 2.25rem);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include size(1.5rem, 1.25rem);
-      }
-
-      // &:before
+      // &:before 
       &:before {
         content: "";
         @include position(absolute, 0, 0, 0, 0);
         @include margin(auto);
-
-        // theme: codymer
-        @if $theme == codymer {
-          @include size(1.25rem);
-          filter: var(--filter-color-white);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include size(0.9rem);
-          filter: var(--filter-primary);
-        }
+        @include size(var(--switch-status-icon-size));
+        filter: var(--switch-status-icon-filter);
       }
 
       // &--ok
       &--ok {
-        // theme: codymer
-        @if $theme == codymer {
-          @include position(null, null, null, null, 0);
-          @include border-radius(0.313rem, 0, 0, 0.313rem);
-          background-color: var(--color-state-ok);
-        }
+        @include position(null, null, null, null, 0);
+        @include border-radius(var(--theme-radius),0,0,var(--theme-radius));
+        background-color: var(--color-state-ok);
 
-        // theme: example-01
-        @if $theme == example-01 {
-          @include position(null, null, null, null, 0.5rem);
-          @include border-radius(0.313rem, 0, 0, 0.313rem);
-          background-color: var(--color-white);
-        }
-
-        // &:before
+        // &:before 
         &:before {
-          // theme: codymer
-          @if $theme == codymer {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--approve-tick),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
-          // theme: example-01
-          @if $theme == example-01 {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--approve-tick),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-            filter: var(--filter-primary);
-          }
+          @include background-setup(
+            // img path
+            var(--switch-status-icon-ok-pic),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null
+          );
         }
       }
 
       // &--ko
       &--ko {
-        border-radius: 0 0.313rem 0.313rem 0;
-        // theme: codymer
-        @if $theme == codymer {
-          @include position(null, null, 0, null, null);
-          background-color: var(--color-state-ko);
-        }
-        // theme: example-01
-        @if $theme == example-01 {
-          @include position(null, null, 0.5rem, null, null);
-          background-color: var(--color-white);
-        }
+        @include position(null, null, 0, null, null);
+        @include border-radius(0,var(--theme-radius),var(--theme-radius),0);
+        background-color: var(--color-state-ko);
 
-        // &:before
+        // &:before 
         &:before {
-          // theme: codymer
-          @if $theme == codymer {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--cancel),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
-          
-          // theme: example-01
-          @if $theme == example-01 {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--cancel),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-            filter: var(--filter-primary);
-          }
+          @include background-setup(
+            // img path
+            var(--switch-status-icon-ko-pic),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null
+          );
         }
       }
     }
@@ -266,17 +154,14 @@
     &:has(input:disabled) {
       // &:before
       &:before {
-        border-color: var(--color-state-disabled); 
+        border-color: var(--color-state-disabled);
       }
 
       // #{ $self }
       #{ $self } {
         // &__status
         &__status {
-          // theme: codymer
-          @if $theme == codymer {
-            opacity: 0.5;
-          }
+          opacity: var(--switch-status-disabled);
         }
       }
     }
@@ -288,7 +173,7 @@
         // &:before
         &:before {
           border-color: var(--color-primary);
-          box-shadow: 0 0 0.313rem 0 var(--color-state-focus);
+          box-shadow: var(--theme-focus);
         }
       }
     }

@@ -35,8 +35,8 @@
     // &__section
     &__section {
       @include padding(0.938rem);
+      @include border-radius(var(--theme-radius));
       background-color: var(--color-white);
-      border-radius: 0.313rem; 
       @include min-screen(768px) {
         @include padding(1.563rem);
       }

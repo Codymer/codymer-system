@@ -9,59 +9,28 @@
   .cdmr-label {
     $self: &;
     @include position(relative);
+    
 
     // &--primary
     &--primary {
-      // theme: codymer
-      @if $theme == codymer {
-        @include border-radius(.2rem);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include border-radius(1rem); 
-      }
+      @include border-radius(var(--theme-radius));
     }
 
     // &--scope
     &--scope {
       // &-25
       &-25 {
-        // theme: codymer
-        @if $theme == codymer {
-          @include padding(0.25rem);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include padding(1rem);
-        }
+        @include padding(var(--scope-25));
       }
 
       // &-50
       &-50 {
-        // theme: codymer
-        @if $theme == codymer {
-          @include padding(0.625rem);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include padding(1.5rem);
-        }
+        @include padding(var(--scope-50)); 
       }
 
       // &-75
       &-75 {
-        // theme: codymer
-        @if $theme == codymer {
-          @include padding(0.938rem);
-        }
-        
-        // theme: example-01
-        @if $theme == example-01 {
-          @include padding(3.5rem);
-        }
+        @include padding(var(--scope-75));
       }
     }
 

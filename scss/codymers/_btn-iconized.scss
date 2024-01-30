@@ -9,7 +9,8 @@
   .cdmr-btn-iconized {
     $self: &;
     @include position(relative);
-    @include border(all, 0.188rem, solid, null);
+    @include border(all, var(--theme-w-border), solid, null);
+    @include border-radius(var(--theme-radius));
     display: inline-block;
     transition: border-color 0.25s ease-out, color 0.25s ease-out,
       background-color 0.25s ease-out;
@@ -56,20 +57,12 @@
     &--shape {
       // &-box
       &-box {
-        // theme: codymer
-        @if $theme == codymer {
-          @include border-radius(0.6rem);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include border-radius(1rem);
-        }
+        @include border-radius(var(--theme-radius));
       }
 
       // &-circle
       &-circle {
-        border-radius: 50%;
+        @include border-radius(50%);
       }
     }
 
@@ -77,15 +70,7 @@
     &--scope {
       // &-25
       &-25 {
-        // theme: codymer
-        @if $theme == codymer {
-          @include size(2.5rem);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include size(4rem);
-        }
+        @include size(calc(var(--scope-25) * 2));
 
         // .cdmr
         .cdmr {
@@ -93,15 +78,7 @@
           &-icon {
             // &:before
             &:before {
-              // theme: codymer
-              @if $theme == codymer {
-                @include size(85%);
-              }
-
-              // theme: example-01
-              @if $theme == example-01 {
-                @include size(75%);
-              }
+              @include size(calc(var(--scope-25) - 15%));
             }
           }
         }
@@ -137,24 +114,13 @@
           // &:before
           &:before {
             filter: var(--filter-secondary);
-
-            // behavior-in-ancestor
-            @include behavior-in-ancestor(helper-bg-color-primary-50) {
-              // theme: codymer
-              @if $theme == codymer {
-                filter: var(--filter-color-white);
-              }
-            }
           }
         }
       }
 
       // behavior-in-ancestor
       @include behavior-in-ancestor(helper-bg-color-primary-50) {
-        // theme: codymer
-        @if $theme == codymer {
-          border-color: var(--color-white);
-        }
+        border-color: var(--color-white);
       }
 
       // &:hover
@@ -173,22 +139,6 @@
           // &:before
           &:before {
             filter: var(--filter-color-white);
-          }
-        }
-      }
-
-      // behavior-in-ancestor
-      @include behavior-in-ancestor(helper-bg-color-primary-50) {
-        border-color: var(--color-white);
-
-        // .cdmr
-        .cdmr {
-          // &-icon
-          &-icon {
-            // &:before
-            &:before {
-              filter: var(--filter-color-white);
-            }
           }
         }
       }

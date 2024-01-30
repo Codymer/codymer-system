@@ -20,10 +20,8 @@
     &__th {
       @include padding(0.625rem);
       vertical-align: bottom;
-      @include min-screen(768px) {
-        font-size: 1rem;
-        line-height: 1.125rem;
-      }
+      font-size: var(--table-th-font-size);
+      line-height: var(--table-th-line-height);;
 
       // &:first-of-type
       &:first-of-type {
@@ -59,7 +57,7 @@
           &:focus {
             background-color: var(--color-state-focus);
             border-color: var(--color-primary);
-            box-shadow: 0 0 0.313rem 0 var(--color-primary);
+            box-shadow: var(--theme-focus);
           }
         }
 

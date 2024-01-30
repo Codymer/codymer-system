@@ -8,17 +8,8 @@
 @mixin cdmr-list-ordered($theme: null) {
   .cdmr-list-ordered {
     $self: &;
+    @include margin(var(--list-ordered-m-t) null var(--list-ordered-m-b) null);
     @include padding(null null null 0);
-
-    // theme: codymer
-    @if $theme == codymer {
-      @include margin(1.5rem null 2.5rem null);
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      @include margin(2rem null 4rem null);
-    }
 
     // &--primary
     &--primary {
@@ -30,55 +21,25 @@
         // &__item
         &__item {
           @include position(relative);
-
-          // theme: codymer
-          @if $theme == codymer {
-            @include padding(null null null 2.5rem);
-          }
-
-          // theme: example-01
-          @if $theme == example-01 {
-            @include padding(null null null 3rem);
-          }
+          @include padding(null null null var(--list-ordered-gap));
 
           // &:before
           &:before {
             content: counter(list-number);
-            @include position(absolute);
+            @include position(absolute, -0.25rem, null, null, 0);
+            @include size(var(--list-ordered-counter-size));
+            @include border-radius(50%);
             counter-increment: list-number;
-            border-radius: 50%;
+            font-size: var(--list-ordered-counter-font-size);
+            line-height: var(--list-ordered-counter-line-height);
             color: var(--color-white);
             text-align: center;
             background-color: var(--color-primary); 
-
-            // theme: codymer
-            @if $theme == codymer {
-              @include position(null, -0.25rem, null, null, 0);
-              @include size(1.563rem);
-              font-size: 0.938rem;
-              line-height: 1.563rem;
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include position(null, -0.25rem, null, null, 0);
-              @include size(2rem);
-              font-size: 1rem;
-              line-height: 2rem;
-            }
           }
 
           // &:not(:first-child)
           &:not(:first-child) {
-            // theme: codymer
-            @if $theme == codymer {
-              @include margin(1.5rem null null null);
-            }
-            
-            // theme: example-01
-            @if $theme == example-01 {
-              @include margin(3rem null null null);
-            }
+            @include margin(var(--list-ordered-item-m-t) null null null);
           }
         }
       }

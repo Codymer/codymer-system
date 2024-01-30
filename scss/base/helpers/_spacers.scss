@@ -13,20 +13,9 @@
       &-t {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            @include margin(1rem null null null);
-            @include min-screen(768px) {
-              @include margin(2rem null null null);
-            }
-          }
-
-          // theme: example-01
-          @if $theme == example-01 {
-            @include margin(2rem null null null);
-            @include min-screen(768px) {
-              @include margin(4rem null null null);
-            }
+          @include margin(var(--gap-25) null null null);
+          @include min-screen(768px) {
+            @include margin(calc(var(--gap-25) * 2) null null null);
           }
         }
       }
@@ -38,20 +27,9 @@
       &-t {
         // &-25
         &-25 {
-          // theme: codymer
-          @if $theme == codymer {
-            @include padding(1rem null null null);
-            @include min-screen(768px) {
-              @include padding(2rem null null null);
-            }
-          }
-          
-          // theme: example-01
-          @if $theme == example-01 {
-            @include padding(2rem null null null);
-            @include min-screen(768px) {
-              @include padding(4rem null null null);
-            }
+          @include padding(var(--inner-25) null null null);
+          @include min-screen(768px) {
+            @include padding(calc(var(--inner-25) * 2) null null null);
           }
         }
       }

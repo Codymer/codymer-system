@@ -29,16 +29,7 @@
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
-
-    // theme: codymer
-    @if $theme == codymer {
-      font: normal normal 500 16px/18px var(--font-body);
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      font: normal normal 500 100%/18px var(--font-body);
-    }
+    font: var(--reset-html-font);
   }
 
   // body
@@ -46,21 +37,11 @@
     @include margin(0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--color-body);
+    font-size: var(--reset-body-font-size);
+    line-height: var(--reset-body-line-height);
+    color: var(--reset-body-color);
     text-align: left;
-    background-color: var(--background-color-body);
-
-    // theme: codymer
-    @if $theme == codymer {
-      font-size: 16px;
-      line-height: 18px;
-    }
-    
-    // theme: example-01
-    @if $theme == example-01 {
-      font-size: 18px;
-      line-height: 20px;
-    }
+    background-color: var(--reset-body-background-color);
   }
 
   // article
@@ -155,21 +136,10 @@
 
   // h1
   h1 {
-    font-family: var(--font-title);
-
-    // theme: codymer
-    @if $theme == codymer {
-      font-size: 3.052rem;
-      line-height: 3.177rem;
-      letter-spacing: -0.1rem;
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      font-size: 3.052rem;
-      line-height: 3.177rem;
-      letter-spacing: -0.1rem;
-    }
+    font-family: var(--reset-h-font-family);
+    font-size: var(--reset-h1-size); 
+    line-height: var(--reset-h1-line-height);
+    letter-spacing: var(--reset-h1-letter-spacing);
 
     // &::selection
     &::selection {
@@ -180,13 +150,10 @@
 
   // h2
   h2 {
-    font-family: var(--font-title);
-
-    // theme: codymer
-    @if $theme == codymer {
-      font-size: 2.441rem;
-      line-height: 2.566rem;
-    }
+    font-family: var(--reset-h-font-family);
+    font-size: var(--reset-h2-size);
+    line-height: var(--reset-h2-line-height);
+    letter-spacing: var(--reset-h2-letter-spacing);
 
     // &::selection
     &::selection {
@@ -197,13 +164,10 @@
 
   // h3
   h3 {
-    font-family: var(--font-title);
-
-    // theme: codymer
-    @if $theme == codymer {
-      font-size: 1.953rem;
-      line-height: 2.078rem;
-    }
+    font-family: var(--reset-h-font-family);
+    font-size: var(--reset-h3-size);
+    line-height: var(--reset-h3-line-height);
+    letter-spacing: var(--reset-h3-letter-spacing);
 
     // &::selection
     &::selection {
@@ -214,13 +178,10 @@
 
   // h4
   h4 {
-    font-family: var(--font-title);
-
-    // theme: codymer
-    @if $theme == codymer {
-      font-size: 1.563rem;
-      line-height: 1.688rem;
-    }
+    font-family: var(--reset-h-font-family);
+    font-size: var(--reset-h4-size);
+    line-height: var(--reset-h4-line-height);
+    letter-spacing: var(--reset-h4-letter-spacing);
 
     // &::selection
     &::selection {
@@ -231,13 +192,10 @@
 
   // h5
   h5 {
-    font-family: var(--font-title);
-
-    // theme: codymer
-    @if $theme == codymer {
-      font-size: 1.25rem;
-      line-height: 1.375rem;
-    }
+    font-family: var(--reset-h-font-family);
+    font-size: var(--reset-h5-size);
+    line-height: var(--reset-h5-line-height);
+    letter-spacing: var(--reset-h5-letter-spacing);
 
     // &::selection
     &::selection {
@@ -248,13 +206,10 @@
 
   // h6
   h6 {
-    font-family: var(--font-title);
-
-    // theme: codymer
-    @if $theme == codymer {
-      font-size: 1.125rem;
-      line-height: 1.25rem;
-    }
+    font-family: var(--reset-h-font-family);
+    font-size: var(--reset-h6-size);
+    line-height: var(--reset-h6-line-height);
+    letter-spacing: var(--reset-h6-letter-spacing);
 
     // &::selection
     &::selection {

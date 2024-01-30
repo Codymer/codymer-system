@@ -3,7 +3,7 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: list
+// CDMR: list 
 // ===============================================
 @mixin cdmr-list($theme: null) {
   .cdmr-list {
@@ -18,97 +18,46 @@
         // &__item
         &__item {
           @include position(relative);
-
-          // theme: codymer
-          @if $theme == codymer {
-            @include padding(null null null 1.5rem);
-          }
-
-          // theme: example-01
-          @if $theme == example-01 {
-            @include padding(null null null 3rem);
-          }
+          @include padding(null null null var(--list-lvl1-gap)); 
 
           // &:before
           &:before {
             content: "";
             @include position(absolute, null, null, null, 0);
+            @include size(var(--list-icon-size));
             filter: var(--filter-primary); 
-
-            // theme: codymer
-            @if $theme == codymer {
-              @include size(1rem);
-              top: 0;
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include size(2rem);
-              top: -.4rem; 
-            }
           }
 
           // &:not(:first-child)
           &:not(:first-child) {
-            // theme: codymer
-            @if $theme == codymer {
-              @include margin(0.313rem null null null);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include margin(1rem null null null);
-            }
+            @include margin(var(--list-item-m-t) null null null);
           }
 
-          // &:not(.cdmr-list__lvl2 .cdmr-list__item):before
+          // &:not(.cdmr-list__lvl2 .cdmr-list__item):before 
           &:not(#{ $self }__lvl2 #{ $self }__item):before {
-            // theme: codymer
-            @if $theme == codymer {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                transparent
-              );
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                transparent
-              );
-            }
+            @include background-setup(
+              // img path
+              var(--list-lvl1-icon-pic),
+              // position and size
+              "0 0 / contain",
+              // repeat
+              no-repeat,
+              // attachment
+              null,
+              // origin
+              null,
+              // clip
+              null,
+              // color
+              transparent
+            );
           }
         }
 
         // &__lvl2
         &__lvl2 {
-          @include margin(1rem null null null);
-          @include padding(null null null 1rem);
+          @include margin(var(--list-lvl2-m-l) null null null);
+          @include padding(null null null var(--list-lvl2-gap));
 
           // #{ $self }
           #{ $self } {
@@ -116,45 +65,22 @@
             &__item {
               // &:before
               &:before {
-                // theme: codymer
-                @if $theme == codymer {
-                  @include background-setup(
-                    // img path
-                    map-icons(arrows, theme-unicons--double-rgt),
-                    // position and size
-                    "0 0 / contain",
-                    // repeat
-                    no-repeat,
-                    // attachment
-                    null,
-                    // origin
-                    null,
-                    // clip
-                    null,
-                    // color
-                    transparent
-                  );
-                }
-
-                // theme: example-01
-                @if $theme == example-01 {
-                  @include background-setup(
-                    // img path
-                    map-icons(arrows, theme-unicons--double-rgt),
-                    // position and size
-                    "0 0 / contain",
-                    // repeat
-                    no-repeat,
-                    // attachment
-                    null,
-                    // origin
-                    null,
-                    // clip
-                    null,
-                    // color
-                    transparent
-                  );
-                }
+                @include background-setup(
+                  // img path
+                  var(--list-lvl2-icon-pic),
+                  // position and size
+                  "0 0 / contain",
+                  // repeat
+                  no-repeat,
+                  // attachment
+                  null,
+                  // origin
+                  null,
+                  // clip
+                  null,
+                  // color
+                  transparent
+                );
               }
             }
           }
@@ -162,17 +88,8 @@
 
         // &__lvl3
         &__lvl3 {
-          // theme: codymer
-          @if $theme == codymer {
-            @include margin(1rem null null null);
-            @include padding(null null null 1rem);
-          }
-          
-          // theme: example-01
-          @if $theme == example-01 {
-            @include margin(2rem null null null);
-            @include padding(null null null 2rem);
-          }
+          @include margin(var(--list-lvl3-m-l) null null null);
+          @include padding(null null null var(--list-lvl3-gap));
         }
       }
     }

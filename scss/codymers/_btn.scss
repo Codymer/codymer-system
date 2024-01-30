@@ -3,12 +3,13 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: btn
+// CDMR: btn  
 // ===============================================
 @mixin cdmr-btn($theme: null) {
   .cdmr-btn {
     $self: &;
-    @include border(all, 0.188rem, solid, null);
+    @include border(all, var(--theme-w-border), solid, null);
+    @include border-radius(var(--theme-radius));
     overflow-wrap: break-word;
     display: inline-block;
     user-select: none;
@@ -16,16 +17,6 @@
     box-shadow: none;
     transition: border-color 0.25s ease-out, color 0.25s ease-out,
       background-color 0.25s ease-out;
-
-    // theme: codymer
-    @if $theme == codymer {
-      @include border-radius(0.2rem);
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      @include border-radius(1rem);
-    }
 
     // &:hover
     &:hover {
@@ -74,53 +65,23 @@
     &--scope {
       // &-25
       &-25 {
-        // theme: codymer
-        @if $theme == codymer {
-          @include padding(0.55rem 0.625rem 0.55rem 0.625rem);
-          font-size: 1rem;
-          line-height: 1rem;
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include padding(1rem);
-          font-size: 2rem;
-          line-height: 2rem;
-        }
+        @include padding(var(--scope-25));
+        font-size: var(--scope-25);
+        line-height: var(--scope-25); 
       }
 
       // &-50
       &-50 {
-        // theme: codymer
-        @if $theme == codymer {
-          @include padding(0.75rem);
-          font-size: 1.125rem;
-          line-height: 1.25rem;
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include padding(1.5rem);
-          font-size: 2rem;
-          line-height: 2rem;
-        }
+        @include padding(var(--scope-50));
+        font-size: var(--scope-50);
+        line-height: var(--scope-50);  
       }
 
       // &-75
       &-75 {
-        // theme: codymer
-        @if $theme == codymer {
-          @include padding(1.5rem);
-          font-size: 1.3rem;
-          line-height: 1.3rem;
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include padding(2.5rem);
-          font-size: 2.5rem;
-          line-height: 2.5rem;
-        }
+        @include padding(var(--scope-75));
+        font-size: var(--scope-75);
+        line-height: var(--scope-75);  
       }
     }
 
@@ -227,7 +188,7 @@
         .cdmr {
           // &-icon
           &-icon {
-            @include position(absolute, 0, null, 0, 0.313rem);
+            @include position(absolute, 0, null, 0, 0);
             @include margin(auto null auto null);
           }
         }
@@ -236,87 +197,42 @@
         &-scope {
           // &-25
           &-25 {
-            // theme: codymer
-            @if $theme == codymer {
-              @include padding(null null null 2rem);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include padding(null null null 4rem);
-            }
+            @include padding(null null null calc(var(--scope-25) * 2));
 
             // .cdmr
             .cdmr {
               // &-icon
               &-icon {
-                // theme: codymer
-                @if $theme == codymer {
-                  @include size(1.5rem);
-                }
-
-                // theme: example-01
-                @if $theme == example-01 {
-                  @include size(3rem);
-                }
+                @include margin(null null null calc(var(--scope-25) / 2));
+                @include size(var(--scope-25));
               }
             }
           }
 
           // &-50
           &-50 {
-            // theme: codymer
-            @if $theme == codymer {
-              @include padding(null null null 2.8rem);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include padding(null null null 4rem);
-            }
+            @include padding(null null null calc(var(--scope-50) * 2));
 
             // .cdmr
             .cdmr {
               // &-icon
               &-icon {
-                // theme: codymer
-                @if $theme == codymer {
-                  @include size(2.5rem);
-                }
-                
-                // theme: example-01
-                @if $theme == example-01 {
-                  @include size(4rem);
-                }
+                @include margin(null null null calc(var(--scope-50) / 2));
+                @include size(var(--scope-50));
               }
             }
           }
 
           // &-75
           &-75 {
-            // theme: codymer
-            @if $theme == codymer {
-              @include padding(null null null 3.2rem);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include padding(null null null 4rem);
-            }
+            @include padding(null null null calc(var(--scope-75) * 2));
 
             // .cdmr
             .cdmr {
               // &-icon
               &-icon {
-                // theme: codymer
-                @if $theme == codymer {
-                  @include size(3rem);
-                }
-
-                // theme: example-01
-                @if $theme == example-01 {
-                  @include size(4rem);
-                }
+                @include margin(null null null calc(var(--scope-75) / 2));
+                @include size(var(--scope-75));
               }
             }
           }

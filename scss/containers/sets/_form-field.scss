@@ -52,15 +52,7 @@
     &--gap {
       // &-25
       &-25 {
-        // theme: codymer
-        @if $theme == codymer {
-          gap: 0.625rem;
-        }
-        
-        // theme: example-01
-        @if $theme == example-01 { 
-          gap: 1rem; 
-        }
+        gap: var(--gap-25);
       }
     }
 

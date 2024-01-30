@@ -9,34 +9,15 @@
   .cont-group-form-field {
     $self: &;
     @include position(relative);
-
-    // theme: codymer
-    @if $theme == codymer {
-      @include padding(null null 0.5rem null);
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      @include padding(null null 0.8rem null);
-    }
+    @include margin(null null var(--cont-group-form-field-m-b) null);
 
     // &:before
     &:before {
       content: "";
-      @include position(absolute);
+      @include position(absolute, 0, var(--cont-group-form-field-icon-p-r), 0, null);
+      @include margin(auto null auto null);
+      @include size(var(--cont-group-form-field-icon-size));
       filter: var(--filter-primary);
-
-      // theme: codymer
-      @if $theme == codymer {
-        @include position(null, 2rem, 0.625rem, null, null);
-        @include size(1.25rem);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include position(null, 3.3rem, 0.9rem, null, null);
-        @include size(2rem);
-      }
     }
 
     // .cdmr
@@ -71,47 +52,23 @@
           ) {
           // &:before
           &:before {
-            // theme: codymer
-            @if $theme == codymer {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                null
-              );
-              transform: rotate(90deg);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                null
-              );
-              transform: rotate(90deg);
-            }
+            @include background-setup(
+              // img path
+              var(--icon-arrow-default),
+              // position and size
+              "0 0 / contain",
+              // repeat
+              no-repeat,
+              // attachment
+              null,
+              // origin
+              null,
+              // clip
+              null,
+              // color
+              null
+            );
+            transform: rotate(90deg);
           }
         }
       }
@@ -123,46 +80,23 @@
       &-error {
         // &:before
         &:before {
+          @include background-setup(
+            // img path
+            var(--icon-user-interface-cancel),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null
+          );
           filter: var(--filter-state-ko);
-          // theme: codymer
-          @if $theme == codymer {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--cancel),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
-
-          // theme: example-01
-          @if $theme == example-01 {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--cancel),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
         }
 
         // .cdmr
@@ -191,46 +125,23 @@
       &-success {
         // &:before
         &:before {
+          @include background-setup(
+            // img path
+            var(--icon-user-interface-tick),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null
+          );
           filter: var(--filter-state-ok);
-          // theme: codymer
-          @if $theme == codymer {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--approve-tick),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
-
-          // theme: example-01
-          @if $theme == example-01 {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--approve-tick),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
         }
 
         // .cdmr
@@ -262,46 +173,23 @@
       &-warning {
         // &:before
         &:before {
+          @include background-setup(
+            // img path
+            var(--icon-user-interface-cancel),
+            // position and size
+            "0 0 / contain",
+            // repeat
+            no-repeat,
+            // attachment
+            null,
+            // origin
+            null,
+            // clip
+            null,
+            // color
+            null
+          );
           filter: var(--filter-state-warning);
-          // theme: codymer
-          @if $theme == codymer {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--exclamation-mark),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
-          
-          // theme: example-01
-          @if $theme == example-01 {
-            @include background-setup(
-              // img path
-              map-icons(user-interface, theme-unicons--exclamation-mark),
-              // position and size
-              "0 0 / contain",
-              // repeat
-              no-repeat,
-              // attachment
-              null,
-              // origin
-              null,
-              // clip
-              null,
-              // color
-              null
-            );
-          }
         }
 
         // .cdmr
@@ -336,6 +224,8 @@
         #{ $self }--is-success,
         #{ $self }--is-warning
       )
+
+      // .cdmr-form-field
       .cdmr-form-field {
       @include padding(null 2.5rem null null);
     }

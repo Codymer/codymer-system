@@ -18,7 +18,7 @@
 ) {
 
   background:
-    url("#{$background-setup--path}") // img path
+    #{$background-setup--path} // img path
     #{$background-setup--positionAndSize} // position and size
     $background-setup--repeat // repeat
     $background-setup--attachment // attachment

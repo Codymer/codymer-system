@@ -11,25 +11,15 @@
     @include padding(null null null 0);
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: var(--pagination-gap);
     list-style: none;
 
     // &__item
     &__item {
       @include position(relative);
+      @include size(var(--pagination-item-size));
+      @include border-radius(var(--theme-radius));
       transition: background-color 200ms ease;
-
-      // theme: codymer
-      @if $theme == codymer {
-        @include size(2.5rem);
-        @include border-radius(.6rem);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include size(4rem);
-        @include border-radius(1rem);
-      }
 
       // &--has
       &--has {
@@ -40,18 +30,8 @@
             content: "";
             @include position(absolute, 0, 0, 0, 0);
             @include margin(auto);
-            @include size(1.875rem);
+            @include size(var(--pagination-icon-size));
             pointer-events: none;
-
-            // theme: codymer
-            @if $theme == codymer {
-              @include size(1.875rem);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include size(2.5rem);
-            }
           }
 
           // #{ $self }
@@ -88,47 +68,23 @@
           &-prev {
             // &:after
             &:after {
-              // theme: codymer
-              @if $theme == codymer {
-                @include background-setup(
-                  // img path
-                  map-icons(arrows, theme-unicons--rgt),
-                  // position and size
-                  "0 0 / contain",
-                  // repeat
-                  no-repeat,
-                  // attachment
-                  null,
-                  // origin
-                  null,
-                  // clip
-                  null,
-                  // color
-                  null
-                );
-                transform: rotate(-180deg);
-              }
-
-              // theme: example-01
-              @if $theme == example-01 {
-                @include background-setup(
-                  // img path
-                  map-icons(arrows, theme-unicons--rgt),
-                  // position and size
-                  "0 0 / contain",
-                  // repeat
-                  no-repeat,
-                  // attachment
-                  null,
-                  // origin
-                  null,
-                  // clip
-                  null,
-                  // color
-                  null
-                );
-                transform: rotate(-180deg);
-              }
+              @include background-setup(
+                // img path
+                var(--pagination-prev-icon-pic),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                transparent
+              );
+              transform: rotate(-180deg);
             }
           }
 
@@ -136,45 +92,22 @@
           &-next {
             // &:after
             &:after {
-              // theme: codymer
-              @if $theme == codymer {
-                @include background-setup(
-                  // img path
-                  map-icons(arrows, theme-unicons--rgt),
-                  // position and size
-                  "0 0 / contain",
-                  // repeat
-                  no-repeat,
-                  // attachment
-                  null,
-                  // origin
-                  null,
-                  // clip
-                  null,
-                  // color
-                  null
-                );
-              }
-
-              // theme: example-01
-              @if $theme == example-01 {
-                @include background-setup(
-                  // img path
-                  map-icons(arrows, theme-unicons--rgt),
-                  // position and size
-                  "0 0 / contain",
-                  // repeat
-                  no-repeat,
-                  // attachment
-                  null,
-                  // origin
-                  null,
-                  // clip
-                  null,
-                  // color
-                  null
-                );
-              }
+              @include background-setup(
+                // img path
+                var(--pagination-next-icon-pic),
+                // position and size
+                "0 0 / contain",
+                // repeat
+                no-repeat,
+                // attachment
+                null,
+                // origin
+                null,
+                // clip
+                null,
+                // color
+                transparent
+              );
             }
           }
         }
@@ -183,47 +116,23 @@
         &-first {
           // &:after
           &:after {
-            // theme: codymer
-            @if $theme == codymer {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--double-rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                null
-              );
-              transform: rotate(180deg);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--double-rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                null
-              );
-              transform: rotate(180deg);
-            }
+            @include background-setup(
+              // img path
+              var(--pagination-back-icon-pic),
+              // position and size
+              "0 0 / contain",
+              // repeat
+              no-repeat,
+              // attachment
+              null,
+              // origin
+              null,
+              // clip
+              null,
+              // color
+              transparent
+            );
+            transform: rotate(180deg);
           }
         }
 
@@ -231,45 +140,22 @@
         &-last {
           // &:after
           &:after {
-            // theme: codymer
-            @if $theme == codymer {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--double-rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                null
-              );
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              @include background-setup(
-                // img path
-                map-icons(arrows, theme-unicons--double-rgt),
-                // position and size
-                "0 0 / contain",
-                // repeat
-                no-repeat,
-                // attachment
-                null,
-                // origin
-                null,
-                // clip
-                null,
-                // color
-                null
-              );
-            }
+            @include background-setup(
+              // img path
+              var(--pagination-forward-icon-pic),
+              // position and size
+              "0 0 / contain",
+              // repeat
+              no-repeat,
+              // attachment
+              null,
+              // origin
+              null,
+              // clip
+              null,
+              // color
+              transparent
+            );
           }
         }
 
@@ -301,21 +187,11 @@
     &__trigger {
       @include position(relative);
       @include size(100%);
-      @include border(all, null, solid, transparent);
+      @include border(all, var(--theme-w-border), solid, transparent);
+      @include border-radius(var(--theme-radius));
       transition: border-color 200ms ease, color 200ms ease;
       background-color: transparent;
       color: var(--color-primary);
-
-      // theme: codymer
-      @if $theme == codymer {
-        @include border-radius(.6rem);
-        border-width: 0.125rem;
-      }
-      
-      // theme: example-01
-      @if $theme == example-01 {
-        @include border-radius(1rem);
-      }
 
       // &:not(:disabled)
       &:not(:disabled) {

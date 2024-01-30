@@ -9,94 +9,27 @@
   // .layout-grid
   .layout-grid {
     @include margin(null auto null auto);
+    @include padding(null var(--layout-pad-1) null var(--layout-pad-1));
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: 1fr;
-
-    // theme: codymer
-    @if $theme == codymer {
-      @include padding(null var(--measure-base) null var(--measure-base));
-      max-width: 1920px;
-      gap: var(--measure-base);
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      @include padding(null var(--measure-base) null var(--measure-base));
-      max-width: 1440px;
-      gap: var(--measure-base);
-    }
-
+    max-width: var(--layout-max-width);
+    gap: var(--layout-gap-1);
     @include min-screen(768px) {
-      // theme: codymer
-      @if $theme == codymer {
-        @include padding(
-          null calc(var(--measure-base) * 2) null calc(var(--measure-base) * 2)
-        );
-        gap: calc(var(--measure-base) * 2);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include padding(
-          null calc(var(--measure-base) * 2) null calc(var(--measure-base) * 2)
-        );
-        gap: calc(var(--measure-base) * 2);
-      }
+      @include padding(null var(--layout-pad-2) null var(--layout-pad-2));
+      gap: var(--layout-gap-2);
     }
-
     @include min-screen(1024px) {
-      // theme: codymer
-      @if $theme == codymer {
-        @include padding(
-          null calc(var(--measure-base) * 3) null calc(var(--measure-base) * 3)
-        );
-        gap: calc(var(--measure-base) * 3);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include padding(
-          null calc(var(--measure-base) * 3) null calc(var(--measure-base) * 3)
-        );
-        gap: calc(var(--measure-base) * 3);
-      }
+      @include padding(null var(--layout-pad-3) null var(--layout-pad-3));
+      gap: var(--layout-gap-3);
     }
-
     @include min-screen(1280px) {
-      // theme: codymer
-      @if $theme == codymer {
-        @include padding(
-          null calc(var(--measure-base) * 4) null calc(var(--measure-base) * 4)
-        );
-        gap: calc(var(--measure-base) * 4);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include padding(
-          null calc(var(--measure-base) * 4) null calc(var(--measure-base) * 4)
-        );
-        gap: calc(var(--measure-base) * 4);
-      }
+      @include padding(null var(--layout-pad-4) null var(--layout-pad-4));
+      gap: var(--layout-gap-4);
     }
-
     @include min-screen(1440px) {
-      // theme: codymer
-      @if $theme == codymer {
-        @include padding(
-          null calc(var(--measure-base) * 5) null calc(var(--measure-base) * 5)
-        );
-        gap: calc(var(--measure-base) * 5);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include padding(
-          null calc(var(--measure-base) * 5) null calc(var(--measure-base) * 5)
-        );
-        gap: calc(var(--measure-base) * 5);
-      }
+      @include padding(null var(--layout-pad-5) null var(--layout-pad-5));
+      gap: var(--layout-gap-5);
     }
 
     // > *
@@ -370,65 +303,22 @@
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: 1fr;
-      
-      // theme: codymer
-      @if $theme == codymer {
-        max-width: 1920px;
-        gap: var(--measure-base);
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        max-width: 1440px;
-        gap: var(--measure-base);
-      }
-
+      gap: var(--layout-gap-1);
       @include min-screen(768px) {
-        // theme: codymer
-        @if $theme == codymer {
-          gap: calc(var(--measure-base) * 2);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          gap: calc(var(--measure-base) * 2);
-        }
+        @include padding(null var(--layout-pad-2) null var(--layout-pad-2));
+        gap: var(--layout-gap-2);
       }
-
       @include min-screen(1024px) {
-        // theme: codymer
-        @if $theme == codymer {
-          gap: calc(var(--measure-base) * 3);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          gap: calc(var(--measure-base) * 3);
-        }
+        @include padding(null var(--layout-pad-3) null var(--layout-pad-3));
+        gap: var(--layout-gap-3);
       }
-
       @include min-screen(1280px) {
-        // theme: codymer
-        @if $theme == codymer {
-          gap: calc(var(--measure-base) * 4);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          gap: calc(var(--measure-base) * 4);
-        }
+        @include padding(null var(--layout-pad-4) null var(--layout-pad-4));
+        gap: var(--layout-gap-4);
       }
-
       @include min-screen(1440px) {
-        // theme: codymer
-        @if $theme == codymer {
-          gap: calc(var(--measure-base) * 5); 
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          gap: calc(var(--measure-base) * 5); 
-        }
+        @include padding(null var(--layout-pad-5) null var(--layout-pad-5));
+        gap: var(--layout-gap-5);
       }
     }
 
@@ -436,7 +326,7 @@
     &--is {
       // &-fs
       &-fs {
-        @include padding(null var(--measure-0) null var(--measure-0));
+        @include padding(null calc(var(--measure-base) * 0) null calc(var(--measure-base) * 0));
       }
     }
   }

@@ -25,7 +25,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-facebook--default),
+            var(--icon-rrss-facebook),
             // position and size
             "center center / contain",
             // repeat
@@ -51,7 +51,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-github--default),
+            var(--icon-rrss-github),
             // position and size
             "center center / contain",
             // repeat
@@ -77,7 +77,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-instagram--default),
+            var(--icon-rrss-instagram),
             // position and size
             "center center / contain",
             // repeat
@@ -103,7 +103,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-linkedin--default),
+            var(--icon-rrss-instagram),
             // position and size
             "center center / contain",
             // repeat
@@ -129,7 +129,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-pinterest--default),
+            var(--icon-rrss-pinterest),
             // position and size
             "center center / contain",
              // repeat
@@ -155,7 +155,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-snapchat--default),
+            var(--icon-rrss-snapchat),
             // position and size
             "center center / contain",
             // repeat
@@ -181,7 +181,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-twitter--default),
+            var(--icon-rrss-twitter),
             // position and size
             "center center / contain",
             // repeat
@@ -207,7 +207,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-whatsapp--default),
+            var(--icon-rrss-whatsapp),
             // position and size
             "center center / contain",
             // repeat
@@ -233,7 +233,7 @@
         &:before {
           @include background-setup(
             // img path
-            map-icons(rrss, theme-youtube--default),
+            var(--icon-rrss-youtube),
             // position and size
             "center center / contain",
             // repeat

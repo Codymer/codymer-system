@@ -10,102 +10,46 @@
     $self: &;
     @include position(relative);
 
-    // theme: codymer
-    @if $theme == codymer {
-      @include margin(null null 0.938rem null);
-    }
-
-    // theme: example-01
-    @if $theme == example-01 {
-      @include margin(null null 1.2rem null);
-    }
-
     // &__label
     &__label {
+      @include padding(null null null var(--check-gap));
       display: inline-flex;
       flex-wrap: wrap;
-
-      // theme: codymer
-      @if $theme == codymer {
-        @include padding(null null null 2rem);
-        line-height: 1.563rem;
-      }
-
-      // theme: example-01
-      @if $theme == example-01 {
-        @include padding(null null null 3rem);
-        line-height: 2rem;
-      }
+      line-height: var(--check-line-height);
 
       // &:before
       &:before {
         content: "";
         @include position(absolute, 0, null, null, 0);
+        @include size(var(--check-uncheck-size));
+        @include border(all, var(--theme-w-border), solid, var(--color-primary));
+        @include border-radius(var(--theme-radius));
         transition: border-color 250ms ease;
-
-        // theme: codymer
-        @if $theme == codymer {
-          @include size(1.563rem);
-          @include border(all, 0.188rem, solid, var(--color-primary));
-          @include border-radius(0.4rem);
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include size(2rem);
-          @include border(all, 0.4rem, solid, var(--color-primary));
-          @include border-radius(0.6rem);
-        }
       }
 
       // &:after
       &:after {
         content: "";
         @include position(absolute, 0, 0, null, 0);
+        @include size(var(--check-checked-icon-size)); 
         opacity: 0;
-        transition: all 250ms ease;
-
-        // theme: codymer
-        @if $theme == codymer {
-          @include size(1.563rem, 1.563rem);
-          @include background-setup(
-            // img path
-            map-icons(user-interface, theme-unicons--approve-tick),
-            // position and size
-            "0 0 / contain",
-            // repeat
-            no-repeat,
-            // attachment
-            null,
-            // origin
-            null,
-            // clip
-            null,
-            // color
-            transparent
-          );
-        }
-
-        // theme: example-01
-        @if $theme == example-01 {
-          @include size(2rem, 2rem);
-          @include background-setup(
-            // img path
-            map-icons(user-interface, theme-unicons--approve-tick),
-            // position and size
-            "0 0 / contain",
-            // repeat
-            no-repeat,
-            // attachment
-            null,
-            // origin
-            null,
-            // clip
-            null,
-            // color
-            transparent
-          );
-        }
+        transition: all 250ms ease;  
+        @include background-setup(
+          // img path
+          var(--check-checked-icon-pic),
+          // position and size
+          "0 0 / contain",
+          // repeat
+          no-repeat,
+          // attachment
+          null,
+          // origin
+          null,
+          // clip
+          null,
+          // color
+          transparent
+        );
       }
 
       // &:not(:disabled)
@@ -114,15 +58,7 @@
         &:hover {
           // &:before
           &:before {
-            // theme: codymer
-            @if $theme == codymer {
-              box-shadow: 0 0 0.313rem 0 var(--color-primary);
-            }
-
-            // theme: example-01
-            @if $theme == example-01 {
-              box-shadow: 0 0 0.5rem 0 var(--color-primary);
-            }
+            box-shadow: var(--theme-focus);
           }
         }
       }
@@ -143,17 +79,8 @@
             // &:before
             &:before {
               border-color: var(--color-state-ok);
+              border-width: var(--theme-w-border);
               background-color: var(--color-state-ok);
-
-              // theme: codymer
-              @if $theme == codymer {
-                border-width: 0.79rem;
-              }
-
-              // theme: example-01
-              @if $theme == example-01 {
-                border-width: 0.79rem;
-              }
             }
 
             // &:after
@@ -201,15 +128,7 @@
           &__label {
             // &:before
             &:before {
-              // theme: codymer
-              @if $theme == codymer {
-                box-shadow: 0 0 0.313rem 0 var(--color-primary);
-              }
-
-              // theme: example-01
-              @if $theme == example-01 {
-                box-shadow: 0 0 0.5rem 0 var(--color-primary);
-              }
+              box-shadow: var(--theme-focus);
             }
           }
         }
