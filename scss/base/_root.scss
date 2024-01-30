@@ -238,6 +238,8 @@
       --cont-group-form-field-m-b: calc(var(--measure-base) * 2); 
       --cont-group-form-field-icon-p-r: calc(var(--measure-base) * 1);
       --cont-group-form-field-icon-size: calc(var(--measure-base) * 2);
+      --cont-group-form-field-success-icon-pic: var(--icon-user-interface-tick); 
+      --cont-group-form-field-warning-icon-pic: var(--icon-user-interface-exclamation-mark);
     }
 
     // THEME: example-01 
@@ -426,7 +428,9 @@
       --txt-m-b: calc(var(--measure-base) * 2);
       --cont-group-form-field-m-b: calc(var(--measure-base) * 4);
       --cont-group-form-field-icon-p-r: calc(var(--measure-base) * 2);
-      --cont-group-form-field-icon-size: calc(var(--measure-base) * 6); 
+      --cont-group-form-field-icon-size: calc(var(--measure-base) * 6);
+      --cont-group-form-field-success-icon-pic: var(--icon-user-interface-tick); 
+      --cont-group-form-field-warning-icon-pic: var(--icon-user-interface-exclamation-mark);
     }
   }
 }

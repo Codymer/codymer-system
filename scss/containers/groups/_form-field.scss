@@ -127,7 +127,7 @@
         &:before {
           @include background-setup(
             // img path
-            var(--icon-user-interface-tick),
+            var(--cont-group-form-field-success-icon-pic),
             // position and size
             "0 0 / contain",
             // repeat
@@ -175,7 +175,7 @@
         &:before {
           @include background-setup(
             // img path
-            var(--icon-user-interface-cancel),
+            var(--cont-group-form-field-warning-icon-pic),
             // position and size
             "0 0 / contain",
             // repeat
