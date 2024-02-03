@@ -9,7 +9,6 @@
   .cdmr-radio {
     $self: &;
     @include position(relative);
-    @include margin(null null 0.938rem null);
 
     // &__label
     &__label {
