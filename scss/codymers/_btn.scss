@@ -63,25 +63,25 @@
 
     // &--scope
     &--scope {
-      // &-25
-      &-25 {
-        @include padding(var(--scope-25));
-        font-size: var(--scope-25);
-        line-height: var(--scope-25); 
+      // &-01
+      &-01 {
+        @include padding(var(--scope-01));
+        font-size: var(--scope-01);
+        line-height: var(--scope-01); 
       }
 
-      // &-50
-      &-50 {
-        @include padding(var(--scope-50));
-        font-size: var(--scope-50);
-        line-height: var(--scope-50);  
+      // &-02
+      &-02 {
+        @include padding(var(--scope-02));
+        font-size: var(--scope-02);
+        line-height: var(--scope-02);  
       }
 
-      // &-75
-      &-75 {
-        @include padding(var(--scope-75));
-        font-size: var(--scope-75);
-        line-height: var(--scope-75);  
+      // &-03
+      &-03 {
+        @include padding(var(--scope-03));
+        font-size: var(--scope-03);
+        line-height: var(--scope-03);  
       }
     }
 
@@ -195,44 +195,44 @@
 
         // &-scope
         &-scope {
-          // &-25
-          &-25 {
-            @include padding(null null null calc(2 * var(--scope-25)));
+          // &-01
+          &-01 {
+            @include padding(null null null calc(2 * var(--scope-01)));
 
             // .cdmr
             .cdmr {
               // &-icon
               &-icon {
-                @include margin(null null null calc(var(--scope-25) / 2));
-                @include size(var(--scope-25));
+                @include margin(null null null calc(var(--scope-01) / 2));
+                @include size(var(--scope-01));
               }
             }
           }
 
-          // &-50
-          &-50 {
-            @include padding(null null null calc(2* var(--scope-50)));
+          // &-02
+          &-02 {
+            @include padding(null null null calc(2* var(--scope-02)));
 
             // .cdmr
             .cdmr {
               // &-icon
               &-icon {
-                @include margin(null null null calc(var(--scope-50) / 2));
-                @include size(var(--scope-50));
+                @include margin(null null null calc(var(--scope-02) / 2));
+                @include size(var(--scope-02));
               }
             }
           }
 
-          // &-75
-          &-75 {
-            @include padding(null null null calc(2 * var(--scope-75)));
+          // &-03
+          &-03 {
+            @include padding(null null null calc(2 * var(--scope-03)));
 
             // .cdmr
             .cdmr {
               // &-icon
               &-icon {
-                @include margin(null null null calc(var(--scope-75) / 2));
-                @include size(var(--scope-75));
+                @include margin(null null null calc(var(--scope-03) / 2));
+                @include size(var(--scope-03));
               }
             }
           }

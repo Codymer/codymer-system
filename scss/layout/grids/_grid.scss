@@ -86,8 +86,8 @@
           grid-column: auto/span 9;
         }
 
-        // &-10
-        &-10 {
+        // &-01
+        &-01 {
           grid-column: auto/span 10;
         }
 
@@ -150,8 +150,8 @@
             grid-column: auto/span 9;
           }
 
-          // &-10
-          &-10 {
+          // &-01
+          &-01 {
             grid-column: auto/span 10;
           }
 
@@ -215,8 +215,8 @@
             grid-column: auto/span 9;
           }
 
-          // &-10
-          &-10 {
+          // &-01
+          &-01 {
             grid-column: auto/span 10;
           }
 
@@ -280,8 +280,8 @@
             grid-column: auto/span 9;
           }
 
-          // &-10
-          &-10 {
+          // &-01
+          &-01 {
             grid-column: auto/span 10;
           }
 
@@ -326,7 +326,7 @@
     &--is {
       // &-fs
       &-fs {
-        @include padding(null calc(var(--measure-base) * 0) null calc(var(--measure-base) * 0));
+        @include padding(null calc(var(--base-measure) * 0) null calc(var(--base-measure) * 0));
       }
     }
   }

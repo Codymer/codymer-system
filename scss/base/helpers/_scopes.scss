@@ -7,19 +7,19 @@
 // ===============================================
 @mixin helper-scope($theme: null) {
   .helper-scope {
-    // &-10
-    &-10 {
-      @include size(var(--scope-10));
+    // &-01
+    &-01 {
+      @include size(var(--scope-01));
     }
 
-    // &-20
-    &-20 {
-      @include size(var(--scope-20));
+    // &-02
+    &-02 {
+      @include size(var(--scope-02));
     }
 
-    // &-25
-    &-25 {
-      @include size(var(--scope-25));
+    // &-01
+    &-01 {
+      @include size(var(--scope-01));
     }
   }
 }

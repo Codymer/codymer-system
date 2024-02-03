@@ -53,26 +53,17 @@
       &-blue {
         // &-facebook
         &-facebook {
-          // &-25
-          &-25 {
-            background-color: var(--color-brand-fb-blue-25);
-          }
+          background-color: var(--color-brand-fb-blue);
         }
 
         // &-instagram
         &-instagram {
-          // &-25
-          &-25 {
-            background-color: var(--color-brand-instagram-blue-25);
-          }
+          background-color: var(--color-brand-instagram-blue);
         }
 
         // &-twitter
         &-twitter {
-          // &-25
-          &-25 {
-            background-color: var(--color-brand-twitter-blue-25);
-          }
+          background-color: var(--color-brand-twitter-blue);
         }
       }
 
@@ -80,14 +71,14 @@
       &-green {
         // &-whatsapp
         &-whatsapp {
-          // &-25
-          &-25 {
-            background-color: var(--color-brand-whatsapp-green-25);
-          }
+          background-color: var(--color-brand-whatsapp-green);
 
-          // &-50
-          &-50 {
-            background-color: var(--color-brand-whatsapp-green-50);
+          // &-drk
+          &-drk {
+            // &-02
+            &-01 {
+              background-color: var(--color-brand-whatsapp-green-drk-01);
+            }
           }
         }
       }
@@ -96,10 +87,7 @@
       &-purple {
         // &-instagram
         &-instagram {
-          // &-25
-          &-25 {
-            background-color: var(--color-brand-instagram-purple-25);
-          }
+          background-color: var(--color-brand-instagram-purple);
         }
       }
       // &-transparent
@@ -135,76 +123,67 @@
 
       // &-primary
       &-primary {
-        // &-25
-        &-25 {
-          background-color: var(--color-primary-25);
+        background-color: var(--color-primary);
+
+        // theme: codymer
+        @if $theme == codymer {
+          color: var(--color-white);
         }
 
-        // &-50
-        &-50 {
-          background-color: var(--color-primary-50);
-
-          // theme: codymer
-          @if $theme == codymer {
+        // theme: codymer
+        @if $theme == codymer {
+          * {
             color: var(--color-white);
           }
+        }
 
-          // theme: codymer
-          @if $theme == codymer {
-            * {
-              color: var(--color-white);
-            }
+        // theme: example-01
+        @if $theme == example-01 {
+          color: var(--color-white);
+        }
+
+        // theme: example-01
+        @if $theme == example-01 {
+          * {
+            color: var(--color-white);
+          }
+        }
+
+        // &-lighter
+        &-lt {
+          // &-01
+          &-01 {
+            background-color: var(--color-primary-lt-01);
           }
         }
       }
 
       // &-secondary
       &-secondary {
-        // &-25
-        &-25 {
-          background-color: var(--color-secondary-25);
-        }
+        background-color: var(--color-secondary);
 
-        // &-50
-        &-50 {
-          background-color: var(--color-secondary-50);
-
-          // theme: codymer
-          @if $theme == codymer {
-            color: var(--color-white);
-          }
-
-          // theme: codymer
-          @if $theme == codymer {
-            * {
-              color: var(--color-white);
-            }
+        // &-lighter
+        &-lt {
+          // &-01
+          &-01 {
+            background-color: var(--color-secondary-lt-01);
           }
         }
       }
 
       // &-tertiary
       &-tertiary {
-        // &-50
-        &-50 {
-          background-color: var(--color-tertiary-50);
-        }
+        background-color: var(--color-tertiary);
       }
 
       // &-quaternary
       &-quaternary {
-        // &-75
-        &-75 {
-          background-color: var(--color-quaternary-75);
-        }
+        background-color: var(--color-quaternary);
       }
-      
-      // &-senary
-      &-senary {
-        // &-25
-        &-25 {
-          background-color: var(--color-senary-25);
-        }
+
+      // &-quinary
+      &-quinary {
+        background-color: var(--color-quinary);
       }
     }
   }

@@ -1,4 +1,4 @@
-// CORE
+// CORE 
 // ===============================================
 @use "../abstracts/index" as *;
 // ===============================================
@@ -67,10 +67,10 @@
     }
 
     // &--scope
-    &--scope {
-      // &-25
-      &-25 {
-        @include size(calc(2 * var(--scope-25)));
+    &--scope { 
+      // &-01
+      &-01 {
+        @include size(calc(2.5 * var(--scope-01)));
 
         // .cdmr
         .cdmr {
@@ -78,7 +78,7 @@
           &-icon {
             // &:before
             &:before {
-              @include size(calc(var(--scope-25) - 15%));
+              @include size(calc(var(--scope-01) - 5%));
             }
           }
         }
@@ -119,7 +119,7 @@
       }
 
       // behavior-in-ancestor
-      @include behavior-in-ancestor(helper-bg-color-primary-50) {
+      @include behavior-in-ancestor(helper-bg-color-primary-02) {
         border-color: var(--color-white);
       }
 
@@ -174,7 +174,7 @@
       }
 
       // behavior-in-ancestor
-      @include behavior-in-ancestor(helper-bg-color-primary-50) {
+      @include behavior-in-ancestor(helper-bg-color-primary-02) {
         border-color: var(--color-white);
 
         // .cdmr

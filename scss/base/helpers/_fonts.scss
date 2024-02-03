@@ -21,28 +21,20 @@
 
       // &-blue
       &-blue {
+        
         // &-facebook
         &-facebook {
-          // &-25
-          &-25 {
-            color: var(--color-brand-fb-blue-25);
-          }
+          color: var(--color-brand-fb-blue);
         }
 
         // &-instagram
         &-instagram {
-          // &-25
-          &-25 {
-            color: var(--color-brand-instagram-blue-25);
-          }
+          color: var(--color-brand-instagram-blue);
         }
 
         // &-twitter
         &-twitter {
-          // &-25
-          &-25 {
-            color: var(--color-brand-twitter-blue-25);
-          }
+          color: var(--color-brand-twitter-blue);
         }
       }
 
@@ -50,10 +42,7 @@
       &-green {
         // &-whatsapp
         &-whatsapp {
-          // &-25
-          &-25 {
-            color: var(--color-brand-whatsapp-green-25);
-          }
+          color: var(--color-brand-whatsapp-green);
         }
       }
 
@@ -61,135 +50,104 @@
       &-purple {
         // &-instagram
         &-instagram {
-          // &-25
-          &-25 {
-            color: var(--color-brand-instagram-purple-25);
-          }
+          color: var(--color-brand-instagram-purple);
         }
       }
 
       // &-primary
       &-primary {
-        // &-25
-        &-25 {
-          color: var(--color-primary-25);
-        }
+        color: var(--color-primary);
       }
 
       // &-secondary
       &-secondary {
-        // &-25
-        &-25 {
-          color: var(--color-secondary-25);
-        }
+        color: var(--color-secondary);
       }
 
       // &-tertiary
       &-tertiary {
-        // &-25
-        &-25 {
-          color: var(--color-tertiary-25);
-        }
+        color: var(--color-tertiary);
       }
 
       // &-quaternary
       &-quaternary {
-        // &-25
-        &-25 {
-          color: var(--color-quaternary-25);
-        }
+        color: var(--color-quaternary);
       }
 
       // &-quinary
       &-quinary {
-        // &-25
-        &-25 {
-          color: var(--color-quinary-25);
-        }
+        color: var(--color-quinary);
       }
 
       // &-septenary
       &-septenary {
-        // &-25
-        &-25 {
-          color: var(--color-septenary-25);
-        }
+        color: var(--color-septenary);
       }
     }
 
     // &-weight
     &-weight {
-      // &-25
-      &-25 {
-        font-family: var(--font-weight-25);
+      // &-01
+      &-01 {
+        font-family: var(--font-weight-01);
       }
 
-      // &-50
-      &-50 {
-        font-family: var(--font-weight-50);
+      // &-02
+      &-02 {
+        font-family: var(--font-weight-02);
       }
 
-      // &-75
-      &-75 {
-        font-family: var(--font-weight-75);
-      }
-
-      // &-100
-      &-100 {
-        font-family: var(--font-weight-100);
-      }
-
-      // &-125
-      &-125 {
-        font-family: var(--font-weight-125);
+      // &-03
+      &-03 {
+        font-family: var(--font-weight-03);
       }
     }
 
     // &-scope
     &-scope {
-      // &-10
-      &-10 {
-        font-size: var(--scope-10);
-        line-height: var(--scope-10);
+      // &-01
+      &-01 {
+        font-size: var(--scope-01);
+        line-height: var(--scope-01);
       }
 
-      // &-20
-      &-20 {
-        font-size: var(--scope-20);
-        line-height: var(--scope-20);
+      // &-02
+      &-02 {
+        font-size: var(--scope-02);
+        line-height: var(--scope-02);
         @include min-screen(768px) {
-          font-size: calc(10% + var(--scope-20));
-          line-height: calc(10% + var(--scope-20)); 
+          font-size: calc(10% + var(--scope-02));
+          line-height: calc(10% + var(--scope-02)); 
         }
       }
 
-      // &-30
-      &-30 {
-        font-size: var(--scope-30);
-        line-height: var(--scope-30);
+      // &-03
+      &-03 {
+        font-size: var(--scope-03);
+        line-height: var(--scope-03);
         @include min-screen(768px) {
-          font-size: calc(20% + var(--scope-30));
-          line-height: calc(20% + var(--scope-30));
+          font-size: calc(20% + var(--scope-03));
+          line-height: calc(20% + var(--scope-03));
         }
       }
 
-      // &-40
-      &-40 {
-        font-size: var(--scope-40);
-        line-height: var(--scope-40);
+      // &-04
+      &-04 {
+        font-size: var(--scope-04);
+        line-height: var(--scope-04);
         @include min-screen(768px) {
-          font-size: calc(30% + var(--scope-40));
-          line-height: calc(30% + var(--scope-40));
+          font-size: calc(30% + var(--scope-04));
+          line-height: calc(30% + var(--scope-04));
         }
       }
 
-      // &-50
-      &-50 {
-        font-size: var(--scope-50);
-        line-height: var(--scope-50);
+      // &-05
+      &-05 {
+        font-size: var(--scope-05);
+        line-height: var(--scope-05);
         @include min-screen(768px) {
-          font-size: calc(50% + var(--scope-50));
-          line-height: calc(50% + var(--scope-50)); 
+          font-size: calc(50% + var(--scope-05));
+          line-height: calc(50% + var(--scope-05)); 
         }
       }
     }
