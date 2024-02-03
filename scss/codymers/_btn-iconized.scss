@@ -70,7 +70,7 @@
     &--scope {
       // &-25
       &-25 {
-        @include size(calc(var(--scope-25) * 2));
+        @include size(calc(2 * var(--scope-25)));
 
         // .cdmr
         .cdmr {

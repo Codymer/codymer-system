@@ -197,7 +197,7 @@
         &-scope {
           // &-25
           &-25 {
-            @include padding(null null null calc(var(--scope-25) * 2));
+            @include padding(null null null calc(2 * var(--scope-25)));
 
             // .cdmr
             .cdmr {
@@ -211,7 +211,7 @@
 
           // &-50
           &-50 {
-            @include padding(null null null calc(var(--scope-50) * 2));
+            @include padding(null null null calc(2* var(--scope-50)));
 
             // .cdmr
             .cdmr {
@@ -225,7 +225,7 @@
 
           // &-75
           &-75 {
-            @include padding(null null null calc(var(--scope-75) * 2));
+            @include padding(null null null calc(2 * var(--scope-75)));
 
             // .cdmr
             .cdmr {

@@ -158,8 +158,8 @@
         font-size: var(--scope-20);
         line-height: var(--scope-20);
         @include min-screen(768px) {
-          font-size: calc(var(--scope-20) + 10%);
-          line-height: calc(var(--scope-20) + 10%); 
+          font-size: calc(10% + var(--scope-20));
+          line-height: calc(10% + var(--scope-20)); 
         }
       }
 
@@ -168,8 +168,8 @@
         font-size: var(--scope-30);
         line-height: var(--scope-30);
         @include min-screen(768px) {
-          font-size: calc(var(--scope-30) + 20%);
-          line-height: calc(var(--scope-30) + 20%); 
+          font-size: calc(20% + var(--scope-30));
+          line-height: calc(20% + var(--scope-30));
         }
       }
 
@@ -178,8 +178,8 @@
         font-size: var(--scope-40);
         line-height: var(--scope-40);
         @include min-screen(768px) {
-          font-size: calc(var(--scope-40) + 30%);
-          line-height: calc(var(--scope-40) + 30%); 
+          font-size: calc(30% + var(--scope-40));
+          line-height: calc(30% + var(--scope-40));
         }
       }
 
@@ -188,8 +188,8 @@
         font-size: var(--scope-50);
         line-height: var(--scope-50);
         @include min-screen(768px) {
-          font-size: calc(var(--scope-50) + 50%);
-          line-height: calc(var(--scope-50) + 50%); 
+          font-size: calc(50% + var(--scope-50));
+          line-height: calc(50% + var(--scope-50)); 
         }
       }
     }

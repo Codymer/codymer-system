@@ -55,9 +55,8 @@
 
     // &-ctr
     &-ctr {
+      @include position(null, 0, null, null, 0);
       @include margin(auto);
-      right: 0;
-      left: 0;
     }
   }
 }

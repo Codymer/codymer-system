@@ -15,7 +15,7 @@
         &-25 {
           @include margin(var(--gap-25) null null null);
           @include min-screen(768px) {
-            @include margin(calc(var(--gap-25) * 2) null null null);
+            @include margin(calc(2* var(--gap-25)) null null null);
           }
         }
       }
@@ -29,7 +29,7 @@
         &-25 {
           @include padding(var(--inner-25) null null null);
           @include min-screen(768px) {
-            @include padding(calc(var(--inner-25) * 2) null null null);
+            @include padding(calc(2 * var(--inner-25)) null null null);
           }
         }
       }
