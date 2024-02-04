@@ -37,7 +37,7 @@
     // &__td
     &__td {
       @include padding(0.625rem);
-      @include border(bottom, 0.125rem, solid, var(--color-grey01));
+      @include border(bottom, 0.125rem, solid, var(--color-grey-80pct));
     }
 
     // &--primary
@@ -63,7 +63,7 @@
 
         // &__foot
         &__tfoot {
-          background-color: var(--color-grey01);
+          background-color: var(--color-grey-80pct);
         }
       }
     }
