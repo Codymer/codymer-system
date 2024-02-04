@@ -95,7 +95,7 @@
       }
     }
 
-    // &-linkedin
+    // &--linkedin
     &--linkedin {
       // &-primary
       &-primary {
@@ -103,7 +103,7 @@
         &:before {
           @include background-setup(
             // img path
-            var(--icon-rrss-instagram),
+            var(--icon-rrss-linkedin),
             // position and size
             "center center / contain",
             // repeat
@@ -173,7 +173,7 @@
       }
     }
 
-    // &-twitter
+    // &--twitter
     &--twitter {
       // &-primary
       &-primary {
