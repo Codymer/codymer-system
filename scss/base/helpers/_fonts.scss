@@ -87,67 +87,67 @@
 
     // &-weight
     &-weight {
-      // &-01
-      &-01 {
-        font-family: var(--font-weight-01);
+      // &-1
+      &-1 {
+        font-family: var(--font-weight-1);
       }
 
-      // &-02
-      &-02 {
-        font-family: var(--font-weight-02);
+      // &-2
+      &-2 {
+        font-family: var(--font-weight-2);
       }
 
-      // &-03
-      &-03 {
-        font-family: var(--font-weight-03);
+      // &-3
+      &-3 {
+        font-family: var(--font-weight-3);
       }
     }
 
     // &-scope
     &-scope {
-      // &-01
-      &-01 {
-        font-size: var(--scope-01);
-        line-height: var(--scope-01);
+      // &-1
+      &-1 {
+        font-size: var(--scope-1);
+        line-height: var(--scope-1);
       }
 
-      // &-02
-      &-02 {
-        font-size: var(--scope-02);
-        line-height: var(--scope-02);
+      // &-2
+      &-2 {
+        font-size: var(--scope-2);
+        line-height: var(--scope-2);
         @include min-screen(768px) {
-          font-size: calc(10% + var(--scope-02));
-          line-height: calc(10% + var(--scope-02)); 
+          font-size: calc(10% + var(--scope-2));
+          line-height: calc(10% + var(--scope-2)); 
         }
       }
 
-      // &-03
-      &-03 {
-        font-size: var(--scope-03);
-        line-height: var(--scope-03);
+      // &-3
+      &-3 {
+        font-size: var(--scope-3);
+        line-height: var(--scope-3);
         @include min-screen(768px) {
-          font-size: calc(20% + var(--scope-03));
-          line-height: calc(20% + var(--scope-03));
+          font-size: calc(20% + var(--scope-3));
+          line-height: calc(20% + var(--scope-3));
         }
       }
 
-      // &-04
-      &-04 {
-        font-size: var(--scope-04);
-        line-height: var(--scope-04);
+      // &-4
+      &-4 {
+        font-size: var(--scope-4);
+        line-height: var(--scope-4);
         @include min-screen(768px) {
-          font-size: calc(30% + var(--scope-04));
-          line-height: calc(30% + var(--scope-04));
+          font-size: calc(30% + var(--scope-4));
+          line-height: calc(30% + var(--scope-4));
         }
       }
 
-      // &-05
-      &-05 {
-        font-size: var(--scope-05);
-        line-height: var(--scope-05);
+      // &-5
+      &-5 {
+        font-size: var(--scope-5);
+        line-height: var(--scope-5);
         @include min-screen(768px) {
-          font-size: calc(50% + var(--scope-05));
-          line-height: calc(50% + var(--scope-05)); 
+          font-size: calc(50% + var(--scope-5));
+          line-height: calc(50% + var(--scope-5)); 
         }
       }
     }

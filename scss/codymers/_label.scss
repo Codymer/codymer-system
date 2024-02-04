@@ -18,19 +18,19 @@
 
     // &--scope
     &--scope {
-      // &-01
-      &-01 {
-        @include padding(var(--scope-01));
+      // &-1
+      &-1 {
+        @include padding(var(--scope-1));
       }
 
-      // &-02
-      &-02 {
-        @include padding(var(--scope-02)); 
+      // &-2
+      &-2 {
+        @include padding(var(--scope-2)); 
       }
 
-      // &-03
-      &-03 {
-        @include padding(var(--scope-03));
+      // &-3
+      &-3 {
+        @include padding(var(--scope-3)); 
       }
     }
 

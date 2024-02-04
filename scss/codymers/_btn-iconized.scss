@@ -68,9 +68,9 @@
 
     // &--scope
     &--scope { 
-      // &-01
-      &-01 {
-        @include size(calc(2.5 * var(--scope-01)));
+      // &-1
+      &-1 {
+        @include size(calc(2.5 * var(--scope-1)));
 
         // .cdmr
         .cdmr {
@@ -78,7 +78,7 @@
           &-icon {
             // &:before
             &:before {
-              @include size(calc(var(--scope-01) - 5%));
+              @include size(calc(var(--scope-1) - 5%));
             }
           }
         }

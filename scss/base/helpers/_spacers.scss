@@ -11,11 +11,11 @@
     &-gap {
       // &-t
       &-t {
-        // &-01
-        &-01 {
-          @include margin(var(--gap-01) null null null);
+        // &-1
+        &-1 {
+          @include margin(var(--gap-1) null null null);
           @include min-screen(768px) {
-            @include margin(calc(2* var(--gap-01)) null null null);
+            @include margin(calc(2* var(--gap-1)) null null null);
           }
         }
       }
@@ -25,11 +25,11 @@
     &-inner {
       // &-t
       &-t {
-        // &-01
-        &-01 {
-          @include padding(var(--inner-01) null null null);
+        // &-1
+        &-1 {
+          @include padding(var(--inner-1) null null null);
           @include min-screen(768px) {
-            @include padding(calc(2 * var(--inner-01)) null null null);
+            @include padding(calc(2 * var(--inner-1)) null null null);
           }
         }
       }
