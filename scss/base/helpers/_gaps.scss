@@ -1,11 +1,15 @@
 // CORE
 // ===============================================
-@use "../abstracts/index" as *;
+@use '../../abstracts/index' as *;
 // ===============================================
 
-// CDMR: title
+// GAP
 // ===============================================
-@mixin cdmr-title($theme: null) {
-  .cdmr-title {
+@mixin helper-gap($theme: null) {
+  .helper-gap {
+    // &-1
+    &-1 {
+      gap: var(--gap-1);
+    }
   }
 }

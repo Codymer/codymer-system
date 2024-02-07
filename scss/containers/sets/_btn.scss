@@ -7,22 +7,5 @@
 // ===============================================
 @mixin cont-set-btn($theme: null) {
   .cont-set-btn {
-    $self: &;
-
-    // &--gap
-    &--gap {
-      // &-1
-      &-1 {
-        gap: var(--gap-1);
-      }
-    }
-
-    // &--is
-    &--is {
-    }
-
-    // &--has
-    &--has {
-    }
   }
 }

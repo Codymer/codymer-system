@@ -39,15 +39,6 @@
             </li>
             <li class="cdmr-list-ordered__item">
               <a
-                href="#btnIconized"
-                class="cdmr-link cdmr-link--primary"
-                title="Go to the btn iconized section"
-                target="_self">
-                  Btn iconized
-              </a>
-            </li>
-            <li class="cdmr-list-ordered__item">
-              <a
                 href="#check"
                 class="cdmr-link cdmr-link--primary"
                 title="Go to the check section"
@@ -191,7 +182,7 @@
               <li class="cdmr-breadcrumb__item">
                 <a
                   href="#"
-                  class="cdmr-breadcrumb__link cdmr-helper-fontWeight-700"
+                  class="cdmr-breadcrumb__link"
                   title="title text"
                   target="_self">
                     Level 2
@@ -224,7 +215,7 @@
                 &--primary &--has-icon
               </span>
             </h4>
-            <ol class="cdmr-breadcrumb cdmr-breadcrumb--primary cdmr-breadcrumb--has-icon">
+            <ol class="cdmr-breadcrumb cdmr-breadcrumb--has-icon  cdmr-breadcrumb--has-icon-home">
               <li class="cdmr-breadcrumb__item">
                 <a
                   href="#"
@@ -237,7 +228,7 @@
               <li class="cdmr-breadcrumb__item">
                 <a
                   href="#"
-                  class="cdmr-breadcrumb__link cdmr-helper-fontWeight-700"
+                  class="cdmr-breadcrumb__link"
                   title="title text"
                   target="_self">
                     Level 2
@@ -309,12 +300,26 @@
                 &--primary
             </a>
             <a
+            href="#"
+            class="cdmr-btn cdmr-btn--primary cdmr-btn--filled"
+            title="title text"
+            target="_self">
+              &--primary &--filled
+            </a>
+            <a
               href="#"
               class="cdmr-btn cdmr-btn--secondary"
               title="title text"
               target="_self">
                 &--secondary
             </a>
+            <a
+            href="#"
+            class="cdmr-btn cdmr-btn--secondary cdmr-btn--filled"
+            title="title text"
+            target="_self">
+              &--secondary &--filled
+          </a>
             <a
               href="#"
               class="cdmr-btn cdmr-btn--tertiary"
@@ -323,12 +328,26 @@
                 &--tertiary
             </a>
             <a
+            href="#"
+            class="cdmr-btn cdmr-btn--tertiary cdmr-btn--filled"
+            title="title text"
+            target="_self">
+              &--tertiary &--filled
+          </a>
+            <a
               href="#"
               class="cdmr-btn cdmr-btn--quaternary"
               title="title text"
               target="_self">
                 &--quaternary
             </a>
+            <a
+            href="#"
+            class="cdmr-btn cdmr-btn--quaternary cdmr-btn--filled"
+            title="title text"
+            target="_self">
+              &--quaternary &--filled
+          </a>
             <h4 class="cdmr-title">
               <span class="helper-font-scope-1">
                 &--scope-(1, 2, 3...)
@@ -355,11 +374,6 @@
               target="_self">
                 &--scope-3
             </a>
-            <h4 class="cdmr-title">
-              <span class="helper-font-scope-1">
-                &--shape-circle
-              </span>
-            </h4>
             <h4 class="cdmr-title">
               <span class="helper-font-scope-1">
                 .helper-font-weight-(1, 2...)
@@ -398,6 +412,14 @@
                 &--primary &:disabled
             </button>
             <button
+            type="button"
+            name="button"
+            class="cdmr-btn cdmr-btn--primary cdmr-btn--filled"
+            title="button text"
+            disabled>
+              &--primary &--filled &:disabled
+          </button>
+            <button
               type="button"
               name="button"
               class="cdmr-btn cdmr-btn--secondary"
@@ -405,6 +427,14 @@
               disabled>
                 &--secondary &:disabled
             </button>
+            <button
+            type="button"
+            name="button"
+            class="cdmr-btn cdmr-btn--secondary cdmr-btn--filled"
+            title="button text"
+            disabled>
+              &--secondary &--filled &:disabled
+          </button>
             <button
               type="button"
               name="button"
@@ -414,6 +444,14 @@
                 &--tertiary &:disabled
             </button>
             <button
+            type="button"
+            name="button"
+            class="cdmr-btn cdmr-btn--tertiary cdmr-btn--filled"
+            title="button text"
+            disabled>
+              &--tertiary &--filled &:disabled
+          </button>
+            <button
               type="button"
               name="button"
               class="cdmr-btn cdmr-btn--quaternary"
@@ -421,19 +459,27 @@
               disabled>
                 &--quaternary &:disabled
             </button>
+            <button
+            type="button"
+            name="button"
+            class="cdmr-btn cdmr-btn--quaternary cdmr-btn--filled"
+            title="button text"
+            disabled>
+              &--quaternary &:disabled
+          </button>
             <h4 class="cdmr-title">
               <span class="helper-font-scope-1">
-                &--has
+                &:has
               </span>
             </h4>
             <h5 class="cdmr-title">
               <span class="helper-font-scope-1">
-                &-icon (&-scope-(1, 2, 3...))
+                (.cdmr-icon)
               </span>
             </h5>
             <a
               href="#"
-              class="cdmr-btn cdmr-btn--scope-1 cdmr-btn--has-icon cdmr-btn--has-icon-scope-1"
+              class="cdmr-btn cdmr-btn--scope-1"
               title="title text"
               target="_self">
                 This btn has an icon
@@ -441,7 +487,7 @@
             </a>
             <a
               href="#"
-              class="cdmr-btn cdmr-btn--scope-2 cdmr-btn--has-icon cdmr-btn--has-icon-scope-2"
+              class="cdmr-btn cdmr-btn--primary cdmr-btn--scope-2"
               title="title text"
               target="_self">
                 This btn has an icon
@@ -449,129 +495,107 @@
             </a>
             <a
               href="#"
-              class="cdmr-btn cdmr-btn--scope-3 cdmr-btn--has-icon cdmr-btn--has-icon-scope-3"
+              class="cdmr-btn cdmr-btn--primary cdmr-btn--filled cdmr-btn--scope-3"
               title="title text"
               target="_self">
                 This btn has an icon
                 <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
             </a>
-          </section>
-          <section id="btnIconized" class="cont-wrapper-aside-structure__section">
-            <h2 class="cdmr-title">
-              <span class="helper-font-scope-40">
-                Btn Iconized
-              </span>
-            </h2>
-            <p class="cdmr-txt cdmr-txt--primary">
-              <span>
-                Anchors or buttons with only an icon.
-              </span>
-            </p>
-            <h3 class="cdmr-title">
+            <h5 class="cdmr-title">
               <span class="helper-font-scope-1">
-                .cdmr-btn-iconized &--(scope-(1, 2, 3...)) 
+                (.helper-hide + .cdmr-icon)
               </span>
-            </h3>
+            </h5>
             <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--scope-1"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <h4 class="cdmr-title">
-              <span class="helper-font-scope-1">
-                &--(primary, secondary, tertiary, quaternary...)
-              </span>
-            </h4>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--primary cdmr-btn-iconized--scope-1"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--secondary cdmr-btn-iconized--scope-1"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--tertiary cdmr-btn-iconized--scope-1"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--quaternary cdmr-btn-iconized--scope-1"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <h4 class="cdmr-title">
-              <span class="helper-font-scope-1">
-                &--shape-circle
-              </span>
-            </h4>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--primary cdmr-btn-iconized--scope-1 cdmr-btn-iconized--shape-circle"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--secondary cdmr-btn-iconized--scope-1 cdmr-btn-iconized--shape-circle"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--tertiary cdmr-btn-iconized--scope-1 cdmr-btn-iconized--shape-circle"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
-            <button
-              type="button"
-              name="name"
-              class="cdmr-btn-iconized cdmr-btn-iconized--quaternary cdmr-btn-iconized--scope-1 cdmr-btn-iconized--shape-circle"
-              title="title text">
-              <span class="helper-hide">
-                Text of the button
-              </span>
-              <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
-            </button>
+            type="button"
+            name="name"
+            class="cdmr-btn cdmr-btn--primary cdmr-btn--scope-1"
+            title="title text">
+            <span class="helper-hide">
+              Text of the button
+            </span>
+            <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+          </button>
+          <button
+          type="button"
+          name="name"
+          class="cdmr-btn cdmr-btn--secondary cdmr-btn--scope-1"
+          title="title text">
+          <span class="helper-hide">
+            Text of the button
+          </span>
+          <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+        </button>
+        <button
+        type="button"
+        name="name"
+        class="cdmr-btn cdmr-btn--tertiary cdmr-btn--scope-1"
+        title="title text">
+        <span class="helper-hide">
+          Text of the button
+        </span>
+        <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+      </button>
+      <button
+      type="button"
+      name="name"
+      class="cdmr-btn cdmr-btn--quaternary cdmr-btn--scope-1"
+      title="title text">
+      <span class="helper-hide">
+        Text of the button
+      </span>
+      <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+    </button>
+    <h4 class="cdmr-title">
+      <span class="helper-font-scope-1">
+        :is
+      </span>
+    </h4>
+    <h5 class="cdmr-title">
+      <span class="helper-font-scope-1">
+        (&--circle)
+      </span>
+    </h5>
+    <button
+    type="button"
+    name="name"
+    class="cdmr-btn cdmr-btn--primary cdmr-btn--scope-1 cdmr-btn--circle"
+    title="title text">
+    <span class="helper-hide">
+      Text of the button
+    </span>
+    <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+  </button>
+  <button
+  type="button"
+  name="name"
+  class="cdmr-btn cdmr-btn--secondary cdmr-btn--scope-1 cdmr-btn--circle"
+  title="title text">
+  <span class="helper-hide">
+    Text of the button
+  </span>
+  <span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+</button>
+<button
+type="button"
+name="name"
+class="cdmr-btn cdmr-btn--tertiary cdmr-btn--scope-1 cdmr-btn--circle"
+title="title text">
+<span class="helper-hide">
+  Text of the button
+</span>
+<span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+</button>
+<button
+type="button"
+name="name"
+class="cdmr-btn cdmr-btn--quaternary cdmr-btn--scope-1 cdmr-btn--circle"
+title="title text">
+<span class="helper-hide">
+Text of the button
+</span>
+<span class="cdmr-icon cdmr-icon--userinterface-cancel"></span>
+</button>
           </section>
           <section id="check" class="cont-wrapper-aside-structure__section">
             <h2 class="cdmr-title">
@@ -1365,8 +1389,8 @@
                 type="checkbox"
                 class="cdmr-switch__input">
               <span class="cdmr-switch__slider">
-                <span class="cdmr-switch__status cdmr-switch__status--ok"></span>
-                <span class="cdmr-switch__status cdmr-switch__status--ko"></span>
+                <span class="cdmr-switch__status"></span>
+                <span class="cdmr-switch__status"></span>
               </span>
             </div>
             <h4 class="cdmr-title">
@@ -1374,7 +1398,7 @@
                 &-checked, input:checked
               </span>
             </h4>
-            <div class="cdmr-switch cdmr-switch--is-checked">
+            <div class="cdmr-switch">
               <label
                 for="switchChecked"
                 class="cdmr-switch__label">
@@ -1386,13 +1410,13 @@
                 class="cdmr-switch__input"
                 checked>
               <span class="cdmr-switch__slider">
-                <span class="cdmr-switch__status cdmr-switch__status--ok"></span>
-                <span class="cdmr-switch__status cdmr-switch__status--ko"></span>
+                <span class="cdmr-switch__status"></span>
+                <span class="cdmr-switch__status"></span>
               </span>
             </div>
             <h4 class="cdmr-title">
               <span class="helper-font-scope-1">
-                &:has(:disabled)
+                &-disabled, input:disabled
               </span>
             </h4>
             <div class="cdmr-switch">
@@ -1407,16 +1431,16 @@
                 class="cdmr-switch__input"
                 disabled>
               <span class="cdmr-switch__slider">
-                <span class="cdmr-switch__status cdmr-switch__status--ok"></span>
-                <span class="cdmr-switch__status cdmr-switch__status--ko"></span>
+                <span class="cdmr-switch__status"></span>
+                <span class="cdmr-switch__status"></span>
               </span>
             </div>
             <h4 class="cdmr-title">
               <span class="helper-font-scope-1">
-                &:has(:disabled) :checked
+                &-disabled, input:checked:disabled
               </span>
             </h4>
-            <div class="cdmr-switch cdmr-switch--is-disabled">
+            <div class="cdmr-switch">
               <label
                 for="switchDisabledChecked"
                 class="cdmr-switch__label">
@@ -1429,8 +1453,8 @@
                 disabled
                 checked>
               <span class="cdmr-switch__slider">
-                <span class="cdmr-switch__status cdmr-switch__status--ok"></span>
-                <span class="cdmr-switch__status cdmr-switch__status--ko"></span>
+                <span class="cdmr-switch__status"></span>
+                <span class="cdmr-switch__status"></span>
               </span>
             </div>
           </section>
@@ -2067,7 +2091,7 @@
           </section>
         </article>
         <nav class="layout-grid__col-xs-12">
-          <ol class="cdmr-breadcrumb cdmr-breadcrumb--primary cdmr-breadcrumb--has-icon">
+          <ol class="cdmr-breadcrumb cdmr-breadcrumb--has-icon  cdmr-breadcrumb--has-icon-home">
             <li class="cdmr-breadcrumb__item">
               <a
                 href="./index.html"

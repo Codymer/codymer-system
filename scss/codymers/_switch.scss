@@ -7,7 +7,6 @@
 // ===============================================
 @mixin cdmr-switch($theme: null) {
   .cdmr-switch {
-    $self: &;
     @include position(relative);
     @include size(var(--switch-w-size), var(--switch-h-size));
     display: inline-block;
@@ -42,7 +41,7 @@
         @include border-radius(var(--switch-slider-radius));
         z-index: 1;
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        background-color: var(--switch-slider-background-color); 
+        background-color: var(--switch-slider-background-color);
       }
     }
 
@@ -54,14 +53,10 @@
 
       // &:checked
       &:checked {
-        // + #{ $self }
-        + #{ $self } {
-          // &__slider
-          &__slider {
-            // &:before
-            &:before {
-              transform: translateX(100%);
-            }
+        + [class*="__slider"] {
+          // &:before
+          &:before {
+            transform: translateX(100%);
           }
         }
       }
@@ -86,7 +81,7 @@
       @include margin(auto null auto null);
       @include size(var(--switch-status-w-size), var(--switch-status-h-size));
 
-      // &:before 
+      // &:before
       &:before {
         content: "";
         @include position(absolute, 0, 0, 0, 0);
@@ -95,13 +90,13 @@
         filter: var(--switch-status-icon-filter);
       }
 
-      // &--ok
-      &--ok {
+      // &:first-child
+      &:first-child {
         @include position(null, null, null, null, 0);
-        @include border-radius(var(--theme-radius),0,0,var(--theme-radius));
+        @include border-radius(var(--theme-radius), 0, 0, var(--theme-radius));
         background-color: var(--color-state-ok);
 
-        // &:before 
+        // &:before
         &:before {
           @include background-setup(
             // img path
@@ -122,13 +117,13 @@
         }
       }
 
-      // &--ko
-      &--ko {
+      // &:last-child
+      &:last-child {
         @include position(null, null, 0, null, null);
-        @include border-radius(0,var(--theme-radius),var(--theme-radius),0);
+        @include border-radius(0, var(--theme-radius), var(--theme-radius), 0);
         background-color: var(--color-state-ko);
 
-        // &:before 
+        // &:before
         &:before {
           @include background-setup(
             // img path
@@ -152,21 +147,20 @@
 
     // &:has()
     &:has(input:disabled) {
+      filter: var(--filter-state-disabled);
+      
       // &:before
       &:before {
         border-color: var(--color-state-disabled);
       }
 
-      // #{ $self }
-      #{ $self } {
-        // &__status
-        &__status {
-          opacity: var(--switch-status-disabled);
-        }
+      // [class*="__status"]
+      [class*="__status"] {
+        opacity: var(--switch-status-disabled);
       }
     }
 
-    // &:not(:has(input:disabled))
+    // &:not()
     &:not(:has(input:disabled)) {
       // &:hover
       &:hover {
@@ -176,14 +170,6 @@
           box-shadow: var(--theme-focus);
         }
       }
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

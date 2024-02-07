@@ -7,19 +7,9 @@
 // ===============================================
 @mixin cdmr-txt($theme: null) {
   .cdmr-txt {
-    $self: &;
-
     // &--primary
     &--primary {
       @include margin(0 null var(--txt-m-b) null);
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

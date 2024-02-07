@@ -7,8 +7,6 @@
 // ===============================================
 @mixin cdmr-form($theme: null) {
   .cdmr-form {
-    $self: &;
-
     // &-label
     &-label {
       font-family: var(--form-font-family);
@@ -55,8 +53,8 @@
 
       // &:disabled
       &:disabled {
-        color: var(--color-primary);
         background-color: var(--color-state-disabled);
+        border-color: var(--color-state-disabled);
 
         // &:hover
         &:hover {
@@ -83,14 +81,6 @@
       &--txtarea {
         font-family: var(--form-font-family);
       }
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

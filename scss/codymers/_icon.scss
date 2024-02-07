@@ -7,7 +7,6 @@
 // ===============================================
 @mixin cdmr-icon($theme: null) {
   .cdmr-icon {
-    $self: &;
     display: inline-block;
 
     // &:before
@@ -67,14 +66,6 @@
           );
         }
       }
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

@@ -61,6 +61,7 @@
 // ===============================================
 @include helper-scope(codymer);
 @include helper-spacer(codymer);
+@include helper-gap(codymer);
 @include helper-font(codymer);
 @include helper-background(codymer);
 // ===============================================
@@ -69,13 +70,11 @@
 // ===============================================
 @include cdmr-breadcrumb(codymer);
 @include cdmr-btn(codymer);
-@include cdmr-btn-iconized(codymer);
 @include cdmr-check(codymer);
 @include cdmr-form(codymer);
 @include cdmr-icon(codymer);
 @include cdmr-label(codymer);
 @include cdmr-link(codymer);
-@include cdmr-list-ordered(codymer);
 @include cdmr-list(codymer);
 @include cdmr-pagination(codymer);
 @include cdmr-radio(codymer);

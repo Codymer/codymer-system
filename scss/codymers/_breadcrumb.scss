@@ -3,11 +3,10 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: breadcrumb  
+// CDMR: breadcrumb
 // ===============================================
 @mixin cdmr-breadcrumb($theme: null) {
   .cdmr-breadcrumb {
-    $self: &;
     @include position(relative);
     @include size(100%, null);
     overflow: hidden;
@@ -30,7 +29,12 @@
 
       // &:last-child
       &:last-child {
-        @include padding(null var(--breadcrumb-item-highlighted-p-x) null var(--breadcrumb-item-highlighted-p-x));
+        @include padding(
+          null var(--breadcrumb-item-highlighted-p-x) null
+            var(--breadcrumb-item-highlighted-p-x)
+        );
+        color: var(--color-white);
+        background-color: var(--color-primary);
       }
 
       // &:not(:last-child)
@@ -39,7 +43,13 @@
         &:after {
           content: "";
           @include margin(auto null auto null);
-          @include position(absolute, 0, var(--breadcrumb-item-icon-p-r), 0, null);
+          @include position(
+            absolute,
+            0,
+            var(--breadcrumb-item-icon-p-r),
+            0,
+            null
+          );
           @include size(var(--breadcrumb-item-icon-size));
           @include background-setup(
             // img path
@@ -57,7 +67,7 @@
             // color
             null
           );
-          filter: var(--filter-primary); 
+          filter: var(--filter-primary);
         }
       }
     }
@@ -76,64 +86,48 @@
       }
     }
 
-    // &--primary
-    &--primary {
-      // &:before
-      &:before {
-        @include background-setup(
-          // img path
-          var(--icon-user-interface-home),
-          // position and size
-          "0 0 / contain",
-          // repeat
-          no-repeat,
-          // attachment
-          null,
-          // origin
-          null,
-          // clip
-          null,
-          // color
-          null
-        );
-        filter: var(--filter-primary); 
-      }
-
-      // #{ $self }
-      #{ $self } {
-        // &__item
-        &__item {
-          // &:last-child
-          &:last-child {
-            color: var(--color-white);
-            background-color: var(--color-primary);
-          }
-        }
-      }
-    }
-
     // &--has
     &--has {
       // &-icon
       &-icon {
         @include padding(null null null 1.875rem);
-        line-height: 1.25rem;
 
         // &:before
         &:before {
           content: "";
           @include position(absolute, 0, null, 0, 0);
-          @include size(1.25rem);
+          @include margin(auto null auto null);
+          @include size(1.25rem); 
+        }
+
+        // &-home
+        &-home {
+          // &::before
+          &:before {
+            @include background-setup(
+              // img path
+              var(--icon-user-interface-home),
+              // position and size
+              "0 0 / contain",
+              // repeat
+              no-repeat,
+              // attachment
+              null,
+              // origin
+              null,
+              // clip
+              null,
+              // color
+              null
+            );
+            filter: var(--filter-primary);
+          }
         }
       }
     }
 
-    // &--is
-    &--is {
-    }
-
     // &:not()
-    &:not(#{ $self }--has-icon) {
+    &:not([class*="--has-icon"]) {
       @include padding(null null null 0);
     }
   }

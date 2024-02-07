@@ -7,7 +7,6 @@
 // ===============================================
 @mixin cdmr-radio($theme: null) {
   .cdmr-radio {
-    $self: &;
     @include position(relative);
 
     // &__label
@@ -22,18 +21,34 @@
         @include position(absolute, 0, null, null, 0);
         @include size(var(--radio-uncheck-size));
         @include border-radius(100%);
-        @include border(all, var(--theme-w-border), solid, var(--color-primary));
+        @include border(
+          all,
+          var(--theme-w-border),
+          solid,
+          var(--color-primary)
+        );
         transition: all 250ms ease;
       }
 
-      // &:not(:disabled)
+      // &:not()  
       &:not(:disabled) {
-        // &:hover
+        // &:hover 
         &:hover {
           // &:before
           &:before {
             border-color: var(--color-primary);
             box-shadow: 0 0 0.313rem 0 var(--color-primary);
+          }
+        }
+
+        // &:focus-visible 
+        &:focus-visible {
+          // [class*="__label"]
+          + [class*="__label"] { 
+            // &:before
+            &:before {
+              outline: 0.2rem solid var(--color-state-focus);
+            }
           }
         }
       }
@@ -47,81 +62,39 @@
 
       // &:checked
       &:checked {
-        // + #{ $self }
-        + #{ $self } {
-          // &__label
-          &__label {
-            // &:before
-            &:before {
-              border-width: var(--radio-checked-size);
-              border-color: var(--color-state-ok);
-              background-color: var(--color-white);
-            }
+        // [class*="__label"]
+        + [class*="__label"] {
+          // &:before
+          &:before {
+            border-width: var(--radio-checked-size);
+            border-color: var(--color-state-ok);
+            background-color: var(--color-white);
           }
         }
       }
 
       // &:disabled
       &:disabled {
-        // + #{ $self }
-        + #{ $self } {
-          // &__label
-          &__label {
-            // &:before
-            &:before {
-              border-color: var(--color-state-disabled);
-            }
+        // [class*="__label"]
+        + [class*="__label"] {
+          // &:before
+          &:before {
+            border-color: var(--color-state-disabled);
           }
         }
 
         // &:not()
         &:not(:checked) {
-          // + #{ $self }
-          + #{ $self } {
-            // &__label
-            &__label {
-              // &:before
-              &:before {
-                background-color: var(--color-state-disabled);
-                box-shadow: inset 0 0 0 0.4rem var(--color-state-disabled);
-              }
-            }
-          }
-        }
-
-        // &:hover
-        &:hover {
-          // + #{ $self }
-          + #{ $self } {
-            // &__label
-            &__label {
-              cursor: not-allowed;
-            }
-          }
-        }
-      }
-
-      // &:focus-visible
-      &:focus-visible {
-        // + #{ $self }
-        + #{ $self } {
-          // &__label
-          &__label {
+          // [class*="__label"]
+          + [class*="__label"] {
             // &:before
             &:before {
-              outline: 0.2rem solid var(--color-state-focus);
+              background-color: var(--color-state-disabled);
+              box-shadow: inset 0 0 0 0.4rem var(--color-state-disabled);
             }
           }
         }
       }
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

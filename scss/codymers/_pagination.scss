@@ -7,7 +7,6 @@
 // ===============================================
 @mixin cdmr-pagination($theme: null) {
   .cdmr-pagination {
-    $self: &;
     @include padding(null null null 0);
     display: flex;
     flex-wrap: wrap;
@@ -34,19 +33,16 @@
             pointer-events: none;
           }
 
-          // #{ $self }
-          #{ $self } {
-            // &__trigger
-            &__trigger {
-              text-indent: -9999px;
-            }
+          // [class*="__trigger"]
+          [class*="__trigger"] {
+            text-indent: -9999px;
           }
 
           // &:not()
-          &:not(#{ $self }__item--is-disabled) {
+          &:not([class*="__item--is-disabled"]) {
             // &:after
             &:after {
-              filter: var(--filter-primary); 
+              filter: var(--filter-primary);
             }
           }
 
@@ -164,12 +160,9 @@
           border-color: var(--color-primary);
           background-color: var(--color-primary);
 
-          // #{ $self }
-          #{ $self } {
-            // &__trigger
-            &__trigger {
-              color: var(--color-white); 
-            }
+          // [class*="__trigger"]
+          [class*="__trigger"] {
+            color: var(--color-white);
           }
         }
 
@@ -190,25 +183,25 @@
       @include border(all, var(--theme-w-border), solid, transparent);
       @include border-radius(var(--theme-radius));
       transition: border-color 200ms ease, color 200ms ease;
-      background-color: transparent;
       color: var(--color-primary);
 
       // &:not(:disabled)
       &:not(:disabled) {
+        background-color: transparent;
+
         // &:hover
         &:hover {
-          border-color: var(--color-primary); 
+          border-color: var(--color-primary);
         }
-      }
 
-      // &:focus-visible
-      &:focus-visible {
-        outline: 0.2rem solid var(--color-state-focus);
+        // &:focus-visible
+        &:focus-visible {
+          outline: 0.2rem solid var(--color-state-focus);
+        }
       }
 
       // &:disabled
       &:disabled {
-        color: var(--color-white);
         border-color: var(--color-state-disabled);
         background-color: var(--color-state-disabled);
 
@@ -216,22 +209,7 @@
         &:hover {
           cursor: not-allowed;
         }
-
-        // &:focus-visible
-        &:focus-visible {
-          border-color: var(--color-state-disabled);
-          color: var(--color-state-disabled);
-          background-color: var(--color-state-disabled);
-        }
       }
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

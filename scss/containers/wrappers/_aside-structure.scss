@@ -7,19 +7,6 @@
 // ===============================================
 @mixin cont-wrapper-aside-structure($theme: null) {
   .cont-wrapper-aside-structure {
-    $self: &;
-
-    // .cdmr
-    .cdmr {
-      // &-breadcrumb
-      &-breadcrumb {
-        @include margin(1rem null 1rem null);
-        @include min-screen(1280px) {
-          @include margin(null null 0 null);
-        }
-      }
-    }
-
     // &__aside
     &__aside {
       @include position(sticky, 0, null, null, null);
@@ -65,14 +52,6 @@
     // &__main-title
     &__main-title {
       @include margin(0 null 2rem null);
-    }
-
-    // &--is
-    &--is {
-    }
-
-    // &--has
-    &--has {
     }
   }
 }

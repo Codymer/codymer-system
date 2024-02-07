@@ -7,7 +7,6 @@
 // ===============================================
 @mixin cdmr-link($theme: null) {
   .cdmr-link {
-    $self: &;
     @include position(relative);
 
     // &:focus-visible
@@ -50,14 +49,6 @@
       &:active {
         color: var(--color-primary);
       }
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

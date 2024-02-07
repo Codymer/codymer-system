@@ -61,21 +61,20 @@
 // ===============================================
 @include helper-scope(example-01);
 @include helper-spacer(example-01);
+@include helper-gap(codymer);
 @include helper-font(example-01);
 @include helper-background(example-01);
 // ===============================================
 
 // CODYMER: theme
 // ===============================================
-@include cdmr-breadcrumb(example-01);
+@include cdmr-breadcrumb(example-01); 
 @include cdmr-btn(example-01);
-@include cdmr-btn-iconized(example-01);
 @include cdmr-check(example-01);
 @include cdmr-form(example-01);
 @include cdmr-icon(example-01);
 @include cdmr-label(example-01);
 @include cdmr-link(example-01);
-@include cdmr-list-ordered(example-01);
 @include cdmr-list(example-01);
 @include cdmr-pagination(example-01);
 @include cdmr-radio(example-01);

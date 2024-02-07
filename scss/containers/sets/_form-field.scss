@@ -7,8 +7,6 @@
 // ===============================================
 @mixin cont-set-form-field($theme: null) {
   .cont-set-form-field {
-    $self: &;
-
     // .cont
     .cont {
       // &-group
@@ -46,22 +44,6 @@
           }
         }
       }
-    }
-
-    // &--gap
-    &--gap {
-      // &-1
-      &-1 {
-        gap: var(--gap-1);
-      }
-    }
-
-    // &--is
-    &--is {
-    }
-
-    // &--has
-    &--has {
     }
   }
 }

@@ -3,13 +3,11 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: btn  
+// CDMR: btn
 // ===============================================
 @mixin cdmr-btn($theme: null) {
   .cdmr-btn {
-    $self: &;
     @include border(all, var(--theme-w-border), solid, null);
-    @include border-radius(var(--theme-radius));
     overflow-wrap: break-word;
     display: inline-block;
     user-select: none;
@@ -18,47 +16,84 @@
     transition: border-color 0.25s ease-out, color 0.25s ease-out,
       background-color 0.25s ease-out;
 
-    // &:hover
-    &:hover {
-      cursor: default;
-    }
-
-    // &:focus
-    &:focus {
-      outline: 0;
-    }
-
-    // &:focus-visible
-    &:focus-visible {
-      outline: 0.2rem solid var(--color-state-focus);
-    }
-
     // &--primary
     &--primary {
-      color: var(--color-white);
       border-color: var(--color-primary);
-      background-color: var(--color-primary);
+
+      // &[class*="--filled"]
+      &[class*="--filled"] {
+        background-color: var(--color-primary);
+      }
+
+      // &:not()
+      &:not([class*="--filled"]):not([class*="--filled"]:not([disabled])):not(
+          :disabled
+        ) {
+        color: var(--btn-primary-font-color);
+      }
+      &:not(:disabled) {
+        color: var(--btn-primary-filled-font-color);
+      }
     }
 
     // &--secondary
     &--secondary {
-      color: var(--color-secondary);
-      background-color: transparent;
       border-color: var(--color-secondary);
+
+      // &[class*="--filled"]
+      &[class*="--filled"] {
+        background-color: var(--color-secondary);
+      }
+
+      // &:not()
+      &:not([class*="--filled"]):not([class*="--filled"]:not([disabled])):not(
+          :disabled
+        ) {
+        color: var(--btn-secondary-font-color);
+      }
+      &:not(:disabled) {
+        color: var(--btn-secondary-filled-font-color);
+      }
     }
 
     // &--tertiary
     &--tertiary {
-      color: var(--color-white);
       border-color: var(--color-tertiary);
-      background-color: var(--color-tertiary);
+
+      // &[class*="--filled"]
+      &[class*="--filled"] {
+        background-color: var(--color-tertiary);
+      }
+
+      // &:not()
+      &:not([class*="--filled"]):not([class*="--filled"]:not([disabled])):not(
+          :disabled
+        ) {
+        color: var(--btn-tertiary-font-color);
+      }
+      &:not(:disabled) {
+        color: var(--btn-tertiary-filled-font-color);
+      }
     }
 
     // &--quaternary
     &--quaternary {
-      color: var(--color-quaternary);
       border-color: var(--color-quaternary);
-      background-color: transparent;
+
+      // &[class*="--filled"]
+      &[class*="--filled"] {
+        background-color: var(--color-quaternary);
+      }
+
+      // &:not()
+      &:not([class*="--filled"]):not([class*="--filled"]:not([disabled])):not(
+          :disabled
+        ) {
+        color: var(--btn-quaternary-font-color);
+      }
+      &:not(:disabled) {
+        color: var(--btn-quaternary-filled-font-color);
+      }
     }
 
     // &--scope
@@ -67,115 +102,135 @@
       &-1 {
         @include padding(var(--scope-1));
         font-size: var(--scope-1);
-        line-height: var(--scope-1); 
+        line-height: var(--scope-1);
       }
 
       // &-2
       &-2 {
         @include padding(var(--scope-2));
         font-size: var(--scope-2);
-        line-height: var(--scope-2);  
+        line-height: var(--scope-2);
       }
 
       // &-3
       &-3 {
         @include padding(var(--scope-3));
         font-size: var(--scope-3);
-        line-height: var(--scope-3);  
+        line-height: var(--scope-3);
       }
     }
 
-    // &:where()
-    &:where(#{ $self }--primary) {
-      // .cdmr
-      .cdmr {
-        // &-icon
-        &-icon {
-          // &:before
-          &:before {
-            filter: var(--filter-color-white);
-          }
-        }
-      }
+    // &:hover
+    &:hover {
+      // &:not(:disabled)
+      &:not(:disabled) {
+        cursor: default;
 
-      // &:hover
-      &:hover {
-        border-color: var(--color-state-hover-primary);
-        background-color: var(--color-state-hover-primary);
+        // &[class*="--primary"]
+        &[class*="--primary"] {
+          border-color: var(--color-state-hover-primary);
+          background-color: var(--color-state-hover-primary);
+        }
+
+        // &[class*="--secondary"]
+        &[class*="--secondary"] {
+          border-color: var(--color-state-hover-secondary);
+          background-color: var(--color-state-hover-secondary);
+        }
+
+        // &[class*="--tertiary"]
+        &[class*="--tertiary"] {
+          border-color: var(--color-state-hover-tertiary);
+          background-color: var(--color-state-hover-tertiary);
+        }
+
+        // &[class*="--quaternary"]
+        &[class*="--quaternary"] {
+          border-color: var(--color-state-hover-quaternary);
+          background-color: var(--color-state-hover-quaternary);
+        }
+
+        // &[class*="--quaternary"]
+        &[class*="--quaternary"] {
+          border-color: var(--color-state-hover-quaternary);
+          background-color: var(--color-state-hover-quaternary);
+        }
       }
     }
 
-    // &:where()
-    &:where(#{ $self }--secondary) {
-      // .cdmr
-      .cdmr {
-        // &-icon
-        &-icon {
-          // &:before
-          &:before {
-            filter: var(--filter-secondary);
-          }
-        }
-      }
-
-      // &:hover
-      &:hover {
-        border-color: var(--color-state-hover-secondary);
-        color: var(--color-state-hover-secondary);
+    // &:focus
+    &:focus {
+      // &:not(:disabled)
+      &:not(:disabled) {
+        outline: 0;
       }
     }
 
-    // &:where()
-    &:where(#{ $self }--tertiary) {
-      // .cdmr
-      .cdmr {
-        // &-icon
-        &-icon {
-          // &:before
-          &:before {
-            filter: var(--filter-color-white);
-          }
-        }
-      }
-
-      // &:hover
-      &:hover {
-        border-color: var(--color-state-hover-tertiary);
-        background-color: var(--color-state-hover-tertiary);
-      }
-    }
-
-    // &:where()
-    &:where(#{ $self }--quaternary) {
-      // .cdmr
-      .cdmr {
-        // &-icon
-        &-icon {
-          // &:before
-          &:before {
-            filter: var(--filter-primary);
-          }
-        }
-      }
-
-      // &:hover
-      &:hover {
-        border-color: var(--color-state-hover-quaternary);
-        color: var(--color-state-hover-quaternary);
+    // &:focus-visible
+    &:focus-visible {
+      // &:not(:disabled)
+      &:not(:disabled) {
+        outline: 0.2rem solid var(--color-state-focus);
       }
     }
 
     // &:disabled
     &:disabled {
       cursor: not-allowed;
-      color: var(--color-black);
       border-color: var(--color-state-disabled);
     }
 
-    // &:where():disabled
-    &:where(#{ $self }--primary, #{ $self }--tertiary):disabled {
-      border-color: var(--color-state-disabled);
-      background-color: var(--color-state-disabled);
+    // &:is()
+    &:is([class*="--circle"]) {
+      @include border-radius(50%);
+    }
+    &:is([class*="--filled"]) {
+      // &:disabled
+      &:disabled {
+        background-color: var(--color-state-disabled);
+      }
+    }
+
+    // &:not() 
+    &:not([class*="--filled"]) {
+      background-color: transparent;
+    }
+    &:not([class*="--circle"]) {
+      @include border-radius(var(--theme-radius));
+    }
+    &:not(:has(.helper-hide)) {
+      // .cdmr 
+      .cdmr {
+        // &-icon
+        &-icon {
+          @include size(null, 50%);
+        }
+      }
+    }
+
+    // &:has()
+    &:has(.cdmr-icon) {
+      @include position(relative);
+
+      // .cdmr
+      .cdmr {
+        // &-icon
+        &-icon {
+          @include position(absolute, 0, 0, 0, 0);
+          @include margin(auto);
+        }
+      }
+    }
+
+    // &:where()
+    &:where([class*="--scope-1"]):has(.cdmr-icon:first-child:last-child) {
+      @include padding(null null null calc(var(--scope-1) * 2));
+    }
+    &:where([class*="--scope-2"]):has(.cdmr-icon:first-child:last-child) {
+      @include padding(null null null calc(var(--scope-1) * 2.5));
+    }
+    &:where([class*="--scope-3"]):has(.cdmr-icon:first-child:last-child) {
+      @include padding(null null null calc(var(--scope-1) * 3.5));
     }
 
     // &--has
@@ -211,7 +266,7 @@
 
           // &-2
           &-2 {
-            @include padding(null null null calc(2* var(--scope-2)));
+            @include padding(null null null calc(2 * var(--scope-2)));
 
             // .cdmr
             .cdmr {

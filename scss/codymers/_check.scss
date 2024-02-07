@@ -3,11 +3,10 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: check 
+// CDMR: check
 // ===============================================
 @mixin cdmr-check($theme: null) {
   .cdmr-check {
-    $self: &;
     @include position(relative);
 
     // &__label
@@ -22,7 +21,12 @@
         content: "";
         @include position(absolute, 0, null, null, 0);
         @include size(var(--check-uncheck-size));
-        @include border(all, var(--theme-w-border), solid, var(--color-primary));
+        @include border(
+          all,
+          var(--theme-w-border),
+          solid,
+          var(--color-primary)
+        );
         @include border-radius(var(--theme-radius));
         transition: border-color 250ms ease;
       }
@@ -31,9 +35,9 @@
       &:after {
         content: "";
         @include position(absolute, 0, 0, null, 0);
-        @include size(var(--check-checked-icon-size)); 
+        @include size(var(--check-checked-icon-size));
         opacity: 0;
-        transition: all 250ms ease;  
+        transition: all 250ms ease;
         @include background-setup(
           // img path
           var(--check-checked-icon-pic),
@@ -72,75 +76,55 @@
 
       // &:checked
       &:checked {
-        // + #{ $self }
-        + #{ $self } {
-          // &__label
-          &__label {
-            // &:before
-            &:before {
-              border-color: var(--color-state-ok);
-              border-width: var(--theme-w-border);
-              background-color: var(--color-state-ok);
-            }
+        // [class*="__label"]
+        + [class*="__label"] {
+          // &:before
+          &:before {
+            border-color: var(--color-state-ok);
+            border-width: var(--theme-w-border);
+            background-color: var(--color-state-ok);
+          }
 
-            // &:after
-            &:after {
-              opacity: 1;
-              transform: scale(1);
-              filter: var(--filter-primary);
-            }
+          // &:after
+          &:after {
+            opacity: 1;
+            transform: scale(1);
+            filter: var(--filter-primary);
           }
         }
       }
 
       // &:disabled
       &:disabled {
-        // + #{ $self }
-        + #{ $self } {
-          // &__label
-          &__label {
-            // &:before
-            &:before {
-              border-color: var(--color-state-disabled);
-              background-color: var(--color-state-disabled);
-              box-shadow: inset 0 0 0 0.4rem var(--color-state-disabled);
-            }
+        // + [class*="__label"]
+        + [class*="__label"] {
+          // &:before
+          &:before {
+            border-color: var(--color-state-disabled);
+            background-color: var(--color-state-disabled);
+            box-shadow: inset 0 0 0 0.4rem var(--color-state-disabled);
           }
         }
 
         // &:hover
         &:hover {
-          // + #{ $self }
-          + #{ $self } {
-            // &__label
-            &__label {
-              cursor: not-allowed;
-            }
+          // + [class*="__label"]
+          + [class*="__label"] {
+            cursor: not-allowed;
           }
         }
       }
 
       // &:focus-visible
       &:focus-visible {
-        // + #{ $self }
-        + #{ $self } {
-          // &__label
-          &__label {
-            // &:before
-            &:before {
-              box-shadow: var(--theme-focus);
-            }
+        // + [class*="__label"]
+        + [class*="__label"] {
+          // &::before
+          &:before {
+            box-shadow: var(--theme-focus);
           }
         }
       }
-    }
-
-    // &--has
-    &--has {
-    }
-
-    // &--is
-    &--is {
     }
   }
 }

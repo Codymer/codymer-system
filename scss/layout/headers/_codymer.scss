@@ -6,7 +6,6 @@
 // LAYOUT HEADER: codymer
 // ===============================================
 .layout-header-codymer {
-  $self: &;
   @include position(sticky, 0, null, null, null);
   @include padding(0.938rem null 0.938rem null);
   z-index: 5;
@@ -81,7 +80,7 @@
 
     // &:hover
     &:hover {
-      color: var(--color-pink-02);
+      color: var(--color-pink);
     }
 
     // &:focus-visible

@@ -3,38 +3,34 @@
 @use "../abstracts/index" as *;
 // ===============================================
 
-// CDMR: list 
+// CDMR: list
 // ===============================================
 @mixin cdmr-list($theme: null) {
   .cdmr-list {
-    $self: &;
-
     // &--primary
     &--primary {
       @include padding(null null null 0);
 
-      // #{ $self }
-      #{ $self } {
-        // &__item
-        &__item {
-          @include position(relative);
-          @include padding(null null null var(--list-lvl1-gap)); 
+      // [class*="__item"]
+      [class*="__item"] {
+        @include position(relative);
+        @include padding(null null null var(--list-lvl1-gap));
 
+        // &:before
+        &:before {
+          content: "";
+          @include position(absolute, null, null, null, 0);
+          @include size(var(--list-icon-size));
+          filter: var(--filter-primary);
+        }
+
+        // &:not()
+        &:not(:first-child) { 
+          @include margin(var(--list-item-m-t) null null null);
+        }
+        &:not([class*="__lvl2"]) {
           // &:before
           &:before {
-            content: "";
-            @include position(absolute, null, null, null, 0);
-            @include size(var(--list-icon-size));
-            filter: var(--filter-primary); 
-          }
-
-          // &:not(:first-child)
-          &:not(:first-child) {
-            @include margin(var(--list-item-m-t) null null null);
-          }
-
-          // &:not(.cdmr-list__lvl2 .cdmr-list__item):before 
-          &:not(#{ $self }__lvl2 #{ $self }__item):before {
             @include background-setup(
               // img path
               var(--list-lvl1-icon-pic),
@@ -53,53 +49,81 @@
             );
           }
         }
+      }
 
-        // &__lvl2
-        &__lvl2 {
-          @include margin(var(--list-lvl2-m-l) null null null);
-          @include padding(null null null var(--list-lvl2-gap));
+      // [class*="__lvl2"]
+      [class*="__lvl2"] {
+        @include margin(var(--list-lvl2-m-l) null null null);
+        @include padding(null null null var(--list-lvl2-gap));
 
-          // #{ $self }
-          #{ $self } {
-            // &__item
-            &__item {
-              // &:before
-              &:before {
-                @include background-setup(
-                  // img path
-                  var(--list-lvl2-icon-pic),
-                  // position and size
-                  "0 0 / contain",
-                  // repeat
-                  no-repeat,
-                  // attachment
-                  null,
-                  // origin
-                  null,
-                  // clip
-                  null,
-                  // color
-                  transparent
-                );
-              }
-            }
+        // [class*="__item"]
+        [class*="__item"] {
+          // &:before
+          &:before {
+            @include background-setup(
+              // img path
+              var(--list-lvl2-icon-pic),
+              // position and size
+              "0 0 / contain",
+              // repeat
+              no-repeat,
+              // attachment
+              null,
+              // origin
+              null,
+              // clip
+              null,
+              // color
+              transparent
+            );
           }
         }
+      }
 
-        // &__lvl3
-        &__lvl3 {
-          @include margin(var(--list-lvl3-m-l) null null null);
-          @include padding(null null null var(--list-lvl3-gap));
-        }
+      // [class*="__lvl3"]
+      [class*="__lvl3"] {
+        @include margin(var(--list-lvl3-m-l) null null null);
+        @include padding(null null null var(--list-lvl3-gap));
       }
     }
 
-    // &--has
-    &--has {
-    }
+    // &-ordered
+    &-ordered {
+      @include margin(
+        var(--list-ordered-m-t) null var(--list-ordered-m-b) null
+      );
+      @include padding(null null null 0);
 
-    // &--is
-    &--is {
+      // &--primary
+      &--primary {
+        list-style: none;
+        counter-reset: list-number;
+
+        // [class*="__item"]
+        [class*="__item"] {
+          @include position(relative);
+          @include padding(null null null var(--list-ordered-gap));
+
+          // &:before
+          &:before {
+            content: counter(list-number);
+            @include position(absolute, -0.25rem, null, null, 0);
+            @include size(var(--list-ordered-counter-size));
+            @include border-radius(50%);
+            counter-increment: list-number;
+            font-size: var(--list-ordered-counter-font-size);
+            line-height: var(--list-ordered-counter-line-height);
+            color: var(--color-white);
+            text-align: center;
+            background-color: var(--color-primary);
+          }
+
+          // &:not(:first-child)
+          &:not(:first-child) {
+            @include margin(var(--list-ordered-item-m-t) null null null);
+          }
+        }
+      }
     }
   }
 }

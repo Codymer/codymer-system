@@ -123,6 +123,7 @@
         saturate(1731%)
         hue-rotate(33deg)
         brightness(92%);
+      --filter-state-disabled: grayscale(1);
       --reset-html-font: normal normal 500 16px/18px var(--font-weight-1);
       --reset-body-color: var(--color-primary);
       --reset-body-background-color: var(--color-pink-lt-1);
@@ -168,6 +169,14 @@
       --theme-focus: 0 0 0.313rem 0 var(--color-state-focus);
       --theme-radius: calc(var(--base-measure));
       --theme-w-border: calc(.4 * var(--base-measure));
+      --btn-primary-font-color: var(--color-primary);  
+      --btn-primary-filled-font-color: var(--color-white);
+      --btn-secondary-font-color: var(--color-secondary);  
+      --btn-secondary-filled-font-color: var(--color-white);
+      --btn-tertiary-font-color: var(--color-tertiary);  
+      --btn-tertiary-filled-font-color: var(--color-white);
+      --btn-quaternary-font-color: var(--color-quaternary);  
+      --btn-quaternary-filled-font-color: var(--color-white); 
       --breadcrumb-gap: calc(3 * var(--base-measure));
       --breadcrumb-item-highlighted-p-x: calc(var(--base-measure));
       --breadcrumb-item-icon-p-r: calc(-2.5 * var(--base-measure)); 
@@ -306,6 +315,7 @@
         saturate(1731%)
         hue-rotate(33deg)
         brightness(92%);
+      --filter-state-disabled: grayscale(1);
       --reset-html-font: normal normal 500 16px/18px var(--font-weight-1);
       --reset-body-color: var(--color-black);
       --reset-body-background-color: var(--color-brown-lt-1);
@@ -352,6 +362,14 @@
       --theme-focus: 0 0 0.313rem 0 var(--color-state-focus);
       --theme-w-border: calc(var(--base-measure) / 2);
       --theme-radius: calc(3 * var(--base-measure));
+      --btn-primary-font-color: var(--color-primary);  
+      --btn-primary-filled-font-color: var(--color-white);
+      --btn-secondary-font-color: var(--color-secondary);  
+      --btn-secondary-filled-font-color: var(--color-white);
+      --btn-tertiary-font-color: var(--color-tertiary);  
+      --btn-tertiary-filled-font-color: var(--color-white);
+      --btn-quaternary-font-color: var(--color-quaternary);  
+      --btn-quaternary-filled-font-color: var(--color-white); 
       --breadcrumb-gap: calc(4 * var(--base-measure));
       --breadcrumb-item-highlighted-p-x: calc(4 * var(--base-measure)); 
       --breadcrumb-item-icon-p-r: calc(-4 * var(--base-measure));

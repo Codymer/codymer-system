@@ -7,14 +7,19 @@
 // ===============================================
 @mixin cont-group-form-field($theme: null) {
   .cont-group-form-field {
-    $self: &;
     @include position(relative);
     @include margin(null null var(--cont-group-form-field-m-b) null);
 
     // &:before
     &:before {
       content: "";
-      @include position(absolute, 0, var(--cont-group-form-field-icon-p-r), 0, null);
+      @include position(
+        absolute,
+        0,
+        var(--cont-group-form-field-icon-p-r),
+        0,
+        null
+      );
       @include margin(auto null auto null);
       @include size(var(--cont-group-form-field-icon-size));
       filter: var(--filter-primary);
@@ -46,9 +51,9 @@
       &-select {
         // &:not()
         &:not(
-            #{ $self }--is-error,
-            #{ $self }--is-success,
-            #{ $self }--is-warning
+            [class*="--is-error"],
+            [class*="--is-success"],
+            [class*="--is-warning"]
           ) {
           // &:before
           &:before {
@@ -115,8 +120,8 @@
           }
         }
 
-        // .cdmr-form-label-field__msg
-        #{ $self }__msg {
+        // [class*="__msg"]
+        [class*="__msg"] {
           color: var(--color-state-ko);
         }
       }
@@ -160,12 +165,9 @@
           }
         }
 
-        // #{ $self }
-        #{ $self } {
-          // &__msg
-          &__msg {
-            color: var(--color-state-ok);
-          }
+        // [class*="__msg"]
+        [class*="__msg"] {
+          color: var(--color-state-ok);
         }
       }
 
@@ -208,32 +210,33 @@
           }
         }
 
-        // #{ $self }
-        #{ $self } {
-          // &__msg
-          &__msg {
-            color: var(--color-state-warning);
-          }
+        // [class*="__msg"]
+        [class*="__msg"] {
+          color: var(--color-state-warning);
         }
       }
     }
 
     // &:has()
     &:where(
-        #{ $self }--is-error,
-        #{ $self }--is-success,
-        #{ $self }--is-warning
-      )
-
+        [class*="--is-error"],
+        [class*="--is-success"],
+        [class*="--is-warning"]
+      ) {
       // .cdmr-form-field
       .cdmr-form-field {
-      @include padding(null 2.5rem null null);
+        @include padding(null 2.5rem null null);
+      }
     }
-
     // &:not()
-    &:not(#{ $self }--is-error, #{ $self }--is-success, #{ $self }--is-warning)
+    &:not(
+        [class*="--is-error"],
+        [class*="--is-success"],
+        [class*="--is-warning"]
+      ) {
       .cont-group-form-field__msg {
-      @include hide-visually;
+        @include hide-visually;
+      }
     }
   }
 }

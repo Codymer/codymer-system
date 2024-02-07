@@ -7,8 +7,6 @@
 // ===============================================
 @mixin cont-wrapper-col-contents($theme: null) {
   .cont-wrapper-col-contents {
-    $self: &;
-  
     // &__col
     &__col {
       @include padding(1.563rem null 1.563rem null);
@@ -16,7 +14,7 @@
       @include min-screen(1440px) {
         @include padding(2.813rem null 2.813rem null);
       }
-  
+
       // .layout-grid
       .layout-grid {
         // &__col-xs-12
@@ -26,19 +24,19 @@
             flex-wrap: wrap;
             align-content: center;
           }
-  
+
           // &:first-of-type
           &:first-of-type {
             order: 2;
           }
-  
+
           // &:last-of-type
           &:last-of-type {
             order: 1;
           }
         }
       }
-  
+
       // .cdmr
       .cdmr {
         // &-title
@@ -49,14 +47,14 @@
             flex-basis: 100%;
           }
         }
-  
+
         // &-txt
         &-txt {
           @include min-screen(1024px) {
             flex-basis: 100%;
           }
         }
-  
+
         // &-list
         &-list {
           @include min-screen(1024px) {
@@ -64,7 +62,7 @@
           }
         }
       }
-  
+
       // .cont
       .cont {
         // &-set
@@ -75,7 +73,7 @@
           }
         }
       }
-  
+
       // &--is
       &--is {
         // &-inverse
@@ -90,7 +88,7 @@
                   order: 1;
                 }
               }
-  
+
               // &:last-of-type
               &:last-of-type {
                 @include min-screen(1024px) {
@@ -102,13 +100,5 @@
         }
       }
     }
-  
-    // &--is
-    &--is {
-    }
-  
-    // &--has
-    &--has {
-    }
-  }  
+  }
 }

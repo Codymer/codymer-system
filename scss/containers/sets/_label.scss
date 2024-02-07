@@ -7,22 +7,5 @@
 // ===============================================
 @mixin cont-set-label($theme: null) {
   .cont-set-label {
-    $self: &;
-
-    // &--gap
-    &--gap {
-      // &-1
-      &-1 {
-        gap: var(--gap-1);
-      }
-    }
-
-    // &--is
-    &--is {
-    }
-
-    // &--has
-    &--has {
-    }
   }
 }

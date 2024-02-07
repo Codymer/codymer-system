@@ -7,7 +7,6 @@
 // ===============================================
 @mixin cdmr-table($theme: null) {
   .cdmr-table {
-    $self: &;
     word-break: normal;
 
     // &__container
@@ -21,7 +20,7 @@
       @include padding(0.625rem);
       vertical-align: bottom;
       font-size: var(--table-th-font-size);
-      line-height: var(--table-th-line-height);;
+      line-height: var(--table-th-line-height);
 
       // &:first-of-type
       &:first-of-type {
@@ -42,29 +41,26 @@
 
     // &--primary
     &--primary {
-      // #{ $self }
-      #{ $self } {
-        // &__th
-        &__th {
-          color: var(--color-white);
-          background-color: var(--color-primary);
-        }
+      // [class*="__th"]
+      [class*="__th"] {
+        color: var(--color-white);
+        background-color: var(--color-primary);
+      }
 
-        // &__td
-        &__td {
-          // &:hover, &:focus
-          &:hover,
-          &:focus {
-            background-color: var(--color-state-focus);
-            border-color: var(--color-primary);
-            box-shadow: var(--theme-focus);
-          }
+      // [class*="__td"]
+      [class*="__td"] {
+        // &:hover, &:focus
+        &:hover,
+        &:focus {
+          background-color: var(--color-state-focus);
+          border-color: var(--color-primary);
+          box-shadow: var(--theme-focus);
         }
+      }
 
-        // &__foot
-        &__tfoot {
-          background-color: var(--color-grey-80pct);
-        }
+      // [class*="__tfoot"]
+      [class*="__tfoot"] {
+        background-color: var(--color-grey-80pct);
       }
     }
 
@@ -77,10 +73,6 @@
       overflow-y: hidden;
     }
 
-    // &--has
-    &--has {
-    }
-
     // &--is
     &--is {
       // &-stick
@@ -90,29 +82,26 @@
           overflow-y: auto;
           max-height: 450px;
 
-          // #{ $self }
-          #{ $self } {
-            // &__th
-            &__th {
-              @include position(sticky, 0, null, null, null);
-              z-index: 3;
-            }
+          // [class*="__th"]
+          [class*="__th"] {
+            @include position(sticky, 0, null, null, null);
+            z-index: 3;
+          }
 
-            // &__td
-            &__td {
-              // &:first-of-type
-              &:first-of-type {
-                @include position(sticky, null, null, null, 0);
-                z-index: 2;
-                color: var(--color-white);
-                background-color: var(--color-primary);
+          // [class*="__td"]
+          [class*="__td"] {
+            // &:first-of-type
+            &:first-of-type {
+              @include position(sticky, null, null, null, 0);
+              z-index: 2;
+              color: var(--color-white);
+              background-color: var(--color-primary);
 
-                // &:hover, &:focus
-                &:hover,
-                &:focus {
-                  color: var(--color-primary);
-                  background-color: var(--color-state-focus);
-                }
+              // &:hover, &:focus
+              &:hover,
+              &:focus {
+                color: var(--color-primary);
+                background-color: var(--color-state-focus);
               }
             }
           }
