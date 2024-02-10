@@ -101,7 +101,15 @@
         @include position(relative);
         @include padding(null null null var(--list-ordered-gap));
 
-        // &:before
+        // &:not()
+        &:not(:first-child) {
+          @include margin(var(--list-ordered-item-m-t) null null null);
+        }
+      }
+
+      // [class*=__item]
+      > [class*=__item] {
+        // ::before
         &:before {
           content: counter(list-number);
           @include position(absolute, -0.25rem, null, null, 0);
@@ -113,11 +121,6 @@
           color: var(--color-white);
           text-align: center;
           background-color: var(--color-primary);
-        }
-
-        // &:not(:first-child)
-        &:not(:first-child) {
-          @include margin(var(--list-ordered-item-m-t) null null null);
         }
       }
     }
